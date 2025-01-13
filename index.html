@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>LViS • Vídeos creados y actualizados automáticamente</title>
+	<meta content="Con LViS puedes crear y mantener tus vídeos de forma automática y autónoma. Ten tus vídeos siempre al día fácilmente" name="description"/>
+	<meta content="LViS • Vídeos creados y actualizados automáticamente" property="og:title"/>
+	<meta content="Con LViS puedes crear y mantener tus vídeos de forma automática y autónoma. Ten tus vídeos siempre al día fácilmente" property="og:description"/>
+	<meta content="https://lvis.es/images/logo_background_color.png" property="og:image"/>
+	<meta content="LViS • Vídeos creados y actualizados automáticamente" property="twitter:title"/>
+	<meta content="Con LViS puedes crear y mantener tus vídeos de forma automática y autónoma. Ten tus vídeos siempre al día fácilmente" property="twitter:description"/>
+	<meta content="https://lvis.es/images/logo_background_color.png" property="twitter:image"/>	
+	<meta property="og:type" content="website" />
+	<meta content="summary_large_image" name="twitter:card"/>
+	<meta name="keywords" content="Videos automaticos, generación de vídeo, vídeo como servicio, vídeo como código, automatización, elearning, visión artificial,
+	video as a service, no code, video, video as a code, blockly, videos actualizables, artificial vision, creación de vídeo, video creation" />
+	<meta name="author" content="LViS" />
+	<meta name="robots" content="index,follow" lang="es" />
+	<meta property="og:locale" content="es_ES" />
+	<meta name="url" property="og:url" content="https://lvis.es" />
+	<meta property="og:site_name" content="LViS" />	
+	<meta property="twitter:site" content="@lvis" /> 
+	<meta property="twitter:creator" content="@lvis" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width; initial-scale=1">
+	<link rel="stylesheet" href="css/animsition.min.css">
+	<link rel="stylesheet" href="css/venobox.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="js\cookies\cookies.css">
+	<!-- Pixel Code for https://overtracking.com/ -->
+	<script defer src="https://overtracking.com/p/u1lKOy3bjAeQ8eNW"></script>
+	<!-- END Pixel Code -->
+	<script>
+		let recordedVideos = 10327;
+		let recordedVideosCount = 0;
+
+		let recordedHours = 317
+		let recordedHoursCount = 0;
+
+		let recordedVideosInterval = setInterval(function () {
+			recordedVideosCount += Math.round(recordedVideos / 100);
+			if (recordedVideosCount >= recordedVideos) {
+				recordedVideosCount = recordedVideos;
+				clearInterval(recordedVideosInterval);
+			}
+			document.getElementById("recordedCount").textContent = recordedVideosCount;
+		}, 50);
+		let recordedHoursInterval = setInterval(function () {
+			recordedHoursCount += Math.round(recordedHours / 100);
+			if (recordedHoursCount >= recordedHours) {
+				recordedHoursCount = recordedHours;
+				clearInterval(recordedHoursInterval)
+			}
+			document.getElementById("recordedHoursCount").textContent = '0'+recordedHoursCount;
+		}, 50)
+	</script>
+</head>
+
+<body class="bg-init">
+
+	<!-- ***** OVERLAY ***** -->
+	<div class="animsition-overlay">
+
+		<!-- ***** HEADER ***** -->
+		<header class="header">
+			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left"><img
+					src="images/logo.svg" alt="LViS logo"></a>
+			<input class="side-menu" type="checkbox" id="side-menu" />
+			<label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+			<nav class="nav">
+				<ul class="menu">
+					<li><a href="soluciones.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Soluciones</a></li>
+					<li><a href="caracteristicas.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Características</a></li>
+					<li><a href="como-funciona.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Cómo funciona</a></li>
+					<li><a href="galeria.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Galeria</a></li>
+					<li><a href="planes.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Planes</a></li> 
+					<li><a href="partners.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Partners</a></li>
+				</ul>
+			</nav>
+			<div class="nav-buttons">
+				<a class="demo-button" target="_blank" href="https://calendly.com/lvis-demo/30min"><strong style="color: white;"> Solicita tu demo</strong></a>
+				<a class="login-button" target="_blank" href="https://lvis.studio/auth/signin">LViS Studio</a>
+				<a class="language-button" href="https://lvis.video/"><div style="position: relative; display: inline-flex;"><img src="images/globe_white.svg" alt="globo blanco" style="width: 15px; margin-right: 3px;"/><span style="margin-top: 5px;">English</span></div></a>
+			</div>
+		</header>
+		<!-- ***** END HEADER ***** -->
+
+		<!-- ***** HERO ***** -->
+		<div id="hero" class="wrapper clearfix" style="padding-bottom: 150px">
+			<section class="grid-2">
+				<div class="col post">
+					<section class="cd-intro">
+						<h1 class="cd-headline loading-bar">
+							<span class="color-primary" style="margin-bottom: 20px;">Automatización Robótica de Vídeos</span>
+							<span>Tus contenidos<br>siempre al día para</span>
+							<span class="cd-words-wrapper">
+								<b class="is-visible" style="color: black; font-weight: 700;"> aplicaciones</b>
+								<b style="color: black; font-weight: 700;"> procesos</b>
+								<b style="color: black; font-weight: 700;"> documentos</b>
+							</span>
+						</h1>
+					</section>
+				</div>
+    			<div class="col">
+					<div class="iframe-content">
+						<iframe src="https://player.vimeo.com/video/1015654160?autoplay=1&amp;loop=1&amp;autopause=0&amp;muted=1&amp;badge=0&amp;player_id=0&amp;app_id=58479&amp;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="LViS, Automatización Robótica de Vídeos"></iframe>
+					</div>
+					<div>
+						<p style="display: flex; justify-content: space-evenly; padding-top: 80px; padding-bottom: 2px;">Ejemplos grabados y producidos por LViS automáticamente</p>
+					</div>
+				</div>
+
+				<div style="margin-top: 50px">
+					<h2 style="text-align: center"><strong><span><strong class="color-primary">Trabaja en actualizar tu empresa</strong>, no tus vídeos<br></span></h2>
+					<h4 style="text-align: center">Tú escribes el guión y LViS crea tu vídeo en la nube y lo publica por ti<br>sin depender de tu ordenador, ningún software de edición u otras personas o agencias</h4>
+				</div>
+
+				<!--</div>-->
+			</section>
+
+		</div>
+		<!-- ***** END HERO ***** -->
+
+		<!-- ***** USE ***** -->
+		<div id="use" class="wrapper clearfix">
+			<h2 class="post">Deja volar tu imaginación, <br>LViS se encarga del resto</h2>
+			<section class="grid-3--2-1">
+				<div class="center">
+					<ul class="list-arrow home-li">
+						<li class="post"><span>Usa <span class="color-primary">múltiples idiomas</span> para hablar, leer y escribir en tus grabaciones</span></li>
+						<li class="post"><span>Genera <span class="color-primary">diferentes variaciones</span> de tus vídeos según el perfil del usuario</span></li>
+						<li class="post"><span>Ofrece <span class="color-primary">experiencias personalizadas</span> e <span class="color-primary">individualizadas</span> a tu audiencia</span></li>
+						<li class="post"><span>Escala la producción de vídeo de manera <span class="color-primary">automática</span> y <span class="color-primary">autónoma</span></span></li>
+					</ul>
+				</div>
+			</section>
+		</div>
+		<!-- ***** END USE ***** -->
+
+		<!-- ***** HOME ADVANTAGE ***** -->
+		<div id="home-advantage" class="wrapper clearfix" style="padding-bottom: 150px;">
+			<section class="grid-1">
+				<div class="center">
+					<img src="images/arrow_circles.svg" alt="flecha y círculos">
+					<h2 style="color: white;">Haz más vídeos para tu empresa</h2>
+				</div>				
+				<br>
+				<div class="center">
+					<img src="images/clock.svg" class="grey-icon" alt="reloj">
+					<h3 style="color: lightgray; position: relative;">El tiempo invertido por vídeo es entre 5 y 15 veces menor</h3>
+				</div>
+				<br>
+				<div class="center">
+					<img src="images/piggy.svg" alt="cerdito">
+					<h3 style="color: lightgray; position: relative;">Ahorro de costes entre el 50% y el 80% al año</h3>
+				</div>
+				<br>
+			</section>
+		</div>
+		<!-- ***** END HOME ADVANTAGE ***** -->
+
+		<!-- ***** CUSTOMERS ***** -->
+		<div id="customers" style="padding-bottom: 150px;">
+			<div class="center">
+				<h3>Algunos de nuestros clientes</h3>
+			</div>
+			<div class="center">
+				<img src="images/customer_logos/granada_logo.png" alt="logo universidad de granada">
+				<img src="images/customer_logos/telefonica.png" alt="telefonica logo">
+				<img src="images/customer_logos/ojerpharma_logo.png" alt="ojerpharma logo">
+				<img src="images/customer_logos/abbvie_logo.png" alt="abbvie logo" class="max">
+				<img src="images/customer_logos/techdow_logo.png" alt="techdown logo">
+				<img src="images/customer_logos/scanmar_logo.png" alt="scanmar logo">
+			</div>
+			<div class="center">
+				<img src="images/customer_logos/stenfit_logo.svg" alt="stenfit_logo">
+				<img src="images/customer_logos/cle_logo.png" alt="cle logo">
+				<img src="images/customer_logos/lug_logo.png" alt="lug logo" class="max">
+				<img src="images/customer_logos/idential_logo.png" alt="idential logo">
+				<img src="images/customer_logos/asemaz_logo.png" alt="asemaz logo">
+				<img src="images/customer_logos/frutos_logo.png" alt="frutos logo">
+				<img src="images/customer_logos/logoAMAIF.webp" alt="amaif logo" class="max">
+			</div>								
+		</div>
+		<!-- ***** END CUSTOMERS ***** -->
+
+		<!-- ***** DEMO SECTION ***** -->
+		<div id="demo-section" class="wrapper clearfix">
+			<section class="grid-1">
+				<div class="col">
+					<h3 style="color: lightgray">20.000 vídeos y 600 horas grabadas con LViS desde enero de 2023</h3>
+					<h2 class="post">¡Comienza ahora a automatizar tus vídeos!</h2>
+					<a class="button-cta" target="_blank" href="https://calendly.com/lvis-demo/30min">Aquí te contamos como</a>
+				</div>
+			</section>
+		</div>
+		<!-- ***** END DEMO SECTION ***** -->
+
+		<!-- ***** FOOTER ***** -->
+		<footer class="wrapper clearfix">
+			<section class="grid-1">
+				<div class="col">
+					<div class="social-menu">
+						<ul>
+							<li><a href="https://www.youtube.com/@lvisvideo" target="blank"><img
+										src="images/social-youtube.svg" alt="youtube logo"></a></li>
+							<li><a href="https://www.linkedin.com/company/lvis-video" target="blank"><img
+										src="images/social-linkedin.svg" alt="Linkedin logo"></a></li>
+							<li><a href="https://twitter.com/lvis_video" target="blank"><img src="images/social-twitter.svg" alt="twitter logo"></a></li>
+						</ul>
+					</div>
+					<div style="text-align: center;">
+						<p>© 2024 LViS Video Automatización S.L.  LViS es una marca registrada. Todos los derechos reservados</p>
+					</div>
+					<div style="text-align: center; margin-bottom: 20px;">
+						<p style="display: inline;">
+							<a href="https://lvis.es/lvis-vs-camtasia.html" target="blank">LViS vs Camtasia</a>
+							<a href="https://lvis.es/noticias.html" target="blank" style="margin-left: 30px;">Noticias</a>
+							<a href="lvis-starter.html" target="blank" style="margin-left: 30px;">LViS Starter</a>
+							<a href="https://overtracking.com/dashboard/open/lvis.es" style="margin-left: 30px;" target="blank">Estadísticas web</a>
+							<a href="accesibilidad.html" style="margin-left: 30px;" target="blank">Accesibilidad</a>
+							<!-- <a data-vbtype="ajax" href="external/legal.html" style="margin-left: 30px;">Notas legales y privacidad</a> -->
+						</p>
+					</div>
+					<hr style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
+					<div style="text-align: center; margin-top: 20px; ">
+						<p style="display: inline;">
+							<a href="aviso-legal.html" target="blank" style="color: gray;">Aviso legal</a>
+							<a href="politica-de-cookies.html" target="blank" style="margin-left: 30px; color: gray;" >Política de cookies</a>
+							<a href="politica-privacidad.html" style="margin-left: 30px; color: gray;" target="blank" >Política de privacidad</a>
+							<a href="terminos-servicio.html" style="margin-left: 30px; color: gray;" target="blank" >Términos de servicio</a>
+							<a href="politica-marcas-servicios.html" target="blank" style="margin-left: 30px; color: gray;" >Política de marcas y productos</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</footer>
+		<!-- ***** END FOOTER ***** -->
+
+	</div>
+	<!-- ***** END OVERLAY ***** -->
+    <script type="text/javascript" src="https://acumbamail.com/newform/dynamic/js/H4VQmL2JDLUi6P0emHZzjNXonuSRHIpi3FXnpJ5Rw6Yf0vilAaKytCjxlxl/40723/"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+	<script src="js/vendor/easings.js"></script>
+	<script src="js/vendor/venobox.min.js"></script>
+	<script src="js/vendor/font-animation.js"></script>
+	<script src="js/main.js"></script>
+	<!--<script src="js\cookies\scriptsCookies.js"></script>
+	<script src="js\cookies\cookiesAnalytics.js"></script>
+	<script src="js\cookies\cookies.js"></script>-->
+	<script>
+		const dropdowns = document.querySelectorAll('.dropdown');
+		dropdowns.forEach(dropdown => {
+			dropdown.addEventListener('click', (e) => {
+				dropdown.classList.toggle('dropdown__options--visible')
+			})
+			dropdown.querySelectorAll('.dropdown__options .dropdown__option').forEach(opt => {
+				opt.addEventListener('click', (e) => {
+					dropdown.querySelector('.dropdown__selected').innerHTML = opt.innerHTML;
+				})
+			})
+		})
+	</script>
+	
+</body>
+
+</html>
