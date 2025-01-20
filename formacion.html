@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>LViS Vally • Formación</title>
+	<meta content="" name="description"/>
+	<meta content="LViS • Vally" property="og:title"/>
+	<meta content="Con LViS puedes crear y mantener tus vídeos de forma automática y autónoma. Ten tus vídeos siempre al día fácilmente" property="og:description"/>
+	<meta content="https://lvis.es/images/logo_background_color.png" property="og:image"/>
+	<meta content="LViS • Vally" property="twitter:title"/>
+	<meta content="Con LViS puedes crear y mantener tus vídeos de forma automática y autónoma. Ten tus vídeos siempre al día fácilmente" property="twitter:description"/>
+	<meta content="https://lvis.es/images/logo_background_color.png" property="twitter:image"/>	
+	<meta property="og:type" content="website" />
+	<meta content="summary_large_image" name="twitter:card"/>
+	<meta name="keywords" content="Videos automaticos, generación de vídeo, vídeo como servicio, vídeo como código, automatización, elearning, visión artificial,
+	video as a service, no code, video, video as a code, blockly, videos actualizables, artificial vision, creación de vídeo, video creation" />
+	<meta name="author" content="LViS" />
+	<meta name="robots" content="index,follow" lang="es" />
+	<meta property="og:locale" content="es_ES" />
+	<meta name="url" property="og:url" content="https://lvis.es" />
+	<meta property="og:site_name" content="LViS" />	
+	<meta property="twitter:site" content="@lvis" /> 
+	<meta property="twitter:creator" content="@lvis" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width; initial-scale=1">
+	<link rel="stylesheet" href="css/animsition.min.css">
+	<link rel="stylesheet" href="css/venobox.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="js\cookies\cookies.css">
+	<!-- Pixel Code for https://overtracking.com/ -->
+	<!-- <script defer src="https://overtracking.com/p/u1lKOy3bjAeQ8eNW"></script> -->
+	<!-- END Pixel Code -->
+	<script>
+		let recordedVideos = 10327;
+		let recordedVideosCount = 0;
+
+		let recordedHours = 317
+		let recordedHoursCount = 0;
+
+		let recordedVideosInterval = setInterval(function () {
+			recordedVideosCount += Math.round(recordedVideos / 100);
+			if (recordedVideosCount >= recordedVideos) {
+				recordedVideosCount = recordedVideos;
+				clearInterval(recordedVideosInterval);
+			}
+			document.getElementById("recordedCount").textContent = recordedVideosCount;
+		}, 50);
+		let recordedHoursInterval = setInterval(function () {
+			recordedHoursCount += Math.round(recordedHours / 100);
+			if (recordedHoursCount >= recordedHours) {
+				recordedHoursCount = recordedHours;
+				clearInterval(recordedHoursInterval)
+			}
+			document.getElementById("recordedHoursCount").textContent = '0'+recordedHoursCount;
+		}, 50)
+	</script>
+</head>
+
+<body class="bg-init">
+
+	<!-- ***** OVERLAY ***** -->
+	<div class="animsition-overlay">
+
+		<!-- ***** HEADER ***** -->
+		<header class="header">
+			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left"><img
+					src="images/logo_azul_claro_fondo.svg" alt="LViS logo"></a>
+			<input class="side-menu" type="checkbox" id="side-menu" />
+			<label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+			<nav class="nav" style="margin-left: 80px;">
+				<ul class="menu">
+					<li><a href="servicios.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Servicios</a></li>
+					<li><a href="formacion.html" class="active animsition-link" data-animsition-out-class="overlay-slide-out-left">Formación</a></li>
+					<li><a href="planes.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Tarifas</a></li>
+				</ul>
+			</nav>
+			<div class="nav-buttons">
+				<a class="demo-button" target="_blank" href="https://calendly.com/lvis-demo/30min"><strong style="color: white;"> Hablemos</strong></a>
+				<!-- <a class="login-button" target="_blank" href="https://lvis.studio/auth/signin">LViS Studio</a> -->
+				<!-- <a class="language-button" href="https://lvis.video/"><div style="position: relative; display: inline-flex;"><img src="images/globe_white.svg" alt="globo blanco" style="width: 15px; margin-right: 3px;"/><span style="margin-top: 5px;">English</span></div></a> -->
+			</div>
+		</header>
+		<!-- ***** END HEADER ***** -->
+
+		<!-- ***** HERO ***** -->
+		<div id="hero" class="wrapper clearfix" style="padding-bottom: 150px">
+			<section class="grid-1">
+				<div class="col post">
+					<section class="cd-intro">
+						<h1 class="cd-headline loading-bar">
+							<span style="margin-bottom: 20px; color: #203460">Taller Creación de Videos Accesibles</span>
+						</h1>
+					</section>
+				</div>
+
+				<div style="margin-top: 10px">
+					<p style="text-align: center">En este curso, aprenderás a integrar las mejores prácticas de accesibilidad en videos,<br>
+                         asegurando que tus contenidos sean inclusivos para personas <br>
+                         con discapacidades auditivas, visuales, motoras y cognitivas. <br>
+                         <br>   
+                          Desde subtítulos y descripciones de audio hasta la incorporación de lengua de señas,<br>
+                           descubrirás herramientas y estrategias clave para cumplir con estándares como las WCAG<br>
+                            y promover la igualdad de acceso en tus proyectos audiovisuales.</p>
+				</div>
+                <hr style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
+                <div style="margin-top: 10px">
+                    <p style="text-align: center; margin-top: 0px;">
+                        <span style="font-size: 40px;"><strong style="color: #203460">Duración</strong></span><br>
+                        <br>    
+                        <span style="font-size: 25px; color: #203460"><strong >8 horas</strong></span><br>
+                        (Dividido en 2 sesiones de 4 horas cada una, con opciones para clases intensivas de 1 día).</p>
+				</div>
+                <div style="margin-top: 10px">
+                    <p style="text-align: center; margin-top: 0px;">
+                        <span style="font-size: 40px; color: #203460"><strong style="color: #203460">Audiencia</strong></span><br>  
+                        <ul>
+                            <li style="font-size: 20px;">• Profesionales de la producción de vídeo, editores de contenido y creadores de medios.</li>
+                            <li style="font-size: 20px;">• Personas interesadas en mejorar la accesibilidad e inclusión de sus vídeos y plataformas digitales <br>(YouTubers, vídeobloggers, educadores en línea, etc.)</li>
+                            <li style="font-size: 20px;">• Equipos de marketing y comunicación en empresas que deseen ofrecer contenido accesible.</li>
+                            <li style="font-size: 20px;">• Personas con interés en la inclusión digital, accesibilidad web y diseño universal para el aprendizaje.</li>
+                        </ul>
+				</div>
+                <div style="margin-top: 10px">
+                    <p style="text-align: center; margin-top: 0px;">
+                        <span style="font-size: 40px;"><strong style="color: #203460">Requisitos previos</strong></span><br>
+                        <br>    
+                        Conocimientos básicos en edición de vídeo y/o creación de contenido audiovisual. <br>No se requieren conocimientos previos en accesibilidad, pero sí se recomienda tener familiaridad con temas de edición de vídeo..</p>
+				</div>
+
+				<!--</div>-->
+			</section>
+
+		</div>
+		<!-- ***** END HERO ***** -->
+
+		<!-- ***** USE ***** -->
+		<div id="faq" class="wrapper clearfix plans">
+			<section class="grid-1">
+                <div class="col">
+					<h2 class="post">Contenidos</h2>
+					<div class="accordion">
+						<div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb1">
+							<label for="cb1" class="tab__label"><strong>1. Introducción a la accesibilidad digital (30 minutos)</strong></label>
+							<div class="tab__content"><p>
+                                1. Definición y principios de accesibilidad.<br>
+                                2. Importancia de la accesibilidad en los medios digitales.<br>
+                                3. Normativas y estándares de accesibilidad (WCAG, ADA, SEVTC).<br>
+                                4. Acta Europea de Accesibilidad<br>
+                                5. Tipos de discapacidades y sus necesidades específicas en medios.
+                            </p></div>
+						</div>
+						<div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb2">
+							<label for="cb2" class="tab__label"><strong>2. Fundamentos de la creación de vídeos accesibles (30 minutos)</strong></label>
+							<div class="tab__content">
+								<p>
+								    1. Qué es un vídeo accesible.<br>
+                                    2. Elementos clave: texto alternativo, subtítulos, audio descripción, transcripciones.<br>
+                                    3. Tipos de discapacidades que requieren vídeos accesibles.
+								</p>
+							</div>
+						</div>
+						<div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb3">
+							<label for="cb3" class="tab__label"><strong>3. Subtítulos y transcripciones (60 minutos)</strong></label>
+							<div class="tab__content">
+								<p>
+                                    1. ¿Qué son los subtítulos? Diferencia entre subtítulos y transcripciones.<br> 
+                                    2. Técnicas para crear subtítulos efectivos.<br> 
+                                    3. Cómo crear transcripciones de vídeos.<br> 
+                                    4. Herramientas para generar y sincronizar subtítulos.
+								</p>
+							</div>
+						</div>
+						<div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb4">
+							<label for="cb4" class="tab__label"><strong>4. Audio descripción (60 minutos)</strong></label>
+							<div class="tab__content">
+								<p>
+									1. ¿Qué es la audio descripción y por qué es importante?<br>
+                                    2. Cómo crear una audio descripción clara y precisa.<br>
+                                    3. Uso de Audio descripción extendidas<br> 
+                                    4. Técnicas de grabación y edición de audio descripción.<br>
+                                    5. Herramientas para integrar audio descripción en vídeos.
+								</p>
+							</div>
+						</div>
+                        <div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb5">
+							<label for="cb5" class="tab__label"><strong>5. Lengua de Signos (30 minutos)</strong></label>
+							<div class="tab__content">
+								<p>
+                                    1. Fundamentos de la Lengua de Señas.<br>
+                                    2. Intérpretes de lengua de señas.<br>
+                                    3. Integración de la Lengua de Señas en Contenidos Audiovisuales.
+								</p>
+							</div>
+						</div>
+                        <div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb6">
+							<label for="cb6" class="tab__label"><strong>6. Creación de contenido visual accesible (60 minutos)</strong></label>
+							<div class="tab__content">
+								<p>
+                                    1. Diseño inclusivo: tipografía, contraste y colores accesibles.<br>
+                                    2. Uso adecuado de imágenes y gráficos (textos alternativos, imágenes descriptivas).<br>
+                                    3. Animaciones y transiciones accesibles.
+								</p>
+							</div>
+						</div>
+                        <div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb7">
+							<label for="cb7" class="tab__label"><strong>7. Accesibilidad en plataformas de vídeo (60 minutos)</strong></label>
+							<div class="tab__content">
+								<p>
+                                    1. Cómo garantizar que los vídeos sean accesibles en plataformas populares (YouTube, Vimeo, etc.).<br>
+                                    2. Herramientas de accesibilidad en plataformas de streaming.<br>
+                                    3. Consideraciones para la compatibilidad con lectores de pantalla y otros dispositivos de asistencia.
+								</p>
+							</div>
+						</div>
+                        <div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb8">
+							<label for="cb8" class="tab__label"><strong>8. Evaluación de la accesibilidad de vídeos (30 minutos)</strong></label>
+							<div class="tab__content">
+								<p>
+                                    1. Cómo probar la accesibilidad de un vídeo.<br>
+                                    2. Herramientas para evaluar la accesibilidad.<br>
+                                    3. Cómo realizar ajustes en vídeos según los resultados de la evaluación.<br>
+                                    4. Medios.
+								</p>
+							</div>
+						</div>
+                        <div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb9">
+							<label for="cb9" class="tab__label"><strong>9.Tendencias y futuro de la accesibilidad en vídeo (30 minutos)</strong></label>
+							<div class="tab__content">
+								<p>
+                                    1. Nuevas tecnologías para mejorar la accesibilidad (IA, tecnologías emergentes).<br>
+                                    2. El papel de la inteligencia artificial en la automatización de la creación de vídeos accesibles.<br>
+                                    3. Retos y oportunidades futuras en la accesibilidad digital.
+								</p>
+							</div>
+						</div>
+                        <div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb10">
+							<label for="cb10" class="tab__label"><strong>10. Proyecto final (90 minutos)</strong></label>
+							<div class="tab__content">
+								<p>
+                                    1. Creación de un video accesible (subtítulos, transcripciones, audio descripción).<br>
+                                    2. Revisión y retroalimentación del proyecto.<br>
+                                    3. Presentación del video accesible creado por los estudiantes
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>			
+		</div> 
+		<!-- ***** END USE ***** -->
+
+		<!-- ***** HOME ADVANTAGE ***** -->
+		<!-- <div id="home-advantage" class="wrapper clearfix" style="padding-bottom: 150px;">
+			<section class="grid-1">
+				<div class="center">
+					<img src="images/arrow_circles.svg" alt="flecha y círculos">
+					<h2 style="color: white;">Haz más vídeos para tu empresa</h2>
+				</div>				
+				<br>
+				<div class="center">
+					<img src="images/clock.svg" class="grey-icon" alt="reloj">
+					<h3 style="color: lightgray; position: relative;">El tiempo invertido por vídeo es entre 5 y 15 veces menor</h3>
+				</div>
+				<br>
+				<div class="center">
+					<img src="images/piggy.svg" alt="cerdito">
+					<h3 style="color: lightgray; position: relative;">Ahorro de costes entre el 50% y el 80% al año</h3>
+				</div>
+				<br>
+			</section>
+		</div> -->
+		<!-- ***** END HOME ADVANTAGE ***** -->
+
+		<!-- ***** CUSTOMERS ***** -->
+		<!-- <div id="customers" style="padding-bottom: 150px;">
+			<div class="center">
+				<h3>Algunos de nuestros clientes</h3>
+			</div>
+			<div class="center">
+				<img src="images/customer_logos/granada_logo.png" alt="logo universidad de granada">
+				<img src="images/customer_logos/telefonica.png" alt="telefonica logo">
+				<img src="images/customer_logos/ojerpharma_logo.png" alt="ojerpharma logo">
+				<img src="images/customer_logos/abbvie_logo.png" alt="abbvie logo" class="max">
+				<img src="images/customer_logos/techdow_logo.png" alt="techdown logo">
+				<img src="images/customer_logos/scanmar_logo.png" alt="scanmar logo">
+			</div>
+			<div class="center">
+				<img src="images/customer_logos/stenfit_logo.svg" alt="stenfit_logo">
+				<img src="images/customer_logos/cle_logo.png" alt="cle logo">
+				<img src="images/customer_logos/lug_logo.png" alt="lug logo" class="max">
+				<img src="images/customer_logos/idential_logo.png" alt="idential logo">
+				<img src="images/customer_logos/asemaz_logo.png" alt="asemaz logo">
+				<img src="images/customer_logos/frutos_logo.png" alt="frutos logo">
+				<img src="images/customer_logos/logoAMAIF.webp" alt="amaif logo" class="max">
+			</div>								
+		</div> -->
+		<!-- ***** END CUSTOMERS ***** -->
+
+		<!-- ***** DEMO SECTION ***** -->
+		<div id="demo-section" class="wrapper clearfix">
+			<section class="grid-1">
+				<div class="col">
+					<h2 style="color: lightgray">¡Haz que tu contenido sea realmente para todos!</h2>
+					<h3 class="post">Transforma tu Producción Audiovisual en una Experiencia Accesible</h3>
+					<a class="button-cta" target="_blank" href="https://calendly.com/lvis-demo/30min">Contáctanos</a>
+				</div>
+			</section>
+		</div>
+		<!-- ***** END DEMO SECTION ***** -->
+
+		<!-- ***** FOOTER ***** -->
+		<footer class="wrapper clearfix">
+			<section class="grid-1">
+				<div class="col">
+					<!-- <div class="social-menu">
+						<ul>
+							<li><a href="https://www.youtube.com/@lvisvideo" target="blank"><img
+										src="images/social-youtube.svg" alt="youtube logo"></a></li>
+							<li><a href="https://www.linkedin.com/company/lvis-video" target="blank"><img
+										src="images/social-linkedin.svg" alt="Linkedin logo"></a></li>
+							<li><a href="https://twitter.com/lvis_video" target="blank"><img src="images/social-twitter.svg" alt="twitter logo"></a></li>
+						</ul>
+					</div> -->
+					<div style="text-align: center;">
+						<p>© 2024 LViS Video Automatización S.L.  LViS es una marca registrada. Todos los derechos reservados</p>
+					</div>
+					<!-- <div style="text-align: center; margin-bottom: 20px;">
+						<p style="display: inline;">
+							<a href="https://lvis.es/lvis-vs-camtasia.html" target="blank">LViS vs Camtasia</a>
+							<a href="https://lvis.es/noticias.html" target="blank" style="margin-left: 30px;">Noticias</a>
+							<a href="lvis-starter.html" target="blank" style="margin-left: 30px;">LViS Starter</a>
+							<a href="https://overtracking.com/dashboard/open/lvis.es" style="margin-left: 30px;" target="blank">Estadísticas web</a>
+							<a href="accesibilidad.html" style="margin-left: 30px;" target="blank">Accesibilidad</a>
+						</p>
+					</div> -->
+					<hr style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
+					<div style="text-align: center; margin-top: 20px; ">
+						<p style="display: inline;">
+							<a href="aviso-legal.html" target="blank" style="color: gray;">Aviso legal</a>
+							<a href="politica-de-cookies.html" target="blank" style="margin-left: 30px; color: gray;" >Política de cookies</a>
+							<a href="politica-privacidad.html" style="margin-left: 30px; color: gray;" target="blank" >Política de privacidad</a>
+							<a href="terminos-servicio.html" style="margin-left: 30px; color: gray;" target="blank" >Términos de servicio</a>
+							<a href="politica-marcas-servicios.html" target="blank" style="margin-left: 30px; color: gray;" >Política de marcas y productos</a>
+							<a href="accesibilidad.html" style="margin-left: 30px; color: gray;" target="blank">Accesibilidad</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</footer>
+		<!-- ***** END FOOTER ***** -->
+
+	</div>
+	<!-- ***** END OVERLAY ***** -->
+    <!-- <script type="text/javascript" src="https://acumbamail.com/newform/dynamic/js/H4VQmL2JDLUi6P0emHZzjNXonuSRHIpi3FXnpJ5Rw6Yf0vilAaKytCjxlxl/40723/"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+	<script src="js/vendor/easings.js"></script>
+	<script src="js/vendor/venobox.min.js"></script>
+	<script src="js/vendor/font-animation.js"></script>
+	<script src="js/main.js"></script>
+	<!--<script src="js\cookies\scriptsCookies.js"></script>
+	<script src="js\cookies\cookiesAnalytics.js"></script>
+	<script src="js\cookies\cookies.js"></script>-->
+	<script>
+		const dropdowns = document.querySelectorAll('.dropdown');
+		dropdowns.forEach(dropdown => {
+			dropdown.addEventListener('click', (e) => {
+				dropdown.classList.toggle('dropdown__options--visible')
+			})
+			dropdown.querySelectorAll('.dropdown__options .dropdown__option').forEach(opt => {
+				opt.addEventListener('click', (e) => {
+					dropdown.querySelector('.dropdown__selected').innerHTML = opt.innerHTML;
+				})
+			})
+		})
+	</script>
+	
+</body>
+
+</html>
