@@ -449,7 +449,7 @@ h6{
 	}
 .logo{
     display: inline-block;
-	width: 42px;
+	width: 500px;
 	height: auto;
     margin: 6px;
 	}
@@ -2332,7 +2332,7 @@ h6{
 		border-radius: 16px;
 		}
 .logo{
-	width: 48px;
+	width: 130px;
 	}	
 .nav{
 	top: 66px;
@@ -2954,7 +2954,7 @@ h6{
 		border-radius: 20px;
 		}
 .logo{
-	width: 60px;	
+	width: 130px;	
     margin: 9px;
 	}	
 .nav{
