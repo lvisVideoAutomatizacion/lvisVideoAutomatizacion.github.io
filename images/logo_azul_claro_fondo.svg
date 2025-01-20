@@ -2,12 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="76.199997mm"
+   width="171mm"
    height="76.20002mm"
-   viewBox="0 0 76.199997 76.20002"
+   viewBox="0 0 171 76.20002"
    version="1.1"
    id="svg1"
    xml:space="preserve"
+   sodipodi:docname="logo_azul_claro_fondo.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -21,7 +23,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"><inkscape:page
+     inkscape:document-units="mm"
+     inkscape:zoom="0.69444437"
+     inkscape:cx="362.88004"
+     inkscape:cy="-61.920007"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1"><inkscape:page
        x="0"
        y="-4.0713759e-13"
        width="76.199997"
@@ -96,4 +107,15 @@
        d="m 0,0 -10.5,84 h -15 l 18,-144 h 15 l 18,144 h -15 z"
        style="fill:#12b4d4;fill-opacity:1;fill-rule:nonzero;stroke:none"
        transform="matrix(1.3333333,0,0,-1.3333333,-620.85114,429.19475)"
-       clip-path="url(#clipPath64)" /></g></svg>
+       clip-path="url(#clipPath64)" /><text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:135.978px;line-height:0.9;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#12b4d4;fill-opacity:1;stroke-width:38.5452"
+       x="-474.00089"
+       y="443.78391"
+       id="text1"
+       transform="scale(0.90740124,1.1020483)"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="-474.00089"
+         y="443.78391"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Ultra-Bold';fill:#12b4d4;fill-opacity:1;stroke-width:38.5452">Vally</tspan></text></g></svg>
