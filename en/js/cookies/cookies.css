@@ -1,0 +1,145 @@
+body.emCookieToolVisible{overflow:hidden}
+#emCookieWrapper{background:#000;background:rgba(0,0,0,.81);width:100%;height:100vh;position:fixed;top:0;left:0;z-index:99999;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#333;
+	overflow:auto;
+	line-height:1.7em
+}
+#emCookieWrapper strong{font-weight:bold}
+/* Banner */
+#emCookieBanner{
+	background:#fff;color:#333;position:fixed;bottom:0;right:0;
+	z-index:100000;
+	width:100%;
+	text-align:center
+}
+#emCookieBanner a{color:#0d77d1;text-decoration:underline}
+#emCookieBanner a:hover,#emCookieBanner a:focus{text-decoration:none}
+#emCookieBanner h2{font-size:17px;font-weight:bold;margin:20px 0 10px 0;color:#333}
+#emCookieBanner p{margin:0 0 15px 0}
+/* Dialog */
+#emCookieTool{background:#fff;margin:0 auto;max-width:965px;padding:20px 40px 40px 40px;height:auto}
+#emCookieTool h2{margin:0 0 1.5rem 0}
+#emCookieTool p{margin:0 0 1rem 0}
+#emCookieBtnConfigureClose{display:inline-block;width:22px;height:22px;background:url(../img/close.png) no-repeat 50% 50%}
+#emCookieWrapper iframe,
+#emCookieResetWrapper iframe{display:none!important}
+#emCookieTool br{font-size:.5rem}
+#emCookieTool h3{font-size:1em}
+#emCookieTool ol,#emCookieTool li{margin:0;padding:0;list-style:none}
+#emCookieTool ol{margin-bottom:2rem}
+#emCookieTool li{margin:1.5rem 0;overflow:auto}
+#emCookieTool .emCookieDesc{float:left;width:60%}
+#emCookieTool .emCookieDesc .emCookieType{display:block;font-size:15.5px;margin-bottom:5px}
+#emCookieTool .emCookieDesc .emCookieType span{font-size:13px;color:#666;margin-left:.3rem;font-weight:normal;font-style:italic}
+#emCookieTool .emCookieInfoToggler{color:#777;font-size:13px}
+#emCookieTool .emCookieInfoToggler:after{content:"+";padding-left:.5rem}
+#emCookieTool .emCookieInfoHide{color:#333}
+#emCookieTool .emCookieInfo{color:#777;font-size:13px;display:none}
+#emCookieTool #emCookieInfo1{display:inline!important}
+#emCookieTool .emCookieBtns{float:right;width:30%;padding-top:1.5rem;font-size:12px}
+#emCookieTool .emCookieBtn{padding:.8em 1em}
+#emCookieResetWrapper{text-align:center}
+#emCookieSaveBtns.emCookieLoading,
+#emCookieResetWrapper.emCookieLoading{background:url(../img/loading.gif) no-repeat 50% 50%}
+#emCookieSaveBtns.emCookieLoading *,
+#emCookieResetWrapper.emCookieLoading *{visibility:hidden}
+@media screen and (max-width:690px){
+	#emCookieTool .emCookieDesc{float:none;width:auto;display:block;margin-bottom:.5rem}
+	#emCookieTool .emCookieBtns{float:none;width:auto}
+}
+/* Classes */
+#emCookieWrapper .emCookieSrAv,
+body.emCookieFramed #emCookieBanner h2{
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+#emCookieWrapper .emCookieRight{text-align:right}
+#emCookieWrapper .emCookieBtn,#emCookieResetBtn{
+    /* Structure */
+    display: inline-block;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+/* Firefox: Get rid of the inner focus border */
+#emCookieWrapper .emCookieBtn::-moz-focus-inner,#emCookieResetBtn::-moz-focus-inner{
+    padding: 0;
+    border: 0;
+}
+#emCookieWrapper .emCookieBtn,#emCookieResetBtn{
+    font-size:105%;
+    letter-spacing:.5px;
+    padding: 1em 1.2em;
+    color: rgba(255, 255, 255, 0.80);
+    border: none rgba(0, 0, 0, 0);
+    background-color: #E6E6E6;
+    text-decoration: none;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    margin:5px 15px 15px 0
+}
+#emCookieWrapper .emCookieBtn:hover,
+#emCookieWrapper .emCookieBtn:focus,
+#emCookieResetBtn:hover,
+#emCookieResetBtn:focus{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+#emCookieWrapper .emCookieBtn:active,
+#emCookieResetBtn:active{
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+            box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: #000;
+}
+#emCookieWrapper .emCookieBtn{
+    background: #F23054;
+    /* this is a green */
+}
+#emCookieWrapper .emCookieBtn-success,
+#emCookieWrapper .emCookieBtn-error{
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#emCookieWrapper .emCookieBtn-success{background: rgb(28, 184, 65)}
+#emCookieWrapper .emCookieBtn-error{background: rgb(202, 60, 60)}
+#emCookieWrapper .emCookieBtn-secondary,#emCookieResetBtn{
+    background: #ccc;
+    color:#333;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+#emCookieWrapper .emCookieBtn-disabled,
+#emCookieWrapper .emCookieBtn-disabled:active,
+#emCookieWrapper .emCookieBtn-disabled:focus,
+#emCookieWrapper .emCookieBtn-disabled:hover{
+	border:none;
+	background-image:none;
+	opacity:.4;
+	cursor:not-allowed;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+#emCookieWrapper .emCookieContent{max-width:900px;margin:15px auto;text-align:left;padding:0 15px}
+/* In iframe */
+/* body.emCookieFramed #emCookieBannerButtons{display:none} */
+body.emCookieFramed #emCookieWrapper{font-size:12px;line-height:1.5em}
+body.emCookieFramed #emCookieWrapper .emCookieContent{margin:10px auto;padding:0 10px}
+body.emCookieFramed #emCookieWrapper p{margin-bottom:10px}
+body.emCookieFramed #emCookieBannerButtons{text-align:right}
+body.emCookieFramed #emCookieBtnConfigure{display:none}
+body.emCookieFramed #emCookieWrapper .emCookieBtn{font-size:12px;padding:.5rem;margin:0 0 0 10px}
+body.emCookieFramed #emCookieBanner{border:1px solid rgba(0,0,0,.85)}
+body.emCookieFramed #emCookieBtnConfigureApart{color:#333}
