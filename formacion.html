@@ -48,30 +48,6 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="js\cookies\cookies.css">
 	<script src="https://kit.fontawesome.com/3d245d70bc.js" crossorigin="anonymous"></script>
-	<script>
-		let recordedVideos = 10327;
-		let recordedVideosCount = 0;
-
-		let recordedHours = 317
-		let recordedHoursCount = 0;
-
-		let recordedVideosInterval = setInterval(function () {
-			recordedVideosCount += Math.round(recordedVideos / 100);
-			if (recordedVideosCount >= recordedVideos) {
-				recordedVideosCount = recordedVideos;
-				clearInterval(recordedVideosInterval);
-			}
-			document.getElementById("recordedCount").textContent = recordedVideosCount;
-		}, 50);
-		let recordedHoursInterval = setInterval(function () {
-			recordedHoursCount += Math.round(recordedHours / 100);
-			if (recordedHoursCount >= recordedHours) {
-				recordedHoursCount = recordedHours;
-				clearInterval(recordedHoursInterval)
-			}
-			document.getElementById("recordedHoursCount").textContent = '0'+recordedHoursCount;
-		}, 50)
-	</script>
 </head>
 
 <body class="bg-init">
@@ -307,7 +283,7 @@
 			<section class="grid-1">
 				<div class="col">
 					<div style="text-align: center;">
-						<p>© 2024 LViS Video Automatización S.L.  LViS es una marca registrada. Todos los derechos reservados</p>
+						<p>© 2025 LViS Video Automatización S.L.  LViS es una marca registrada. Todos los derechos reservados</p>
 					</div>
 					<hr style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
 					<div style="text-align: center; margin-top: 20px; ">
