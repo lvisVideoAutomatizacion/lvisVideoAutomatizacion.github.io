@@ -57,24 +57,40 @@
 	<div class="animsition-overlay">
 		
 		<!-- ***** HEADER ***** -->
-		<header class="header">
-			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left"><img
-				src="images/LVISVally_Logotipo.svg" alt="LViS logo"></a>
-		<input class="side-menu" type="checkbox" id="side-menu" />
-			<input class="side-menu" type="checkbox" id="side-menu"/>
-			<label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-			<nav class="nav" style="margin-left: 80px;">
-				<ul class="menu">
-					<li><a href="servicios.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Servicios</a></li>
-					<li><a href="formacion.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Formación</a></li>
-					<li><a href="planes.html" class="active animsition-link" data-animsition-out-class="overlay-slide-out-left">Tarifas</a></li>
-				</ul>
+		<header class="header" role="banner">
+			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left">
+			  <img src="images/LVISVally_Logotipo.svg" alt="Logotipo de LViS Vally">
+			</a>
+		  
+			<input class="side-menu" type="checkbox" id="side-menu" aria-label="Abrir o cerrar el menú de navegación" />
+			<label class="hamb" for="side-menu" aria-controls="primary-navigation" aria-expanded="false" role="button">
+			  <span class="hamb-line"></span>
+			</label>
+		  
+			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Navegación principal" style="margin-left: 80px;">
+			  <ul class="menu">
+				<li>
+				  <a href="servicios.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Servicios</a>
+				</li>
+				<li>
+				  <a href="formacion.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Formación</a>
+				</li>
+				<li>
+				  <a href="planes.html" class="active animsition-link" data-animsition-out-class="overlay-slide-out-left">Tarifas</a>
+				</li>
+			  </ul>
 			</nav>
+		  
 			<div class="nav-buttons">
-				<a class="demo-button" target="_blank" href="https://calendly.com/lvis-demo/30min">
-					<strong style="color: white;"> Hablemos</strong>
-				</a>
-				<a class="language-button" href="en/prices.html"><div style="position: relative; display: inline-flex;"><img src="images/globe_white.svg" alt="globo blanco" style="width: 15px; margin-right: 3px;"/><span style="margin-top: 5px;">English</span></div></a>			
+			  <a class="demo-button" target="_blank" rel="noopener" href="https://calendly.com/lvis-demo/30min" aria-label="Reservar una reunión de 30 minutos">
+				<strong style="color: white;">Hablemos</strong>
+			  </a>
+			  <a class="language-button" href="en/index.html" aria-label="Cambiar el idioma a inglés">
+				<div style="position: relative; display: inline-flex; align-items: center;">
+				  <img src="images/globe_white.svg" alt="Icono de un globo terráqueo" style="width: 15px; margin-right: 3px;" />
+				  <span style="margin-top: 5px;">English</span>
+				</div>
+			  </a>
 			</div>
 		</header>
 		<!-- ***** END HEADER ***** --> 
@@ -190,16 +206,14 @@
 		</div>		
 		<!-- ***** END PRICING ***** --> 				
 		<!-- ***** FOOTER ***** -->
-		<footer class="wrapper clearfix">
+		<footer class="wrapper clearfix" role="contentinfo">
 			<section class="grid-1">
-                <div class="col">
-					<div class="dropdown">
-					</div>
+				<div class="col">
 					<div style="text-align: center;">
-						<p>© 2024 LViS Video Automatización S.L.  LViS es una marca registrada. Todos los derechos reservados</p>
+						<p>© 2025 LViS Video Automatización S.L. LViS es una marca registrada. Todos los derechos reservados.</p>
 					</div>
-					<hr style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
-					<div style="text-align: center; margin-top: 20px; ">
+					<hr aria-hidden="true" style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
+					<div aria-label="Enlaces legales" style="text-align: center; margin-top: 20px;">
 						<p style="display: inline;">
 							<a href="aviso-legal.html" target="blank" style="color: gray;">Aviso legal</a>
 							<a href="politica-de-cookies.html" target="blank" style="margin-left: 30px; color: gray;" >Política de cookies</a>
@@ -210,7 +224,7 @@
 						</p>
 					</div>
 				</div>
-			</section>				
+			</section>
 		</footer>
 		<!-- ***** END FOOTER ***** -->
 
