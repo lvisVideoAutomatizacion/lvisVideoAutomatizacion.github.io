@@ -95,7 +95,7 @@
 		<!-- ***** END HEADER ***** -->
 
 		<!-- ***** HERO ***** -->
-		<div id="hero" class="wrapper clearfix" style="padding-bottom: 150px">
+		<div id="hero" class="wrapper clearfix" style="padding-bottom: 150px" role="region" aria-label="Información del curso">
 			<section class="grid-1" aria-labelledby="titulo-curso">
 				<div class="col post">
 					<section class="cd-intro" aria-labelledby="titulo-curso">
@@ -109,7 +109,7 @@
 				</div>
 		
 				<div style="margin-top: 10px">
-					<p style="text-align: center">
+					<p style="text-align: center" aria-label="Descripción del curso">
 						<span style="color: #203460; font-weight: bold;">En este curso, aprenderás a integrar las mejores prácticas de accesibilidad en vídeos,<br>
 						asegurando que tus contenidos sean inclusivos para personas <br>
 						con discapacidades auditivas, visuales, motoras y cognitivas.</span> <br><br>   
@@ -119,10 +119,10 @@
 					</p>
 				</div>
 		
-				<hr style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
+				<hr style="border: none; border-top: 1px solid lightgray; margin: 20px 0;" aria-hidden="true">
 		
 				<div style="margin-top: 10px">
-					<p style="text-align: center; margin-top: 0px;">
+					<p style="text-align: center; margin-top: 0px;" aria-label="Duración del curso">
 						<span style="color: #203460; font-size: 35px; margin-right: 10px;">
 							<i class="fa-solid fa-clock" aria-hidden="true"></i>
 						</span>
@@ -139,11 +139,11 @@
 				</div>
 		
 				<div style="margin-top: 10px">
-					<div style="text-align: center; margin-top: 0px;">
+					<div style="text-align: center; margin-top: 0px;" role="region" aria-labelledby="audiencia-curso">
 						<span style="color: #203460; font-size: 35px; margin-right: 10px;">
 							<i class="fa-solid fa-people-group" aria-hidden="true"></i>
 						</span>
-						<span style="font-size: 40px; color: #203460">
+						<span id="audiencia-curso" style="font-size: 40px; color: #203460">
 							<strong style="color: #203460">Audiencia</strong>
 						</span><br>  
 						<ul style="display: inline-block; text-align: left; margin: 0 auto;">
@@ -164,7 +164,7 @@
 				</div>
 		
 				<div style="margin-top: 10px">
-					<p style="text-align: center; margin-top: 0px;">
+					<p style="text-align: center; margin-top: 0px;" aria-label="Requisitos previos">
 						<span style="color: #203460; font-size: 35px; margin-right: 10px;">
 							<i class="fa-solid fa-book" aria-hidden="true"></i>
 						</span>
@@ -175,145 +175,146 @@
 					</p>
 				</div>
 			</section>
-		</div>		
+		</div>
+				
 		<!-- ***** END HERO ***** -->
 
-		<!-- ***** USE ***** -->
-		<div id="faq" class="wrapper clearfix plans">
+		<!-- ***** CONTENIDOS ***** -->
+		<div id="faq" class="wrapper clearfix plans" role="region" aria-labelledby="faq-heading">
 			<section class="grid-1">
-                <div class="col">
-					<h2 class="post">Contenidos</h2>
-					<div class="accordion">
+				<div class="col">
+					<h2 class="post" id="faq-heading">Contenidos</h2>
+					<div class="accordion" role="tablist">
 						<div class="tab">
-							<input type="checkbox" name="accordion-1" id="cb1">
-							<label for="cb1" class="tab__label"><strong>1. Introducción a la accesibilidad digital (30 minutos)</strong></label>
-							<div class="tab__content"><p>
-                                1. Definición y principios de accesibilidad.<br>
-                                2. Importancia de la accesibilidad en los medios digitales.<br>
-                                3. Normativas y estándares de accesibilidad (WCAG, ADA, SEVTC).<br>
-                                4. Acta Europea de Accesibilidad<br>
-                                5. Tipos de discapacidades y sus necesidades específicas en medios.
-                            </p></div>
+							<input type="checkbox" name="accordion-1" id="cb1" aria-controls="panel1" aria-expanded="false">
+							<label for="cb1" class="tab__label" role="tab" aria-controls="panel1" id="tab1"><strong>1. Introducción a la accesibilidad digital (30 minutos)</strong></label>
+							<div class="tab__content" role="tabpanel" id="panel1" aria-labelledby="tab1" ><p>
+								1. Definición y principios de accesibilidad.<br>
+								2. Importancia de la accesibilidad en los medios digitales.<br>
+								3. Normativas y estándares de accesibilidad (WCAG, ADA, SEVTC).<br>
+								4. Acta Europea de Accesibilidad<br>
+								5. Tipos de discapacidades y sus necesidades específicas en medios.
+							</p></div>
 						</div>
 						<div class="tab">
-							<input type="checkbox" name="accordion-1" id="cb2">
-							<label for="cb2" class="tab__label"><strong>2. Fundamentos de la creación de vídeos accesibles (30 minutos)</strong></label>
-							<div class="tab__content">
+							<input type="checkbox" name="accordion-1" id="cb2" aria-controls="panel2" aria-expanded="false">
+							<label for="cb2" class="tab__label" role="tab" aria-controls="panel2" id="tab2"><strong>2. Fundamentos de la creación de vídeos accesibles (30 minutos)</strong></label>
+							<div class="tab__content" role="tabpanel" id="panel2" aria-labelledby="tab2" >
 								<p>
-								    1. Qué es un vídeo accesible.<br>
-                                    2. Elementos clave: texto alternativo, subtítulos, audio descripción, transcripciones.<br>
-                                    3. Tipos de discapacidades que requieren vídeos accesibles.
+									1. Qué es un vídeo accesible.<br>
+									2. Elementos clave: texto alternativo, subtítulos, audio descripción, transcripciones.<br>
+									3. Tipos de discapacidades que requieren vídeos accesibles.
 								</p>
 							</div>
 						</div>
 						<div class="tab">
-							<input type="checkbox" name="accordion-1" id="cb3">
-							<label for="cb3" class="tab__label"><strong>3. Subtítulos y transcripciones (60 minutos)</strong></label>
-							<div class="tab__content">
+							<input type="checkbox" name="accordion-1" id="cb3" aria-controls="panel3" aria-expanded="false">
+							<label for="cb3" class="tab__label" role="tab" aria-controls="panel3" id="tab3"><strong>3. Subtítulos y transcripciones (60 minutos)</strong></label>
+							<div class="tab__content" role="tabpanel" id="panel3" aria-labelledby="tab3" >
 								<p>
-                                    1. ¿Qué son los subtítulos? Diferencia entre subtítulos y transcripciones.<br> 
-                                    2. Técnicas para crear subtítulos efectivos.<br> 
-                                    3. Cómo crear transcripciones de vídeos.<br> 
-                                    4. Herramientas para generar y sincronizar subtítulos.
+									1. ¿Qué son los subtítulos? Diferencia entre subtítulos y transcripciones.<br> 
+									2. Técnicas para crear subtítulos efectivos.<br> 
+									3. Cómo crear transcripciones de vídeos.<br> 
+									4. Herramientas para generar y sincronizar subtítulos.
 								</p>
 							</div>
 						</div>
 						<div class="tab">
-							<input type="checkbox" name="accordion-1" id="cb4">
-							<label for="cb4" class="tab__label"><strong>4. Audio descripción (60 minutos)</strong></label>
-							<div class="tab__content">
+							<input type="checkbox" name="accordion-1" id="cb4" aria-controls="panel4" aria-expanded="false">
+							<label for="cb4" class="tab__label" role="tab" aria-controls="panel4" id="tab4"><strong>4. Audio descripción (60 minutos)</strong></label>
+							<div class="tab__content" role="tabpanel" id="panel4" aria-labelledby="tab4" >
 								<p>
 									1. ¿Qué es la audio descripción y por qué es importante?<br>
-                                    2. Cómo crear una audio descripción clara y precisa.<br>
-                                    3. Uso de audio descripciones extendidas<br> 
-                                    4. Técnicas de grabación y edición de audio descripción.<br>
-                                    5. Herramientas para integrar audio descripción en vídeos.
+									2. Cómo crear una audio descripción clara y precisa.<br>
+									3. Uso de audio descripciones extendidas<br> 
+									4. Técnicas de grabación y edición de audio descripción.<br>
+									5. Herramientas para integrar audio descripción en vídeos.
 								</p>
 							</div>
 						</div>
-                        <div class="tab">
-							<input type="checkbox" name="accordion-1" id="cb5">
-							<label for="cb5" class="tab__label"><strong>5. Lengua de Signos (30 minutos)</strong></label>
-							<div class="tab__content">
+						<div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb5" aria-controls="panel5" aria-expanded="false">
+							<label for="cb5" class="tab__label" role="tab" aria-controls="panel5" id="tab5"><strong>5. Lengua de Signos (30 minutos)</strong></label>
+							<div class="tab__content" role="tabpanel" id="panel5" aria-labelledby="tab5" >
 								<p>
-                                    1. Fundamentos de la Lengua de Señas.<br>
-                                    2. Intérpretes de lengua de señas.<br>
-                                    3. Integración de la Lengua de Señas en Contenidos Audiovisuales.
+									1. Fundamentos de la Lengua de Señas.<br>
+									2. Intérpretes de lengua de señas.<br>
+									3. Integración de la Lengua de Señas en Contenidos Audiovisuales.
 								</p>
 							</div>
 						</div>
-                        <div class="tab">
-							<input type="checkbox" name="accordion-1" id="cb6">
-							<label for="cb6" class="tab__label"><strong>6. Creación de contenido visual accesible (60 minutos)</strong></label>
-							<div class="tab__content">
+						<div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb6" aria-controls="panel6" aria-expanded="false">
+							<label for="cb6" class="tab__label" role="tab" aria-controls="panel6" id="tab6"><strong>6. Creación de contenido visual accesible (60 minutos)</strong></label>
+							<div class="tab__content" role="tabpanel" id="panel6" aria-labelledby="tab6" >
 								<p>
-                                    1. Diseño inclusivo: tipografía, contraste y colores accesibles.<br>
-                                    2. Uso adecuado de imágenes y gráficos (textos alternativos, imágenes descriptivas).<br>
-                                    3. Animaciones y transiciones accesibles.
+									1. Diseño inclusivo: tipografía, contraste y colores accesibles.<br>
+									2. Uso adecuado de imágenes y gráficos (textos alternativos, imágenes descriptivas).<br>
+									3. Animaciones y transiciones accesibles.
 								</p>
 							</div>
 						</div>
-                        <div class="tab">
-							<input type="checkbox" name="accordion-1" id="cb7">
-							<label for="cb7" class="tab__label"><strong>7. Accesibilidad en plataformas de vídeo (60 minutos)</strong></label>
-							<div class="tab__content">
+						<div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb7" aria-controls="panel7" aria-expanded="false">
+							<label for="cb7" class="tab__label" role="tab" aria-controls="panel7" id="tab7"><strong>7. Accesibilidad en plataformas de vídeo (60 minutos)</strong></label>
+							<div class="tab__content" role="tabpanel" id="panel7" aria-labelledby="tab7" >
 								<p>
-                                    1. Cómo garantizar que los vídeos sean accesibles en plataformas populares (YouTube, Vimeo, etc.).<br>
-                                    2. Herramientas de accesibilidad en plataformas de streaming.<br>
-                                    3. Consideraciones para la compatibilidad con lectores de pantalla y otros dispositivos de asistencia.
+									1. Cómo garantizar que los vídeos sean accesibles en plataformas populares (YouTube, Vimeo, etc.).<br>
+									2. Herramientas de accesibilidad en plataformas de streaming.<br>
+									3. Consideraciones para la compatibilidad con lectores de pantalla y otros dispositivos de asistencia.
 								</p>
 							</div>
 						</div>
-                        <div class="tab">
-							<input type="checkbox" name="accordion-1" id="cb8">
-							<label for="cb8" class="tab__label"><strong>8. Evaluación de la accesibilidad de vídeos (30 minutos)</strong></label>
-							<div class="tab__content">
+						<div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb8" aria-controls="panel8" aria-expanded="false">
+							<label for="cb8" class="tab__label" role="tab" aria-controls="panel8" id="tab8"><strong>8. Evaluación de la accesibilidad de vídeos (30 minutos)</strong></label>
+							<div class="tab__content" role="tabpanel" id="panel8" aria-labelledby="tab8" >
 								<p>
-                                    1. Cómo probar la accesibilidad de un vídeo.<br>
-                                    2. Herramientas para evaluar la accesibilidad.<br>
-                                    3. Cómo realizar ajustes en vídeos según los resultados de la evaluación.<br>
-                                    4. Medios.
+									1. Cómo probar la accesibilidad de un vídeo.<br>
+									2. Herramientas para evaluar la accesibilidad.<br>
+									3. Cómo realizar ajustes en vídeos según los resultados de la evaluación.<br>
+									4. Medios.
 								</p>
 							</div>
 						</div>
-                        <div class="tab">
-							<input type="checkbox" name="accordion-1" id="cb9">
-							<label for="cb9" class="tab__label"><strong>9.Tendencias y futuro de la accesibilidad en vídeo (30 minutos)</strong></label>
-							<div class="tab__content">
+						<div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb9" aria-controls="panel9" aria-expanded="false">
+							<label for="cb9" class="tab__label" role="tab" aria-controls="panel9" id="tab9"><strong>9.Tendencias y futuro de la accesibilidad en vídeo (30 minutos)</strong></label>
+							<div class="tab__content" role="tabpanel" id="panel9" aria-labelledby="tab9" >
 								<p>
-                                    1. Nuevas tecnologías para mejorar la accesibilidad (IA, tecnologías emergentes).<br>
-                                    2. El papel de la inteligencia artificial en la automatización de la creación de vídeos accesibles.<br>
-                                    3. Retos y oportunidades futuras en la accesibilidad digital.
+									1. Nuevas tecnologías para mejorar la accesibilidad (IA, tecnologías emergentes).<br>
+									2. El papel de la inteligencia artificial en la automatización de la creación de vídeos accesibles.<br>
+									3. Retos y oportunidades futuras en la accesibilidad digital.
 								</p>
 							</div>
 						</div>
-                        <div class="tab">
-							<input type="checkbox" name="accordion-1" id="cb10">
-							<label for="cb10" class="tab__label"><strong>10. Proyecto final (90 minutos)</strong></label>
-							<div class="tab__content">
+						<div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb10" aria-controls="panel10" aria-expanded="false">
+							<label for="cb10" class="tab__label" role="tab" aria-controls="panel10" id="tab10"><strong>10. Proyecto final (90 minutos)</strong></label>
+							<div class="tab__content" role="tabpanel" id="panel10" aria-labelledby="tab10" >
 								<p>
-                                    1. Creación de un video accesible (subtítulos, transcripciones, audio descripción).<br>
-                                    2. Revisión y retroalimentación del proyecto.<br>
-                                    3. Presentación del video accesible creado por los estudiantes
+									1. Creación de un video accesible (subtítulos, transcripciones, audio descripción).<br>
+									2. Revisión y retroalimentación del proyecto.<br>
+									3. Presentación del video accesible creado por los estudiantes
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>			
-		</div> 
-		<!-- ***** END USE ***** -->
+		</div>		
+		<!-- ***** END CONTENIDOS ***** -->
 
 		<!-- ***** DEMO SECTION ***** -->
-		<div id="demo-section" class="wrapper clearfix">
+		<div id="demo-section" class="wrapper clearfix" role="region" aria-labelledby="demo-section-heading">
 			<section class="grid-1">
 				<div class="col">
-					<h2 style="color: lightgray">Fórmate en accesibilidad</h2>
+					<h2 id="demo-section-heading" style="color: lightgray">Fórmate en accesibilidad</h2>
 					<h3 class="post">¡Haz que tu contenido sea realmente para todos!</h3>
-					<a class="button-cta" target="_blank" href="https://calendly.com/lvis-demo/30min">Contáctanos</a>
+					<a class="button-cta" target="_blank" href="https://calendly.com/lvis-demo/30min" role="button" aria-label="Contáctanos para agendar una cita de 30 minutos">Contáctanos</a>
 				</div>
 			</section>
-		</div>
+		</div>		
 		<!-- ***** END DEMO SECTION ***** -->
 
 		<!-- ***** FOOTER ***** -->
