@@ -80,7 +80,7 @@
 			</nav>
 		  
 			<div class="nav-buttons">
-			  <a class="demo-button" target="_blank" rel="noopener" href="https://calendly.com/lvis-demo/30min" aria-label="Book a 30-minute meeting">
+			  <a class="demo-button" target="_blank" rel="noopener" href="https://calendly.com/lvis-demo/30min" aria-label="Schedule a 30-minute call on Calendly. Opens in a new tab.">
 				<strong style="color: white;">Let's talk</strong>
 			  </a>
 			  <a class="language-button" href="../index.html" aria-label="Change language to Spanish">
@@ -94,89 +94,120 @@
 		<!-- ***** END HEADER ***** -->
 
 		<!-- ***** HERO ***** -->
-		<div id="hero" class="wrapper clearfix" style="padding-bottom: 150px">
+		<div id="hero" class="wrapper clearfix" style="padding-bottom: 150px" role="region" aria-labelledby="hero-section">
 			<section class="grid-2">
 				<div class="col post">
 					<section class="cd-intro">
-						<h1 class="cd-headline loading-bar">
-							<span style="margin-bottom: 20px; color: #203460">Make your medias accessible to everyone</span>
+						<h1 class="cd-headline loading-bar" id="hero-section">
+						<span style="margin-bottom: 20px; color: #203460">Make your medias accessible to everyone</span>
 						</h1>
 						<h2 class="color-primary">Videos with <br>audio description, subtitles, and transcription</h2>
 					</section>
 				</div>
-    			<div class="col">
-					<div class="iframe-content"> 
-						<iframe src="https://player.vimeo.com/video/1051461972?autoplay=1&amp;loop=1&amp;autopause=0&amp;muted=1&amp;badge=0&amp;player_id=0&amp;app_id=58479&amp;texttrack=en" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="LViS, Robotic Video Automation"></iframe>
-					</div>
-					<div>
-						<p style="display: flex; justify-content: space-evenly; padding-top: 80px; padding-bottom: 2px;"></p>
+
+				<div class="col">
+					<div class="iframe-content">
+						<!-- Video embed con título accesible y texto alternativo para la descripción del vídeo -->
+						<iframe 
+						src="https://player.vimeo.com/video/1051461972?autoplay=1&amp;loop=1&amp;autopause=0&amp;muted=1&amp;badge=0&amp;player_id=0&amp;app_id=58479&amp;texttrack=en&amp;hl=en&amp;dnt=1"
+						frameborder="0"
+						allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+						style="position:absolute;top:0;left:0;width:100%;height:100%;"
+						title="LViS, Creating Accessible Videos"
+						aria-label="English example of how to make a short video about accessible space-related fun facts with synthetic voice-over audio descriptions, CC subtitles, transcription, and scene navigation."
+						allowfullscreen>
+						</iframe>
 					</div>
 				</div>
 
-				<div style="margin-top: 50px">
-					<h3 style="text-align: center;"><strong style="color: #203460;">We transform your videos into accessible content in record time
-						<br>applying techniques that meet standards and regulations</strong><br></h3>
-					<h4 style="text-align: center">that will come into effect this June 2025</h4>
+				<div style="margin-top: 100px">
+					<h3 style="text-align: center;">
+						<strong style="color: #203460;">
+							We transform your videos into accessible content in record time
+						<br>applying techniques that meet standards and regulations
+						<br>
+						that will come into effect this June 2025
+						</strong>
+					</h3>
 				</div>
+
 			</section>
 		</div>
 		<!-- ***** END HERO ***** -->
 
-		<!-- ***** USE ***** -->
+		<!-- ***** WHY ***** -->
 		<div id="faq" class="wrapper clearfix plans">
-			<section class="grid-1">
-                <div class="col">
-					<h2 class="post">Why choose our services?</h2>
-					<div class="accordion">
+			<section class="grid-1" aria-labelledby="faq-heading">
+				<div class="col">
+					<h2 id="faq-heading" class="post" tabindex="0">Why choose our services?</h2>
+					<div class="accordion" role="region" aria-labelledby="faq-heading">
+						
 						<div class="tab">
 							<input type="checkbox" name="accordion-1" id="cb1">
-							<label for="cb1" class="tab__label"><strong>Expand Your Reach and Meet Accessibility Standards</strong></label>
-							<div class="tab__content"><p>Accessibility is not just a good practice, 
-								it's a legal requirement! According to the European Accessibility Act, 
-								digital content must be accessible to people with disabilities, including 
-								audio descriptions, subtitles, and transcripts across the European Union.</p></div>
-						</div>
-						<div class="tab">
-							<input type="checkbox" name="accordion-1" id="cb2">
-							<label for="cb2" class="tab__label"><strong>Comply with Legislation</strong></label>
-							<div class="tab__content">
+							<label for="cb1" class="tab__label" aria-labelledby="cb1-label" id="cb1-label">
+								<strong>Expand Your Reach and Meet Accessibility Standards</strong>
+							</label>
+							<div id="panel1" class="tab__content" role="region" aria-labelledby="cb1">
 								<p>
-								The Directive on the Accessibility of Websites and Mobile Applications 
-								of Public Sector Bodies (EU) 2016/2102 establishes that public entities must 
-								ensure the accessibility of their websites and mobile applications, 
-								including multimedia content such as videos and audios. 
-								Private platforms are also aligning with these requirements.
-								</p>
-								<p>
-								In addition, Spain's General Law on the Rights of Persons with Disabilities 
-								and their Social Inclusion (LGD) sets similar standards, requiring content creators 
-								to provide accessible alternatives for people with disabilities.
+									Accessibility is not just a good practice, 
+									it's a legal requirement! According to the European Accessibility Act, 
+									digital content must be accessible to people with disabilities, including 
+									audio descriptions, subtitles, and transcripts across the European Union.
 								</p>
 							</div>
 						</div>
+		
+						<div class="tab">
+							<input type="checkbox" name="accordion-1" id="cb2">
+							<label for="cb2" class="tab__label" aria-labelledby="cb2-label" id="cb2-label">
+								<strong>Comply with Legislation</strong>
+							</label>
+							<div id="panel2" class="tab__content" role="region" aria-labelledby="cb2">
+								<p>
+									The Directive on the Accessibility of Websites and Mobile Applications 
+									of Public Sector Bodies (EU) 2016/2102 establishes that public entities must 
+									ensure the accessibility of their websites and mobile applications, 
+									including multimedia content such as videos and audios. 
+									Private platforms are also aligning with these requirements.
+								</p>
+								<p>
+									In addition, Spain's General Law on the Rights of Persons with Disabilities 
+									and their Social Inclusion (LGD) sets similar standards, requiring content creators 
+									to provide accessible alternatives for people with disabilities.
+								</p>
+							</div>
+						</div>
+		
 						<div class="tab">
 							<input type="checkbox" name="accordion-1" id="cb3">
-							<label for="cb3" class="tab__label"><strong>Mandatory Compliance Dates</strong></label>
-							<div class="tab__content">
+							<label for="cb3" class="tab__label" aria-labelledby="cb3-label" id="cb3-label">
+								<strong>Mandatory Compliance Dates</strong>
+							</label>
+							<div id="panel3" class="tab__content" role="region" aria-labelledby="cb3">
 								<div class="tab_content"><p style="padding-bottom: 0px;"><strong><span style="color: #203460; font-size: 30px;">June 28, 2025</span></strong></p></div>
 								<p>
 									<strong>Start of mandatory compliance: </strong><br>From this date, affected products and 
 									services must meet the accessibility requirements established by law.
 								</p>
 								<p>
-									<strong>Exception for products and services already on the market:</strong><br>
-    								Products and services that were already available on the market before June 28, 2025, may continue to be marketed without meeting the new requirements. However, any update or new version launched after this date must be accessible.
+									<strong>Exception for products and services already on the market: </strong><br>
+									Products and services that were already available on the market before June 28, 2025, may continue to be marketed without meeting the new requirements. 
+									However, any update or new version launched after this date must be accessible.
 								</p>
 								<div class="tab_content"><p style="padding-bottom: 0px;"><strong><span style="color: #203460; font-size: 30px;">June 28, 2030</span></strong></p></div>
 								<p>
-									Deadline for market exceptions (products and services existing before 2025) to comply with the new regulations or be withdrawn from the market.
+									Deadline for market exceptions (products and services existing before 2025) 
+									to comply with the new regulations or be withdrawn from the market.
 								</p>
 							</div>
 						</div>
+		
 						<div class="tab">
 							<input type="checkbox" name="accordion-1" id="cb4">
-							<label for="cb4" class="tab__label"><strong>Frequently Asked Questions</strong></label>
-							<div class="tab__content">
+							<label for="cb4" class="tab__label" aria-labelledby="cb4-label" id="cb4-label">
+								<strong>Frequently Asked Questions</strong>
+							</label>
+							<div id="panel4" class="tab__content" role="region" aria-labelledby="cb4">
 								<p>
 									<strong>What types of videos can be made accessible? </strong> 
 									We can make all types of videos accessible, including educational videos, tutorials, 
@@ -194,41 +225,49 @@
 								</p>
 							</div>
 						</div>
+		
 					</div>
 				</div>
 			</section>			
 		</div>
  
-		<!-- ***** END USE ***** -->
+		<!-- ***** END WHY ***** -->
 
 		<!-- ***** DEMO SECTION ***** -->
-		<div id="demo-section" class="wrapper clearfix">
+		<div id="demo-section" class="wrapper clearfix" role="region" aria-labelledby="demo-heading">
 			<section class="grid-1">
 				<div class="col">
-					<h2 class="post">Make your videos accessible</h2>
-					<h3 style="color: lightgray">Contact us now to start your project or receive a free consultation</h3>
-					<a class="button-cta" target="_blank" href="https://calendly.com/lvis-demo/30min">Let’s talk!</a>
+					<h2 id="demo-heading" class="post">Make your videos accessible</h2>
+					<h3>
+						Contact us now to start your project or receive a free consultation.
+					</h3>
+					<a class="button-cta" target="_blank" rel="noopener noreferrer" 
+					   href="https://calendly.com/lvis-demo/30min" 
+					   role="button" 
+					   aria-label="Schedule a 30-minute call on Calendly. Opens in a new tab.">
+					   Let’s talk!
+					</a>
 				</div>
 			</section>
 		</div>
 		<!-- ***** END DEMO SECTION ***** -->
 
 		<!-- ***** FOOTER ***** -->
-		<footer class="wrapper clearfix">
+		<footer class="wrapper clearfix" role="contentinfo">
 			<section class="grid-1">
 				<div class="col">
 					<div style="text-align: center;">
 						<p>© 2025 LViS Video Automatización S.L. LViS is a registered trademark. All rights reserved</p>
 					</div>
-					<hr style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
-					<div style="text-align: center; margin-top: 20px; ">
+					<hr aria-hidden="true" style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
+					<div aria-label="Enlaces legales" style="text-align: center; margin-top: 20px;">
 						<p style="display: inline;">
-							<a href="legal.html" target="blank" style="color: gray;">Legal Notice</a>
-							<a href="cookies-policy.html" target="blank" style="margin-left: 30px; color: gray;" >Cookie Policy</a>
-							<a href="privacy-policy.html" style="margin-left: 30px; color: gray;" target="blank" >Privacy Policy</a>
-							<a href="service-terms.html" style="margin-left: 30px; color: gray;" target="blank" >Terms of Service</a>
-							<a href="trademark-services-policy.html" target="blank" style="margin-left: 30px; color: gray;" >Trademark and Product Policy</a>
-							<a href="accesibility.html" style="margin-left: 30px; color: gray;" target="blank">Accessibility</a>
+							<a href="legal.html" target="blank" style="color: darkslategray;">Legal Notice</a>
+							<a href="cookies-policy.html" target="blank" style="margin-left: 30px; color: darkslategray;" >Cookie Policy</a>
+							<a href="privacy-policy.html" style="margin-left: 30px; color: darkslategray;" target="blank" >Privacy Policy</a>
+							<a href="service-terms.html" style="margin-left: 30px; color: darkslategray;" target="blank" >Terms of Service</a>
+							<a href="trademark-services-policy.html" target="blank" style="margin-left: 30px; color: darkslategray;" >Trademark and Product Policy</a>
+							<a href="accesibility.html" style="margin-left: 30px; color: darkslategray;" target="blank">Accessibility</a>
 						</p>
 					</div>
 				</div>
