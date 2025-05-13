@@ -93,90 +93,92 @@
 		<!-- ***** END HEADER ***** --> 
 		
 		<!-- ***** PRICING ***** -->			
-		<div id="pricing" class="pricing-tables wrapper clearfix">
+		<div id="pricing" class="pricing-tables wrapper clearfix" role="region" aria-labelledby="pricing-title">
 			<div class="grid-1">
-				<h1 style="margin-bottom: 20px;" ><span class="color-primary">Flexible packages <br>to meet all your needs</span></h1>
+				<h1 id="pricing-title" style="margin-bottom: 20px;">
+					<span class="color-primary">Flexible packages <br>to meet all your needs</span>
+				</h1>
 			</div>	
 			<div class="grid-3 plans">
 
-				<div class="plan col" style="padding-bottom: 45px;">
+				<div class="plan col" style="padding-bottom: 45px;" role="region" aria-labelledby="basic-package-title">
 					<div class="plan__head">
-						<h3 class="plan__title">Basic Package</h3>
+						<h3 id="basic-package-title" class="plan__title">Basic Package</h3>
 					</div>
 					<div class="plan__features" >
-						<ul class="list-check price--saas" >						
-							<li>								
+						<ul class="list-check price--saas" role="list">						
+							<li role="listitem">								
 								<strong>Audio Description + Subtitles + Transcription</strong> for up to <strong>30 minutes</strong> of video							
 							</li>
-							<li>
+							<li role="listitem">
 								Delivery in 5 working days							
 							</li>
-							<li>
+							<li role="listitem">
 								Includes review and adjustments							
 							</li>
-							<li>								
+							<li role="listitem">								
 								<strong>Conversion to Braille</strong> available for transcriptions							
 							</li>
 						</ul>
 					</div>
 					<div class="plan__credit">
-						<div class="plan__price">
+						<div class="plan__price" aria-label="Basic package price">
 							<span class="price price--saas"><span class="plan__type">1,920 €</span></span>
 						</div>
 					</div>
 				</div>
 
-				<div class="plan col" style="padding-bottom: 40px;">
+				<div class="plan col" style="padding-bottom: 40px;" role="region" aria-labelledby="standar-package-title">
 					<div class="plan__head">
-						<h3 class="plan__title">Standard Package</h3>
+						<h3 class="plan__title" id="standar-package-title">Standard Package</h3>
 					</div>
 					<div class="plan__features" >
-						<ul class="list-check price--saas">						
-							<li>
-								<strong>Audio Description + Subtitles + Transcription</strong> for up to <strong>60 minutes</strong> of video							
+						<ul class="list-check price--saas" role="list">						
+							<li role="listitem">
+								<strong>Audio Description + Subtitles + Transcription</strong> for up to <strong>120 minutes</strong> of video							
 							</li>
-							<li>
+							<li role="listitem">
 								Delivery in 10 working days							
 							</li>
-							<li>
+							<li role="listitem">
 								Includes review and adjustments							
 							</li>
-							<li>								
+							<li role="listitem">								
 								<strong>Conversion to Braille</strong> available for transcriptions							
 							</li>
 						</ul>
 					</div>
 					<div class="plan__credit">
-						<div class="plan__price">
-							<span class="price price--saas"><span class="plan__type">3,480 €</span></span>
+						<div class="plan__price" aria-label="Standar package price">
+							<span class="price price--saas"><span class="plan__type">5,760 €</span></span>
 						</div>
 					</div>
 				</div>
 
-				<div class="plan col" style="padding-bottom: 20px;">
+				<div class="plan col" style="padding-bottom: 20px;" role="region" aria-labelledby="formation-title">
 					<div class="plan__head" >
-						<h3 class="plan__title" >Video Accessibility Training</h3>
+						<h3 class="plan__title" id="formation-title">Video Accessibility Training</h3>
 						<div class="plan__price">
 						</div>
 					</div>
 					<div class="plan__features" >
-						<ul class="list-check price--saas" >						
-							<li>
+						<ul class="list-check price--saas" role="list">						
+							<li role="listitem">
 								<strong>Practical Workshop</strong> of <strong>8 hours</strong> duration						
 							</li>
-							<li>
+							<li role="listitem">
 								Virtual / Remote Format in 1 or 2 sessions						
 							</li>
-							<li>
+							<li role="listitem">
 								Open groups or company-specific
 							</li>
-							<li>								
+							<li role="listitem">								
 								Bring your own videos
 							</li>
 						</ul>
 					</div>
 					<div class="plan__credit" >
-						<div class="plan__price">
+						<div class="plan__price" aria-label="Formation price">
 							<span class="price price--saas"><span class="plan__type">400 € /student</span></span>
 							<br>
 							<span class="price price--saas"><span class="plan__type">1,200 € /group <span style="font-size: 15px;">(Up to 6 students)</span></span></span>
@@ -185,17 +187,20 @@
 					</div>
 				</div>
 							
-				<div class="plan-text">
+				<div class="plan-text" role="region" aria-labelledby="custom-title">
 					<div class="plan__bottom__text">
 						<div class="plan__price__title">
-							<center><h4 style="margin-bottom: 20px;">
+							<center><h4 style="margin-bottom: 20px;" id="custom-title">
 							<strong>Do you have a longer video or a custom project?</strong>	
 							</br>Contact us for a quote tailored to your needs.</span></h4></center>
 						</div>
 					</div>
 				</div>
 				<div>
-					<center><a class="button-cta animsition-link" data-animsition-out-class="overlay-slide-out-left" href="https://calendly.com/lvis-demo/30min" style="width: 250px;">Contact Us</a></center>
+					<center><a class="button-cta animsition-link" data-animsition-out-class="overlay-slide-out-left" 
+						href="https://calendly.com/lvis-demo/30min" 
+						style="width: 250px;" role="button" aria-label="Contact us for more information">Contact Us</a>
+					</center>
 				</div>
 			</div>
 		</div>		
