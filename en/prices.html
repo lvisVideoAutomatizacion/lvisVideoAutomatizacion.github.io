@@ -54,152 +54,173 @@
 	<div class="animsition-overlay">
 		
 		<!-- ***** HEADER ***** -->
-		<header class="header">
-			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left"><img
-				src="images/LVISVally_Logotipo.svg" alt="LViS logo"></a>
-		<input class="side-menu" type="checkbox" id="side-menu" />
-			<input class="side-menu" type="checkbox" id="side-menu"/>
-			<label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-			<nav class="nav" style="margin-left: 80px;">
-				<ul class="menu">
-					<li><a href="services.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Services</a></li>
-					<li><a href="formation.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Training</a></li>
-					<li><a href="prices.html" class="active animsition-link" data-animsition-out-class="overlay-slide-out-left">Prices</a></li>
-				</ul>
+		<header class="header" role="banner">
+			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left">
+			  <img src="images/LVISVally_Logotipo.svg" alt="LViS Vally logo">
+			</a>
+		  
+			<input class="side-menu" type="checkbox" id="side-menu" aria-label="Open or close navigation menu" />
+			<label class="hamb" for="side-menu" aria-controls="primary-navigation" aria-expanded="false" role="button">
+			  <span class="hamb-line"></span>
+			</label>
+		  
+			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Primary navigation" style="margin-left: 80px;">
+			  <ul class="menu">
+				<li>
+				  <a href="services.html" class=" animsition-link" data-animsition-out-class="overlay-slide-out-left" >Services</a>
+				</li>
+				<li>
+				  <a href="formation.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Training</a>
+				</li>
+				<li>
+				  <a href="prices.html" class="active animsition-link" data-animsition-out-class="overlay-slide-out-left" aria-current="page">Pricing</a>
+				</li>
+			  </ul>
 			</nav>
+		  
 			<div class="nav-buttons">
-				<a class="demo-button" target="_blank" href="https://calendly.com/lvis-demo/30min">
-					<strong style="color: white;"> Let's talk</strong>
-				</a>
-				<a class="language-button" href="../planes.html"><div style="position: relative; display: inline-flex;"><img src="images/globe_white.svg" alt="white globe" style="width: 15px; margin-right: 3px;"/><span style="margin-top: 5px;">Español</span></div></a>			
+			  <a class="demo-button" target="_blank" rel="noopener" href="https://calendly.com/lvis-demo/30min" aria-label="Schedule a 30-minute call on Calendly. Opens in a new tab.">
+				<strong style="color: white;">Let's talk</strong>
+			  </a>
+			  <a class="language-button" href="../planes.html" aria-label="Change language to Spanish">
+				<div style="position: relative; display: inline-flex; align-items: center;">
+				  <img src="images/globe_white.svg" alt="Icon of a globe" style="width: 15px; margin-right: 3px;" />
+				  <span style="margin-top: 5px;">Español</span>
+				</div>
+			  </a>
 			</div>
 		</header>
 		<!-- ***** END HEADER ***** --> 
 		
 		<!-- ***** PRICING ***** -->			
-		<div id="pricing" class="pricing-tables wrapper clearfix">
+		<div id="pricing" class="pricing-tables wrapper clearfix" role="region" aria-labelledby="pricing-title">
 			<div class="grid-1">
-				<h1 style="margin-bottom: 20px;" ><span class="color-primary">Flexible packages <br>to meet all your needs</span></h1>
+				<h1 id="pricing-title" style="margin-bottom: 20px;">
+					<span class="color-primary">Flexible packages <br>to meet all your needs</span>
+				</h1>
 			</div>	
 			<div class="grid-3 plans">
 
-				<div class="plan col" style="padding-bottom: 45px;">
+				<div class="plan col" style="padding-bottom: 45px;" role="region" aria-labelledby="basic-package-title">
 					<div class="plan__head">
-						<h3 class="plan__title">Basic Package</h3>
+						<h3 id="basic-package-title" class="plan__title">Basic Package</h3>
 					</div>
 					<div class="plan__features" >
-						<ul class="list-check price--saas" >						
-							<li>								
+						<ul class="list-check price--saas" role="list">						
+							<li role="listitem">								
 								<strong>Audio Description + Subtitles + Transcription</strong> for up to <strong>30 minutes</strong> of video							
 							</li>
-							<li>
+							<li role="listitem">
 								Delivery in 5 working days							
 							</li>
-							<li>
+							<li role="listitem">
 								Includes review and adjustments							
 							</li>
-							<li>								
+							<li role="listitem">								
 								<strong>Conversion to Braille</strong> available for transcriptions							
 							</li>
 						</ul>
 					</div>
 					<div class="plan__credit">
-						<div class="plan__price">
+						<div class="plan__price" aria-label="Basic package price">
 							<span class="price price--saas"><span class="plan__type">1,920 €</span></span>
 						</div>
 					</div>
 				</div>
 
-				<div class="plan col" style="padding-bottom: 40px;">
+				<div class="plan col" style="padding-bottom: 40px;" role="region" aria-labelledby="standar-package-title">
 					<div class="plan__head">
-						<h3 class="plan__title">Standard Package</h3>
+						<h3 class="plan__title" id="standar-package-title">Standard Package</h3>
 					</div>
 					<div class="plan__features" >
-						<ul class="list-check price--saas">						
-							<li>
-								<strong>Audio Description + Subtitles + Transcription</strong> for up to <strong>60 minutes</strong> of video							
+						<ul class="list-check price--saas" role="list">						
+							<li role="listitem">
+								<strong>Audio Description + Subtitles + Transcription</strong> for up to <strong>120 minutes</strong> of video							
 							</li>
-							<li>
+							<li role="listitem">
 								Delivery in 10 working days							
 							</li>
-							<li>
+							<li role="listitem">
 								Includes review and adjustments							
 							</li>
-							<li>								
+							<li role="listitem">								
 								<strong>Conversion to Braille</strong> available for transcriptions							
 							</li>
 						</ul>
 					</div>
 					<div class="plan__credit">
-						<div class="plan__price">
-							<span class="price price--saas"><span class="plan__type">3,480 €</span></span>
+						<div class="plan__price" aria-label="Standar package price">
+							<span class="price price--saas"><span class="plan__type">5,760 €</span></span>
 						</div>
 					</div>
 				</div>
 
-				<div class="plan col" style="padding-bottom: 20px;">
+				<div class="plan col" style="padding-bottom: 20px;" role="region" aria-labelledby="formation-title">
 					<div class="plan__head" >
-						<h3 class="plan__title" >Video Accessibility Training</h3>
+						<h3 class="plan__title" id="formation-title">Video Accessibility Training</h3>
 						<div class="plan__price">
 						</div>
 					</div>
 					<div class="plan__features" >
-						<ul class="list-check price--saas" >						
-							<li>
+						<ul class="list-check price--saas" role="list">						
+							<li role="listitem">
 								<strong>Practical Workshop</strong> of <strong>8 hours</strong> duration						
 							</li>
-							<li>
+							<li role="listitem">
 								Virtual / Remote Format in 1 or 2 sessions						
 							</li>
-							<li>
+							<li role="listitem">
 								Open groups or company-specific
 							</li>
-							<li>								
+							<li role="listitem">								
 								Bring your own videos
 							</li>
 						</ul>
 					</div>
 					<div class="plan__credit" >
-						<div class="plan__price">
+						<div class="plan__price" aria-label="Formation price">
 							<span class="price price--saas"><span class="plan__type">400 € /student</span></span>
 							<br>
-							<span class="price price--saas"><span class="plan__type">1,200 € /group <span style="font-size: 15px;">(Up to 6 students)</span></span></span>
+							<span class="price price--saas"><span class="plan__type">1,800 € /group <span style="font-size: 15px;">(Up to 8 students)</span></span></span>
 							
 						</div>
 					</div>
 				</div>
 							
-				<div class="plan-text">
+				<div class="plan-text" role="region" aria-labelledby="custom-title">
 					<div class="plan__bottom__text">
 						<div class="plan__price__title">
-							<center><h4 style="margin-bottom: 20px;">
-							<strong>Do you have a longer video or a custom project?</strong>	
+							<center><h4 style="margin-bottom: 20px;" id="custom-title">
+							<strong>Do you have a larger volume of videos or a custom project?</strong>	
 							</br>Contact us for a quote tailored to your needs.</span></h4></center>
 						</div>
 					</div>
 				</div>
 				<div>
-					<center><a class="button-cta animsition-link" data-animsition-out-class="overlay-slide-out-left" href="https://calendly.com/lvis-demo/30min" style="width: 250px;">Contact Us</a></center>
+					<center><a class="button-cta animsition-link" data-animsition-out-class="overlay-slide-out-left" 
+						href="https://calendly.com/lvis-demo/30min" 
+						style="width: 250px;" role="button" aria-label="Contact us for more information">Contact Us</a>
+					</center>
 				</div>
 			</div>
 		</div>		
 		<!-- ***** END PRICING ***** --> 				
 		<!-- ***** FOOTER ***** -->
-		<footer class="wrapper clearfix">
+		<footer class="wrapper clearfix" role="contentinfo">
 			<section class="grid-1">
 				<div class="col">
 					<div style="text-align: center;">
 						<p>© 2025 LViS Video Automatización S.L. LViS is a registered trademark. All rights reserved</p>
 					</div>
-					<hr style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
-					<div style="text-align: center; margin-top: 20px; ">
+					<hr aria-hidden="true" style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
+					<div aria-label="Enlaces legales" style="text-align: center; margin-top: 20px;">
 						<p style="display: inline;">
-							<a href="legal.html" target="blank" style="color: gray;">Legal Notice</a>
-							<a href="cookies-policy.html" target="blank" style="margin-left: 30px; color: gray;" >Cookie Policy</a>
-							<a href="privacy-policy.html" style="margin-left: 30px; color: gray;" target="blank" >Privacy Policy</a>
-							<a href="service-terms.html" style="margin-left: 30px; color: gray;" target="blank" >Terms of Service</a>
-							<a href="trademark-services-policy.html" target="blank" style="margin-left: 30px; color: gray;" >Trademark and Product Policy</a>
-							<a href="accesibility.html" style="margin-left: 30px; color: gray;" target="blank">Accessibility</a>
+							<a href="legal.html" target="blank" style="color: darkslategray;">Legal Notice</a>
+							<a href="cookies-policy.html" target="blank" style="margin-left: 30px; color: darkslategray;" >Cookie Policy</a>
+							<a href="privacy-policy.html" style="margin-left: 30px; color: darkslategray;" target="blank" >Privacy Policy</a>
+							<a href="service-terms.html" style="margin-left: 30px; color: darkslategray;" target="blank" >Terms of Service</a>
+							<a href="trademark-services-policy.html" target="blank" style="margin-left: 30px; color: darkslategray;" >Trademark and Product Policy</a>
+							<a href="accesibility.html" style="margin-left: 30px; color: darkslategray;" target="blank">Accessibility</a>
 						</p>
 					</div>
 				</div>

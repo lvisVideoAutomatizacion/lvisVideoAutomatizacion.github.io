@@ -56,102 +56,145 @@
 	<div class="animsition-overlay">
 
 		<!-- ***** HEADER ***** -->
-		<header class="header">
-			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left"><img
-					src="images/LVISVally_Logotipo.svg" alt="LViS logo"></a>
-			<input class="side-menu" type="checkbox" id="side-menu" />
-			<label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-			<nav class="nav" style="margin-left: 80px;">
-				<ul class="menu">
-					<li><a href="servicios.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Servicios</a></li>
-					<li><a href="formacion.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Formación</a></li>
-					<li><a href="planes.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Tarifas</a></li>
-				</ul>
+		<header class="header" role="banner">
+			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left">
+			  <img src="images/LVISVally_Logotipo.svg" alt="Logotipo de LViS Vally">
+			</a>
+		  
+			<input class="side-menu" type="checkbox" id="side-menu" aria-label="Abrir o cerrar el menú de navegación" />
+			<label class="hamb" for="side-menu" aria-controls="primary-navigation" aria-expanded="false" role="button">
+			  <span class="hamb-line"></span>
+			</label>
+		  
+			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Navegación principal" style="margin-left: 80px;">
+			  <ul class="menu">
+				<li>
+				  <a href="servicios.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Servicios</a>
+				</li>
+				<li>
+				  <a href="formacion.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Formación</a>
+				</li>
+				<li>
+				  <a href="planes.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Tarifas</a>
+				</li>
+			  </ul>
 			</nav>
+		  
 			<div class="nav-buttons">
-				<a class="demo-button" target="_blank" href="https://calendly.com/lvis-demo/30min"><strong style="color: white;"> Hablemos</strong></a>
-				<a class="language-button" href="en/index.html"><div style="position: relative; display: inline-flex;"><img src="images/globe_white.svg" alt="globo blanco" style="width: 15px; margin-right: 3px;"/><span style="margin-top: 5px;">English</span></div></a>
+			  <a class="demo-button" target="_blank" rel="noopener" href="https://calendly.com/lvis-demo/30min" aria-label="Agenda una llamada de 30 minutos en Calendly. Se abre en una nueva pestaña.">
+				<strong style="color: white;">Hablemos</strong>
+			  </a>
+			  <a class="language-button" href="en/index.html" aria-label="Cambiar el idioma a inglés">
+				<div style="position: relative; display: inline-flex; align-items: center;">
+				  <img src="images/globe_white.svg" alt="Icono de un globo terráqueo" style="width: 15px; margin-right: 3px;" />
+				  <span style="margin-top: 5px;">English</span>
+				</div>
+			  </a>
 			</div>
 		</header>
+		  
 		<!-- ***** END HEADER ***** -->
 
 		<!-- ***** HERO ***** -->
-		<div id="hero" class="wrapper clearfix" style="padding-bottom: 150px">
+		<div id="hero" class="wrapper clearfix" style="padding-bottom: 150px" role="region" aria-labelledby="hero-section">
 			<section class="grid-2">
 				<div class="col post">
 					<section class="cd-intro">
-						<h1 class="cd-headline loading-bar">
-							<span style="margin-bottom: 20px; color: #203460">Haz tu contenido accesible para todos</span>
+						<h1 class="cd-headline loading-bar" id="hero-section">
+						<span style="margin-bottom: 20px; color: #203460">Haz tu contenido accesible para todos</span>
 						</h1>
 						<h2 class="color-primary">Vídeos con <br>audio descripción, subtítulos y transcripción</h2>
 					</section>
 				</div>
-    			<div class="col">
-					<div class="iframe-content"> 
-						<iframe src="https://player.vimeo.com/video/1047849578?autoplay=1&amp;loop=1&amp;autopause=0&amp;muted=1&amp;badge=0&amp;player_id=0&amp;app_id=58479&amp;texttrack=es&amp;hl=es&amp;dnt=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="LViS, Automatización Robótica de Vídeos"></iframe>
-					</div>
-					<div>
-						<p style="display: flex; justify-content: space-evenly; padding-top: 80px; padding-bottom: 2px;"></p>
+
+				<div class="col">
+					<div class="iframe-content">
+						<!-- Video embed con título accesible y texto alternativo para la descripción del vídeo -->
+						<iframe 
+						src="https://player.vimeo.com/video/1047849578?autoplay=1&amp;loop=1&amp;autopause=0&amp;muted=1&amp;badge=0&amp;player_id=0&amp;app_id=58479&amp;texttrack=es&amp;hl=es&amp;dnt=1"
+						frameborder="0"
+						allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+						style="position:absolute;top:0;left:0;width:100%;height:100%;"
+						title="LViS, Creación de Vídeos Accesibles"
+						aria-label="Ejemplo en español sobre como hacer accesible un vídeo corto sobre datos curiosos del espacio con audio descripciones con voces sintéticas, subtítulos CC, transcripción y navegación entre escenas."
+						allowfullscreen>
+						</iframe>
 					</div>
 				</div>
 
-				<div style="margin-top: 50px">
-					<h3 style="text-align: center;"><strong style="color: #203460;">Transformamos tus vídeos en contenido accesible en tiempo récord
-						<br>aplicando las técnicas que cumplen con los estándares y normativas</strong><br></h3>
-					<h4 style="text-align: center">que entraran en vigor este mes de junio de 2025</h4>
+				<div style="margin-top: 100px">
+					<h3 style="text-align: center;">
+						<strong style="color: #203460;">
+						Transformamos tus vídeos en contenido accesible en tiempo récord
+						<br>aplicando las técnicas que cumplen con los estándares y normativas
+						<br>
+						que entrarán en vigor este mes de junio de 2025
+						</strong>
+					</h3>
 				</div>
 
 			</section>
-
 		</div>
 		<!-- ***** END HERO ***** -->
 
-		<!-- ***** USE ***** -->
+		<!-- ***** WHY ***** -->
 		<div id="faq" class="wrapper clearfix plans">
-			<section class="grid-1">
-                <div class="col">
-					<h2 class="post">¿Por qué elegir nuestros servicios?</h2>
-					<div class="accordion">
+			<section class="grid-1" aria-labelledby="faq-heading">
+				<div class="col">
+					<h2 id="faq-heading" class="post" tabindex="0">¿Por qué elegir nuestros servicios?</h2>
+					<div class="accordion" role="region" aria-labelledby="faq-heading">
+						
 						<div class="tab">
 							<input type="checkbox" name="accordion-1" id="cb1">
-							<label for="cb1" class="tab__label"><strong>Aumenta tu Alcance y Cumple con la Accesibilidad</strong></label>
-							<div class="tab__content"><p>La accesibilidad no es solo una buena práctica, 
-								¡es un requisito legal! De acuerdo con el Acta Europea de Accesibilidad, 
-								los contenidos digitales deben ser accesibles para las personas con 
-								discapacidades, incluyendo audio descripción, subtítulos y transcripciones, 
-								en toda la Unión Europea.</p></div>
+							<label for="cb1" class="tab__label" aria-labelledby="cb1-label" id="cb1-label">
+								<strong>Aumenta tu Alcance y Cumple con la Accesibilidad</strong>
+							</label>
+							<div id="panel1" class="tab__content" role="region" aria-labelledby="cb1">
+								<p>La accesibilidad no es solo una buena práctica, 
+									¡es un requisito legal! De acuerdo con el Acta Europea de Accesibilidad, 
+									los contenidos digitales deben ser accesibles para las personas con 
+									discapacidades, incluyendo audio descripción, subtítulos y transcripciones, 
+									en toda la Unión Europea.</p>
+							</div>
 						</div>
+		
 						<div class="tab">
 							<input type="checkbox" name="accordion-1" id="cb2">
-							<label for="cb2" class="tab__label"><strong>Cumple con la legislación</strong></label>
-							<div class="tab__content">
+							<label for="cb2" class="tab__label" aria-labelledby="cb2-label" id="cb2-label">
+								<strong>Cumple con la legislación</strong>
+							</label>
+							<div id="panel2" class="tab__content" role="region" aria-labelledby="cb2">
 								<p>
-								La Directiva sobre la Accesibilidad de los Sitios Web y Aplicaciones Móviles 
-								del Sector Público (UE) 2016/2102 establece que las entidades públicas deben 
-								garantizar la accesibilidad de sus sitios web y aplicaciones móviles, 
-								lo que incluye los contenidos multimedia como vídeos y audios. 
-								Las plataformas privadas también se están sumando a estos requisitos.
+									La Directiva sobre la Accesibilidad de los Sitios Web y Aplicaciones Móviles 
+									del Sector Público (UE) 2016/2102 establece que las entidades públicas deben 
+									garantizar la accesibilidad de sus sitios web y aplicaciones móviles, 
+									lo que incluye los contenidos multimedia como vídeos y audios. 
+									Las plataformas privadas también se están sumando a estos requisitos.
 								</p>
 								<p>
-								Además, la Ley General de Derechos de las Personas con Discapacidad y de su 
-								Inclusión Social (LGD) de España establece normas similares, obligando a los 
-								creadores de contenido a proporcionar alternativas accesibles para personas 
-								con discapacidades.
+									Además, la Ley General de Derechos de las Personas con Discapacidad y de su 
+									Inclusión Social (LGD) de España establece normas similares, obligando a los 
+									creadores de contenido a proporcionar alternativas accesibles para personas 
+									con discapacidades.
 								</p>
 							</div>
 						</div>
+		
 						<div class="tab">
 							<input type="checkbox" name="accordion-1" id="cb3">
-							<label for="cb3" class="tab__label"><strong>Fechas de Cumplimiento Obligatorio</strong></label>
-							<div class="tab__content">
+							<label for="cb3" class="tab__label" aria-labelledby="cb3-label" id="cb3-label">
+								<strong>Fechas de Cumplimiento Obligatorio</strong>
+							</label>
+							<div id="panel3" class="tab__content" role="region" aria-labelledby="cb3">
 								<div class="tab_content"><p style="padding-bottom: 0px;"><strong><span style="color: #203460; font-size: 30px;">28 de junio de 2025</span></strong></p></div>
 								<p>
 									<strong>Inicio del cumplimiento obligatorio: </strong><br>A partir de esta fecha, los productos y 
 									servicios afectados deberán cumplir con los requisitos de accesibilidad establecidos en la ley.
 								</p>
 								<p>
-									<strong>Excepción para productos y servicios ya en el mercado:</strong><br>
-    								Los productos y servicios que ya estaban disponibles en el mercado antes del 28 de junio de 2025 podrán seguir siendo comercializados sin cumplir con los nuevos requisitos. Sin embargo, cualquier actualización o nueva versión que se lance después de esa fecha deberá ser accesible.
+									<strong>Excepción para productos y servicios ya en el mercado: </strong><br>
+									Los productos y servicios que ya estaban disponibles en el mercado antes del 28 de junio de 2025 podrán seguir siendo comercializados sin cumplir con los nuevos requisitos. 
+									Sin embargo, cualquier actualización o nueva versión que se lance después de esa fecha deberá ser accesible.
 								</p>
 								<div class="tab_content"><p style="padding-bottom: 0px;"><strong><span style="color: #203460; font-size: 30px;">28 de junio de 2030</span></strong></p></div>
 								<p>
@@ -160,10 +203,13 @@
 								</p>
 							</div>
 						</div>
+		
 						<div class="tab">
 							<input type="checkbox" name="accordion-1" id="cb4">
-							<label for="cb4" class="tab__label"><strong>Preguntas frecuentes</strong></label>
-							<div class="tab__content">
+							<label for="cb4" class="tab__label" aria-labelledby="cb4-label" id="cb4-label">
+								<strong>Preguntas frecuentes</strong>
+							</label>
+							<div id="panel4" class="tab__content" role="region" aria-labelledby="cb4">
 								<p>
 									<strong>¿Qué tipo de vídeos pueden hacerse accesibles? </strong> 
 									Podemos hacer accesibles todo tipo de vídeos, incluidos vídeos educativos, tutoriales, 
@@ -177,49 +223,57 @@
 								<p>
 									<strong>¿Cuánto tiempo tarda el proceso? </strong> 
 									El tiempo de entrega depende de la duración y el paquete seleccionado. 
-									Normalmente entregamos los proyectos entre 5 y15 días laborables..
+									Normalmente entregamos los proyectos entre 5 y 15 días laborables.
 								</p>
 							</div>
 						</div>
+		
 					</div>
 				</div>
 			</section>			
-		</div> 
-		<!-- ***** END USE ***** -->
+		</div>		
+		<!-- ***** END WHY ***** -->
 
 		<!-- ***** DEMO SECTION ***** -->
-		<div id="demo-section" class="wrapper clearfix">
+		<div id="demo-section" class="wrapper clearfix" role="region" aria-labelledby="demo-heading">
 			<section class="grid-1">
 				<div class="col">
-					<h2 class="post">Haz tus vídeos accesibles</h2>
-					<h3 style="color: lightgray">Contáctanos ahora para comenzar con tu proyecto o recibir una consulta gratuita</h3>
-					<a class="button-cta" target="_blank" href="https://calendly.com/lvis-demo/30min">¡Hablemos!</a>
+					<h2 id="demo-heading" class="post">Haz tus vídeos accesibles</h2>
+					<h3>
+						Contáctanos ahora para comenzar con tu proyecto o recibir una consulta gratuita.
+					</h3>
+					<a class="button-cta" target="_blank" rel="noopener noreferrer" 
+					   href="https://calendly.com/lvis-demo/30min" 
+					   role="button" 
+					   aria-label="Agenda una llamada de 30 minutos en Calendly. Se abre en una nueva pestaña.">
+						¡Hablemos!
+					</a>
 				</div>
 			</section>
-		</div>
+		</div>		
 		<!-- ***** END DEMO SECTION ***** -->
 
 		<!-- ***** FOOTER ***** -->
-		<footer class="wrapper clearfix">
+		<footer class="wrapper clearfix" role="contentinfo">
 			<section class="grid-1">
 				<div class="col">
 					<div style="text-align: center;">
-						<p>© 2025 LViS Video Automatización S.L.  LViS es una marca registrada. Todos los derechos reservados</p>
+						<p>© 2025 LViS Video Automatización S.L. LViS es una marca registrada. Todos los derechos reservados.</p>
 					</div>
-					<hr style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
-					<div style="text-align: center; margin-top: 20px; ">
+					<hr aria-hidden="true" style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
+					<div aria-label="Enlaces legales" style="text-align: center; margin-top: 20px;">
 						<p style="display: inline;">
-							<a href="aviso-legal.html" target="blank" style="color: gray;">Aviso legal</a>
-							<a href="politica-de-cookies.html" target="blank" style="margin-left: 30px; color: gray;" >Política de cookies</a>
-							<a href="politica-privacidad.html" style="margin-left: 30px; color: gray;" target="blank" >Política de privacidad</a>
-							<a href="terminos-servicio.html" style="margin-left: 30px; color: gray;" target="blank" >Términos de servicio</a>
-							<a href="politica-marcas-servicios.html" target="blank" style="margin-left: 30px; color: gray;" >Política de marcas y productos</a>
-							<a href="accesibilidad.html" style="margin-left: 30px; color: gray;" target="blank">Accesibilidad</a>
+							<a href="aviso-legal.html" target="blank" style="color: darkslategray;">Aviso legal</a>
+							<a href="politica-de-cookies.html" target="blank" style="margin-left: 30px; color: darkslategray;" >Política de cookies</a>
+							<a href="politica-privacidad.html" style="margin-left: 30px; color: darkslategray;" target="blank" >Política de privacidad</a>
+							<a href="terminos-servicio.html" style="margin-left: 30px; color: darkslategray;" target="blank" >Términos de servicio</a>
+							<a href="politica-marcas-servicios.html" target="blank" style="margin-left: 30px; color: darkslategray;" >Política de marcas y productos</a>
+							<a href="accesibilidad.html" style="margin-left: 30px; color: darkslategray;" target="blank">Accesibilidad</a>
 						</p>
 					</div>
 				</div>
 			</section>
-		</footer>
+		</footer>		
 		<!-- ***** END FOOTER ***** -->
 
 	</div>

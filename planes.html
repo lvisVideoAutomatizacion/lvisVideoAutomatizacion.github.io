@@ -57,160 +57,194 @@
 	<div class="animsition-overlay">
 		
 		<!-- ***** HEADER ***** -->
-		<header class="header">
-			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left"><img
-				src="images/LVISVally_Logotipo.svg" alt="LViS logo"></a>
-		<input class="side-menu" type="checkbox" id="side-menu" />
-			<input class="side-menu" type="checkbox" id="side-menu"/>
-			<label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-			<nav class="nav" style="margin-left: 80px;">
-				<ul class="menu">
-					<li><a href="servicios.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Servicios</a></li>
-					<li><a href="formacion.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Formación</a></li>
-					<li><a href="planes.html" class="active animsition-link" data-animsition-out-class="overlay-slide-out-left">Tarifas</a></li>
-				</ul>
+		<header class="header" role="banner">
+			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left">
+			  <img src="images/LVISVally_Logotipo.svg" alt="Logotipo de LViS Vally">
+			</a>
+		  
+			<input class="side-menu" type="checkbox" id="side-menu" aria-label="Abrir o cerrar el menú de navegación" />
+			<label class="hamb" for="side-menu" aria-controls="primary-navigation" aria-expanded="false" role="button">
+			  <span class="hamb-line"></span>
+			</label>
+		  
+			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Navegación principal" style="margin-left: 80px;">
+			  <ul class="menu">
+				<li>
+				  <a href="servicios.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Servicios</a>
+				</li>
+				<li>
+				  <a href="formacion.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Formación</a>
+				</li>
+				<li>
+				  <a href="planes.html" class="active animsition-link" data-animsition-out-class="overlay-slide-out-left" aria-current="page">Tarifas</a>
+				</li>
+			  </ul>
 			</nav>
+		  
 			<div class="nav-buttons">
-				<a class="demo-button" target="_blank" href="https://calendly.com/lvis-demo/30min">
-					<strong style="color: white;"> Hablemos</strong>
-				</a>
-				<a class="language-button" href="en/prices.html"><div style="position: relative; display: inline-flex;"><img src="images/globe_white.svg" alt="globo blanco" style="width: 15px; margin-right: 3px;"/><span style="margin-top: 5px;">English</span></div></a>			
+			  <a class="demo-button" target="_blank" rel="noopener" href="https://calendly.com/lvis-demo/30min" aria-label="Reservar una reunión de 30 minutos">
+				<strong style="color: white;">Hablemos</strong>
+			  </a>
+			  <a class="language-button" href="en/prices.html" aria-label="Cambiar el idioma a inglés">
+				<div style="position: relative; display: inline-flex; align-items: center;">
+				  <img src="images/globe_white.svg" alt="Icono de un globo terráqueo" style="width: 15px; margin-right: 3px;" />
+				  <span style="margin-top: 5px;">English</span>
+				</div>
+			  </a>
 			</div>
 		</header>
 		<!-- ***** END HEADER ***** --> 
 		
 		<!-- ***** PRICING ***** -->			
-		<div id="pricing" class="pricing-tables wrapper clearfix">
+		<div id="pricing" class="pricing-tables wrapper clearfix" role="region" aria-labelledby="pricing-title">
 			<div class="grid-1">
-				<h1 style="margin-bottom: 20px;" ><span class="color-primary">Paquetes flexibles <br>para satisfacer todas tus necesidades</span></h1>
+			  <h1 id="pricing-title" style="margin-bottom: 20px;">
+				<span class="color-primary">Paquetes flexibles <br>para satisfacer todas tus necesidades</span>
+			  </h1>
 			</div>	
 			<div class="grid-3 plans">
-
-				<div class="plan col" style="padding-bottom: 45px;">
-					<div class="plan__head">
-						<h3 class="plan__title">Paquete básico</h3>
-					</div>
-					<div class="plan__features" >
-						<ul class="list-check price--saas" >						
-							<li>								
-								<strong>Audio Descripción + Subtítulos + Transcripción</strong> para hasta <strong>30 minutos</strong> de vídeo							
-							</li>
-							<li>
-								Entrega en 5 días laborales							
-							</li>
-							<li>
-								Incluye revisión y ajustes							
-							</li>
-							<li>								
-								<strong>Conversión a Braille</strong> disponible para transcripciones							
-							</li>
-						</ul>
-					</div>
-					<div class="plan__credit">
-						<div class="plan__price">
-							<span class="price price--saas"><span class="plan__type">1.920 €</span></span>
-						</div>
-					</div>
+		  
+			  <div class="plan col" style="padding-bottom: 45px;" role="region" aria-labelledby="plan-basico-title">
+				<div class="plan__head">
+				  <h3 id="plan-basico-title" class="plan__title">Paquete básico</h3>
 				</div>
-
-				<div class="plan col" style="padding-bottom: 40px;">
-					<div class="plan__head">
-						<h3 class="plan__title">Paquete Estándar</h3>
-					</div>
-					<div class="plan__features" >
-						<ul class="list-check price--saas">						
-							<li>
-								<strong>Audio Descripción + Subtítulos + Transcripción</strong> para hasta <strong>60 minutos</strong> de vídeo							
-							</li>
-							<li>
-								Entrega en 10 días laborales							
-							</li>
-							<li>
-								Incluye revisión y ajustes							
-							</li>
-							<li>								
-								<strong>Conversión a Braille</strong> disponible para transcripciones							
-							</li>
-						</ul>
-					</div>
-					<div class="plan__credit">
-						<div class="plan__price">
-							<span class="price price--saas"><span class="plan__type">3.480 €</span></span>
-						</div>
-					</div>
-					<!-- <a class="button-cta animsition-link" data-animsition-out-class="overlay-slide-out-left" href="https://eu.bigin.online/org20092830437/forms/contacta-con-nosotros">Contacta con nosotros</a> -->
+				<div class="plan__features">
+				  <ul class="list-check price--saas" role="list">						
+					<li role="listitem">
+					  <strong>Audio Descripción + Subtítulos + Transcripción</strong> para hasta <strong>30 minutos</strong> de vídeo							
+					</li>
+					<li role="listitem">
+					  Entrega en 5 días laborales							
+					</li>
+					<li role="listitem">
+					  Incluye revisión y ajustes							
+					</li>
+					<li role="listitem">
+					  <strong>Conversión a Braille</strong> disponible para transcripciones							
+					</li>
+				  </ul>
 				</div>
-
-				<div class="plan col" style="padding-bottom: 40px;">
-					<div class="plan__head" >
-						<h3 class="plan__title" >Formación Accesibilidad Vídeo</h3>
-						<div class="plan__price">
-						</div>
-					</div>
-					<div class="plan__features" >
-						<ul class="list-check price--saas" >						
-							<li>
-								<strong>Taller Práctico</strong>  de <strong>8 horas</strong> de duración						
-							</li>
-							<li>
-								Formato Virtual / Remoto en 1 o 2 sesiones						
-							</li>
-							<li>
-								Grupos abiertos o por empresa
-							</li>
-							<li>								
-								Trae tus propios vídeos
-							</li>
-						</ul>
-					</div>
-					<div class="plan__credit" >
-						<div class="plan__price">
-							<span class="price price--saas"><span class="plan__type">400 € /alumno</span></span>
-							<br>
-							<span class="price price--saas"><span class="plan__type">1.200 € /grupo <span style="font-size: 15px;">(Hasta 6 alumnos)</span></span></span>
-							
-						</div>
-					</div>
+				<div class="plan__credit">
+				  <div class="plan__price" aria-label="Precio del paquete básico">
+					<span class="price price--saas">
+					  <span class="plan__type">1.920 €</span>
+					</span>
+				  </div>
 				</div>
-							
-				<div class="plan-text">
-					<div class="plan__bottom__text">
-						<div class="plan__price__title">
-							<center><h4 style="margin-bottom: 20px;">
-							<strong>¿Tienes un vídeo más largo o un proyecto personalizado?</strong>	
-							</br>Contáctanos para obtener una cotización ajustada a tus necesidades.</span></h4></center>
-						</div>
-					</div>
+			  </div>
+		  
+			  <div class="plan col" style="padding-bottom: 40px;" role="region" aria-labelledby="plan-estandar-title">
+				<div class="plan__head">
+				  <h3 id="plan-estandar-title" class="plan__title">Paquete Estándar</h3>
 				</div>
-				<div>
-					<center><a class="button-cta animsition-link" data-animsition-out-class="overlay-slide-out-left" href="https://calendly.com/lvis-demo/30min" style="width: 250px;">Contáctanos</a></center>
-					<!-- <center><p style="padding-top: 0px;">*No se requiere tarjeta</p></center> -->
+				<div class="plan__features">
+				  <ul class="list-check price--saas" role="list">						
+					<li role="listitem">
+					  <strong>Audio Descripción + Subtítulos + Transcripción</strong> para hasta <strong>120 minutos</strong> de vídeo							
+					</li>
+					<li role="listitem">
+					  Entrega en 10 días laborales							
+					</li>
+					<li role="listitem">
+					  Incluye revisión y ajustes							
+					</li>
+					<li role="listitem">
+					  <strong>Conversión a Braille</strong> disponible para transcripciones							
+					</li>
+				  </ul>
 				</div>
+				<div class="plan__credit">
+				  <div class="plan__price" aria-label="Precio del paquete estándar">
+					<span class="price price--saas">
+					  <span class="plan__type">5.760 €</span>
+					</span>
+				  </div>
+				</div>
+			  </div>
+		  
+			  <div class="plan col" style="padding-bottom: 40px;" role="region" aria-labelledby="formacion-title">
+				<div class="plan__head">
+				  <h3 id="formacion-title" class="plan__title">Formación Accesibilidad Vídeo</h3>
+				  <div class="plan__price"></div>
+				</div>
+				<div class="plan__features">
+				  <ul class="list-check price--saas" role="list">						
+					<li role="listitem">
+					  <strong>Taller Práctico</strong> de <strong>8 horas</strong> de duración						
+					</li>
+					<li role="listitem">
+					  Formato Virtual / Remoto en 1 o 2 sesiones						
+					</li>
+					<li role="listitem">
+					  Grupos abiertos o por empresa
+					</li>
+					<li role="listitem">								
+					  Trae tus propios vídeos
+					</li>
+				  </ul>
+				</div>
+				<div class="plan__credit">
+				  <div class="plan__price" aria-label="Precio de la formación">
+					<span class="price price--saas">
+					  <span class="plan__type">400 € /alumno</span>
+					</span>
+					<br>
+					<span class="price price--saas">
+					  <span class="plan__type">1.800 € /grupo 
+						<span style="font-size: 15px;">(Hasta 8 alumnos)</span>
+					  </span>
+					</span>
+				  </div>
+				</div>
+			  </div>
+		  
+			  <div class="plan-text" role="region" aria-labelledby="personalizado-title">
+				<div class="plan__bottom__text">
+				  <div class="plan__price__title">
+					<center>
+					  <h4 id="personalizado-title" style="margin-bottom: 20px;">
+						<strong>¿Tienes un volumen de vídeos más grande o un proyecto personalizado?</strong><br>
+						Contáctanos para obtener una cotización ajustada a tus necesidades.
+					  </h4>
+					</center>
+				  </div>
+				</div>
+			  </div>
+		  
+			  <div>
+				<center>
+				  <a class="button-cta animsition-link" data-animsition-out-class="overlay-slide-out-left" 
+					 href="https://calendly.com/lvis-demo/30min" 
+					 style="width: 250px;" role="button" aria-label="Contáctanos para obtener más información">
+					Contáctanos
+				  </a>
+				</center>
+			  </div>
+		  
 			</div>
-		</div>		
-		<!-- ***** END PRICING ***** --> 				
+		  </div>				  
+		<!-- ***** END PRICING ***** --> 	
+
 		<!-- ***** FOOTER ***** -->
-		<footer class="wrapper clearfix">
+		<footer class="wrapper clearfix" role="contentinfo">
 			<section class="grid-1">
-                <div class="col">
-					<div class="dropdown">
-					</div>
+				<div class="col">
 					<div style="text-align: center;">
-						<p>© 2024 LViS Video Automatización S.L.  LViS es una marca registrada. Todos los derechos reservados</p>
+						<p>© 2025 LViS Video Automatización S.L. LViS es una marca registrada. Todos los derechos reservados.</p>
 					</div>
-					<hr style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
-					<div style="text-align: center; margin-top: 20px; ">
+					<hr aria-hidden="true" style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
+					<div aria-label="Enlaces legales" style="text-align: center; margin-top: 20px;">
 						<p style="display: inline;">
-							<a href="aviso-legal.html" target="blank" style="color: gray;">Aviso legal</a>
-							<a href="politica-de-cookies.html" target="blank" style="margin-left: 30px; color: gray;" >Política de cookies</a>
-							<a href="politica-privacidad.html" style="margin-left: 30px; color: gray;" target="blank" >Política de privacidad</a>
-							<a href="terminos-servicio.html" style="margin-left: 30px; color: gray;" target="blank" >Términos de servicio</a>
-							<a href="politica-marcas-servicios.html" target="blank" style="margin-left: 30px; color: gray;" >Política de marcas y productos</a>
-							<a href="accesibilidad.html" style="margin-left: 30px; color: gray;" target="blank">Accesibilidad</a>
+							<a href="aviso-legal.html" target="blank" style="color: darkslategray;">Aviso legal</a>
+							<a href="politica-de-cookies.html" target="blank" style="margin-left: 30px; color: darkslategray;" >Política de cookies</a>
+							<a href="politica-privacidad.html" style="margin-left: 30px; color: darkslategray;" target="blank" >Política de privacidad</a>
+							<a href="terminos-servicio.html" style="margin-left: 30px; color: darkslategray;" target="blank" >Términos de servicio</a>
+							<a href="politica-marcas-servicios.html" target="blank" style="margin-left: 30px; color: darkslategray;" >Política de marcas y productos</a>
+							<a href="accesibilidad.html" style="margin-left: 30px; color: darkslategray;" target="blank">Accesibilidad</a>
 						</p>
 					</div>
 				</div>
-			</section>				
+			</section>
 		</footer>
 		<!-- ***** END FOOTER ***** -->
 
