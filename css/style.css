@@ -2,39 +2,95 @@
    RESETS
    ========================================================================== */
    
-article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video, img{ display: block; }
-audio, canvas, video{ display: inline-block; *display: inline; *zoom: 1; }
+article, aside, details, figcaption, figure, footer, header, nav, section {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
 audio:not([controls]){ display: none; }
+
 [hidden]{ display: none; }
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, section, nav, img{ margin: 0; padding: 0; }
+
+/* Elimina todos los márgenes y padding */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+body, div, dl, dt, dd, ul, ol, li, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, section, nav, img {
+    margin: 0;
+    padding: 0;
+}
+
 mark, rp, rt, ruby, summary, time{ display: inline; }
-html{}
-body{ background: rgba(var(--color-grey-light),1); color: rgba(var(--color-black),1); -webkit-backface-visibility: hidden; }
-input, textarea{ outline: none; resize: none; border: none; border: 0; }
-a{ text-decoration: none; outline: none; color: rgba(var(--color-primary),1);}
+
+body { 
+    background: rgba(var(--color-grey-light),1); 
+    color: rgba(var(--color-black),1);
+}
+
+input, textarea {
+    resize: vertical; 
+    border: none;
+}
+
+a { 
+    text-decoration: none; 
+    color: rgba(var(--color-primary),1); 
+}
+
+a:focus {
+    outline: none;
+    text-decoration: underline;
+    text-decoration-color: rgba(var(--color-primary), 0.7);
+}
+
 a.active{ outline: none; }
-.none{ display: none; }
-.float-left{ float: left; }
-.float-right{ float: right; }
-.align-left{ text-align: left; }
-.align-center{ text-align: center; }
-.align-right{ text-align: right; }
-.no-border{ border: none; }
-.c-white { color:#fff!important; }
-.c-green { color:rgba(0,176,154,1)!important; }
-table{ border-collapse: collapse; border-spacing: 0; font-size: inherit; font: 100%; }
+
+table { 
+    border-collapse: collapse; 
+    border-spacing: 0; 
+    font: inherit; 
+}
+
 fieldset, img{ border: 0; }
-address, caption, cite, code, dfn, em, /*strong,*/ th, var, optgroup{ font-style:inherit; font-weight:inherit; }
+
+address, caption, cite, code, dfn, var, optgroup { 
+    font-style: inherit; 
+    font-weight: inherit; 
+}
+
 li{	list-style: none; }
-.restablecer li {list-style: initial;}
-.nested-style ul ul {list-style: initial; list-style-type: circle;}
+
 h1, h2, h3, h4, h5, h6{	font-size: 100%; }
-input, button, textarea, select, optgroup, option{ font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; }
-select, input, button, textarea, button{ font: 100%; }
-input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button{ -webkit-appearance:none; margin:0;}
-.clearfix:before, .clearfix:after{ content: ""; display: table; }
+
+input, button, textarea, select, optgroup, option { 
+    font-family: inherit; 
+    font-size: inherit; 
+    font-style: inherit; 
+    font-weight: inherit; 
+}
+
+
+select, input, button, textarea { 
+    font: inherit; 
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.clearfix:before, .clearfix:after { 
+    content: ""; 
+    display: table; 
+}
+
 .clearfix:after{ clear: both; }
-.clearfix{ *zoom: 1; }
+
 img{ width: 100%;}
 
 
