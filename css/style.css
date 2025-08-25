@@ -94,16 +94,43 @@ input[type=number]::-webkit-outer-spin-button {
 img{ width: 100%;}
 
 
-/* ============================
-   Variables
-   ============================ */
+/* =============================================================================
+   CLASES UTILITARIAS
+   ========================================================================== */
+
+.none{ display: none; }
+
+.float-left{ float: left; }
+
+.float-right{ float: right; }
+
+.align-left{ text-align: left; }
+
+.align-center{ text-align: center; }
+
+.align-right{ text-align: right; }
+
+.no-border{ border: none; }
+
+.c-white { color:#fff; }
+
+.c-green { color:rgba(0,176,154,1); }
+
+.restablecer li {list-style: initial;}
+
+.nested-style ul ul { list-style-type: circle; }
+
+
+/* =============================================================================
+   VARIABLES
+   ========================================================================== */
 
 :root{		
 	--color-white: 255,255,255; /* #FFFFFF */  	
 	--color-grey-light: 250,251,251; /* #fafbfb */  	
 	--color-grey-dark: 122,128,141; /* #7A808D */ 
 	--color-black: 24,26,28; /* #181A1C */  	
-	--color-primary: 18,180,212; /* #F23054 */  	
+	--color-primary: 18,180,212; /* #12B4D4 */  	
 	--color-menu: 48,42,48; /* #302A30 */ 	
 	--color-blue: 18,180,212; /* #12B4D4 */ 
 	--color-green: 24,216,134; /* #18D886 */
@@ -116,15 +143,19 @@ img{ width: 100%;}
 .color-white{
 	color: rgba(var(--color-white),1);
 	}
+
 .color-grey-light{
 	color: rgba(var(--color-grey-light),1);
 	}
+
 .color-grey-dark{
 	color: rgba(var(--color-grey-dark),1);
 	}
+
 .color-black{
 	color: rgba(var(--color-black),1);
 	}
+	
 .color-primary{
 	color: rgba(var(--color-primary),1);
 	}
