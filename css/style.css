@@ -970,14 +970,14 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 		text-align: center;
 		}
 
-/* ============================
+/* =============================================================================
    FAQ
-   ============================ */
+   ========================================================================== */
 
 #faq{	
 	text-align: center;
 	background-color: rgba(var(--color-purple-light),1);
-	background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1512 72" style="enable-background:new 0 0 1512 72;" xml:space="preserve"><style type="text/css">.st0{fill:%23302A30;}</style><path class="st0" d="M270.1,55.5c99.5-12.7,204-37.6,304.7-47.8C678.4-2.9,786.5-2.3,890.3,7.9c72.9,7.1,143.6,18.9,216.7,25.5c135.8,12.1,275.8,5.9,404.9-17.7V72H0V57.3C85.4,71.3,181.8,66.7,270.1,55.5z"/></svg>');
+	background-image: url('../images/backgrounds/faq-background.svg');
 	}
 	#faq .title{
 		display: block;
@@ -1014,11 +1014,14 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 			#faq input:checked ~ .tab__content{
 				max-height: 900px;
 				}
+		#faq .tab__content p.tab-title {
+			padding-bottom: 0px;
+			font-weight: bold;
+			color: #203460; 
+			font-size: 30px;
+		}
 		#faq .accordion{
 			margin-top: 24px;
-			/*border: 2px solid;
-			border-radius: 0.5rem;
-			overflow: hidden;*/
 			}
 		#faq .tab{
 			background: rgba(var(--color-white),1);
@@ -1026,9 +1029,6 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 			margin-bottom: 12px;
 			box-shadow: 0px 10px 15px -3px rgba(var(--color-black),0.12);
 			}
-			#faq .tab:not(:last-child){
-				/*border-bottom: 2px solid;*/
-				}
 		#faq .tab__label, .tab__close{
 			display: flex;
 			cursor: pointer;
@@ -1087,8 +1087,6 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	align-items: center; 
 	height: 30vh; 
 }
-
-
 	#test-logo img {
 		height: 200px; 
 		width: auto; 
