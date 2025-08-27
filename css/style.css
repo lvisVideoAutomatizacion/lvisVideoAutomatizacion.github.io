@@ -353,6 +353,13 @@ video {
     border: 12px solid rgba(var(--color-white),1); 
 }
 
+/* ===== Línea Temática ===== */
+.rupture{
+	border: none; 
+	border-top: 1px solid lightgray; 
+	margin: 20px 0;
+}
+
 
 /* =============================================================================
    GRID
@@ -2013,9 +2020,9 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
     left: -12px;
 	}
 
-/* ============================
-   Footer
-   ============================ */
+/* =============================================================================
+   FOOTER
+   ========================================================================== */
 
 footer{
 	position: relative;
@@ -2093,7 +2100,25 @@ footer{
 		}
 		footer a:hover{
 			text-decoration: underline;
-			}		
+			}
+
+.legal-links {
+	text-align: center;
+}
+
+.footer-legal-links{
+  margin-top: 0px;
+}
+
+.footer-legal-links a {
+  color: darkslategray;
+  margin-right: 30px;
+}
+
+.footer-legal-links a:last-child {
+  margin-right: 0; 
+}
+
 .dropdown{
 	width: 180px;
 	position: relative;
