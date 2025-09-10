@@ -120,6 +120,8 @@ img{ width: 100%;}
 
 .nested-style ul ul { list-style-type: circle; }
 
+.top-common { padding-top: 1rem !important;}
+
 
 /* =============================================================================
    VARIABLES
@@ -137,7 +139,8 @@ img{ width: 100%;}
 	--color-purple: 60,18,106; /* #3C126A */	
 	--color-blue-light: 228,242,248; /* #e4f2f8 */ 	
 	--color-purple-light: 244,242,248; /* #f4f2f8 */ 	
-	--color-yellow-light: 248,246,232; /* #f8f6e8 */ 		
+	--color-yellow-light: 248,246,232; /* #f8f6e8 */
+	--color-blue-dark: #203460; 		
     }
 
 .color-white{
@@ -208,7 +211,7 @@ h2, h3, h4, h5, h6, p {
 
 /* ===== Secciones con padding y fondo ===== */
 #hero, #home-video, #home-advantage, #customers, #why, #faq, #make,
-#how, #use, #pricing, #features, #use-cases, #demo-section, footer {
+#how, #use, #pricing, #services, #use-cases, #demo-section, footer {
     padding-top: 42px !important;
     padding-bottom: 60px;
     background-size: 100% auto;
@@ -217,7 +220,7 @@ h2, h3, h4, h5, h6, p {
 }
 
 /* ===== Sobrescribir padding-top para secciones clave ===== */
-#hero, #make, #pricing, #features, #use-cases {
+#hero, #make, #pricing, #services, #use-cases {
     padding-top: 60px !important;
 }
 
@@ -675,7 +678,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	padding-top: 90px!important;
 	padding-bottom: 150px;
 	background-color: rgba(var(--color-grey-light),1);
-	background-image: url('../images/backgrounds/hero-background.svg')
+	background-image: url('../images/backgrounds/light-purple-wave.svg')
 	}
 	#hero .grid-3--2-1 .col:first-child{
 		margin: 6px 0 24px;
@@ -977,7 +980,8 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 #faq{	
 	text-align: center;
 	background-color: rgba(var(--color-purple-light),1);
-	background-image: url('../images/backgrounds/faq-background.svg');	}
+	background-image: url('../images/backgrounds/black-wave.svg');
+	}
 	#faq .title{
 		display: block;
 		font-family: 'Raleway';
@@ -1726,59 +1730,99 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 			visibility: visible;
 			opacity: 1;
 			}
-/* ============================
-   Features
-   ============================ */
+/* =============================================================================
+   SERVICES
+   ========================================================================== */
 
-#features{
+#services{
 	background-color: rgba(var(--color-grey-light),1);
-	background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1512 72" style="enable-background:new 0 0 1512 72;" xml:space="preserve"><style type="text/css">.st0{fill:%23302A30;}</style><path class="st0" d="M270.1,55.5c99.5-12.7,204-37.6,304.7-47.8C678.4-2.9,786.5-2.3,890.3,7.9c72.9,7.1,143.6,18.9,216.7,25.5c135.8,12.1,275.8,5.9,404.9-17.7V72H0V57.3C85.4,71.3,181.8,66.7,270.1,55.5z"/></svg>');	
+	background-image: url('../images/backgrounds/black-wave.svg');	
 	}
-	#features h3{
+	#services section{
+		margin-bottom: 50px;
+		}
+	#services section:last-of-type {
+		margin-bottom: 0;
+		}
+	#services .course-title{
+		margin-bottom: 10px; 
+		padding-top: 50px; 
+		color: var(--color-blue-dark);
+		}
+	#services h2{
+		font-size: 30px;
+		margin-bottom: 60px;
+		line-height: 30px;
+		}
+	#services h3{
 		color: rgba(var(--color-primary),1);
 		padding-bottom: 12px;
 		}
-	#features .icon{
+	#services .icon{
 		display: block;
 		width: 96px;
 		height: 96px;
 		}
-	#features .title{
+	#services .title{
 		display: block;
 		font-family: 'Raleway';
 		font-optical-sizing: auto;
 		font-size: 20px;
-		padding: 12px 0 0;
-		color: rgba(var(--color-primary),1);
+		font-weight: bold;
+		color: var(--color-blue-dark);
+		padding-bottom: 10px;
 		}
-	#features p{
-		padding: 12px 0;
+	#services .col{
+		padding-right: 2rem;
+  		box-sizing: border-box;
+		margin-left: 0;
+		}
+	#services p{
+		padding: 0;
 		font-size: 18px;
 		}
-#features .features-title{
-	display: flex;
-	margin: 12px auto;
-	}
-	#features .features-title span{
-		display: inline-flex;
-		width: 48px;
-		height: 48px;
+	#services ul{
 		font-size: 18px;
-		border-radius: 12px;
-		align-items: center;
-		justify-content: center;
-		background: rgba(var(--color-primary),1);
-		color: rgba(var(--color-white),1);
 		}
-	#features .features-title h3{
-		display: inline-flex;
-		align-items: center;
-		padding: 2px 0 0 9px;
-		color: rgba(var(--color-menu),1);
+	#services ul strong{
+		color: var(--color-blue-dark);
 		}
-	#features video{
-		border: 12px solid rgba(var(--color-white),1);
+	#services ul li{
+		list-style-type: disc;
+		margin-left: 1em;
+		margin-bottom: 0.5em;
 		}
+	#services ul li::marker{
+		color: var(--color-blue-dark); 
+		font-size: 20px;
+		}
+	#services ul ul li {
+		list-style-type: circle; /* círculo baleiro */
+		}
+	#services .services-title{
+		display: flex;
+		margin: 12px auto;
+		}
+		#services .services-title i{
+			display: inline-flex;
+			width: 48px;
+			height: 48px;
+			font-size: 18px;
+			border-radius: 12px;
+			align-items: center;
+			justify-content: center;
+			background: rgba(var(--color-primary),1);
+			color: rgba(var(--color-white),1);
+			}
+		#services .services-title h3{
+			display: inline-flex;
+			align-items: center;
+			padding: 2px 0 15px 9px;
+			color: rgba(var(--color-menu),1);
+			}
+		#services video{
+			border: 12px solid rgba(var(--color-white),1);
+			}
 .external-link{
 	display: inline-flex;
 	margin: 12px auto;
@@ -2316,7 +2360,7 @@ p{
 #how,
 #use,
 #pricing,	
-#features,
+#services,
 #use-cases,
 #demo-section,
 footer{
@@ -2326,7 +2370,7 @@ footer{
 	#hero,
 	#make,
 	#pricing,
-	#features,
+	#services,
 	#use-cases{
 		padding-top: 84px!important;
 		}
@@ -2569,22 +2613,22 @@ h6{
    Features 768
    ============================ */
 
-#features .features-title{
+#services .features-title{
 	margin: 24px auto 18px;
 	}
-	#features .features-title span{
+	#services .features-title span{
 		width: 60px;
 		height: 60px;
 		font-size: 24px;
 		border-radius: 16px;
 		}
-	#features .features-title h3{
+	#services .features-title h3{
 		padding: 4px 0 0 12px;
 		}	
-	#features .section-project{
+	#services .section-project{
 		padding: 12px 0 60px;
 		}
-	#features .slick-dots{
+	#services .slick-dots{
     	bottom: -72px!important;
 		}
 
@@ -2726,7 +2770,7 @@ footer{
 #how,
 #use,
 #pricing,	
-#features,
+#services,
 #use-cases,
 #demo-section,
 footer{
@@ -2736,7 +2780,7 @@ footer{
 	#hero,
 	#make,
 	#pricing,
-	#features,
+	#services,
 	#use-cases{
 		padding-top: 84px!important;
 		}
@@ -2834,10 +2878,10 @@ h2{
    Features 1024
    ============================ */
 
-#features .features-title{
+#services .features-title{
 	margin: 18px auto 6px;
 	}
-#features .slick-dots{
+#services .slick-dots{
    	bottom: -48px!important;
 	}	
 
@@ -2955,7 +2999,7 @@ p{
 #how,
 #use,
 #pricing,
-#features,	
+#services,	
 #use-cases,
 #demo-section,
 footer{
@@ -2965,7 +3009,7 @@ footer{
 	#hero,
 	#make,
 	#pricing,
-	#features,
+	#services,
 	#use-cases{
 		padding-top: 96px!important;
 		}
@@ -3205,16 +3249,16 @@ h6{
    Features 1280
    ============================ */
 
-#features .features-title{
+#services .features-title{
 	margin: 30px auto 24px;
 	}
-	#features .features-title h3{
+	#services .features-title h3{
 		padding: 6px 0 0 12px;
 		}		
-#features .section-project{
+#services .section-project{
     padding: 0 0 48px;
 	}
-	#features .slick-dots{
+	#services .slick-dots{
     	bottom: -60px!important;
 		}	
 	
@@ -3325,7 +3369,7 @@ footer p{
 	#how,
 	#use,
 	#pricing,
-	#features,
+	#services,
 	#use-cases,
 	#demo-section,
 	footer{
@@ -3334,7 +3378,7 @@ footer p{
 		}		
 		#make,
 		#pricing,
-		#features,
+		#services,
 		#use-cases{
 			padding-top: 96px!important;
 			}
@@ -3416,7 +3460,7 @@ footer p{
 	#how,
 	#use,
 	#pricing,
-	#features,
+	#services,
 	#use-cases,
 	#demo-section,
 	footer{
@@ -3426,7 +3470,7 @@ footer p{
 		#hero,		
 		#make,
 		#pricing,
-		#features,
+		#services,
 		#use-cases{
 			padding-top: 96px!important;
 			}	
@@ -3479,7 +3523,7 @@ footer p{
 	#how,
 	#use,
 	#pricing,
-	#features,
+	#services,
 	#use-cases,
 	#demo-section,
 	footer{
@@ -3489,7 +3533,7 @@ footer p{
 		#hero,		
 		#make,
 		#pricing,
-		#features,
+		#services,
 		#use-cases{
 			padding-top: 108px!important;
 			}
@@ -3540,7 +3584,7 @@ footer p{
 	#how,
 	#use,
 	#pricing,
-	#features,
+	#services,
 	#use-cases,
 	#demo-section,
 	footer{
@@ -3550,7 +3594,7 @@ footer p{
 		#hero,		
 		#make,
 		#pricing,
-		#features,
+		#services,
 		#use-cases{
 			padding-top: 108px!important;
 			}
@@ -3576,12 +3620,4 @@ footer p{
 		padding-top: 24px!important;
 		padding-bottom: 36px!important;
 		}
-
-	/*footer p{
-		margin: 168px 0 0;
-		}
-	.dropdown{
-		margin: 168px 0 12px;
-		}*/
-
-/* ================= */
+}
