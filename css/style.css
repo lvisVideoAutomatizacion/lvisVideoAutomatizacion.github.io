@@ -2,274 +2,377 @@
    RESETS
    ========================================================================== */
    
-article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video, img{ display: block; }
-audio, canvas, video{ display: inline-block; *display: inline; *zoom: 1; }
+article, aside, details, figcaption, figure, footer, header, nav, section {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
 audio:not([controls]){ display: none; }
+
 [hidden]{ display: none; }
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, section, nav, img{ margin: 0; padding: 0; }
+
+/* Elimina todos los márgenes y padding */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+body, div, dl, dt, dd, ul, ol, li, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, section, nav, img {
+    margin: 0;
+    padding: 0;
+}
+
 mark, rp, rt, ruby, summary, time{ display: inline; }
-html{}
-body{ background: rgba(var(--color-grey-light),1); color: rgba(var(--color-black),1); -webkit-backface-visibility: hidden; }
-input, textarea{ outline: none; resize: none; border: none; border: 0; }
-a{ text-decoration: none; outline: none; color: rgba(var(--color-primary),1);}
+
+body { 
+    background: rgba(var(--color-grey-light),1); 
+    color: rgba(var(--color-black),1);
+}
+
+input, textarea {
+    resize: vertical; 
+    border: none;
+}
+
+a { 
+    text-decoration: none; 
+    color: rgba(var(--color-primary),1); 
+}
+
+a:focus {
+    outline: none;
+    text-decoration: underline;
+    text-decoration-color: rgba(var(--color-primary), 0.7);
+}
+
 a.active{ outline: none; }
-.none{ display: none; }
-.float-left{ float: left; }
-.float-right{ float: right; }
-.align-left{ text-align: left; }
-.align-center{ text-align: center; }
-.align-right{ text-align: right; }
-.no-border{ border: none; }
-.c-white { color:#fff!important; }
-.c-green { color:rgba(0,176,154,1)!important; }
-table{ border-collapse: collapse; border-spacing: 0; font-size: inherit; font: 100%; }
+
+table { 
+    border-collapse: collapse; 
+    border-spacing: 0; 
+    font: inherit; 
+}
+
 fieldset, img{ border: 0; }
-address, caption, cite, code, dfn, em, /*strong,*/ th, var, optgroup{ font-style:inherit; font-weight:inherit; }
+
+address, caption, cite, code, dfn, var, optgroup { 
+    font-style: inherit; 
+    font-weight: inherit; 
+}
+
 li{	list-style: none; }
-.restablecer li {list-style: initial;}
-.nested-style ul ul {list-style: initial; list-style-type: circle;}
+
 h1, h2, h3, h4, h5, h6{	font-size: 100%; }
-input, button, textarea, select, optgroup, option{ font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; }
-select, input, button, textarea, button{ font: 100%; }
-input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button{ -webkit-appearance:none; margin:0;}
-.clearfix:before, .clearfix:after{ content: ""; display: table; }
+
+input, button, textarea, select, optgroup, option { 
+    font-family: inherit; 
+    font-size: inherit; 
+    font-style: inherit; 
+    font-weight: inherit; 
+}
+
+
+select, input, button, textarea { 
+    font: inherit; 
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.clearfix:before, .clearfix:after { 
+    content: ""; 
+    display: table; 
+}
+
 .clearfix:after{ clear: both; }
-.clearfix{ *zoom: 1; }
+
 img{ width: 100%;}
 
 
-/* ============================
-   Variables
-   ============================ */
+/* =============================================================================
+   CLASES UTILITARIAS
+   ========================================================================== */
+
+.none{ display: none; }
+
+.float-left{ float: left; }
+
+.float-right{ float: right; }
+
+.align-left{ text-align: left; }
+
+.align-center{ text-align: center; }
+
+.align-right{ text-align: right; }
+
+.no-border{ border: none; }
+
+.c-white { color:#fff; }
+
+.c-green { color:rgba(0,176,154,1); }
+
+.restablecer li {list-style: initial;}
+
+.nested-style ul ul { list-style-type: circle; }
+
+.top-common { padding-top: 1rem !important;}
+
+
+/* =============================================================================
+   VARIABLES
+   ========================================================================== */
 
 :root{		
 	--color-white: 255,255,255; /* #FFFFFF */  	
 	--color-grey-light: 250,251,251; /* #fafbfb */  	
 	--color-grey-dark: 122,128,141; /* #7A808D */ 
 	--color-black: 24,26,28; /* #181A1C */  	
-	--color-primary: 18,180,212; /* #F23054 */  	
+	--color-primary: 18,180,212; /* #12B4D4 */  	
 	--color-menu: 48,42,48; /* #302A30 */ 	
 	--color-blue: 18,180,212; /* #12B4D4 */ 
 	--color-green: 24,216,134; /* #18D886 */
 	--color-purple: 60,18,106; /* #3C126A */	
 	--color-blue-light: 228,242,248; /* #e4f2f8 */ 	
 	--color-purple-light: 244,242,248; /* #f4f2f8 */ 	
-	--color-yellow-light: 248,246,232; /* #f8f6e8 */ 		
+	--color-yellow-light: 248,246,232; /* #f8f6e8 */
+	--color-blue-dark: #203460; 		
     }
 
 .color-white{
 	color: rgba(var(--color-white),1);
 	}
+
 .color-grey-light{
 	color: rgba(var(--color-grey-light),1);
 	}
+
 .color-grey-dark{
 	color: rgba(var(--color-grey-dark),1);
 	}
+
 .color-black{
 	color: rgba(var(--color-black),1);
 	}
+	
 .color-primary{
 	color: rgba(var(--color-primary),1);
 	}
 
-/* ============================
-   Common 
-   ============================ */
+/* =============================================================================
+   COMMON
+   ========================================================================== */
 
-a,
-header, 
-nav, 
-img,
-h1, 
-h2, 
-h3, 
-h4, 
-h5,
-h6,
-p,
-img,
-video{
-	transition: all 0.3s ease;
-	}
-.bg-init, 
-.animsition-overlay-slide{ 
-	background: rgba(var(--color-primary),1);
-	z-index: 3000;
-	}
-.post{
-	position: relative;
-	z-index: 2;
-	opacity: 0;
-	}
-.animated{	
-	animation-duration:1s;
-	animation-fill-mode:both;
-	}
-	.animated.fadeIn{
-		animation-name: fadeIn;
-		}
-@keyframes fadeIn{
-	  0%{ opacity:0; }
-	100%{ opacity:1; }
-	}
-h1{
-	padding-top: 30px;
-	}
-h2, 
-h3, 
-h4, 
-h5,
-h6,
-p{
-	padding-top: 18px;
-	}
-#hero,
-#home-video,
-#home-advantage,
-#customers,
-#why,
-#faq,
-#make,
-#how,
-#use,
-#pricing,
-#features,
-#use-cases,
-#demo-section,
-footer{
-	padding-top: 42px!important;
-	padding-bottom: 60px;
-	background-size: 100% auto;
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	}
-	#hero,
-	#make,
-	#pricing,
-	#features,
-	#use-cases{
-		padding-top: 60px!important;
-		}
-.list-number{
-	list-style: none;
-	counter-reset: li;
+/* ===== Transición global para elementos comunes ===== */
+a, header, nav, img, h1, h2, h3, h4, h5, h6, p, video {
+    transition: all 0.3s ease;
+}
+
+/* ===== Fondos principales ===== */
+.bg-init, .animsition-overlay-slide { 
+    background: rgba(var(--color-primary),1);
+    z-index: 3000;
+}
+
+/* ===== Publicaciones animadas ===== */
+.post {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+}
+
+/* ===== Animaciones generales ===== */
+.animated {    
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animated.fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ===== Encabezados con padding específico ===== */
+h1 {
+    padding-top: 30px;
+}
+
+h2, h3, h4, h5, h6, p {
+    padding-top: 18px;
+}
+
+/* ===== Secciones con padding y fondo ===== */
+#hero, #home-video, #home-advantage, #customers, #why, #faq, #make,
+#how, #use, #pricing, #services, #use-cases, #demo-section, footer {
+    padding-top: 42px !important;
+    padding-bottom: 60px;
+    background-size: 100% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+/* ===== Sobrescribir padding-top para secciones clave ===== */
+#hero, #make, #pricing, #services, #use-cases {
+    padding-top: 60px !important;
+}
+
+/* ===== Listas numeradas ===== */
+.list-number {
+    list-style: none;
+    counter-reset: li;
     font-size: 18px;
-	line-height: 30px;
-	color: rgba(var(--color-black),1);
-	padding: 12px 0 0;
-	}
-	.list-number li{
-		display: flex;
-		counter-increment: li;
-		padding: 6px 0;
-		}
-		.list-number li::before{
-			display: inline-block;
-			content: counter(li);
-			font-family: 'Raleway';
-    		font-weight: 600;
-			font-optical-sizing: auto;
-			color: rgba(var(--color-primary),1);
-			text-align: center;
-			direction: rtl;
-			min-width: 30px;
-			}
-.list-arrow{
+    line-height: 30px;
+    color: rgba(var(--color-black),1);
+    padding-top: 12px;
+}
+
+.list-number li {
+    display: flex;
+    counter-increment: li;
+    padding: 6px 0;
+}
+
+.list-number li::before {
+    display: inline-block;
+    content: counter(li);
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-optical-sizing: auto;
+    color: rgba(var(--color-primary),1);
+    text-align: center;
+    direction: rtl;
+    min-width: 30px;
+}
+
+/* ===== Listas con flechas ===== */
+.list-arrow {
     font-size: 18px;
-	line-height: 30px;
-	color: rgba(var(--color-black),1);
-	padding: 12px 0 0;
-	}
-	.list-arrow li{
-		display: flex;
-		padding: 6px 0 6px 30px;
-		}
-		.list-arrow li::before{
-			position: absolute;
-			content: "";
-			width: 24px;
-			height: 24px;
-			top: 6px;
-			left: 0;
-			background: url("../images/arrow-right-circle.svg") no-repeat 0 / 24px;
-			}
-.list-point{
-	display: inline-block;
-	width: 49%;
-	vertical-align: top;
+    line-height: 30px;
+    color: rgba(var(--color-black),1);
+    padding-top: 12px;
+}
+
+.list-arrow li {
+    display: flex;
+    padding: 6px 0 6px 30px;
+}
+
+.list-arrow li::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    top: 6px;
+    left: 0;
+    background: url("../images/arrow-right-circle.svg") no-repeat 0 / 24px;
+}
+
+/* ===== Listas con puntos ===== */
+.list-point {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
     font-size: 14px;
-	line-height: 26px;
-	color: rgba(var(--color-black),1);
-	padding: 6px 0 0;
-	}
-	.list-point li{
-		display: flex;
-		padding: 4px 0 4px 12px;
-		}
-		.list-point li::before{
-			position: absolute;
-			content: "";
-			width: 12px;
-			height: 12px;
-			top: 9px;
-			left: 0;
-			background: url("../images/dot.svg") no-repeat 0 / 6px;
-			}
-.button-cta{
-	position: relative;
-	display: inline-block;
-	font-family: 'Raleway';
-	font-weight: 700;
-	font-optical-sizing: auto;
-	width: 100%;
-	text-align: center;
-	font-size: 16px;
-	line-height: 24px;
-	padding: 18px 0 16px;
-	margin: 24px 0;
-	color: rgba(var(--color-white),1);
-	background: rgba(var(--color-primary),1);
-	box-shadow: inset 0 0 0 0 rgba(var(--color-black),0.12), 0px 8px 16px -6px rgba(var(--color-black),0.08), 0px 6px 8px -6px rgba(var(--color-black),0.06), inset 0 -1px 0 0px rgba(var(--color-black),0.36), inset 0 1px 0 0px rgba(var(--color-white),0.36);	
-	border-radius: 16px;
-	transition: all 0.3s ease;
-	}
-	.button-cta:hover{	
-		box-shadow: inset 0 0 180px 0 rgba(var(--color-black),0.08), 0px 8px 16px -6px rgba(var(--color-black),0.08), 0px 6px 8px -6px rgba(var(--color-black),0.06), inset 0 1px 0 0px rgba(var(--color-black),0.72), inset 0 -1px 0 0px rgba(var(--color-white),0.24);
-		}
-video{
-	width: 100%;
-	width: calc(100% - 24px);
-	height: auto;
-	border-radius: 12px;
-	border: 12px solid rgba(var(--color-white),1); 
-	}
-.video-responsive{
+    line-height: 26px;
+    color: rgba(var(--color-black),1);
+    padding-top: 6px;
+}
+
+.list-point li {
+    display: flex;
+    padding: 4px 0 4px 12px;
+}
+
+.list-point li::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    top: 9px;
+    left: 0;
+    background: url("../images/dot.svg") no-repeat 0 / 6px;
+}
+
+/* ===== Botones CTA ===== */
+.button-cta {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 18px 0 16px;
+    margin: 24px 0;
+    color: rgba(var(--color-white),1);
+    background: rgba(var(--color-primary),1);
+    border-radius: 16px;
+    box-shadow: inset 0 0 0 0 rgba(var(--color-black),0.12),
+                0px 8px 16px -6px rgba(var(--color-black),0.08),
+                0px 6px 8px -6px rgba(var(--color-black),0.06),
+                inset 0 -1px 0 0px rgba(var(--color-black),0.36),
+                inset 0 1px 0 0px rgba(var(--color-white),0.36);
+    transition: all 0.3s ease;
+}
+
+.button-cta:hover {
+    box-shadow: inset 0 0 180px 0 rgba(var(--color-black),0.08),
+                0px 8px 16px -6px rgba(var(--color-black),0.08),
+                0px 6px 8px -6px rgba(var(--color-black),0.06),
+                inset 0 1px 0 0px rgba(var(--color-black),0.72),
+                inset 0 -1px 0 0px rgba(var(--color-white),0.24);
+}
+
+.button-inline {
+    max-width: 200px;
+}
+
+/* ===== Vídeos ===== */
+video {
+    width: calc(100% - 24px);
+    height: auto;
+    border-radius: 12px;
+    border: 12px solid rgba(var(--color-white),1); 
+}
+
+.video-responsive {
     position: relative;
     overflow: hidden;
-	max-width: 480px;
+    max-width: 480px;
     height: 0;
-	border-radius: 12px;
+    border-radius: 12px;
     padding-bottom: 192px;
-	margin: 12px auto;
-	border: 12px solid rgba(var(--color-white),1); 
-	}
-	/* .video-responsive iframe{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		} */
-		  
-/* ============================
-   Grid
-   ============================ */
+    margin: 12px auto;
+    border: 12px solid rgba(var(--color-white),1); 
+}
+
+/* ===== Línea Temática ===== */
+.rupture{
+	border: none; 
+	border-top: 1px solid lightgray; 
+	margin: 20px 0;
+}
+
+
+/* =============================================================================
+   GRID
+   ========================================================================== */
 
 .wrapper{
     width: 90%;
     padding :0 5%;	
 	}
+
 .grid-1, 
 .grid-2, 
 .grid-3, 
@@ -284,6 +387,7 @@ video{
 	max-width: 1350px;
 	position: relative;
 	}
+
 .grid-1 .col, 
 .grid-2 .col, 
 .grid-3 .col, 
@@ -295,86 +399,63 @@ video{
 	position: relative;
 	}
 
-/* ============================
-   Typography
-   ============================ */
-
-/* @font-face {
-    font-family: 'NexaRegular';
-    src: url('../fonts/NexaRegular.eot');
-    src: url('../fonts/NexaRegular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/NexaRegular.woff2') format('woff2'),
-        url('../fonts/NexaRegular.woff') format('woff'),
-        url('../fonts/NexaRegular.ttf') format('truetype'),
-        url('../fonts/NexaRegular.svg#NexaRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+/* =============================================================================
+   TIPOGRAFÍA
+   ========================================================================== */
+/* ===== Variables ===== */
+:root {
+    --font-main: "Raleway", sans-serif;
+    --color-text: rgba(var(--color-black),1);
+    
+    --font-size-body: 18px;
+    --line-height-body: 30px;
+    
+    --font-size-h1: 28px;
+    --line-height-h1: 40px;
+    --font-size-h2: 24px;
+    --line-height-h2: 36px;
+    --font-size-h3: 22px;
+    --line-height-h3: 34px;
+    --font-size-h4: 20px;
+    --line-height-h4: 32px;
+    --font-size-h5: 20px;
+    --line-height-h5: 32px;
+    --font-size-h6: 20px;
+    --line-height-h6: 32px;
 }
-@font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway.eot');
-    src: url('../fonts/Raleway.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Raleway.woff2') format('woff2'),
-        url('../fonts/Raleway.woff') format('woff'),
-        url('../fonts/Raleway.ttf') format('truetype'),
-        url('../fonts/Raleway.svg#Raleway') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-} */
-body,
-p,
-h4, 
-h5,
-h6{
-	font-family: "Raleway", sans-serif;
+
+/* ===== Estilos Generales de texto ===== */
+body, p, h4, h5, h6 {
+    font-family: var(--font-main);
     font-weight: 400;
-    font-style: normal;	
-	font-optical-sizing: auto;
-    font-size: 18px;
-	line-height: 30px;
-	color: rgba(var(--color-black),1);
-	} 
-h1, 
-h2, 
-h3,
-strong{
-	font-family: "Raleway", sans-serif;
-	font-weight: 700;
-    font-style: normal;	
-	font-optical-sizing: auto;
-	color: rgba(var(--color-black),1);
-    }
-h1{
-	font-size: 28px;
-	line-height: 40px;
-	}
-h2{
-	font-size: 24px;
-	line-height: 36px;
-	}
-h3{
-	font-size: 22px;
-	line-height: 34px;
-	}
-h4{
-	font-size: 20px;
-	line-height: 32px;
-	}
-h5{
-	font-size: 20px;
-	line-height: 32px;
-	}
-h6{
-	font-size: 20px;
-	line-height: 32px;
-	}
+    font-style: normal;
+    font-optical-sizing: auto;
+    color: var(--color-text);
+}
 
-/* ============================
-   Menu
-   ============================ */
+/* ===== Encabezados y negrita ===== */
+h1, h2, h3, strong {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-style: normal;
+    font-optical-sizing: auto;
+    color: var(--color-text);
+}
 
+/* ===== Tamaños de fuente y línea ===== */
+h1 { font-size: var(--font-size-h1); line-height: var(--line-height-h1); }
+h2 { font-size: var(--font-size-h2); line-height: var(--line-height-h2); }
+h3 { font-size: var(--font-size-h3); line-height: var(--line-height-h3); }
+h4 { font-size: var(--font-size-h4); line-height: var(--line-height-h4); }
+h5 { font-size: var(--font-size-h5); line-height: var(--line-height-h5); }
+h6 { font-size: var(--font-size-h6); line-height: var(--line-height-h6); }
+p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
+
+/* =============================================================================
+   MENÚ
+   ========================================================================== */
+
+/* ===== Header ===== */
 .header{
     position: fixed;
     top: 6px;
@@ -401,12 +482,16 @@ h6{
 .header a{
 	cursor: pointer;
 	}
+
+/* ===== Logo ===== */
 .logo{
     display: inline-block;
-	width: 500px;
+	width: 42px;
 	height: auto;
     margin: 6px;
 	}
+
+/* ===== Navegación ===== */
 .nav{
     width: calc(100% - 12px);
     position: fixed;
@@ -437,11 +522,22 @@ h6{
 				font-optical-sizing: auto;
 				background-color: rgba(var(--color-black),0.6);
 				}
+	.menu a.menu-logo-link:hover {
+		background-color: transparent !important;
+	}
+
+	.menu a.menu-logo-link.active {
+		background-color: transparent !important;
+		color: inherit;
+	}
+
 .nav{
 	top: 60px;
     max-height: 0;   
     transition: max-height .5s ease-out;	
 	}
+
+/* ===== Menú hamburguesa ===== */
 .hamb{
     cursor: pointer;
     float: right;
@@ -478,6 +574,8 @@ h6{
 	.hamb:hover .hamb-line::after{
 		background: rgba(var(--color-primary),1);
 		}
+
+/* ===== Menú toggling ===== */
 .side-menu{
     display: none;
 	}
@@ -495,11 +593,15 @@ h6{
 		transform: rotate(45deg);
 		top:0;
 		}
+
+/* ===== Botones navegación ===== */
 .nav-buttons{
 	position: absolute;
 	top: 9px;
     right: 54px;
 	}
+
+	/* --- login --- */
 	.login-button{
 		display: inline-block;
 		font-size: 14px;
@@ -515,6 +617,8 @@ h6{
 		.login-button:hover{	
 			opacity: 1;
 			}
+
+	/* --- demo --- */
 	.demo-button{
 		position: relative;
 		display: inline-block;
@@ -534,31 +638,47 @@ h6{
 		.demo-button:hover{	
 			box-shadow: inset 0 0 180px 0 rgba(var(--color-black),0.08), 0px 8px 16px -6px rgba(var(--color-black),0.08), 0px 6px 8px -6px rgba(var(--color-black),0.06), inset 0 1px 0 0px rgba(var(--color-black),0.72), inset 0 -1px 0 0px rgba(var(--color-white),0.24);
 			}
-	.language-button{
+		.demo-button strong {
+			color: rgba(var(--color-white),1);
+		}
+	
+	/* --- lenguaje --- */
+	.language-button {
 		display: inline-block;
 		font-size: 14px;
 		line-height: 10px;
 		font-weight: 700;
 		opacity: 0.72;
 		color: rgba(var(--color-white),1);
-		/* box-shadow: inset 0 0 0 1px rgba(var(--color-white),1); */
 		padding: 9px 14px 7px;
-		/* padding: 0px; */
 		border-radius: 12px;
 		transition: all 0.3s ease;
+		text-decoration: none; 
 		}
-		.language-button:hover{	
+		.language-button:hover {
 			opacity: 1;
-			}
-/* ============================
-   Hero
-   ============================ */
+		}
+		.language-content {
+			display: inline-flex;
+			align-items: center;
+		}
+		.language-icon {
+			width: 15px;
+			margin-right: 3px;
+		}
+		.language-text {
+			margin-top: 5px;
+		}
+
+/* =============================================================================
+   MENÚ
+   ========================================================================== */
    
 #hero{
 	padding-top: 90px!important;
-	padding-bottom: 60px;
+	padding-bottom: 150px;
 	background-color: rgba(var(--color-grey-light),1);
-	background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1512 72" style="enable-background:new 0 0 1512 72;" xml:space="preserve"><style type="text/css">.st0{fill:%23f4f2f8;}</style><path class="st0" d="M270.1,55.5c99.5-12.7,204-37.6,304.7-47.8C678.4-2.9,786.5-2.3,890.3,7.9c72.9,7.1,143.6,18.9,216.7,25.5c135.8,12.1,275.8,5.9,404.9-17.7V72H0V57.3C85.4,71.3,181.8,66.7,270.1,55.5z"/></svg>')
+	background-image: url('../images/backgrounds/light-purple-wave.svg')
 	}
 	#hero .grid-3--2-1 .col:first-child{
 		margin: 6px 0 24px;
@@ -567,31 +687,44 @@ h6{
 		color: rgba(var(--color-black),0.78);
     	padding-top: 24px;
 		}
-	#hero video{
+	/* #hero video{
 		width: 100%;
 		border: none;
 		padding: 48px 0 0;
 		box-shadow: 0px 10px 15px -3px rgba(var(--color-black),0.06);
 		background: url("../images/browser.svg") no-repeat 0 0 / auto 48px;
-		}
+		} */
+	/* ===== iframe ===== */
 	#hero iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
+		height:100%;
 		border: none;
 		border-radius: 20px;
 		padding: 48px 0 0;
 		box-shadow: 0px 10px 15px -3px rgba(var(--color-black),0.06);
 		background: url("../images/browser.svg") no-repeat 0 0 / auto 48px;
 		}
+
 	#hero .iframe-content{
 		padding:56.25% 0 0 0;
 		position:relative;
 		}
+
+	#hero .iframe-caption{
+		display: flex; 
+		justify-content: space-evenly; 
+		padding-top: 80px; 
+		padding-bottom: 2px;
+		}
+	
 	#hero .iframe-content-news{
 		position: relative; 
 		width: 100%;       
 		max-width: 800px;  
-		margin: 0 auto;    
-		/* overflow: hidden;   */
+		margin: 0 auto;
 		aspect-ratio: 16 / 9; 
 		width: 40%;
 		height:40%;
@@ -603,9 +736,22 @@ h6{
 			width: 100%; 
 			height: 100%; 
 		}
-	#hero .h3-news{
-		margin-top: 40px;
+	
+	#hero h1 {
+		margin-bottom: 20px; 
+		color: #203460;
 	}
+
+	#hero h3 {
+		margin-top: 100px;
+		text-align: center;
+		color: #203460;
+		font-weight: bold;
+	}
+
+	/* #hero .h3-news{
+		margin-top: 40px;
+	} */
 .cd-title{
 	position: relative;
 	height: 160px;
@@ -827,14 +973,14 @@ h6{
 		text-align: center;
 		}
 
-/* ============================
+/* =============================================================================
    FAQ
-   ============================ */
+   ========================================================================== */
 
 #faq{	
 	text-align: center;
 	background-color: rgba(var(--color-purple-light),1);
-	background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1512 72" style="enable-background:new 0 0 1512 72;" xml:space="preserve"><style type="text/css">.st0{fill:%23302A30;}</style><path class="st0" d="M270.1,55.5c99.5-12.7,204-37.6,304.7-47.8C678.4-2.9,786.5-2.3,890.3,7.9c72.9,7.1,143.6,18.9,216.7,25.5c135.8,12.1,275.8,5.9,404.9-17.7V72H0V57.3C85.4,71.3,181.8,66.7,270.1,55.5z"/></svg>');
+	background-image: url('../images/backgrounds/black-wave.svg');
 	}
 	#faq .title{
 		display: block;
@@ -871,11 +1017,14 @@ h6{
 			#faq input:checked ~ .tab__content{
 				max-height: 900px;
 				}
+		#faq .tab__content p.tab-title {
+			padding-bottom: 0px;
+			font-weight: bold;
+			color: #203460; 
+			font-size: 30px;
+		}
 		#faq .accordion{
 			margin-top: 24px;
-			/*border: 2px solid;
-			border-radius: 0.5rem;
-			overflow: hidden;*/
 			}
 		#faq .tab{
 			background: rgba(var(--color-white),1);
@@ -883,9 +1032,6 @@ h6{
 			margin-bottom: 12px;
 			box-shadow: 0px 10px 15px -3px rgba(var(--color-black),0.12);
 			}
-			#faq .tab:not(:last-child){
-				/*border-bottom: 2px solid;*/
-				}
 		#faq .tab__label, .tab__close{
 			display: flex;
 			cursor: pointer;
@@ -944,8 +1090,6 @@ h6{
 	align-items: center; 
 	height: 30vh; 
 }
-
-
 	#test-logo img {
 		height: 200px; 
 		width: auto; 
@@ -1586,59 +1730,99 @@ h6{
 			visibility: visible;
 			opacity: 1;
 			}
-/* ============================
-   Features
-   ============================ */
+/* =============================================================================
+   SERVICES
+   ========================================================================== */
 
-#features{
+#services{
 	background-color: rgba(var(--color-grey-light),1);
-	background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1512 72" style="enable-background:new 0 0 1512 72;" xml:space="preserve"><style type="text/css">.st0{fill:%23302A30;}</style><path class="st0" d="M270.1,55.5c99.5-12.7,204-37.6,304.7-47.8C678.4-2.9,786.5-2.3,890.3,7.9c72.9,7.1,143.6,18.9,216.7,25.5c135.8,12.1,275.8,5.9,404.9-17.7V72H0V57.3C85.4,71.3,181.8,66.7,270.1,55.5z"/></svg>');	
+	background-image: url('../images/backgrounds/black-wave.svg');	
 	}
-	#features h3{
+	#services section{
+		margin-bottom: 50px;
+		}
+	#services section:last-of-type {
+		margin-bottom: 0;
+		}
+	#services .course-title{
+		margin-bottom: 10px; 
+		padding-top: 50px; 
+		color: var(--color-blue-dark);
+		}
+	#services h2{
+		font-size: 30px;
+		margin-bottom: 60px;
+		line-height: 30px;
+		}
+	#services h3{
 		color: rgba(var(--color-primary),1);
 		padding-bottom: 12px;
 		}
-	#features .icon{
+	#services .icon{
 		display: block;
 		width: 96px;
 		height: 96px;
 		}
-	#features .title{
+	#services .title{
 		display: block;
 		font-family: 'Raleway';
 		font-optical-sizing: auto;
 		font-size: 20px;
-		padding: 12px 0 0;
-		color: rgba(var(--color-primary),1);
+		font-weight: bold;
+		color: var(--color-blue-dark);
+		padding-bottom: 10px;
 		}
-	#features p{
-		padding: 12px 0;
+	#services .col{
+		padding-right: 2rem;
+  		box-sizing: border-box;
+		margin-left: 0;
+		}
+	#services p{
+		padding: 0;
 		font-size: 18px;
 		}
-#features .features-title{
-	display: flex;
-	margin: 12px auto;
-	}
-	#features .features-title span{
-		display: inline-flex;
-		width: 48px;
-		height: 48px;
+	#services ul{
 		font-size: 18px;
-		border-radius: 12px;
-		align-items: center;
-		justify-content: center;
-		background: rgba(var(--color-primary),1);
-		color: rgba(var(--color-white),1);
 		}
-	#features .features-title h3{
-		display: inline-flex;
-		align-items: center;
-		padding: 2px 0 0 9px;
-		color: rgba(var(--color-menu),1);
+	#services ul strong{
+		color: var(--color-blue-dark);
 		}
-	#features video{
-		border: 12px solid rgba(var(--color-white),1);
+	#services ul li{
+		list-style-type: disc;
+		margin-left: 1em;
+		margin-bottom: 0.5em;
 		}
+	#services ul li::marker{
+		color: var(--color-blue-dark); 
+		font-size: 20px;
+		}
+	#services ul ul li {
+		list-style-type: circle; /* círculo baleiro */
+		}
+	#services .services-title{
+		display: flex;
+		margin: 12px auto;
+		}
+		#services .services-title i{
+			display: inline-flex;
+			width: 48px;
+			height: 48px;
+			font-size: 18px;
+			border-radius: 12px;
+			align-items: center;
+			justify-content: center;
+			background: rgba(var(--color-primary),1);
+			color: rgba(var(--color-white),1);
+			}
+		#services .services-title h3{
+			display: inline-flex;
+			align-items: center;
+			padding: 2px 0 15px 9px;
+			color: rgba(var(--color-menu),1);
+			}
+		#services video{
+			border: 12px solid rgba(var(--color-white),1);
+			}
 .external-link{
 	display: inline-flex;
 	margin: 12px auto;
@@ -1877,9 +2061,9 @@ h6{
     left: -12px;
 	}
 
-/* ============================
-   Footer
-   ============================ */
+/* =============================================================================
+   FOOTER
+   ========================================================================== */
 
 footer{
 	position: relative;
@@ -1957,7 +2141,25 @@ footer{
 		}
 		footer a:hover{
 			text-decoration: underline;
-			}		
+			}
+
+.legal-links {
+	text-align: center;
+}
+
+.footer-legal-links{
+  margin-top: 0px;
+}
+
+.footer-legal-links a {
+  color: darkslategray;
+  margin-right: 30px;
+}
+
+.footer-legal-links a:last-child {
+  margin-right: 0; 
+}
+
 .dropdown{
 	width: 180px;
 	position: relative;
@@ -2158,7 +2360,7 @@ p{
 #how,
 #use,
 #pricing,	
-#features,
+#services,
 #use-cases,
 #demo-section,
 footer{
@@ -2168,7 +2370,7 @@ footer{
 	#hero,
 	#make,
 	#pricing,
-	#features,
+	#services,
 	#use-cases{
 		padding-top: 84px!important;
 		}
@@ -2411,22 +2613,22 @@ h6{
    Features 768
    ============================ */
 
-#features .features-title{
+#services .features-title{
 	margin: 24px auto 18px;
 	}
-	#features .features-title span{
+	#services .features-title span{
 		width: 60px;
 		height: 60px;
 		font-size: 24px;
 		border-radius: 16px;
 		}
-	#features .features-title h3{
+	#services .features-title h3{
 		padding: 4px 0 0 12px;
 		}	
-	#features .section-project{
+	#services .section-project{
 		padding: 12px 0 60px;
 		}
-	#features .slick-dots{
+	#services .slick-dots{
     	bottom: -72px!important;
 		}
 
@@ -2568,7 +2770,7 @@ footer{
 #how,
 #use,
 #pricing,	
-#features,
+#services,
 #use-cases,
 #demo-section,
 footer{
@@ -2578,7 +2780,7 @@ footer{
 	#hero,
 	#make,
 	#pricing,
-	#features,
+	#services,
 	#use-cases{
 		padding-top: 84px!important;
 		}
@@ -2676,10 +2878,10 @@ h2{
    Features 1024
    ============================ */
 
-#features .features-title{
+#services .features-title{
 	margin: 18px auto 6px;
 	}
-#features .slick-dots{
+#services .slick-dots{
    	bottom: -48px!important;
 	}	
 
@@ -2797,7 +2999,7 @@ p{
 #how,
 #use,
 #pricing,
-#features,	
+#services,	
 #use-cases,
 #demo-section,
 footer{
@@ -2807,7 +3009,7 @@ footer{
 	#hero,
 	#make,
 	#pricing,
-	#features,
+	#services,
 	#use-cases{
 		padding-top: 96px!important;
 		}
@@ -3047,16 +3249,16 @@ h6{
    Features 1280
    ============================ */
 
-#features .features-title{
+#services .features-title{
 	margin: 30px auto 24px;
 	}
-	#features .features-title h3{
+	#services .features-title h3{
 		padding: 6px 0 0 12px;
 		}		
-#features .section-project{
+#services .section-project{
     padding: 0 0 48px;
 	}
-	#features .slick-dots{
+	#services .slick-dots{
     	bottom: -60px!important;
 		}	
 	
@@ -3167,7 +3369,7 @@ footer p{
 	#how,
 	#use,
 	#pricing,
-	#features,
+	#services,
 	#use-cases,
 	#demo-section,
 	footer{
@@ -3176,7 +3378,7 @@ footer p{
 		}		
 		#make,
 		#pricing,
-		#features,
+		#services,
 		#use-cases{
 			padding-top: 96px!important;
 			}
@@ -3258,7 +3460,7 @@ footer p{
 	#how,
 	#use,
 	#pricing,
-	#features,
+	#services,
 	#use-cases,
 	#demo-section,
 	footer{
@@ -3268,7 +3470,7 @@ footer p{
 		#hero,		
 		#make,
 		#pricing,
-		#features,
+		#services,
 		#use-cases{
 			padding-top: 96px!important;
 			}	
@@ -3321,7 +3523,7 @@ footer p{
 	#how,
 	#use,
 	#pricing,
-	#features,
+	#services,
 	#use-cases,
 	#demo-section,
 	footer{
@@ -3331,7 +3533,7 @@ footer p{
 		#hero,		
 		#make,
 		#pricing,
-		#features,
+		#services,
 		#use-cases{
 			padding-top: 108px!important;
 			}
@@ -3382,7 +3584,7 @@ footer p{
 	#how,
 	#use,
 	#pricing,
-	#features,
+	#services,
 	#use-cases,
 	#demo-section,
 	footer{
@@ -3392,7 +3594,7 @@ footer p{
 		#hero,		
 		#make,
 		#pricing,
-		#features,
+		#services,
 		#use-cases{
 			padding-top: 108px!important;
 			}
@@ -3418,12 +3620,4 @@ footer p{
 		padding-top: 24px!important;
 		padding-bottom: 36px!important;
 		}
-
-	/*footer p{
-		margin: 168px 0 0;
-		}
-	.dropdown{
-		margin: 168px 0 12px;
-		}*/
-
-/* ================= */
+}

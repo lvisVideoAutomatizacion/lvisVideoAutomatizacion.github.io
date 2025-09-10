@@ -61,187 +61,205 @@
 		
 		<!-- ***** HEADER ***** -->
 		<header class="header" role="banner">
-			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left">
+			<!-- Logo -->
+			<a href="index.html" 
+			class="logo animsition-link" 
+			data-animsition-out-class="overlay-slide-out-left"
+			aria-label="Ir a la página principal de LViS Vally">
 			  <img src="images/LVISVally_Logotipo.svg" alt="Logotipo de LViS Vally">
 			</a>
 		  
+			<!-- Menú Hamburguesa -->
 			<input class="side-menu" type="checkbox" id="side-menu" aria-label="Abrir o cerrar el menú de navegación" />
 			<label class="hamb" for="side-menu" aria-controls="primary-navigation" aria-expanded="false" role="button">
-			  <span class="hamb-line"></span>
+				<span class="hamb-line"></span>
 			</label>
 		  
+			<!-- Navegación Principal -->
 			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Navegación principal" style="margin-left: 80px;">
-				<ul class="menu">
+			  <ul class="menu">
 				  <li>
-					  <a href="servicios.html" class="active animsition-link" data-animsition-out-class="overlay-slide-out-left">Servicios</a>
+					<a href="servicios.html" class="active animsition-link" 
+					data-animsition-out-class="overlay-slide-out-left">Servicios</a>
 				  </li>
-				  <li>
-					  <a href="formacion.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Formación Equipos</a>
-				  </li>
-				  <li>
-					  <a href="evaluacion.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Evaluación Proyecto</a>
-				  </li>
-				  <li>
-					  <a href="produccion-ejemplos.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Producción Ejemplos</a>
-				  </li>
-				  <li>
-					  <a href="plan-continuo.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Plan Continuo</a>
-				  </li>
-				  <li>
-					  <a href="planes.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-left">Tarifas</a>
-				  </li>
-				</ul>
+				<li>
+					<a href="formacion.html" class="animsition-link" 
+					data-animsition-out-class="overlay-slide-out-left">Formación Equipos</a>
+				</li>
+				<li>
+					<a href="evaluacion.html" class="animsition-link" 
+					data-animsition-out-class="overlay-slide-out-left">Evaluación Proyecto</a>
+				</li>
+				<li>
+					<a href="produccion-ejemplos.html" class="animsition-link" 
+					data-animsition-out-class="overlay-slide-out-left">Producción Ejemplos</a>
+				</li>
+				<li>
+					<a href="plan-continuo.html" class="animsition-link" 
+					data-animsition-out-class="overlay-slide-out-left">Plan Continuo</a>
+				</li>
+				<li>
+					<a href="planes.html" class="animsition-link" 
+					data-animsition-out-class="overlay-slide-out-left">Tarifas</a>
+				</li>
+			  </ul>
 			</nav>
-		  
+			
+			<!-- Botones CTA -->
 			<div class="nav-buttons">
-			  <a class="demo-button" target="_blank" rel="noopener" href="https://calendly.com/lvis-meetings/30min" aria-label="Reservar una reunión de 30 minutos">
-				<strong style="color: white;">Hablemos</strong>
-			  </a>
-			  <a class="language-button" href="en/services.html" aria-label="Cambiar el idioma a inglés">
-				<div style="position: relative; display: inline-flex; align-items: center;">
-				  <img src="images/globe_white.svg" alt="Icono de un globo terráqueo" style="width: 15px; margin-right: 3px;" />
-				  <span style="margin-top: 5px;">English</span>
-				</div>
-			  </a>
+				<a class="demo-button" 
+				target="_blank" 
+				rel="noopener" 
+				href="https://calendly.com/lvis-meetings/30min"
+				aria-label="Agenda una llamada de 30 minutos en Calendly. Se abre en una nueva pestaña.">
+					<strong style="color: white;">Hablemos</strong>
+				</a>
+
+				<a class="language-button" href="en/services.html" aria-label="Cambiar idioma a inglés">
+					<div class="language-content">
+						<img src="images/globe_white.svg" alt="Icono de un globo terráqueo" class="language-icon" />
+						<span class="language-text">English</span>
+					</div>
+				</a>
 			</div>
-		</header>
-		<!-- ***** END HEADER ***** --> 
+		</header>		  
+		<!-- ***** FIN HEADER ***** --> 
 		
-		<!-- ***** FEATURES ***** -->
-		<div id="features" class="wrapper clearfix" role="region" aria-label="Características y servicios">
+		<!-- ***** SERVICES ***** -->
+		<div id="services" class="wrapper clearfix" role="region" aria-label="Características y servicios">
 			<div class="grid-1">
-				<h1 id="titulo-curso" class="cd-headline loading-bar">						
-					<span style="margin-bottom: 10px; padding-top: 100px; color: #203460">Servicios de Accesibilidad Audiovisual</span>
-				</h1>
-				<h2 style="font-size: 30px;">Audiodescripción, Subtítulos (CC) y Transcripción Multilingüe</h2>
+				<h1 id="titulo-curso" class="cd-headline loading-bar course-title">Servicios de Accesibilidad Audiovisual</h1>
+				<h2>Audiodescripción, Subtítulos (CC) y Transcripción Multilingüe</h2>
 			</div>
 
-			<div class="grid-1 features-title" style="margin-bottom: 10px">
-				<span><i class="fa-solid fa-universal-access" aria-hidden="true"></i></span>
-				<h3 id="proceso-funciona">Accesibilidad que cumple con la normativa europea y española</h3>
-			</div>
-			
-			
+			<!-- Section #1 -->
 			<section class="grid-1" role="region" aria-labelledby="proceso-funciona">
+				<div class="grid-1 services-title">
+					<i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+					<h3 id="proceso-funciona">Accesibilidad que cumple con la normativa europea y española</h3>
+				</div>			
 				<p>
 					En cumplimiento del <strong>Acta Europea de Accesibilidad</strong> y su desarrollo en España mediante la <strong>Ley 11/2023</strong> y el <strong>Real Decreto 193/2023</strong>,
 					<br/> ofrecemos servicios integrales de accesibilidad audiovisual diseñados para garantizar la <strong>igualdad de acceso a la información y la comunicación</strong> 
 					<br>para todas las personas, incluidas aquellas con discapacidad visual, auditiva o cognitiva.
 				</p>
-				<div class="col post">
+				<div class="top-common">
 					<p>Nuestros servicios están alineados con:</p>
-					<p><strong>•</strong> Las <strong style="color: #203460;">normas UNE 153020</strong> (audiodescripción para personas con discapacidad visual)</p>
-					<p><strong>•</strong> Las <strong style="color: #203460;">normas UNE 153010</strong> (subtitulado para personas sordas y con discapacidad auditiva)</p>
-					<p><strong>•</strong> Las <strong style="color: #203460;">Pautas de Accesibilidad al Contenido Web (WCAG 2.2)</strong> en sus criterios específicos para multimedia:</p>
-					<p style="margin-left: 70px;">◦ 1.2.1: Solo audio y solo vídeo (pregrabado)</p>
-					<p style="margin-left: 70px;">◦ 1.2.2: Subtítulos (pregrabado)</p>
-					<p style="margin-left: 70px;">◦ 1.2.3: Audiodescripción (pregrabado)</p>
-					<p style="margin-left: 70px;">◦ 1.2.5: Audiodescripción avanzada (pregrabado)</p>
-					<p style="margin-left: 70px;">◦ 1.2.7: Audiodescripción extendida</p>
-					<p style="margin-left: 70px;">◦ 1.2.8: Medios alternativos para multimedia pregrabada</p>
+					<ul>
+						<li>Las <strong>normas UNE 153020</strong> (audiodescripción para personas con discapacidad visual)</li>
+						<li>Las <strong>normas UNE 153010</strong> (subtitulado para personas sordas y con discapacidad auditiva)</li>
+						<li>
+							Las <strong>Pautas de Accesibilidad al Contenido Web (WCAG 2.2)</strong> en sus criterios específicos para multimedia:
+							<ul>
+								<li>1.2.1: Solo audio y solo vídeo (pregrabado)</li>
+								<li>1.2.2: Subtítulos (pregrabado)</li>
+								<li>1.2.3: Audiodescripción (pregrabado)</li>
+								<li>1.2.5: Audiodescripción avanzada (pregrabado)</li>
+								<li>1.2.7: Audiodescripción extendida</li>
+								<li>1.2.8: Medios alternativos para multimedia pregrabada</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</section>
 		
-			<div class="grid-1 features-title" style="margin-bottom: 10px">
-				<span><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span>
-				<h3 id="accesibilidad-videos">Nuestros servicios</h3>
-			</div>
-
+			<!-- Section #2 -->
 			<section class="grid-3" role="region" aria-labelledby="accesibilidad-videos">
-				<div class="col post">
-					<div class="title">
-						<strong style="color: #203460;">Subtitulado para personas sordas y con discapacidad auditiva (CC)</strong>
-					</div>
-					<p>
-						<strong>•</strong> Subtítulos en <strong>español, inglés, francés, portugués</strong> y las lenguas oficiales autonómicas: catalán, euskera y gallego
-						<br><strong>•</strong> Inclusión de <strong>elementos sonoros relevantes</strong> (música, efectos, entonaciones)
-						<br><strong>•</strong> Cumplimiento de la norma <strong>UNE 153010</strong>
-					</p>
+				<div class="grid-1 services-title">
+					<i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+					<h3 id="accesibilidad-videos">Nuestros servicios</h3>
 				</div>
 				<div class="col post">
-					<div class="title">
-						<strong style="color: #203460;">Audiodescripción (AD)</strong>
-					</div>
-					<p>
-						<strong>•</strong> Descripciones narradas de elementos visuales importantes para garantizar la comprensión sin ver la imagen
-						<br><strong>•</strong> Realizadas por guionistas expertos/as y voces sintéticas (opcional locutores/as profesionales)
-						<br><strong>•</strong> Conforme a la norma <strong>UNE 153020</strong> y criterios <strong>WCAG 2.2</strong> (1.2.3, 1.2.5, 1.2.7)
-					</p>
+					<h4 class="title">Subtitulado para personas sordas y con discapacidad auditiva (CC)</h4>
+					<ul>
+						<li>Subtítulos en <strong>español, inglés, francés, portugués</strong> y las lenguas oficiales autonómicas: catalán, euskera y gallego</li>
+						<li>Inclusión de <strong>elementos sonoros relevantes</strong> (música, efectos, entonaciones)</li>
+						<li>Cumplimiento de la norma <strong>UNE 153010</strong></li>
+					</ul>
 				</div>
+
 				<div class="col post">
-					<div class="title">
-						<strong style="color: #203460;">Transcripción completa y alternativa textual</strong>
-					</div>
-					<p>
-						<strong>•</strong> Transcripción sincronizada de diálogos, efectos y descripciones
-						<br><strong>•</strong> Documentos accesibles en formatos PDF etiquetado, Word o HTML
-						<br><strong>•</strong> Cumple el nivel AAA del criterio <strong>WCAG 2.2 1.2.8</strong> 
-					</p>
+					<h4 class="title">Audiodescripción (AD)</h4>
+					<ul>
+						<li>Descripciones narradas de elementos visuales importantes para garantizar la comprensión sin ver la imagen</li>
+						<li>Realizadas por guionistas expertos/as y voces sintéticas (opcional locutores/as profesionales)</li>
+						<li>Conforme a la norma <strong>UNE 153020</strong> y criterios <strong>WCAG 2.2</strong> (1.2.3, 1.2.5, 1.2.7)</li>
+					</ul>
+				</div>
+
+				<div class="col post">
+					<h4 class="title">Transcripción completa y alternativa textual</h4>
+					<ul>
+						<li>Transcripción sincronizada de diálogos, efectos y descripciones</li>
+						<li>Documentos accesibles en formatos PDF etiquetado, Word o HTML</li>
+						<li>Cumple el nivel AAA del criterio <strong>WCAG 2.2 1.2.8</strong> </li>
+					</ul>
 				</div>
 			</section>
 
-			<div class="grid-1 features-title" style="margin-bottom: 10px">
-				<span><i class="fa-solid fa-earth-europe" aria-hidden="true"></i></span>
-				<h3 id="proceso-funciona">Multilingüismo y pluralidad lingüística</h3>
-			</div>
-			
-			
+			<!-- Section #3 -->
 			<section class="grid-1" role="region" aria-labelledby="proceso-funciona">
+				<div class="grid-1 services-title">
+					<i class="fa-solid fa-earth-europe" aria-hidden="true"></i>
+					<h3 id="proceso-funciona">Multilingüismo y pluralidad lingüística</h3>
+				</div>
 				<p>
 					Todos los servicios están disponibles en los siguientes idiomas:
 				</p>
-				<div class="col post">
-					<p><strong>•</strong> <strong style="color: #203460;">Español (Castellano)</strong> </p>
-					<p><strong>•</strong> <strong style="color: #203460;">Català (Catalán)</strong> </p>
-					<p><strong>•</strong> <strong style="color: #203460;">Euskara (Euskera)</strong> </p>
-					<p><strong>•</strong> <strong style="color: #203460;">Galego (Gallego)</strong> </p>
-					<p><strong>•</strong> <strong style="color: #203460;">English (Inglés)</strong> </p>
-					<p><strong>•</strong> <strong style="color: #203460;">Français (Francés)</strong> </p>
-					<p><strong>•</strong> <strong style="color: #203460;">Português (Portugués)</strong> </p>
-					<p>Ofrecemos traducción accesible que respeta la normativa lingüística y cultural de cada territorio.</p>
-				</div>
+				<ul>
+					<li><strong>Español (Castellano)</strong></li>
+					<li><strong>Galego (Gallego)</strong></li>
+					<li><strong>Euskara (Euskera)</strong></li>
+					<li><strong>Català (Catalán)</strong></li>
+					<li><strong>English (Inglés)</strong></li>
+					<li><strong>Français (Francés)</strong></li>
+					<li><strong>Português (Portugués)</strong></li>
+				</ul>
+				<p>Ofrecemos traducción accesible que respeta la normativa lingüística y cultural de cada territorio.</p>
 			</section>
 
-			<div class="grid-1 features-title" style="margin-bottom: 10px">
-				<span><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></span>
-				<h3 id="proceso-funciona">Garantía de cumplimiento normativo</h3>
-			</div>
+			<!-- Section #4 -->
 			<section class="grid-1" role="region" aria-labelledby="proceso-funciona">
-				<div class="col post">
-					<p><strong>•</strong> Asesoría en conformidad legal obligatoria para administraciones públicas y grandes empresas según la Ley 11/2023</p>
-					<p><strong>•</strong> Servicios verificados según las mejores prácticas del sector audiovisual accesible </p>
-					<p><strong>•</strong> Preparación de documentación de cumplimiento técnico y legal</p>
+				<div class="grid-1 services-title">
+					<i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+					<h3 id="proceso-funciona">Garantía de cumplimiento normativo</h3>
 				</div>
+				<ul>
+					<li>Asesoría en conformidad legal obligatoria para administraciones públicas y grandes empresas según la Ley 11/2023</li>
+					<li>Servicios verificados según las mejores prácticas del sector audiovisual accesible</li>
+					<li>Preparación de documentación de cumplimiento técnico y legal</li>
+				</ul>
 			</section>
 
-			<div class="grid-1 features-title" style="margin-bottom: 10px">
-				<span><i class="fa-solid fa-arrows-down-to-people" aria-hidden="true"></i></span>
-				<h3 id="proceso-funciona">¿A quién va dirigido?</h3>
-			</div>
-			<section class="grid-1" role="region" aria-labelledby="proceso-funciona">
-				<div class="col post">
-					<p><strong>• Administraciones públicas: </strong>Cumplimiento de accesibilidad en vídeos institucionales, formación, comunicación.</p>
-					<p><strong>• Empresas obligadas por la Ley 11/2023: </strong>Bancos, telecomunicaciones, transporte, servicios digitales.</p>
-					<p><strong>• Productoras y agencias: </strong>Accesibilidad para proyectos culturales, educativos y comerciales.</p>
-					<p><strong>• Centros educativos:  </strong>Formación accesible y multilingüe para garantizar la inclusión.</p>
+			<!-- Section #5 -->
+			<section class="grid-1" role="region" aria-labelledby="a-quien-va-dirigido">
+				<div class="grid-1 services-title">
+					<i class="fa-solid fa-arrows-down-to-people" aria-hidden="true"></i>
+					<h3 id="proceso-funciona">¿A quién va dirigido?</h3>
 				</div>
+				<ul>
+					<li><strong>Administraciones públicas: </strong>Cumplimiento de accesibilidad en vídeos institucionales, formación, comunicación.</li>
+					<li><strong>Empresas obligadas por la Ley 11/2023: </strong>Bancos, telecomunicaciones, transporte, servicios digitales.</li>
+					<li><strong>Productoras y agencias: </strong>Accesibilidad para proyectos culturales, educativos y comerciales.</li>
+					<li><strong>Centros educativos:  </strong>Formación accesible y multilingüe para garantizar la inclusión.</li>
+				</ul>
 			</section>
 		
-			<div class="grid-1 features-title" style="margin-bottom: 10px">
-				<span><i class="fa-solid fa-medal" aria-hidden="true"></i></span>
-				<h3 id="porque-elegirnos">¿Por qué elegirnos?</h3>
-			</div>
-		
+			<!-- Section #6 -->
 			<section class="grid-1" role="region" aria-labelledby="porque-elegirnos">
-				<div class="col post">
-					<p><strong style="color: #203460;">• </strong>Expertos certificados en accesibilidad audiovisual.</p>
-					<p><strong style="color: #203460;">• </strong>Procesos automatizados con revisión humana para máxima calidad.</p>
-					<p><strong style="color: #203460;">• </strong>Integración directa en plataformas LMS, webs o apps</p>
-					<p><strong style="color: #203460;">• </strong>Compromiso con la inclusión real, no solo el cumplimiento normativo</p>
+				<div class="grid-1 services-title">
+					<i class="fa-solid fa-medal" aria-hidden="true"></i>
+					<h3 id="porque-elegirnos">¿Por qué elegirnos?</h3>
 				</div>
+				<ul>
+					<li>Expertos certificados en accesibilidad audiovisual.</li>
+					<li>Procesos automatizados con revisión humana para máxima calidad.</li>
+					<li>Integración directa en plataformas LMS, webs o apps</li>
+					<li>Compromiso con la inclusión real, no solo el cumplimiento normativo</li>
+				</ul>
 			</section>
 		</div>				
-		<!-- ***** END FEATURES ***** --> 		
+		<!-- ***** END SERVICES ***** --> 		
 		
 		<!-- ***** DEMO SECTION ***** -->
 		<div id="demo-section" class="wrapper clearfix">
@@ -259,37 +277,33 @@
 		<footer class="wrapper clearfix" role="contentinfo">
 			<section class="grid-1">
 				<div class="col">
-					<div style="text-align: center;">
+					<div class="align-center">
 						<p>© 2025 LViS Video Automatización S.L. LViS es una marca registrada. Todos los derechos reservados.</p>
 					</div>
-					<hr aria-hidden="true" style="border: none; border-top: 1px solid lightgray; margin: 20px 0;">
-					<div aria-label="Enlaces legales" style="text-align: center; margin-top: 20px;">
-						<p style="display: inline;">
-							<a href="aviso-legal.html" target="blank" style="color: darkslategray;">Aviso legal</a>
-							<a href="politica-de-cookies.html" target="blank" style="margin-left: 30px; color: darkslategray;" >Política de cookies</a>
-							<a href="politica-privacidad.html" style="margin-left: 30px; color: darkslategray;" target="blank" >Política de privacidad</a>
-							<a href="terminos-servicio.html" style="margin-left: 30px; color: darkslategray;" target="blank" >Términos de servicio</a>
-							<a href="politica-marcas-servicios.html" target="blank" style="margin-left: 30px; color: darkslategray;" >Política de marcas y productos</a>
-							<a href="accesibilidad.html" style="margin-left: 30px; color: darkslategray;" target="blank">Accesibilidad</a>
+					<hr aria-hidden="true" class="rupture">
+					<div aria-label="Enlaces legales" class="legal-links">
+						<p class="display-inline footer-legal-links">
+							<a href="aviso-legal.html" target="_blank">Aviso legal</a>
+							<a href="politica-de-cookies.html" target="_blank">Política de cookies</a>
+							<a href="politica-privacidad.html" target="_blank">Política de privacidad</a>
+							<a href="terminos-servicio.html" target="_blank">Términos de servicio</a>
+							<a href="politica-marcas-servicios.html" target="_blank">Política de marcas y productos</a>
+							<a href="accesibilidad.html" target="_blank">Accesibilidad</a>
 						</p>
 					</div>
 				</div>
 			</section>
-		</footer>
-		<!-- ***** END FOOTER ***** -->
+		</footer>		
+		<!-- ***** FIN FOOTER ***** -->
 
 	</div>
 	<!-- ***** END OVERLAY ***** -->
-	<!-- <script type="text/javascript" src="https://acumbamail.com/newform/dynamic/js/H4VQmL2JDLUi6P0emHZzjNXonuSRHIpi3FXnpJ5Rw6Yf0vilAaKytCjxlxl/40723/"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 	<script src="js/vendor/easings.js"></script> 
 	<script src="js/vendor/venobox.min.js"></script>
 	<script src="js/vendor/slick.js"></script>
 	<script src="js/main.js"></script> 
-	<!--<script src="js\cookies\scriptsCookies.js"></script>
-	<script src="js\cookies\cookiesAnalytics.js"></script>
-	<script src="js\cookies\cookies.js"></script>--> 
 	<script>
 		const dropdowns = document.querySelectorAll('.dropdown');
 		dropdowns.forEach(dropdown => {
