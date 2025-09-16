@@ -1064,12 +1064,26 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 		#faq input:checked + .tab__label::after{
 			transform: rotate(270deg);
 			}
-		#faq .tab__content p{
+		#faq .tab__content p,
+		#faq .tab__content ol,
+		#faq .tab__content ul{
 			margin: 0;
 			padding: 24px;
 			font-size: 18px;
 			line-height: 28px;
 			}
+
+		#faq .tab__content ol li{
+			list-style-type: decimal;
+			padding-left: 0.5em;
+			list-style-position: inside;
+			margin-bottom: 1rem;
+			}
+
+		#faq .tab__content ol li:last-child{
+			margin-bottom: 0;
+			}
+
 		#faq .tab__content label{
 			margin: 0;
 			padding: 24px;
@@ -1081,6 +1095,9 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 			padding: 0.25rem 1rem;
 			font-size: 0.75rem;
 			}
+	/* #faq ol, ul{
+		font-size: 18px;
+	} */
 .submit-container {
 	display: flex;
 	justify-content: center;
@@ -1187,7 +1204,8 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 		color: var(--color-blue-dark);
 	}
 
-	.main ul, ol {
+	.main ul,
+	.main ol {
 		width: 50%;
 		margin: 0 auto; 
 		text-align: left;       
@@ -3564,7 +3582,9 @@ footer p{
 		font-size: 20px;
 		line-height: 26px;
 		}
-	#faq .tab__content p{
+	#faq .tab__content p,
+	#faq .tab__content ol,
+	#faq .tab__content ul{
 		padding: 24px 36px 36px;
 		font-size: 20px;
 		line-height: 34px;
