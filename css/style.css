@@ -2110,6 +2110,17 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 				color: rgba(var(--color-primary),1);
 				border: 1px solid rgba(var(--color-primary),1);
 				}
+		#demo-section .end-text{
+			text-align: center; 
+			margin-top: 0px; 
+			font-size: 30px; 
+			line-height: 1.5; 
+			color: rgba(var(--color-primary),1);
+		}
+
+		#demo-section .end-text strong{ 
+			color: rgba(var(--color-white),1);
+		}
 
 /* ============================
    Carousel
