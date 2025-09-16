@@ -122,6 +122,8 @@ img{ width: 100%;}
 
 .top-common { padding-top: 1rem !important;}
 
+.bot-2 { margin-bottom: 2rem; }
+
 
 /* =============================================================================
    VARIABLES
@@ -211,7 +213,7 @@ h2, h3, h4, h5, h6, p {
 
 /* ===== Secciones con padding y fondo ===== */
 #hero, #home-video, #home-advantage, #customers, #why, #faq, #make,
-#how, #use, #pricing, #services, #use-cases, #demo-section, footer {
+#how, #use, #pricing, #services, #use-cases, #demo-section, footer, .main {
     padding-top: 42px !important;
     padding-bottom: 60px;
     background-size: 100% auto;
@@ -220,7 +222,7 @@ h2, h3, h4, h5, h6, p {
 }
 
 /* ===== Sobrescribir padding-top para secciones clave ===== */
-#hero, #make, #pricing, #services, #use-cases {
+#hero, #make, #pricing, #services, #use-cases, .main {
     padding-top: 60px !important;
 }
 
@@ -497,6 +499,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
     position: fixed;
     overflow: hidden;
 	border-radius: 14px;
+	margin-left: 80px;
 	}
 .menu{
 	border: 1px solid rgba(var(--color-white),1);
@@ -999,7 +1002,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	#faq textarea {
 		opacity: 1;
 		margin-left: 20px;
-		width: calc(100% - 60px); /* Ajusta el ancho del textarea */
+		width: calc(100% - 60px); 
 		padding: 10px;
 		border: 1px solid #ccc;
 		border-radius: 4px;
@@ -1109,8 +1112,149 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 }
 
 .submit-container button:hover {
-	background-color: lightgray; /* Color del botón al pasar el cursor */
-}		
+	background-color: lightgray; 
+}
+
+/* =============================================================================
+   MAIN
+   ========================================================================== */
+.main {
+	padding-top: 90px!important;
+	padding-bottom: 150px;
+	background-color: rgba(var(--color-grey-light),1);
+	background-image: url('../images/backgrounds/light-purple-wave.svg')
+	}
+	.main .grid-3--2-1 .col:first-child{
+		margin: 6px 0 24px;
+		}
+	.main p{
+		color: rgba(var(--color-black),0.78);
+		font-size: 18px;
+		}
+	
+	.main h1 {
+		color: var(--color-blue-dark);
+		text-align: center;
+	}
+
+	.main h2{
+		font-weight: bold; 
+		font-size: 40px;
+		color: var(--color-blue-dark);
+		text-align: center;
+		line-height: 2.5rem;
+	}
+
+	.main h3 {
+		margin-top: 1.5rem;
+		text-align: center;
+		font-size: 25px;
+		font-weight: normal; 
+	}
+
+	.main section {
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+
+	.main section:last-of-type {
+		margin-bottom: 0;
+	}
+
+
+	.main hr{
+		border: none; 
+		border-top: 1px solid lightgray;
+		margin-top: 3rem;
+	}
+
+	.main i{
+		font-size: 35px; 
+		margin-right: 10px; 
+		background: rgba(var(--color-primary),1); 
+		color: white; 
+		border-radius: 12px; 
+		padding: 10px; 
+		justify-content: center; 
+		display: inline-flex;
+	}
+
+	.main .subhead{
+		font-size: 28px;
+		line-height: 2.5rem; 
+		margin-bottom: 22px;
+		font-weight: bold;
+		color: var(--color-blue-dark);
+	}
+
+	.main ul, ol {
+		width: 50%;
+		margin: 0 auto; 
+		text-align: left;       
+		list-style-position: inside;
+		font-size: 18px; 
+	}
+
+	.main ul, ol strong{
+		color: var(--color-blue-dark);
+	}
+
+	.main ul li {
+		line-height: 3rem;
+		list-style-type: disc;
+	}
+
+	.main ul li strong{
+		color: var(--color-blue-dark);
+	}
+
+	.main ul li::marker{
+		color: var(--color-blue-dark); 
+	}
+
+	.main ol li{
+		line-height: 3rem;
+		list-style-type: decimal;
+		padding-left: 0.5em;
+	}
+
+	.main ol li::marker{
+		color: var(--color-blue-dark);
+		font-weight: bold;
+	}
+
+	.main .ul-nested {
+		width: 100%;
+		margin-left: 20px;
+	}
+
+	.main .ul-nested li{
+		list-style-type: circle;
+	}
+
+
+.icon-heading {
+  display: flex;
+  align-items: center;   
+  justify-content: center; 
+  gap: 10px;
+  margin-bottom: 40px;            
+}
+
+.icon-heading h2 {
+  margin: 0;  /
+}
+
+.intro-text {
+	font-size: 25px !important;
+}
+
+.question {
+	font-weight: bold;
+	color: var(--color-blue-dark);
+	font-size: 25px;
+}
+
 
 /* ============================
    Gallery
@@ -1907,13 +2051,13 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	height: 144px;
 	margin: 18px auto 6px;
 	object-fit: cover;
-	object-position: content: '';
+	/* object-position: content: ''; */
 	border-radius: 12px;
 	}
 
-/* ============================
-   Demo Section
-   ============================ */
+/* =============================================================================
+   DEMO SECTION
+   ========================================================================== */
 
 #demo-section{
 	position: relative;
@@ -2363,7 +2507,8 @@ p{
 #services,
 #use-cases,
 #demo-section,
-footer{
+footer,
+.main {
 	padding-top: 20px!important;
 	padding-bottom: 96px;
 	}
@@ -2371,7 +2516,8 @@ footer{
 	#make,
 	#pricing,
 	#services,
-	#use-cases{
+	#use-cases,
+	.main {
 		padding-top: 84px!important;
 		}
 .button-cta{
@@ -2517,7 +2663,7 @@ h6{
    Hero 768
    ============================ */   
    
-#hero{
+#hero, .main{
 	padding-top: 120px!important;
 	padding-bottom: 96px;
 	}
@@ -2773,7 +2919,8 @@ footer{
 #services,
 #use-cases,
 #demo-section,
-footer{
+footer,
+.main{
 	padding-top: 54px!important;
 	padding-bottom: 132px;
 	}
@@ -2781,7 +2928,8 @@ footer{
 	#make,
 	#pricing,
 	#services,
-	#use-cases{
+	#use-cases,
+	.main{
 		padding-top: 84px!important;
 		}
 	
@@ -2818,7 +2966,7 @@ h2{
    Hero 1024
    ============================ */   
 	
-#hero{
+#hero, main{
 	padding-top: 120px!important;
 	padding-bottom: 96px;
 	}	
@@ -3002,7 +3150,8 @@ p{
 #services,	
 #use-cases,
 #demo-section,
-footer{
+footer,
+.main{
 	padding-top: 40px!important;
 	padding-bottom: 100px;
 	}
@@ -3010,7 +3159,8 @@ footer{
 	#make,
 	#pricing,
 	#services,
-	#use-cases{
+	#use-cases,
+	.main{
 		padding-top: 96px!important;
 		}
 video{
@@ -3167,7 +3317,7 @@ h6{
    Hero 1280
    ============================ */   
 
-#hero{
+#hero, .main{
     padding-top: 144px!important;
 	}
 #hero p{		
@@ -3372,7 +3522,8 @@ footer p{
 	#services,
 	#use-cases,
 	#demo-section,
-	footer{
+	footer,
+	.main{
 		padding-top: 66px!important;
 		padding-bottom: 168px;
 		}		
@@ -3390,7 +3541,7 @@ footer p{
 		font-size: 46px;
 		line-height: 58px;
 		}	
-	#hero{
+	#hero, .main{
 		padding-top: 156px!important;
 		}
 	#home-video	video{
@@ -3463,7 +3614,8 @@ footer p{
 	#services,
 	#use-cases,
 	#demo-section,
-	footer{
+	footer,
+	.main{
 		padding-top: 66px!important;
 		padding-bottom: 192px;
 		}
@@ -3471,7 +3623,8 @@ footer p{
 		#make,
 		#pricing,
 		#services,
-		#use-cases{
+		#use-cases,
+		.main{
 			padding-top: 96px!important;
 			}	
 	body,
@@ -3487,7 +3640,7 @@ footer p{
 		font-size: 48px;
 		line-height: 62px;
 		}		
-	#hero{
+	#hero, .main{
 		padding-top: 168px!important;
 		}
 	.arrow-big{
@@ -3526,7 +3679,8 @@ footer p{
 	#services,
 	#use-cases,
 	#demo-section,
-	footer{
+	footer,
+	.main{
 		padding-top: 60px!important;
 		padding-bottom: 216px;
 		}
@@ -3534,7 +3688,8 @@ footer p{
 		#make,
 		#pricing,
 		#services,
-		#use-cases{
+		#use-cases,
+		.main{
 			padding-top: 108px!important;
 			}
 	#hero{
@@ -3587,7 +3742,8 @@ footer p{
 	#services,
 	#use-cases,
 	#demo-section,
-	footer{
+	footer,
+	.main{
 		padding-top: 54px!important;
 		padding-bottom: 216px;
 		}
@@ -3595,7 +3751,8 @@ footer p{
 		#make,
 		#pricing,
 		#services,
-		#use-cases{
+		#use-cases,
+		.main{
 			padding-top: 108px!important;
 			}
 	#hero{

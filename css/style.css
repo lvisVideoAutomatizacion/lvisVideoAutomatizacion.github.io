@@ -1223,6 +1223,15 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 		font-weight: bold;
 	}
 
+	.main .ul-nested {
+		width: 100%;
+		margin-left: 20px;
+	}
+
+	.main .ul-nested li{
+		list-style-type: circle;
+	}
+
 
 .icon-heading {
   display: flex;
@@ -2042,13 +2051,13 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	height: 144px;
 	margin: 18px auto 6px;
 	object-fit: cover;
-	object-position: content: '';
+	/* object-position: content: ''; */
 	border-radius: 12px;
 	}
 
-/* ============================
-   Demo Section
-   ============================ */
+/* =============================================================================
+   DEMO SECTION
+   ========================================================================== */
 
 #demo-section{
 	position: relative;
