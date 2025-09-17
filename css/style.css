@@ -1392,14 +1392,20 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	width: 75%;
 	padding: 10px;
 	}
-/* ============================
-   Pricing
-   ============================ */
 
+
+.main {
+	padding-top: 90px!important;
+	padding-bottom: 150px;
+	background-color: rgba(var(--color-grey-light),1);
+	background-image: url('../images/backgrounds/light-purple-wave.svg')
+	}
+/* =============================================================================
+   PRICING
+   ========================================================================== */
 #pricing{
 	background-color: rgba(var(--color-grey-light),1);
-	/*background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1512 72" style="enable-background:new 0 0 1512 72;" xml:space="preserve"><style type="text/css">.st0{fill:%23ffffff;}</style><path class="st0" d="M270.1,55.5c99.5-12.7,204-37.6,304.7-47.8C678.4-2.9,786.5-2.3,890.3,7.9c72.9,7.1,143.6,18.9,216.7,25.5c135.8,12.1,275.8,5.9,404.9-17.7V72H0V57.3C85.4,71.3,181.8,66.7,270.1,55.5z"/></svg>')*/
-	margin-bottom: -200px;
+	background-image: url('../images/backgrounds/white-wave.svg');
 	}
 	#pricing h1{
 		text-align: center;
@@ -1408,7 +1414,12 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 		width: calc(100% - 48px);
 		margin: 24px;
 		}
-.pricing-tables.plans--annually .switch .saas{
+	#pricing .pricing-title{
+		margin-top: 70px;
+		margin-bottom: 20px;
+		color: var(--color-blue-dark);
+	}
+/* .pricing-tables.plans--annually .switch .saas{
     opacity: 0.36;
 	}
 .pricing-tables.plans--annually .switch .starter{
@@ -1416,8 +1427,8 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	}
 .pricing-tables.plans--annually .switch .starter .save{
     color:rgba(var(--color-primary),1)
-	}
-.pricing-tables.plans--annually .plans .plan .plan__head::after{
+	} */
+/* .pricing-tables.plans--annually .plans .plan .plan__head::after{
     opacity: 0.6;
 	}
 .pricing-tables.plans--annually .plans .plan .plan__credit::after{
@@ -1425,8 +1436,8 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	}
 .pricing-tables.plans--annually .plans .plan .plan__bottom__text::after{
 	opacity: 0.6;
-	}
-.pricing-tables.plans--annually .plans .plan .plan__price .price.price--saas{
+	} */
+/* .pricing-tables.plans--annually .plans .plan .plan__price .price.price--saas{
     opacity: 0;
     transform: translateY(100px);
 	}
@@ -1536,16 +1547,14 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 						}
 						.pricing-tables .switch .custom-switch label:active:after{
 							width: 36px;
-							}
+							} */
 .pricing-tables .plans{
     margin-top: 48px;
 	}
-	.pricing-tables .plans .plan-text{    
-		/* overflow: hidden; */
+	/* .pricing-tables .plans .plan-text{
 		margin-bottom: 24px;
 		text-align: center;
-		/* overflow: inherit;  */
-		}
+		} */
 	.pricing-tables .plans .plan:hover{
 		box-shadow: 0 10px 12px 0px rgba(var(--color-primary),0.36);
 		transform: translateY(-3px);
@@ -1558,7 +1567,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 		margin-bottom: 24px;
 		box-shadow: 0px 10px 15px -3px rgba(var(--color-black),0.12);
 		transition: box-shadow 300ms ease, transform 300ms ease;
-		overflow: inherit; /**/
+		overflow: inherit; 
 		}
 		.pricing-tables .plans .plan .dto{
 			position: absolute;
@@ -1575,7 +1584,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 			z-index: 1;
 			transition: all 0.4s ease-in-out;
 			}
-			.pricing-tables .plans .plan .plan__head::after{
+			/* .pricing-tables .plans .plan .plan__head::after{
 				position: absolute;
 				content: "";
 				display: block;
@@ -1588,7 +1597,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 				z-index: -1;
 				border-radius: 20px;
 				transition: all 0.4s ease-in-out;
-				}
+				} */
 				.pricing-tables .plans .plan .plan__head .plan__title{
 					font-size: 24px;
 					color: rgba(var(--color-primary),1);
@@ -1677,7 +1686,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 						font-size: 24px;
 						padding-left: 6px;
 						}
-						.pricing-tables .plans .plan .plan__credit .plan__price .price.price--starter{
+						/* .pricing-tables .plans .plan .plan__credit .plan__price .price.price--starter{
 							position: absolute;
 							left: 24px;
 							right: 0;
@@ -1685,7 +1694,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 							opacity: 0;
 							transform: translateY(100px);
 							transition: transform 0.4s ease 0s, opacity 1s ease 0s;
-							}
+							} */
 		.pricing-tables .plans .plan .plan__head{
 			position: relative;
 			overflow: hidden;
@@ -1693,7 +1702,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 			z-index: 1;
 			transition: all 0.4s ease-in-out;
 			}
-			.pricing-tables .plans .plan .plan__head::after{
+			/* .pricing-tables .plans .plan .plan__head::after{
 				position: absolute;
 				content: "";
 				display: block;
@@ -1706,7 +1715,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 				z-index: -1;
 				border-radius: 20px;
 				transition: all 0.4s ease-in-out;
-				}
+				} */
 				.pricing-tables .plans .plan .plan__head .plan__title{
 					font-size: 24px;
 					color: rgba(var(--color-primary),1);
@@ -1721,11 +1730,11 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 					font-optical-sizing: auto;
 					transition: transform 0.4s ease 0s, opacity 0.2s ease 0s;
 					}
-					.pricing-tables .plans .plan .plan__head .plan__price .price .plan__type{
+					/* .pricing-tables .plans .plan .plan__head .plan__price .price .plan__type{
 						font-size: 24px;
 						padding-left: 6px;
-						}
-						.pricing-tables .plans .plan .plan__head .plan__price .price.price--starter{
+						} */
+						/* .pricing-tables .plans .plan .plan__head .plan__price .price.price--starter{
 							position: absolute;
 							left: 24px;
 							right: 0;
@@ -1733,8 +1742,8 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 							opacity: 0;
 							transform: translateY(100px);
 							transition: transform 0.4s ease 0s, opacity 1s ease 0s;
-							}
-				.pricing-tables .plans .plan .plan__head .plan__price__title .price{
+							} */
+				/* .pricing-tables .plans .plan .plan__head .plan__price__title .price{
 					position: relative;
 					font-family: 'Raleway';
 					font-size: 36px;
@@ -1743,15 +1752,15 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 					transition: transform 0.4s ease 0s, opacity 0.2s ease 0s;
 					padding: 0;
 					margin: 12px 0 24px;
-					}
-					.pricing-tables .plans .plan .plan__head .plan__price__title .price .plan__title{
+					} */
+					/* .pricing-tables .plans .plan .plan__head .plan__price__title .price .plan__title{
 						font-size: 24px;
 						color: rgba(var(--color-primary),1);
 						padding: 0;
 						margin: 12px 0 24px;
 						line-height: 46px;
-						}
-						.pricing-tables .plans .plan .plan__head .plan__price__title .price.price--starter{
+						} */
+						/* .pricing-tables .plans .plan .plan__head .plan__price__title .price.price--starter{
 							position: absolute;
 							left: 24px;
 							right: 0;
@@ -1760,44 +1769,24 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 							opacity: 0;
 							transform: translateY(100px);
 							transition: transform 0.4s ease 0s, opacity 1s ease 0s;
-							}
+							} */
 		.pricing-tables .plans .plan-text .plan__bottom__text{
-			position: relative;
-			overflow: hidden;
-			padding: 24px;			
-			z-index: 1;
-			transition: all 0.4s ease-in-out;
+			padding: 24px;
 			}
-			.pricing-tables .plans .plan-text .plan__bottom__text::after{
-				position: absolute;
-				content: "";
-				display: block;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(160deg, rgba(var(--color-primary),0.24) 0%, rgba(var(--color-primary),0) 48%);
-				top: 0;
-				left: 0;
-				opacity: 0;
-				z-index: -1;
-				border-radius: 20px;
-				transition: all 0.4s ease-in-out;
-				}
-				.pricing-tables .plans .plan-text .plan__bottom__text .plan__price__title .price{
-					/* position: relative; */
+				/* .pricing-tables .plans .plan-text .plan__bottom__text .plan__price__title .price{
 					font-size: 36px;
 					display: inline-block;
 					transition: transform 0.4s ease 0s, opacity 0.2s ease 0s;
 					padding: 0;
 					margin: 12px 0 24px;
-					}
-					.pricing-tables .plans .plan-text .plan__bottom__text .plan__price__title .price .plan__title{
+					} */
+					/* .pricing-tables .plans .plan-text .plan__bottom__text .plan__price__title .price .plan__title{
 						font-size: 24px;
-						/* color: rgba(var(--color-primary),1); */
 						padding: 0;
 						margin: 12px 0 24px;
 						line-height: 46px;
-						}
-						.pricing-tables .plans .plan-text .plan__bottom__text .plan__price__title .price.price--starter{
+						} */
+						/* .pricing-tables .plans .plan-text .plan__bottom__text .plan__price__title .price.price--starter{
 							position: absolute;
 							left: 24px;
 							right: 0;
@@ -1807,7 +1796,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 							transform: translateY(100px);
 							transition: transform 0.4s ease 0s, opacity 1s ease 0s;
 							text-align: center;
-							}
+							} */
 .plan__features{
 	position: relative;
 	}
@@ -1842,7 +1831,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 					.list-check li.not::before{			
 						background: url("../images/arrow-not.svg") no-repeat 0 / 12px;
 						}
-	.pricing-tables .plans .list-check.price--starter{
+	/* .pricing-tables .plans .list-check.price--starter{
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -1850,8 +1839,8 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 		margin: 0 auto;
 		opacity: 0;
 		transition: opacity 1s ease;
-		}
-#why.plans{
+		} */
+/* #why.plans{
 	background-color: rgba(var(--color-white),1);
 	background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1512 72" style="enable-background:new 0 0 1512 72;" xml:space="preserve"><style type="text/css">.st0{fill:%23fafbfb;}</style><path class="st0" d="M270.1,55.5c99.5-12.7,204-37.6,304.7-47.8C678.4-2.9,786.5-2.3,890.3,7.9c72.9,7.1,143.6,18.9,216.7,25.5c135.8,12.1,275.8,5.9,404.9-17.7V72H0V57.3C85.4,71.3,181.8,66.7,270.1,55.5z"/></svg>')
 	}
@@ -1860,38 +1849,38 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
     text-align: left;
 	padding-right: 0;
 	padding-left: 0;
-}
-.tooltip-container{
-	position: initial;
-	cursor: pointer;
-	z-index: 2;
-	}
-	.tooltip-container img{
-		display: inline-flex;
-		position: relative;
-		width: 18px;
-		margin: 3px 0 0 3px;
+} */
+	/* .tooltip-container{
+		position: initial;
+		cursor: pointer;
+		z-index: 2;
 		}
-	.tooltip{		
-		position: absolute;
-		visibility: hidden;
-		width: 240px;
-		background-color: rgba(var(--color-menu),1);
-		color: rgba(var(--color-white),1);
-		text-align: center;
-		border-radius: 12px;
-		padding: 6px;
-		z-index: 1;
-		bottom: 100%;
-		left: 50%;
-		transform: translateX(-50%);
-		opacity: 0;
-		transition: opacity 0.3s ease;
-		}
-		.tooltip-container:hover .tooltip{
-			visibility: visible;
-			opacity: 1;
+		.tooltip-container img{
+			display: inline-flex;
+			position: relative;
+			width: 18px;
+			margin: 3px 0 0 3px;
 			}
+		.tooltip{		
+			position: absolute;
+			visibility: hidden;
+			width: 240px;
+			background-color: rgba(var(--color-menu),1);
+			color: rgba(var(--color-white),1);
+			text-align: center;
+			border-radius: 12px;
+			padding: 6px;
+			z-index: 1;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			}
+			.tooltip-container:hover .tooltip{
+				visibility: visible;
+				opacity: 1;
+				} */
 /* =============================================================================
    SERVICES
    ========================================================================== */
