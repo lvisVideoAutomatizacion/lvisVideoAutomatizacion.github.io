@@ -69,7 +69,7 @@
 			</label>
 		  
 			<!-- Primary Navigation -->
-			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Main navigation" style="margin-left: 80px;">
+			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Main navigation">
 				<ul class="menu">
 					<li>
 						<a href="services.html" class="animsition-link"
@@ -100,14 +100,14 @@
 			<!-- CTA Buttons-->
 			<div class="nav-buttons">
 			  <a class="demo-button" 
-			  target="_blank" 
-			  rel="noopener" 
-			  href="https://calendly.com/lvis-meetings/30min" 
-			  aria-label="Book a 30-minute meeting">
-				<strong style="color: white;">Let’s Talk</strong>
+				target="_blank" 
+				rel="noopener" 
+				href="https://calendly.com/lvis-meetings/30min" 
+				aria-label="Book a 30-minute meeting">
+				Let’s Talk
 			  </a>
 
-			  <a class="language-button" href="../planes.html" aria-label="Switch language to Spanish">
+			  <a class="language-button" href="../tarifas.html" aria-label="Switch language to Spanish">
 				<div class="language-content">
 				  <img src="images/globe_white.svg" alt="Globe icon" class="language-icon"/>
 				  <span class="language-text">Español</span>
@@ -119,22 +119,21 @@
 		
 		<!-- ***** PRICING ***** -->			
 		<div id="pricing" class="pricing-tables wrapper clearfix" role="region" aria-labelledby="pricing-title">
-			<div class="grid-1">
-				<h1 id="pricing-title" style="margin-bottom: 20px;">
-					<span class="color-primary">Flexible Packages <br>to meet all your needs</span>
-				</h1>
-			</div>
+			
+			<h1 class="pricing-title">Flexible Packages <br>to meet all your needs</h1>
+
 			<div class="grid-3 plans">
 
-				<div class="plan col" style="padding-bottom: 45px;" role="region" aria-labelledby="plan-basico-title">
+				<!-- Panel #1 -->
+				<div class="plan col" role="region" aria-labelledby="plan-basico-title">
 					<div class="plan__head">
-						<h3 id="plan-basico-title" class="plan__title">Basic Package</h3>
+						<h2 id="plan-basico-title" class="plan__title">Basic Package</h2>
 					</div>
 					<div class="plan__features">
-						<ul class="list-check price--saas" role="list">
+						<ul class="list-check" role="list">
 							<li role="listitem">
-								<strong>Audio Description + Subtitles + Transcription</strong> for up to <strong>30
-									minutes</strong> of video
+								<strong>Audio Description + Subtitles + Transcription</strong> 
+								for up to <strong>30 minutes</strong> of video
 							</li>
 							<li role="listitem">
 								Delivery in 5 business days
@@ -147,24 +146,19 @@
 							</li>
 						</ul>
 					</div>
-					<div class="plan__credit">
-						<div class="plan__price" aria-label="Price of the Basic Package">
-							<span class="price price--saas">
-								<span class="plan__type">2,400 $</span>
-							</span>
-						</div>
-					</div>
+					<data value="2,400 $" class="price">2,400 $</data>
 				</div>
 
-				<div class="plan col" style="padding-bottom: 40px;" role="region" aria-labelledby="plan-estandar-title">
+				<!-- Panel #2 -->
+				<div class="plan col"role="region" aria-labelledby="plan-estandar-title">
 					<div class="plan__head">
-						<h3 id="plan-estandar-title" class="plan__title">Standard Package</h3>
+						<h2 id="plan-estandar-title" class="plan__title">Standard Package</h2>
 					</div>
 					<div class="plan__features">
-						<ul class="list-check price--saas" role="list">
+						<ul class="list-check" role="list">
 							<li role="listitem">
-								<strong>Audio Description + Subtitles + Transcription</strong> for up to <strong>120
-									minutes</strong> of video
+								<strong>Audio Description + Subtitles + Transcription</strong> 
+								for up to <strong>120 minutes</strong> of video
 							</li>
 							<li role="listitem">
 								Delivery in 10 business days
@@ -177,118 +171,96 @@
 							</li>
 						</ul>
 					</div>
-					<div class="plan__credit">
-						<div class="plan__price" aria-label="Price of the Standard Package">
-							<span class="price price--saas">
-								<span class="plan__type">6,800 $</span>
-							</span>
-						</div>
-					</div>
+					<data value="6,800 $" class="price">6,800 $</data>
 				</div>
 
-				<div class="plan col" style="padding-bottom: 40px;" role="region" aria-labelledby="formacion-title">
+				<!-- Panel #3 -->
+				<div class="plan col" role="region" aria-labelledby="formacion-title">
 					<div class="plan__head">
-						<h3 id="formacion-title" class="plan__title">Continuous Plan</h3>
-						<div class="plan__price"></div>
+						<h2 id="formacion-title" class="plan__title">Continuous Plan</h2>
 					</div>
 					<div class="plan__features">
-						<ul class="list-check price--saas" role="list">
+						<ul class="list-check" role="list">
 							<li role="listitem">
 								We work as your <strong>video accessibility team</strong>.
 							</li>
 							<li role="listitem">
-								We make your <strong>existing media</strong> and <strong>new productions</strong> accessible.
+								We make your <strong>existing media</strong> and <strong>
+								new productions</strong> accessible.
 							</li>
 							<li role="listitem">
 								<strong>Continuous production</strong> every month.
 							</li>
 						</ul>
 					</div>
-					<div class="plan__credit">
-						<div class="plan__price" aria-label="Price of the Ongoing Plan">
-							<span class="price price--saas">
-								<span class="plan__type">7,800 $ /month</span>
-							</span>
-							<br>
-							<span class="price price--saas">
-								<span style="font-size: 15px;">* 4 hours production | 40 videos per month.</span>
-							</span>
-						</div>
-					</div>
+					<data value="7,800 $ /month" class="price">7,800 $ /month</data>
+					<p class="footnote">* 4 hours production | 40 videos per month.</p>
 				</div>
 
-				<div class="plan col" style="padding-bottom: 45px;" role="region" aria-labelledby="plan-basico-title">
+				<!-- Panel #4 -->
+				<div class="plan col" role="region" aria-labelledby="plan-basico-title">
 					<div class="plan__head">
-						<h3 id="plan-basico-title" class="plan__title">Project Assessment</h3>
+						<h2 id="plan-basico-title" class="plan__title">Project Assessment</h2>
 					</div>
 					<div class="plan__features">
-						<ul class="list-check price--saas" role="list">
+						<ul class="list-check" role="list">
 							<li role="listitem">
-								Estimation of <strong>multimedia volume</strong> based on <strong>elements, footage, and types</strong>.
+								Estimation of <strong>multimedia volume</strong> based on <strong>
+								elements, footage, and types</strong>.
 							</li>
 							<li role="listitem">
-								Selection of a <strong>representative sample</strong> for analysis and review.
+								Selection of a <strong>representative sample</strong> 
+								for analysis and review.
 							</li>
 							<li role="listitem">
-								<strong>Report with detected accessibility deviations and prioritized improvement recommendations.</strong>
+								<strong>Report with detected accessibility deviations and prioritized 
+								improvement recommendations.</strong>
 							</li>
 						</ul>
 					</div>
-					<div class="plan__credit">
-						<div class="plan__price" aria-label="Price of Project Evaluation">
-							<span class="price price--saas">
-								<span class="plan__type">3,600 $ /sample</span>
-							</span>
-							<br>
-							<span class="price price--saas">
-								<span style="font-size: 15px;">* 60 min. | 10 videos chosen by the client.</span>
-							</span>
-						</div>
-					</div>
+					<data value="3,600 $ /sample" class="price">3,600 $ /sample</data>
+					<p class="footnote">* 60 min. | 10 videos chosen by the client.</p>
 				</div>
 
-				<div class="plan col" style="padding-bottom: 40px;" role="region" aria-labelledby="plan-estandar-title">
+				<!-- Panel #5 -->
+				<div class="plan col" role="region" aria-labelledby="plan-estandar-title">
 					<div class="plan__head">
-						<h3 id="plan-estandar-title" class="plan__title">Sample Production</h3>
+						<h2 id="plan-estandar-title" class="plan__title">Sample Production</h2>
 					</div>
 					<div class="plan__features">
-						<ul class="list-check price--saas" role="list">
+						<ul class="list-check" role="list">
 							<li role="listitem">
-								Creation of <strong>accessible versions</strong> of videos selected by the client.
+								Creation of <strong>accessible versions</strong> of videos selected by 
+								the client.
 							</li>
 							<li role="listitem">
 								Generation of <strong>artifacts and publishing</strong> on required platforms.
 							</li>
 							<li role="listitem">
-								Used as <strong>models and guides</strong> for other multimedia projects depending on type.
+								Used as <strong>models and guides</strong> for other multimedia 
+								projects depending on type.
 							</li>
 						</ul>
 					</div>
-					<div class="plan__credit">
-						<div class="plan__price" aria-label="Price of Sample Production">
-							<span class="price price--saas">
-								<span class="plan__type">3,600 $/collection</span>
-							</span>
-							<br>
-							<span class="price price--saas">
-								<span style="font-size: 15px;">* 60 min. | 10 videos chosen by the client.</span>
-							</span>
-						</div>
-					</div>
+					<data value="3,600 $/collection" class="price">3,600 $/collection</data>
+					<p class="footnote">* 60 min. | 10 videos chosen by the client.</p>
 				</div>
 
-				<div class="plan col" style="padding-bottom: 40px;" role="region" aria-labelledby="formacion-title">
+				<!-- Panel #6 -->
+				<div class="plan col" role="region" aria-labelledby="formacion-title">
 					<div class="plan__head">
-						<h3 id="formacion-title" class="plan__title">Team Training</h3>
-						<div class="plan__price"></div>
+						<h2 id="formacion-title" class="plan__title">Team Training</h2>
 					</div>
 					<div class="plan__features">
-						<ul class="list-check price--saas" role="list">
+						<ul class="list-check" role="list">
 							<li role="listitem">
-								<strong>Accessible Video Creation Workshop 8 hours</strong> in one or two sessions, in-person or virtual.
+								<strong>Accessible Video Creation Workshop 8 hours</strong> in one or 
+								two sessions, in-person or virtual.
 							</li>
 							<li role="listitem">
-								From <strong>subtitles and transcription</strong> to <strong>audio descriptions</strong>, master key techniques to meet WCAG and UNE standards.
+								From <strong>subtitles and transcription</strong> to <strong>
+								audio descriptions</strong>, master key techniques to meet WCAG and UNE 
+								standards.
 							</li>
 							<li role="listitem">
 								Open groups or company-specific
@@ -298,44 +270,23 @@
 							</li>
 						</ul>
 					</div>
-					<div class="plan__credit">
-						<div class="plan__price" aria-label="Price of Training">
-							<span class="price price--saas">
-								<span class="plan__type">500 $ /student</span>
-							</span>
-							<br>
-							<span class="price price--saas">
-								<span class="plan__type">2,400 $ /group
-									<span style="font-size: 15px;">(Up to 8 students)</span>
-								</span>
-							</span>
-						</div>
-					</div>
+					<data value="500 $ /student" class="price">500 $ /student</data>
+					<data value="2,400 $ /group" class="second-price">2,400 $ /group <small>(Up to 8 students)</small></data>
 				</div>
 
-				<div class="plan-text" role="region" aria-labelledby="personalizado-title">
-					<div class="plan__bottom__text">
-						<div class="plan__price__title">
-							<center>
-								<h4 id="personalizado-title" style="margin-bottom: 20px;">
-									<strong>Do you have a larger video volume or a custom project?</strong><br>
-									Contact us to get a quote tailored to your needs.
-								</h4>
-							</center>
-						</div>
-					</div>
-				</div>
+				<!-- End Text-->
+				<p class="end-text">
+					<strong>Do you have a larger video volume or a custom project?</strong>
+					<br>
+					Contact us to get a quote tailored to your needs.
+				</p>
 
-				<div>
-					<center>
-						<a class="button-cta animsition-link" data-animsition-out-class="overlay-slide-out-left"
-							href="https://eu.bigin.online/org20092830437/forms/contacta-con-nosotros" style="width: 250px;"
-							role="button" aria-label="Contact us for more information">
-							Contact Us
-						</a>
-					</center>
-				</div>
-
+				<!-- Button CTA -->
+				<a class="button-cta animsition-link" data-animsition-out-class="overlay-slide-out-left"
+					href="https://eu.bigin.online/org20092830437/forms/contacta-con-nosotros"
+					role="button" aria-label="Contact us for more information">
+					Contact Us
+				</a>
 			</div>
 		</div>		
 		<!-- ***** END PRICING ***** --> 
