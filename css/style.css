@@ -1515,6 +1515,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 .pricing-tables .plans .plan data small{
 	font-weight: bold;
 	font-size: 15px;
+	margin-left: 10px;
 }
 
 /* ===== Texto final seccion ===== */
