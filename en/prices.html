@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>LViS Vally • Prices</title>
@@ -146,7 +146,7 @@
 							</li>
 						</ul>
 					</div>
-					<data value="2,400 $" class="price">2,400 $</data>
+					<data id="basic-price" value="2,400 $" class="price">2,400 $</data>
 				</div>
 
 				<!-- Panel #2 -->
@@ -171,7 +171,7 @@
 							</li>
 						</ul>
 					</div>
-					<data value="6,800 $" class="price">6,800 $</data>
+					<data id="standar-price" value="6,800 $" class="price">6,800 $</data>
 				</div>
 
 				<!-- Panel #3 -->
@@ -193,7 +193,7 @@
 							</li>
 						</ul>
 					</div>
-					<data value="7,800 $ /month" class="price">7,800 $ /month</data>
+					<data id="continuous-plan" value="7,800 $ /month" class="price">7,800 $ /month</data>
 					<p class="footnote">* 4 hours production | 40 videos per month.</p>
 				</div>
 
@@ -218,7 +218,7 @@
 							</li>
 						</ul>
 					</div>
-					<data value="3,600 $ /sample" class="price">3,600 $ /sample</data>
+					<data id="project-assesment" value="3,600 $ /sample" class="price">3,600 $ /sample</data>
 					<p class="footnote">* 60 min. | 10 videos chosen by the client.</p>
 				</div>
 
@@ -242,7 +242,7 @@
 							</li>
 						</ul>
 					</div>
-					<data value="3,600 $/collection" class="price">3,600 $/collection</data>
+					<data id="example-production" value="3,600 $/collection" class="price">3,600 $/collection</data>
 					<p class="footnote">* 60 min. | 10 videos chosen by the client.</p>
 				</div>
 
@@ -270,8 +270,8 @@
 							</li>
 						</ul>
 					</div>
-					<data value="500 $ /student" class="price">500 $ /student</data>
-					<data value="2,400 $ /group" class="second-price">2,400 $ /group <small>(Up to 8 students)</small></data>
+					<data id="training-student" value="500 $ /student" class="price">500 $ /student</data>
+					<data id="training-group" value="2,400 $ /group" class="second-price">2,400 $ /group <small>(Up to 8 students)</small></data>
 				</div>
 
 				<!-- End Text-->
@@ -321,6 +321,7 @@
 	<script src="js/vendor/easings.js"></script> 
 	<script src="js/vendor/venobox.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/prices.js"></script>
 	<script>
 		const dropdowns = document.querySelectorAll('.dropdown');
 		dropdowns.forEach(dropdown => {
