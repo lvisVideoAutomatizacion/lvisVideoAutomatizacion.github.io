@@ -122,6 +122,8 @@ img{ width: 100%;}
 
 .top-common { padding-top: 1rem !important;}
 
+.bot-2 { margin-bottom: 2rem; }
+
 
 /* =============================================================================
    VARIABLES
@@ -211,7 +213,7 @@ h2, h3, h4, h5, h6, p {
 
 /* ===== Secciones con padding y fondo ===== */
 #hero, #home-video, #home-advantage, #customers, #why, #faq, #make,
-#how, #use, #pricing, #services, #use-cases, #demo-section, footer {
+#how, #use, #pricing, #services, #use-cases, #demo-section, footer, .main {
     padding-top: 42px !important;
     padding-bottom: 60px;
     background-size: 100% auto;
@@ -220,7 +222,7 @@ h2, h3, h4, h5, h6, p {
 }
 
 /* ===== Sobrescribir padding-top para secciones clave ===== */
-#hero, #make, #pricing, #services, #use-cases {
+#hero, #make, #pricing, #services, #use-cases, .main {
     padding-top: 60px !important;
 }
 
@@ -497,6 +499,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
     position: fixed;
     overflow: hidden;
 	border-radius: 14px;
+	margin-left: 80px;
 	}
 .menu{
 	border: 1px solid rgba(var(--color-white),1);
@@ -999,7 +1002,7 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	#faq textarea {
 		opacity: 1;
 		margin-left: 20px;
-		width: calc(100% - 60px); /* Ajusta el ancho del textarea */
+		width: calc(100% - 60px); 
 		padding: 10px;
 		border: 1px solid #ccc;
 		border-radius: 4px;
@@ -1061,12 +1064,26 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 		#faq input:checked + .tab__label::after{
 			transform: rotate(270deg);
 			}
-		#faq .tab__content p{
+		#faq .tab__content p,
+		#faq .tab__content ol,
+		#faq .tab__content ul{
 			margin: 0;
 			padding: 24px;
 			font-size: 18px;
 			line-height: 28px;
 			}
+
+		#faq .tab__content ol li{
+			list-style-type: decimal;
+			padding-left: 0.5em;
+			list-style-position: inside;
+			margin-bottom: 1rem;
+			}
+
+		#faq .tab__content ol li:last-child{
+			margin-bottom: 0;
+			}
+
 		#faq .tab__content label{
 			margin: 0;
 			padding: 24px;
@@ -1078,6 +1095,9 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 			padding: 0.25rem 1rem;
 			font-size: 0.75rem;
 			}
+	/* #faq ol, ul{
+		font-size: 18px;
+	} */
 .submit-container {
 	display: flex;
 	justify-content: center;
@@ -1109,8 +1129,150 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 }
 
 .submit-container button:hover {
-	background-color: lightgray; /* Color del botón al pasar el cursor */
-}		
+	background-color: lightgray; 
+}
+
+/* =============================================================================
+   MAIN
+   ========================================================================== */
+.main {
+	padding-top: 90px!important;
+	padding-bottom: 150px;
+	background-color: rgba(var(--color-grey-light),1);
+	background-image: url('../images/backgrounds/light-purple-wave.svg')
+	}
+	.main .grid-3--2-1 .col:first-child{
+		margin: 6px 0 24px;
+		}
+	.main p{
+		color: rgba(var(--color-black),0.78);
+		font-size: 18px;
+		}
+	
+	.main h1 {
+		color: var(--color-blue-dark);
+		text-align: center;
+	}
+
+	.main h2{
+		font-weight: bold; 
+		font-size: 40px;
+		color: var(--color-blue-dark);
+		text-align: center;
+		line-height: 2.5rem;
+	}
+
+	.main h3 {
+		margin-top: 1.5rem;
+		text-align: center;
+		font-size: 25px;
+		font-weight: normal; 
+	}
+
+	.main section {
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+
+	.main section:last-of-type {
+		margin-bottom: 0;
+	}
+
+
+	.main hr{
+		border: none; 
+		border-top: 1px solid lightgray;
+		margin-top: 3rem;
+	}
+
+	.main i{
+		font-size: 35px; 
+		margin-right: 10px; 
+		background: rgba(var(--color-primary),1); 
+		color: white; 
+		border-radius: 12px; 
+		padding: 10px; 
+		justify-content: center; 
+		display: inline-flex;
+	}
+
+	.main .subhead{
+		font-size: 28px;
+		line-height: 2.5rem; 
+		margin-bottom: 22px;
+		font-weight: bold;
+		color: var(--color-blue-dark);
+	}
+
+	.main ul,
+	.main ol {
+		width: 50%;
+		margin: 0 auto; 
+		text-align: left;       
+		list-style-position: inside;
+		font-size: 18px; 
+	}
+
+	.main ul, ol strong{
+		color: var(--color-blue-dark);
+	}
+
+	.main ul li {
+		line-height: 3rem;
+		list-style-type: disc;
+	}
+
+	.main ul li strong{
+		color: var(--color-blue-dark);
+	}
+
+	.main ul li::marker{
+		color: var(--color-blue-dark); 
+	}
+
+	.main ol li{
+		line-height: 3rem;
+		list-style-type: decimal;
+		padding-left: 0.5em;
+	}
+
+	.main ol li::marker{
+		color: var(--color-blue-dark);
+		font-weight: bold;
+	}
+
+	.main .ul-nested {
+		width: 100%;
+		margin-left: 20px;
+	}
+
+	.main .ul-nested li{
+		list-style-type: circle;
+	}
+
+
+.icon-heading {
+  display: flex;
+  align-items: center;   
+  justify-content: center; 
+  gap: 10px;
+  margin-bottom: 40px;            
+}
+
+.icon-heading h2 {
+  margin: 0;  /
+}
+
+.intro-text {
+	font-size: 25px !important;
+}
+
+.question {
+	font-weight: bold;
+	color: var(--color-blue-dark);
+	font-size: 25px;
+}
+
 
 /* ============================
    Gallery
@@ -1230,160 +1392,42 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	width: 75%;
 	padding: 10px;
 	}
-/* ============================
-   Pricing
-   ============================ */
 
+
+.main {
+	padding-top: 90px!important;
+	padding-bottom: 150px;
+	background-color: rgba(var(--color-grey-light),1);
+	background-image: url('../images/backgrounds/light-purple-wave.svg')
+	}
+/* =============================================================================
+   PRICING
+   ========================================================================== */
 #pricing{
 	background-color: rgba(var(--color-grey-light),1);
-	/*background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1512 72" style="enable-background:new 0 0 1512 72;" xml:space="preserve"><style type="text/css">.st0{fill:%23ffffff;}</style><path class="st0" d="M270.1,55.5c99.5-12.7,204-37.6,304.7-47.8C678.4-2.9,786.5-2.3,890.3,7.9c72.9,7.1,143.6,18.9,216.7,25.5c135.8,12.1,275.8,5.9,404.9-17.7V72H0V57.3C85.4,71.3,181.8,66.7,270.1,55.5z"/></svg>')*/
-	margin-bottom: -200px;
+	background-image: url('../images/backgrounds/white-wave.svg');
 	}
 	#pricing h1{
 		text-align: center;
 		}
 	#pricing .button-cta{
-		width: calc(100% - 48px);
-		margin: 24px;
+		margin: 24px auto;
+		width: 250px;
+		text-align: center;
+		 display: block;
 		}
-.pricing-tables.plans--annually .switch .saas{
-    opacity: 0.36;
+	#pricing .pricing-title{
+		margin-top: 70px;
+		margin-bottom: 20px;
+		color: var(--color-blue-dark);
 	}
-.pricing-tables.plans--annually .switch .starter{
-    opacity: 1;
-	}
-.pricing-tables.plans--annually .switch .starter .save{
-    color:rgba(var(--color-primary),1)
-	}
-.pricing-tables.plans--annually .plans .plan .plan__head::after{
-    opacity: 0.6;
-	}
-.pricing-tables.plans--annually .plans .plan .plan__credit::after{
-	opacity: 0.6;
-	}
-.pricing-tables.plans--annually .plans .plan .plan__bottom__text::after{
-	opacity: 0.6;
-	}
-.pricing-tables.plans--annually .plans .plan .plan__price .price.price--saas{
-    opacity: 0;
-    transform: translateY(100px);
-	}
-.pricing-tables.plans--annually .plans .plan .plan__price .price.price--starter{
-    opacity: 1!important;
-    transform: translateY(0px)!important;
-	}
-.pricing-tables.plans--annually .plans .plan-text .plan__bottom__text .price.price--saas{
-	opacity: 0;
-	transform: translateY(100px);
-	}
-.pricing-tables.plans--annually .plans .plan-text .plan__bottom__text .price.price--starter{
-	opacity: 1!important;
-	transform: translateY(0px)!important;
-	}
-.pricing-tables.plans--annually .plans .plan .plan__price__title .price.price--saas{
-	opacity: 0;
-	transform: translateY(100px);
-	padding: 0;
-	margin: 12px 0 24px
-	}
-.pricing-tables.plans--annually .plans .plan .plan__price__title .price.price--starter{
-	opacity: 1!important;
-	transform: translateY(0px)!important;
-	padding: 0;
-	margin: 12px 0 24px
-	}
-.pricing-tables.plans--annually .plans .list-check.price--saas{
-    opacity: 0;
-	transition: all 0.3s ease;
-	}
-	.pricing-tables .plans .plan .plan__head .tpartners .ppartners{
-		padding-top: 0px;
-		}
-.pricing-tables.plans--annually .plans .list-check.price--starter{
-    opacity: 1;
-	transition: all 0.3s ease;
-	}
-.pricing-tables.plans--annually .plans .plan .dto{
-    opacity: 1;
-	transition: all 0.3s ease;
-	}
-.pricing-tables .switch{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-user-select: none;
-    user-select: none;
-	margin-top: 18px;
-	}
-	.pricing-tables .switch span{
-		font-size: 15px;
-		font-family: 'Raleway';
-		font-weight: 700;
-		font-optical-sizing: auto;
-		padding-top: 4px;
-		transition: all 0.3s ease-in-out;
-		font-optical-sizing: auto;
-		}
-		.pricing-tables .switch span.starter{
-			opacity: 0.36;
-			position: relative;
-			}
-			.pricing-tables .switch span.starter .save{
-				font-size: 11px;
-				position: absolute;
-				top: 21px;
-				left: 1px;
-				}
-		.pricing-tables .switch .custom-switch{
-			position: relative;
-			display: inline-block;
-			margin: 0 12px;
-			}
-			.pricing-tables .switch .custom-switch input{
-				display: none;
-				}
-				.pricing-tables .switch .custom-switch input:checked + label:active:after{
-					left: 25px;
-					}
-					.pricing-tables .switch .custom-switch input:checked + label:after{
-						left: 41px;
-						background: rgba(var(--color-primary),1)
-						}
-				.pricing-tables .switch .custom-switch label{
-					position: relative;
-					display: block;
-					width: 66px;
-					height: 26px;
-					border-radius: 50px;
-					 background: rgba(var(--color-black),0.12);
-					transition: all 0.4s ease-in-out;
-					cursor: pointer;
-					}
-					.pricing-tables .switch .custom-switch label::after{
-						position: relative;
-						display: block;
-						content: "";
-						width: 20px;
-						height: 20px;
-						top: 3px;
-						left: 5px;
-						border-radius: 19px;
-						background: rgba(var(--color-primary),1);
-						pointer-events: none;
-						transition: all 0.4s ease-in-out;
-						}
-						.pricing-tables .switch .custom-switch label:active:after{
-							width: 36px;
-							}
+
+
 .pricing-tables .plans{
     margin-top: 48px;
 	}
-	.pricing-tables .plans .plan-text{    
-		/* overflow: hidden; */
-		margin-bottom: 24px;
-		text-align: center;
-		/* overflow: inherit;  */
-		}
+
+/* ===== comportamiento de las tablas de precios al pasar el ratón por encima ===== */
 	.pricing-tables .plans .plan:hover{
 		box-shadow: 0 10px 12px 0px rgba(var(--color-primary),0.36);
 		transform: translateY(-3px);
@@ -1396,256 +1440,26 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 		margin-bottom: 24px;
 		box-shadow: 0px 10px 15px -3px rgba(var(--color-black),0.12);
 		transition: box-shadow 300ms ease, transform 300ms ease;
-		overflow: inherit; /**/
+		overflow: inherit;
+		min-height: 530px; 
 		}
-		.pricing-tables .plans .plan .dto{
-			position: absolute;
-			top: 12px;
-			right: 18px;
-			font-size: 12px;
-			color: rgba(var(--color-primary),1);
-			opacity: 0;
-			}
-		.pricing-tables .plans .plan .plan__head{
-			position: relative;
-			overflow: hidden;
-			padding: 24px;			
-			z-index: 1;
-			transition: all 0.4s ease-in-out;
-			}
-			.pricing-tables .plans .plan .plan__head::after{
-				position: absolute;
-				content: "";
-				display: block;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(160deg, rgba(var(--color-primary),0.24) 0%, rgba(var(--color-primary),0) 48%);
-				top: 0;
-				left: 0;
-				opacity: 0;
-				z-index: -1;
-				border-radius: 20px;
-				transition: all 0.4s ease-in-out;
-				}
-				.pricing-tables .plans .plan .plan__head .plan__title{
-					font-size: 24px;
-					color: rgba(var(--color-primary),1);
-					padding: 0;
-					margin: 12px 0 24px;
-					}
-				.pricing-tables .plans .plan .plan__head .plan__price .price{
-					position: relative;
-					font-family: 'Raleway';
-					font-size: 36px;
-					font-optical-sizing: auto;
-					display: inline-block;
-					transition: transform 0.4s ease 0s, opacity 0.2s ease 0s;
-					}
-					.pricing-tables .plans .plan .plan__head .plan__price .price .plan__type{
-						font-size: 24px;
-						padding-left: 6px;
-						}
-						.pricing-tables .plans .plan .plan__head .plan__price .price.price--starter{
-							position: absolute;
-							left: 24px;
-							right: 0;
-							margin: 0 auto;
-							opacity: 0;
-							transform: translateY(100px);
-							transition: transform 0.4s ease 0s, opacity 1s ease 0s;
-							}
-				.pricing-tables .plans .plan .plan__head .plan__price__title .price{
-					position: relative;
-					font-family: 'Raleway';
-					font-size: 36px;
-					font-optical-sizing: auto;
-					display: inline-block;
-					transition: transform 0.4s ease 0s, opacity 0.2s ease 0s;
-					padding: 0;
-					margin: 12px 0 24px;
-					}
-					.pricing-tables .plans .plan .plan__head .plan__price__title .price .plan__title{
-						font-size: 24px;
-						color: rgba(var(--color-primary),1);
-						padding: 0;
-						margin: 12px 0 24px;
-						line-height: 46px;
-						}
-						.pricing-tables .plans .plan .plan__head .plan__price__title .price.price--starter{
-							position: absolute;
-							left: 24px;
-							right: 0;
-							padding: 0;
-							margin: 12px 0 24px;
-							opacity: 0;
-							transform: translateY(100px);
-							transition: transform 0.4s ease 0s, opacity 1s ease 0s;
-							}
-		.pricing-tables .plans .plan .plan__credit{
-			position: relative;
-			overflow: hidden;
-			padding: 24px;			
-			z-index: 1;
-			transition: all 0.4s ease-in-out;
-			}
-			.pricing-tables .plans .plan .plan__credit::after{
-				position: absolute;
-				content: "";
-				display: block;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				opacity: 0;
-				z-index: -1;
-				border-radius: 20px;
-				transition: all 0.4s ease-in-out;
-				}
-				.pricing-tables .plans .plan .plan__credit .plan__price .price{
-					position: relative;
-					font-family: 'Raleway';
-					font-weight: 700;
-					font-optical-sizing: auto;
-					font-size: 36px;
-					display: inline-block;
-					font-optical-sizing: auto;
-					transition: transform 0.4s ease 0s, opacity 0.2s ease 0s;
-					}
-					.pricing-tables .plans .plan .plan__credit .plan__price .price .plan__type{
-						font-size: 24px;
-						padding-left: 6px;
-						}
-						.pricing-tables .plans .plan .plan__credit .plan__price .price.price--starter{
-							position: absolute;
-							left: 24px;
-							right: 0;
-							margin: 0 auto;
-							opacity: 0;
-							transform: translateY(100px);
-							transition: transform 0.4s ease 0s, opacity 1s ease 0s;
-							}
-		.pricing-tables .plans .plan .plan__head{
-			position: relative;
-			overflow: hidden;
-			padding: 24px;			
-			z-index: 1;
-			transition: all 0.4s ease-in-out;
-			}
-			.pricing-tables .plans .plan .plan__head::after{
-				position: absolute;
-				content: "";
-				display: block;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(160deg, rgba(var(--color-primary),0.24) 0%, rgba(var(--color-primary),0) 48%);
-				top: 0;
-				left: 0;
-				opacity: 0;
-				z-index: -1;
-				border-radius: 20px;
-				transition: all 0.4s ease-in-out;
-				}
-				.pricing-tables .plans .plan .plan__head .plan__title{
-					font-size: 24px;
-					color: rgba(var(--color-primary),1);
-					padding: 0;
-					margin: 12px 0 24px;
-					}
-				.pricing-tables .plans .plan .plan__head .plan__price .price{
-					position: relative;
-					font-family: 'Raleway';
-					font-size: 36px;
-					display: inline-block;
-					font-optical-sizing: auto;
-					transition: transform 0.4s ease 0s, opacity 0.2s ease 0s;
-					}
-					.pricing-tables .plans .plan .plan__head .plan__price .price .plan__type{
-						font-size: 24px;
-						padding-left: 6px;
-						}
-						.pricing-tables .plans .plan .plan__head .plan__price .price.price--starter{
-							position: absolute;
-							left: 24px;
-							right: 0;
-							margin: 0 auto;
-							opacity: 0;
-							transform: translateY(100px);
-							transition: transform 0.4s ease 0s, opacity 1s ease 0s;
-							}
-				.pricing-tables .plans .plan .plan__head .plan__price__title .price{
-					position: relative;
-					font-family: 'Raleway';
-					font-size: 36px;
-					display: inline-block;
-					font-optical-sizing: auto;
-					transition: transform 0.4s ease 0s, opacity 0.2s ease 0s;
-					padding: 0;
-					margin: 12px 0 24px;
-					}
-					.pricing-tables .plans .plan .plan__head .plan__price__title .price .plan__title{
-						font-size: 24px;
-						color: rgba(var(--color-primary),1);
-						padding: 0;
-						margin: 12px 0 24px;
-						line-height: 46px;
-						}
-						.pricing-tables .plans .plan .plan__head .plan__price__title .price.price--starter{
-							position: absolute;
-							left: 24px;
-							right: 0;
-							padding: 0;
-							margin: 12px 0 24px;
-							opacity: 0;
-							transform: translateY(100px);
-							transition: transform 0.4s ease 0s, opacity 1s ease 0s;
-							}
-		.pricing-tables .plans .plan-text .plan__bottom__text{
-			position: relative;
-			overflow: hidden;
-			padding: 24px;			
-			z-index: 1;
-			transition: all 0.4s ease-in-out;
-			}
-			.pricing-tables .plans .plan-text .plan__bottom__text::after{
-				position: absolute;
-				content: "";
-				display: block;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(160deg, rgba(var(--color-primary),0.24) 0%, rgba(var(--color-primary),0) 48%);
-				top: 0;
-				left: 0;
-				opacity: 0;
-				z-index: -1;
-				border-radius: 20px;
-				transition: all 0.4s ease-in-out;
-				}
-				.pricing-tables .plans .plan-text .plan__bottom__text .plan__price__title .price{
-					/* position: relative; */
-					font-size: 36px;
-					display: inline-block;
-					transition: transform 0.4s ease 0s, opacity 0.2s ease 0s;
-					padding: 0;
-					margin: 12px 0 24px;
-					}
-					.pricing-tables .plans .plan-text .plan__bottom__text .plan__price__title .price .plan__title{
-						font-size: 24px;
-						/* color: rgba(var(--color-primary),1); */
-						padding: 0;
-						margin: 12px 0 24px;
-						line-height: 46px;
-						}
-						.pricing-tables .plans .plan-text .plan__bottom__text .plan__price__title .price.price--starter{
-							position: absolute;
-							left: 24px;
-							right: 0;
-							padding: 0;
-							margin: 12px 0 24px;
-							opacity: 0;
-							transform: translateY(100px);
-							transition: transform 0.4s ease 0s, opacity 1s ease 0s;
-							text-align: center;
-							}
+
+/* ===== Título de los paneles de precios ===== */
+.pricing-tables .plans .plan .plan__head{
+	position: relative;
+	overflow: hidden;
+	padding: 24px;			
+	z-index: 1;
+	transition: all 0.4s ease-in-out;
+	}
+	.pricing-tables .plans .plan .plan__head .plan__title{
+		font-size: 24px;
+		color: rgba(var(--color-primary),1);
+		padding: 0;
+		margin: 12px 0 24px;
+		}
+
+/* ===== Listas paneles ===== */
 .plan__features{
 	position: relative;
 	}
@@ -1674,62 +1488,44 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 				left: 0;
 				background: url("../images/dot_list.svg") no-repeat left 0px center / 8px;
 				}
-				.list-check li.not{
-					color: rgba(var(--color-black),0.48);
-					}
-					.list-check li.not::before{			
-						background: url("../images/arrow-not.svg") no-repeat 0 / 12px;
-						}
-	.pricing-tables .plans .list-check.price--starter{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		opacity: 0;
-		transition: opacity 1s ease;
-		}
-#why.plans{
-	background-color: rgba(var(--color-white),1);
-	background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1512 72" style="enable-background:new 0 0 1512 72;" xml:space="preserve"><style type="text/css">.st0{fill:%23fafbfb;}</style><path class="st0" d="M270.1,55.5c99.5-12.7,204-37.6,304.7-47.8C678.4-2.9,786.5-2.3,890.3,7.9c72.9,7.1,143.6,18.9,216.7,25.5c135.8,12.1,275.8,5.9,404.9-17.7V72H0V57.3C85.4,71.3,181.8,66.7,270.1,55.5z"/></svg>')
+
+/* ===== Precios paneles ===== */
+.pricing-tables .plans .plan .price{
+	font-optical-sizing: auto;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 24px;
+	padding: 24px 30px;			
 	}
 
-#why.plans h2, #why.plans h3, #why.plans p{
-    text-align: left;
-	padding-right: 0;
-	padding-left: 0;
-}
-.tooltip-container{
-	position: initial;
-	cursor: pointer;
-	z-index: 2;
+.pricing-tables .plans .plan .second-price{
+	font-optical-sizing: auto;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 24px;
+	padding: 0px 30px;			
 	}
-	.tooltip-container img{
-		display: inline-flex;
-		position: relative;
-		width: 18px;
-		margin: 3px 0 0 3px;
-		}
-	.tooltip{		
-		position: absolute;
-		visibility: hidden;
-		width: 240px;
-		background-color: rgba(var(--color-menu),1);
-		color: rgba(var(--color-white),1);
-		text-align: center;
-		border-radius: 12px;
-		padding: 6px;
-		z-index: 1;
-		bottom: 100%;
-		left: 50%;
-		transform: translateX(-50%);
-		opacity: 0;
-		transition: opacity 0.3s ease;
-		}
-		.tooltip-container:hover .tooltip{
-			visibility: visible;
-			opacity: 1;
-			}
+
+.pricing-tables .plans .plan .footnote{
+	font-weight: bold;
+	font-size: 15px;
+	padding: 0 30px;	
+	}
+
+.pricing-tables .plans .plan data small{
+	font-weight: bold;
+	font-size: 15px;
+}
+
+/* ===== Texto final seccion ===== */
+#pricing .end-text{
+	padding: 40px;
+	font-size: 28px;
+    line-height: 40px;
+	text-align: center;
+}
+
+
 /* =============================================================================
    SERVICES
    ========================================================================== */
@@ -1907,13 +1703,13 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	height: 144px;
 	margin: 18px auto 6px;
 	object-fit: cover;
-	object-position: content: '';
+	/* object-position: content: ''; */
 	border-radius: 12px;
 	}
 
-/* ============================
-   Demo Section
-   ============================ */
+/* =============================================================================
+   DEMO SECTION
+   ========================================================================== */
 
 #demo-section{
 	position: relative;
@@ -1948,6 +1744,17 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 				color: rgba(var(--color-primary),1);
 				border: 1px solid rgba(var(--color-primary),1);
 				}
+		#demo-section .end-text{
+			text-align: center; 
+			margin-top: 0px; 
+			font-size: 30px; 
+			line-height: 1.5; 
+			color: rgba(var(--color-primary),1);
+		}
+
+		#demo-section .end-text strong{ 
+			color: rgba(var(--color-white),1);
+		}
 
 /* ============================
    Carousel
@@ -2363,7 +2170,8 @@ p{
 #services,
 #use-cases,
 #demo-section,
-footer{
+footer,
+.main {
 	padding-top: 20px!important;
 	padding-bottom: 96px;
 	}
@@ -2371,7 +2179,8 @@ footer{
 	#make,
 	#pricing,
 	#services,
-	#use-cases{
+	#use-cases,
+	.main {
 		padding-top: 84px!important;
 		}
 .button-cta{
@@ -2517,7 +2326,7 @@ h6{
    Hero 768
    ============================ */   
    
-#hero{
+#hero, .main{
 	padding-top: 120px!important;
 	padding-bottom: 96px;
 	}
@@ -2605,7 +2414,7 @@ h6{
    ============================ */	
 	
 #pricing .button-cta{
-	width: calc(100% - 48px);
+	width: 250px;
 	padding: 21px 0 19px;
 	}
 	
@@ -2773,7 +2582,8 @@ footer{
 #services,
 #use-cases,
 #demo-section,
-footer{
+footer,
+.main{
 	padding-top: 54px!important;
 	padding-bottom: 132px;
 	}
@@ -2781,7 +2591,8 @@ footer{
 	#make,
 	#pricing,
 	#services,
-	#use-cases{
+	#use-cases,
+	.main{
 		padding-top: 84px!important;
 		}
 	
@@ -2818,7 +2629,7 @@ h2{
    Hero 1024
    ============================ */   
 	
-#hero{
+#hero, main{
 	padding-top: 120px!important;
 	padding-bottom: 96px;
 	}	
@@ -3002,7 +2813,8 @@ p{
 #services,	
 #use-cases,
 #demo-section,
-footer{
+footer,
+.main{
 	padding-top: 40px!important;
 	padding-bottom: 100px;
 	}
@@ -3010,7 +2822,8 @@ footer{
 	#make,
 	#pricing,
 	#services,
-	#use-cases{
+	#use-cases,
+	.main{
 		padding-top: 96px!important;
 		}
 video{
@@ -3167,7 +2980,7 @@ h6{
    Hero 1280
    ============================ */   
 
-#hero{
+#hero, .main{
     padding-top: 144px!important;
 	}
 #hero p{		
@@ -3372,7 +3185,8 @@ footer p{
 	#services,
 	#use-cases,
 	#demo-section,
-	footer{
+	footer,
+	.main{
 		padding-top: 66px!important;
 		padding-bottom: 168px;
 		}		
@@ -3390,7 +3204,7 @@ footer p{
 		font-size: 46px;
 		line-height: 58px;
 		}	
-	#hero{
+	#hero, .main{
 		padding-top: 156px!important;
 		}
 	#home-video	video{
@@ -3413,7 +3227,9 @@ footer p{
 		font-size: 20px;
 		line-height: 26px;
 		}
-	#faq .tab__content p{
+	#faq .tab__content p,
+	#faq .tab__content ol,
+	#faq .tab__content ul{
 		padding: 24px 36px 36px;
 		font-size: 20px;
 		line-height: 34px;
@@ -3463,7 +3279,8 @@ footer p{
 	#services,
 	#use-cases,
 	#demo-section,
-	footer{
+	footer,
+	.main{
 		padding-top: 66px!important;
 		padding-bottom: 192px;
 		}
@@ -3471,7 +3288,8 @@ footer p{
 		#make,
 		#pricing,
 		#services,
-		#use-cases{
+		#use-cases,
+		.main{
 			padding-top: 96px!important;
 			}	
 	body,
@@ -3487,7 +3305,7 @@ footer p{
 		font-size: 48px;
 		line-height: 62px;
 		}		
-	#hero{
+	#hero, .main{
 		padding-top: 168px!important;
 		}
 	.arrow-big{
@@ -3526,7 +3344,8 @@ footer p{
 	#services,
 	#use-cases,
 	#demo-section,
-	footer{
+	footer,
+	.main{
 		padding-top: 60px!important;
 		padding-bottom: 216px;
 		}
@@ -3534,7 +3353,8 @@ footer p{
 		#make,
 		#pricing,
 		#services,
-		#use-cases{
+		#use-cases,
+		.main{
 			padding-top: 108px!important;
 			}
 	#hero{
@@ -3587,7 +3407,8 @@ footer p{
 	#services,
 	#use-cases,
 	#demo-section,
-	footer{
+	footer,
+	.main{
 		padding-top: 54px!important;
 		padding-bottom: 216px;
 		}
@@ -3595,7 +3416,8 @@ footer p{
 		#make,
 		#pricing,
 		#services,
-		#use-cases{
+		#use-cases,
+		.main{
 			padding-top: 108px!important;
 			}
 	#hero{
