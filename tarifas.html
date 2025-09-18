@@ -46,9 +46,6 @@
     <link rel="stylesheet" href="css/venobox.css">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="js\cookies\cookies.css">
-	<!-- Pixel Code for https://overtracking.com/ -->
-	<script defer src="https://overtracking.com/p/u1lKOy3bjAeQ8eNW"></script>
-	<!-- END Pixel Code -->
 </head>
 
 <body class="bg-init">
@@ -151,7 +148,7 @@
 							</li>
 						</ul>
 					</div>
-					<data value="1.920 €" class="price">1.920 €</data>
+					<data id="basic-price" value="1.920 €" class="price">1.920 €</data>
 				</div>
 		
 				<!-- Panel #2 -->
@@ -176,7 +173,7 @@
 							</li>
 						</ul>
 					</div>
-					<data value="5.760 €" class="price">5.760 €</data>
+					<data id="standar-price" value="5.760 €" class="price">5.760 €</data>
 				</div>
 		
 				<!-- Panel #3 -->
@@ -198,7 +195,7 @@
 							</li>
 						</ul>
 					</div>
-					<data value="7.200 € /mes" class="price">7.200 € /mes</data>
+					<data id="continuous-plan" value="7.200 € /mes" class="price">7.200 € /mes</data>
 					<p class="footnote">* Producción de 4 horas | 40 vídeos al mes.</p>
 				</div>
 		
@@ -223,7 +220,7 @@
 							</li>
 						</ul>
 					</div>
-					<data value="2.400 € /muestra" class="price">2.400 € /muestra</data>
+					<data id="project-assesment" value="2.400 € /muestra" class="price">2.400 € /muestra</data>
 					<p class="footnote">* 60 min. | 10 vídeos elegidos por el cliente.</p>
 				</div>
 		
@@ -248,7 +245,7 @@
 							</li>
 						</ul>
 					</div>
-					<data value="2.400 € /colección" class="price">2.400 € /colección</data>
+					<data id="example-production" value="2.400 € /colección" class="price">2.400 € /colección</data>
 					<p class="footnote">* 60 min. | 10 vídeos elegidos por el cliente.</p>
 				</div>
 
@@ -276,8 +273,8 @@
 							</li>
 						</ul>
 					</div>
-					<data value="400 € /alumno" class="price">400 € /alumno</data>
-					<data value="1.800 € /grupo" class="second-price">1.800 € /grupo <small>(Hasta 8 alumnos)</small></data>
+					<data id="training-student" value="400 € /alumno" class="price">400 € /alumno</data>
+					<data id="training-group" value="1.800 € /grupo" class="second-price">1.800 € /grupo <small>(Hasta 8 alumnos)</small></data>
 				</div>
 				
 				<!-- Texto final sección -->
@@ -327,6 +324,7 @@
 	<script src="js/vendor/easings.js"></script> 
 	<script src="js/vendor/venobox.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/prices.js"></script>
 	<script>
 		const dropdowns = document.querySelectorAll('.dropdown');
 		dropdowns.forEach(dropdown => {
