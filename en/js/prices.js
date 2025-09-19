@@ -1,82 +1,118 @@
-document.addEventListener("DOMContentLoaded", async function() {
-    // Diccionario de precios 
-    const pricesUSD = {
-        'basic-price': '$ 2,400',
-        'standar-price': '$ 6,800',
-        'continuous-plan': '$ 7,800 /month',
-        'project-assesment': '$ 3,600 /sample',
-        'example-production': '$ 3,600 /colection',
-        'training-student': '$ 500 /student',
-        'training-group': '$ 2,400 /group'
-    };
-
-    // Idioma de paǵina según la definición de lang. 
-    // Se usará para determinar el idioma de los sufijos que acompañan a los precios
-    const pageLang = document.documentElement.lang.toLowerCase().startsWith('en') ? 'en' : 'es';
-
-    // Lista de países europeos (simplificada)
+document.addEventListener("DOMContentLoaded", function() {
+    // Lista básica de países europeos
     const europeanCountries = [
-        "ES","PT","FR","DE","IT","NL","BE","LU","AT","IE","FI","SE","NO","DK",
-        "PL","CZ","HU","GR","RO","BG","HR","SI","SK","EE","LV","LT","MT","CY"
+        'es','pt','fr','de','it','nl','be','lu','at','ie','fi','se','no',
+        'dk','pl','cz','sk','hu','gr','si','hr','ro','bg','ee','lv','lt',
+        'mt','cy','ch','is','li','mc','ad','sm','va','al','rs','me','mk',
+        'ba','xk','gl','eu','ca'
     ];
 
-    // Función para decidir si usar dólare$ o €uros
-    async function shouldUseUSD() {
-        try {
-            // Llamada API externa
-            const res = await fetch("https://ipapi.co/json/");
-            const data = await res.json();
-            if (!europeanCountries.includes(data.country)) {
-                return true; // Devuelve true si no es una zona Euro
-            }
-        } catch (e) {
-            console.warn("Can't detect country by IP:", e);
-            // Fallback: idioma navegador
-            const userLang = navigator.language || navigator.userLanguage;
-            const langPrefix = userLang.toLowerCase().split('-')[0];
-            const usdLanguages = ['en', 'us', 'gb', 'au', 'ca'];
-            if (usdLanguages.includes(langPrefix)) return true;
+    // Lista regiones España (Galicia, Euskadi y Cataluña)
+    const regionCodes = ['ga', 'pv', 'ct'];
+
+    // Diccionario de precios
+    const prices = {
+        'eur': {
+            'basic-price': '1.920 €',
+            'standard-price': '5.760 €',
+            'continuous-plan': '7.200 € /mes',
+            'project-assessment': '2.400 € /muestra',
+            'example-production': '2.400 € /colección',
+            'training-student': '400 € /alumno',
+            'training-group': '1.800 € /grupo'
+        },
+        'usd': {
+            'basic-price': '$ 2,400',
+            'standard-price': '$ 6,800',
+            'continuous-plan': '$ 7,800 /month',
+            'project-assessment': '$ 3,600 /sample',
+            'example-production': '$ 3,600 /collection',
+            'training-student': '$ 500 /student',
+            'training-group': '$ 2,400 /group'
         }
-        return false; // Por defecto EUR
+    };
+
+    // Detectar idioma de la página
+    const pageLang = document.documentElement.lang.toLowerCase().startsWith('en') ? 'en' : 'es';
+
+    // ==============================
+    // Función para reemplazar sufijos
+    // ==============================
+    function adaptSuffixes(priceText, lang) {
+        const suffixMap = {
+            '/mes': '/month',
+            '/muestra': '/sample',
+            '/colección': '/collection',
+            '/alumno': '/student',
+            '/grupo': '/group'
+        };
+
+        for (const [esSuffix, enSuffix] of Object.entries(suffixMap)) {
+            const regex = new RegExp(`${esSuffix}|${enSuffix}`, 'gi');
+            const replacement = lang === 'en' ? enSuffix : esSuffix;
+            priceText = priceText.replace(regex, replacement);
+        }
+
+        return priceText;
     }
 
-    // Cambiar precios
-    if (await shouldUseUSD()) {
-        Object.keys(pricesUSD).forEach(id => {
+    // ==============================
+    // Función para determinar moneda
+    // ==============================
+    async function getCurrencyByIP() {
+        try {
+            const res = await fetch("https://ipapi.co/json/");
+            if (!res.ok) throw new Error("IP request failed");
+
+            const data = await res.json();
+
+            // Validación de datos
+            if (
+                !data ||
+                typeof data !== 'object' ||
+                typeof data.country_code !== 'string' ||
+                typeof data.region_code !== 'string'
+            ) {
+                throw new Error("Datos de IP mal formados");
+            }
+
+            const countryCode = data.country_code.toLowerCase();
+            const regionCode = data.region_code.toLowerCase();
+
+            return (europeanCountries.includes(countryCode) || regionCodes.includes(regionCode)) ? 'eur' : 'usd';
+        } catch (e) {
+            console.warn("IP detection failure, fallback to browser language:", e);
+
+            const userLang = navigator.language || navigator.userLanguage;
+            const langPrefix = userLang.toLowerCase().split('-')[0];
+
+            return europeanCountries.includes(langPrefix) ? 'eur' : 'usd';
+        }
+    }
+
+    // ==============================
+    // Aplicar precios según moneda
+    // ==============================
+    getCurrencyByIP().then(currency => {
+        Object.entries(prices[currency]).forEach(([id, rawPrice]) => {
             const el = document.getElementById(id);
             if (el) {
-                let price = pricesUSD[id];
+                const adaptedPrice = adaptSuffixes(rawPrice, pageLang);
 
-                // Adaptar textos según idioma de página
-                // =====================================
-                if(price.includes('/mes') || price.includes('/month')) {
-                    price = price.replace(/\/mes|\/month/, pageLang === 'en' ? '/month' : '/mes');
-                }
-                if(price.includes('/muestra') || price.includes('/sample')) {
-                    price = price.replace(/\/muestra|\/sample/, pageLang === 'en' ? '/sample' : '/muestra');
-                }
-                if(price.includes('/colección') || price.includes('/colection')) {
-                    price = price.replace(/\/colección|\/colection/, pageLang === 'en' ? '/colection' : '/colección');
-                }
-                if(price.includes('/alumno') || price.includes('/student')) {
-                    price = price.replace(/\/alumno|\/student/, pageLang === 'en' ? '/student' : '/alumno');
-                }
-                if(price.includes('/grupo') || price.includes('/group')) {
-                    price = price.replace(/\/grupo|\/group/, pageLang === 'en' ? '/group' : '/grupo');
-                }
-                // =====================================
+                // Actualizar texto principal
+                el.textContent = adaptedPrice;
 
-                // Actualizar contenido
-                el.firstChild.textContent = price;
-                el.value = price;
+                // Actualizar atributo value si aplica
+                if ('value' in el) {
+                    el.value = adaptedPrice;
+                }
 
-                // Determina si se debe traducir el texto que acompaña al precio por grupos del panel "Formación Equipos"
+                // Actualizar texto auxiliar si existe
                 const small = el.querySelector('small');
-                if(small) {
+                if (small) {
                     small.textContent = pageLang === 'en' ? '(Up to 8 students)' : '(Hasta 8 alumnos)';
                 }
             }
         });
-    }
+    });
 });
-
