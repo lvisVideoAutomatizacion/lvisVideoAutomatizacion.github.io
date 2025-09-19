@@ -1,14 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Lista básica de países europeos
-    const europeanCountries = [
-        'es','pt','fr','de','it','nl','be','lu','at','ie','fi','se','no',
-        'dk','pl','cz','sk','hu','gr','si','hr','ro','bg','ee','lv','lt',
-        'mt','cy','ch','is','li','mc','ad','sm','va','al','rs','me','mk',
-        'ba','xk','gl','eu','ca'
-    ];
-
-    // Lista regiones España (Galicia, Euskadi y Cataluña)
-    const regionCodes = ['ga', 'pv', 'ct'];
 
     // Diccionario de precios
     const prices = {
@@ -67,19 +57,13 @@ document.addEventListener("DOMContentLoaded", function() {
             const data = await res.json();
 
             // Validación de datos
-            if (
-                !data ||
-                typeof data !== 'object' ||
-                typeof data.country_code !== 'string' ||
-                typeof data.region_code !== 'string'
-            ) {
+            if (!data || typeof data.currency !== 'string') {
                 throw new Error("Datos de IP mal formados");
             }
 
-            const countryCode = data.country_code.toLowerCase();
-            const regionCode = data.region_code.toLowerCase();
+            const currency = data.currency.toUpperCase();
 
-            return (europeanCountries.includes(countryCode) || regionCodes.includes(regionCode)) ? 'eur' : 'usd';
+            return currency === 'EUR' ? 'eur' : 'usd';
         } catch (e) {
             console.warn("IP detection failure, fallback to browser language:", e);
 
