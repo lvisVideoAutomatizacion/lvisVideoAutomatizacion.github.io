@@ -22,6 +22,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
+    const europeanLangs = [
+        'es','ca','gl','eu','pt','fr','de','it','nl','sv','fi','da','no','is','el','hu','pl','cs','sk','sl','hr','ro','bg','et','lv','lt','mt','cy'
+    ];
+
     // Detectar idioma de la página
     const pageLang = document.documentElement.lang.toLowerCase().startsWith('en') ? 'en' : 'es';
 
@@ -70,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const userLang = navigator.language || navigator.userLanguage;
             const langPrefix = userLang.toLowerCase().split('-')[0];
 
-            return europeanCountries.includes(langPrefix) ? 'eur' : 'usd';
+            return europeanLangs.includes(langPrefix) ? 'eur' : 'usd';
         }
     }
 
