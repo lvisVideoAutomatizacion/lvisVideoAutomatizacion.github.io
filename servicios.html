@@ -127,21 +127,20 @@
 			</div>
 
 			<!-- Section #1 -->
-			<section class="grid-1" role="region" aria-labelledby="proceso-funciona">
+			<section id="services-regulations" class="grid-1" role="region" aria-labelledby="proceso-funciona">
 				<div class="grid-1 services-title">
 					<i class="fa-solid fa-universal-access" aria-hidden="true"></i>
-					<h3 id="proceso-funciona">Accesibilidad que cumple con la normativa europea y española</h3>
+					<h3>Accesibilidad que cumple con la normativa europea y española</h3>
 				</div>			
-				<p>
+				<p id="intro">
 					En cumplimiento del <strong>Acta Europea de Accesibilidad</strong> y su desarrollo en España mediante la <strong>Ley 11/2023</strong> y el <strong>Real Decreto 193/2023</strong>,
 					<br/> ofrecemos servicios integrales de accesibilidad audiovisual diseñados para garantizar la <strong>igualdad de acceso a la información y la comunicación</strong> 
 					<br>para todas las personas, incluidas aquellas con discapacidad visual, auditiva o cognitiva.
 				</p>
 				<div class="top-common">
 					<p>Nuestros servicios están alineados con:</p>
-					<ul>
-						<li>Las <strong>normas UNE 153020</strong> (audiodescripción para personas con discapacidad visual)</li>
-						<li>Las <strong>normas UNE 153010</strong> (subtitulado para personas sordas y con discapacidad auditiva)</li>
+					<ul id="regulations-list">
+						<!-- Aquí se definirán mediante javascript items dinámicos en función del lenguaje -->
 						<li>
 							Las <strong>Pautas de Accesibilidad al Contenido Web (WCAG 2.2)</strong> en sus criterios específicos para multimedia:
 							<ul>
@@ -305,6 +304,7 @@
 	<script src="js/vendor/venobox.min.js"></script>
 	<script src="js/vendor/slick.js"></script>
 	<script src="js/main.js"></script> 
+	<script src="js/services_legal_references.js"></script>
 	<script>
 		const dropdowns = document.querySelectorAll('.dropdown');
 		dropdowns.forEach(dropdown => {
