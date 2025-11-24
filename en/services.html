@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>LViS Vally • Services</title>
@@ -125,12 +125,12 @@
 			</div>
 
 			<!-- Section #1 -->
-			<section class="grid-1" role="region" aria-labelledby="compliance-process">
+			<section id="services-regulations" class="grid-1" role="region" aria-labelledby="compliance-process">
 				<div class="grid-1 services-title">
 					<i class="fa-solid fa-universal-access" aria-hidden="true"></i>
 					<h3 id="compliance-process">Accessibility that complies with European and Spanish regulations</h3>
 				</div>
-				<p>
+				<p id="intro">
 					Following the guidelines and recommendations of the US (<strong>ADA, Section 508, CVAA</strong>) 
 					and Latin American accessibility regulations, 
 					</br>following global standards such as <strong>WCAG and the Marrakesh Treaty</strong>,
@@ -140,10 +140,8 @@
 				</p>
 				<div class="top-common">
 					<p>Our services are aligned with:</p>
-					<ul>
-						<li><strong>Americans with Disabilities Act</strong></li>
-						<li><strong>Section 508 of the Rehabilitation Act</strong></li>
-						<li><strong>21st Century Communications and Video Accessibility Act</strong></li>
+					<ul id="regulations-list">
+						<!-- Aquí se definirán mediante javascript items dinámicos en función del lenguaje -->
 						<li>
 							<strong>Web Content Accessibility Guidelines (WCAG 2.2)</strong> in their multimedia-specific criteria:
 							<ul>
@@ -168,7 +166,7 @@
 				<div class="col post">
 					<h4 class="title">Subtitling for people who are deaf or hard of hearing (CC)</h4>
 					<ul>
-						<li>Subtitles in <strong>Spanish, English, French, Portuguese</strong>, and official regional languages: Catalan, Basque, and Galician</li>
+						<li>Subtitles in <strong>Spanish, English, French, Portuguese</strong>, and more</li>
 						<li>Inclusion of <strong>relevant sound elements</strong> (music, effects, intonation)</li>
 					</ul>
 				</div>
@@ -269,6 +267,13 @@
 		<footer class="wrapper clearfix" role="contentinfo">
 			<section class="grid-1">
 				<div class="col">
+					<div class="align-center powered-by-lvis">
+						<p>
+							<a href="https://lvis.video" target="_blank">
+								Powered by <img src="images/logo.svg">
+							</a>
+						</p>
+					</div>
 					<div class="align-center">
 						<p>© 2025 LViS Video Automatización S.L. LViS is a registered trademark. All rights reserved</p>
 					</div>
@@ -296,6 +301,7 @@
 	<script src="js/vendor/venobox.min.js"></script>
 	<script src="js/vendor/slick.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/services_legal_references.js"></script>
 	<script>
 		const dropdowns = document.querySelectorAll('.dropdown');
 		dropdowns.forEach(dropdown => {

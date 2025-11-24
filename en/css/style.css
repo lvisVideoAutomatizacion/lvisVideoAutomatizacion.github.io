@@ -1968,6 +1968,20 @@ footer{
   margin-right: 0; 
 }
 
+.powered-by-lvis a {
+	color: #F23054;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.powered-by-lvis img {
+	height: 40px;
+	width: auto;
+	vertical-align: middle;
+}
+
 .dropdown{
 	width: 180px;
 	position: relative;
