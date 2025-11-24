@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
 
 
-    // Elementos lista
+    // List items
 
     const dynamicItems = {
         europe: {
@@ -107,13 +107,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // ==============================
     getRegionByIP().then(region => {
 
-        // Acceder al objeto del DOM
+        // Acceder a los objetos del DOM
         const h3 = document.querySelector("#services-regulations h3");
         const intro = document.querySelector("#services-regulations #intro");
         const listEl = document.querySelector("#regulations-list");
-        if (!h3 || !intro || !listEl) return; 
+        const rule1 = document.getElementById("block-1-rule");
+        const rule2 = document.getElementById("block-2-rule");
+        if (!h3 || !intro || !listEl || !rule1 || !rule2) return; 
 
-        // Establecer contenido del texto en función del lenguaje y la región
+        // Establecer contenido del texto de intro y título en función del lenguaje y la región
         let titleText = "";
         let introText = "";
         let items = dynamicItems[region][pageLang] || [];
@@ -135,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
             introText = europe_intro_en;
         }
 
-        // Modificar texto en el html
+        // Modificar texto de intro y título en el html
         h3.textContent = titleText;
         intro.innerHTML = introText;
 
@@ -145,5 +147,12 @@ document.addEventListener("DOMContentLoaded", function() {
             li.innerHTML = item;
             listEl.insertBefore(li, listEl.firstChild);
         });
+
+        // Borrar items que no proceden en las listas del apartado "Nuestros servicios / Our services"
+        if (region === "america") {
+            if (rule1) rule1.remove();
+            if (rule2) rule2.remove();
+        }
+
     });
 });
