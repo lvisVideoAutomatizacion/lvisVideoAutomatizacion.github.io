@@ -213,7 +213,7 @@ h2, h3, h4, h5, h6, p {
 
 /* ===== Secciones con padding y fondo ===== */
 #hero, #home-video, #home-advantage, #customers, #why, #faq, #make,
-#how, #use, #pricing, #services, #use-cases, #demo-section, footer, .main {
+#how, #use, #pricing, #services, #use-cases, #demo-section, footer, .main, .legal {
     padding-top: 42px !important;
     padding-bottom: 60px;
     background-size: 100% auto;
@@ -1104,17 +1104,6 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	margin-top: 20px;
 }
 
-#test-logo{
-	display: flex; 
-	justify-content: center; 
-	align-items: center; 
-	height: 30vh; 
-}
-	#test-logo img {
-		height: 200px; 
-		width: auto; 
-	}
-
 .submit-container button {
 	padding: 10px 20px;
 	font-size: 16px;
@@ -1131,6 +1120,65 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 .submit-container button:hover {
 	background-color: lightgray; 
 }
+
+/* =============================================================================
+   LEGAL
+   ========================================================================== */
+.legal{	
+	text-align: center;
+	background-color: rgba(var(--color-purple-light),1);
+	background-image: url('../images/backgrounds/black-wave.svg');
+	}
+
+	.legal #logo{
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	height: 30vh; 
+	}
+	.legal #logo img {
+		height: 200px; 
+		width: auto; 
+	}
+
+	.legal h1{
+		padding-top: 30px; 
+		padding-bottom: 30px; 
+		text-align: center;
+	}
+
+	.legal h2{
+		font-size: 30px;
+	}
+
+	.legal h3{
+		font-size: 25px;
+	}
+
+	.legal h4{
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.legal p{
+		text-align: center; 
+		text-align: justify;
+		 margin-bottom: 20px;
+	}
+
+	.legal ul li {
+		line-height: 3rem;
+		list-style-type: disc;
+		margin-left: 30px;
+	}
+
+	.legal p:last-of-type {
+		margin-bottom: 100px;
+	}
+
+	.legal .circle li{
+		list-style-type: circle;
+	}
 
 /* =============================================================================
    MAIN
