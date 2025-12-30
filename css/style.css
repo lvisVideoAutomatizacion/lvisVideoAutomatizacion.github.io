@@ -1152,11 +1152,11 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	}
 
 	.legal h3{
-		font-size: 30px;
+		font-size: 25px;
 	}
 
 	.legal h4{
-		font-size: 25px;
+		font-size: 20px;
 		font-weight: bold;
 	}
 
@@ -1176,7 +1176,9 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 		margin-bottom: 100px;
 	}
 
-
+	.legal .circle li{
+		list-style-type: circle;
+	}
 
 /* =============================================================================
    MAIN
