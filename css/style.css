@@ -213,7 +213,7 @@ h2, h3, h4, h5, h6, p {
 
 /* ===== Secciones con padding y fondo ===== */
 #hero, #home-video, #home-advantage, #customers, #why, #faq, #make,
-#how, #use, #pricing, #services, #use-cases, #demo-section, footer, .main, .legal {
+#how, #use, #pricing, #services, #use-cases, #demo-section, #partners, footer, .main, .legal {
     padding-top: 42px !important;
     padding-bottom: 60px;
     background-size: 100% auto;
@@ -222,7 +222,7 @@ h2, h3, h4, h5, h6, p {
 }
 
 /* ===== Sobrescribir padding-top para secciones clave ===== */
-#hero, #make, #pricing, #services, #use-cases, .main {
+#hero, #make, #pricing, #services, #use-cases, #partners, .main {
     padding-top: 60px !important;
 }
 
@@ -1448,6 +1448,86 @@ p  { font-size: var(--font-size-body); line-height: var(--line-height-body); }
 	background-color: rgba(var(--color-grey-light),1);
 	background-image: url('../images/backgrounds/light-purple-wave.svg')
 	}
+
+/* =============================================================================
+   PARTNERS
+   ========================================================================== */
+#partners{
+	padding-top: 168px!important;
+	padding-bottom: 200px;
+	background-color: rgba(var(--color-grey-light),1);
+	background-image: url('../images/backgrounds/black-wave.svg');
+	}
+	#partners h1{
+		color: var(--color-blue-dark);
+		text-align: center;
+		}
+	#partners h2{
+		font-size: 30px;
+		color: var(--color-blue-dark);
+		text-align: center;
+		line-height: 2.5rem;
+		}
+	#partners .button-cta{
+		margin: 0px 24px 30px 24px;
+		}
+/* ===== Cajas ===== */		
+.partners-tables .partners{
+    margin-top: 48px;
+	}
+	.partners-tables .partners .box-text{
+		margin-bottom: 24px;
+		text-align: center;
+		}
+	.partners-tables .partners .box:hover{
+		box-shadow: 0 10px 12px 0px rgba(var(--color-primary),0.36);
+		transform: translateY(-3px);
+		z-index: 12;
+		}
+
+	.partners-tables .partners .box{    
+		overflow: hidden;
+		border-radius: 20px;
+		background: rgba(var(--color-white),1);
+		margin-bottom: 24px;
+		padding: 0px;
+		box-shadow: 0px 10px 15px -3px rgba(var(--color-black),0.12);
+		transition: box-shadow 300ms ease, transform 300ms ease;
+		overflow: inherit; 
+		min-height: 500px;
+		}
+		.partners-tables .partners .box.box--contact {
+			min-height: 280px;
+		}
+		.partners-tables .partners .box img {
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+			object-fit: contain;
+			display: block;
+			margin: 0 auto;
+			}
+		.partners-tables .partners .box .logo-wrapper {
+			width: 200px;  
+			height: 100px; 
+			display: flex;
+			margin: 30px 0;
+			}
+		.partners-tables .partners .box .box__head{
+			position: relative;
+			overflow: hidden;
+			padding: 24px;			
+			z-index: 1;
+			transition: all 0.4s ease-in-out;
+			}
+			.partners-tables .partners .box .box__head .box__title{
+				font-size: 24px;
+				color: rgba(var(--color-primary),1);
+				padding: 0;
+				margin: 12px 0 24px;
+				}
+
 /* =============================================================================
    PRICING
    ========================================================================== */
@@ -3480,6 +3560,7 @@ footer p{
 		#pricing,
 		#services,
 		#use-cases,
+		#partners,
 		.main{
 			padding-top: 108px!important;
 			}
