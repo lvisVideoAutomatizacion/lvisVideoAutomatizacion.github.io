@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>LViS Vally • Más allá del botón play: Vídeos accesibles e inclusivos</title>
+	<meta content="¿Tu contenido en vídeo llega realmente a todas las personas? Únete a esta sesión gratuita y descubre cómo hacer tus vídeos accesibles e inclusivos con audiodescripciones, subtítulos cerrados, transcripción y más." name="description"/>
+	<meta content="Más allá del botón play: ¿Cómo hacer tus vídeos accesibles e inclusivos? — LViS Vally" property="og:title"/>
+	<meta content="Únete a esta sesión gratuita y descubre cómo adaptar tus vídeos para que lleguen a todas las audiencias cumpliendo los estándares de accesibilidad." property="og:description"/>
+	<meta content="https://www.accesible.video/images/LVISVally_Logotipo.png" property="og:image"/>
+	<meta content="Más allá del botón play — LViS Vally" property="twitter:title"/>
+	<meta content="Sesión gratuita: audiodescripciones, subtítulos cerrados, transcripción, navegación entre capítulos y más técnicas para hacer tus vídeos accesibles." property="twitter:description"/>
+	<meta content="https://www.accesible.video/images/LVISVally_Logotipo.png" property="twitter:image"/>
+	<meta property="og:type" content="website" />
+	<meta content="summary_large_image" name="twitter:card"/>
+	<meta name="keywords" content="accesibilidad vídeo, subtítulos cerrados, audiodescripción, transcripción, capítulos, vídeos accesibles, WCAG, inclusión, LViS Vally, evento, charla, webinar" />
+	<meta name="author" content="LViS" />
+	<meta name="robots" content="index,follow" lang="es" />
+	<meta property="og:locale" content="es_ES" />
+	<meta name="url" property="og:url" content="https://vally.lvis.es/evento-accesibilidad-video.html" />
+	<meta property="og:site_name" content="LViS Vally" />
+	<meta property="twitter:site" content="@lvis" />
+	<meta property="twitter:creator" content="@lvis" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/logo_azul_claro.svg">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/logo_azul_claro.svg">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/logo_azul_claro.svg">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/logo_azul_claro.svg">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/logo_azul_claro.svg">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/logo_azul_claro.svg">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/logo_azul_claro.svg">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/logo_azul_claro.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/logo_azul_claro.svg">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/favicon/logo_azul_claro.svg">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/logo_azul_claro.svg">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/logo_azul_claro.svg">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/logo_azul_claro.svg">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width; initial-scale=1">
+	<link rel="stylesheet" href="css/animsition.min.css">
+	<link rel="stylesheet" href="css/venobox.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="js/cookies/cookies.css">
+	<script src="https://kit.fontawesome.com/3d245d70bc.js" crossorigin="anonymous"></script>
+	<style>
+		/* ===== Enlace de salto — WCAG 2.4.1 ===== */
+		.skip-link {
+			position: absolute;
+			top: -60px;
+			left: 6px;
+			padding: 12px 20px;
+			background: #203460;
+			color: #ffffff;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+			font-size: 16px;
+			border-radius: 0 0 12px 12px;
+			z-index: 10000;
+			text-decoration: underline;
+			transition: top 0.2s ease;
+		}
+		.skip-link:focus {
+			top: 0;
+			outline: 3px solid #12B4D4;
+			outline-offset: 2px;
+		}
+
+		/* ===== Badge del evento ===== */
+		.evento-badge {
+			display: inline-block;
+			background: #3C126A;
+			color: #ffffff;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+			font-size: 13px;
+			line-height: 1;
+			padding: 7px 16px 6px;
+			border-radius: 20px;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			margin-bottom: 0.5rem;
+		}
+
+		/* ===== Logo centrado en la parte superior ===== */
+		.evento-page-logo {
+			display: block;
+			width: 180px;
+			height: auto;
+			margin: 0 auto 0;
+		}
+		.evento-page-logo-wrap {
+			background-color: rgba(250,251,251,1);
+			padding: 28px 0 20px;
+			text-align: center;
+		}
+
+		/* ===== Hero section ===== */
+		#evento-hero {
+			padding-top: 40px !important;
+			padding-bottom: 60px;
+			background-color: rgba(250,251,251,1);
+		}
+		#evento-hero h1 {
+			color: #203460;
+			padding-top: 0.75rem;
+		}
+		#evento-hero h2 {
+			color: #203460;
+			font-weight: 400;
+			padding-top: 0.5rem;
+		}
+		#evento-hero p {
+			color: rgba(24,26,28,0.72);
+			padding-top: 1rem;
+		}
+		#evento-hero .col:last-child {
+			padding-top: 2rem;
+		}
+
+		/* ===== Meta info del evento (fecha, hora) ===== */
+		.evento-meta {
+			list-style: none !important;
+			padding: 0 !important;
+			margin: 1.5rem 0 !important;
+			width: auto !important;
+		}
+		.evento-meta li {
+			display: flex !important;
+			align-items: center;
+			gap: 10px;
+			font-size: 16px;
+			line-height: 28px;
+			padding: 4px 0;
+			color: rgba(24,26,28,0.72);
+			list-style-type: none !important;
+		}
+		.evento-meta li i {
+			color: rgba(18,180,212,1);
+			font-size: 16px;
+			width: 20px;
+			text-align: center;
+		}
+
+		/* ===== Grupo de botones CTA ===== */
+		.cta-group {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			margin: 28px 0 8px;
+		}
+		.cta-group .button-cta {
+			margin: 0;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		/* ===== Botón outline ===== */
+		.button-cta--outline {
+			background: transparent;
+			color: rgba(18,180,212,1) !important;
+			box-shadow:
+				inset 0 0 0 2px rgba(18,180,212,1),
+				0px 8px 16px -6px rgba(24,26,28,0.06),
+				0px 6px 8px -6px rgba(24,26,28,0.04);
+			text-decoration: none !important;
+		}
+		.button-cta--outline:hover {
+			background: rgba(18,180,212,0.08);
+			box-shadow:
+				inset 0 0 0 2px rgba(18,180,212,1),
+				0px 8px 16px -6px rgba(24,26,28,0.10),
+				0px 6px 8px -6px rgba(24,26,28,0.06);
+		}
+		.button-cta--outline:focus-visible {
+			outline: 3px solid rgba(18,180,212,1);
+			outline-offset: 2px;
+		}
+
+		/* ===== Cards de features (columna derecha hero) ===== */
+		.evento-features {
+			display: flex;
+			flex-direction: column;
+			gap: 28px;
+		}
+		.evento-feature-card {
+			display: flex;
+			align-items: flex-start;
+			gap: 20px;
+		}
+		.evento-feature-icon {
+			flex-shrink: 0;
+			width: 56px;
+			height: 56px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(18,180,212,1);
+			color: #ffffff;
+			border-radius: 50%;
+			font-size: 22px;
+		}
+		.evento-feature-card h3 {
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 700;
+			color: rgba(18,180,212,1);
+			padding-top: 4px;
+			margin-bottom: 4px;
+		}
+		.evento-feature-card p {
+			font-size: 16px;
+			line-height: 24px;
+			padding-top: 4px;
+			margin: 0;
+			color: rgba(24,26,28,0.72);
+		}
+
+		/* ===== Sección beneficios ===== */
+		#evento-benefits {
+			padding-top: 60px !important;
+			padding-bottom: 60px;
+			background-color: #ffffff;
+			text-align: center;
+		}
+		#evento-benefits h2 {
+			text-align: center;
+			color: #203460;
+		}
+		#evento-benefits .grid-1 p {
+			text-align: center;
+			max-width: 640px;
+			margin: 0 auto;
+			color: rgba(24,26,28,0.72);
+		}
+		#evento-benefits .grid-4 {
+			margin-top: 40px;
+			display: flex !important;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 16px;
+			font-size: 1rem;
+		}
+		#evento-benefits .grid-4 .col {
+			display: block !important;
+			width: auto !important;
+			flex: 0 1 260px;
+			margin-left: 0 !important;
+		}
+		.evento-benefit-card {
+			text-align: center;
+			padding: 24px 16px;
+		}
+		.evento-benefit-icon {
+			width: 64px;
+			height: 64px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(18,180,212,0.12);
+			color: rgba(18,180,212,1);
+			border-radius: 50%;
+			font-size: 26px;
+			margin: 0 auto 1rem;
+		}
+		.evento-benefit-card h3 {
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 700;
+			color: #203460;
+			padding-top: 0;
+			margin-bottom: 8px;
+		}
+		.evento-benefit-card p {
+			font-size: 16px;
+			line-height: 24px;
+			color: rgba(24,26,28,0.72);
+			padding-top: 0;
+		}
+
+		/* ===== Sección impacto ===== */
+		#evento-impact {
+			padding-top: 60px !important;
+			padding-bottom: 60px;
+			background-color: rgba(250,251,251,1);
+			background-image: none;
+		}
+		.evento-impact-title {
+			padding-top: 0;
+		}
+		.evento-impact-title h2 {
+			color: #203460;
+			text-align: left;
+			padding-top: 0;
+			font-size: 36px;
+			line-height: 46px;
+		}
+		.teal-line {
+			display: block;
+			width: 60px;
+			height: 4px;
+			background: rgba(18,180,212,1);
+			border-radius: 2px;
+			margin-top: 16px;
+		}
+		.evento-impact-content p {
+			color: rgba(24,26,28,0.78);
+			font-size: 18px;
+			line-height: 30px;
+			padding-top: 0;
+			margin-bottom: 1rem;
+		}
+		.evento-impact-content .cta-group {
+			align-items: flex-start;
+		}
+
+		/* ===== Botón ghost (Conoce LViS Vally) ===== */
+		.button-cta--ghost {
+			background: transparent;
+			color: rgba(24,26,28,0.72) !important;
+			box-shadow: none;
+			text-decoration: underline !important;
+			font-size: 16px;
+			padding: 10px 0;
+			width: auto;
+		}
+		.button-cta--ghost:hover {
+			color: rgba(18,180,212,1) !important;
+			box-shadow: none;
+			background: transparent;
+		}
+
+		/* ===== Elimina padding-bottom heredado en main para que el banner llegue al borde ===== */
+		main {
+			padding-bottom: 0 !important;
+		}
+
+		/* ===== CTA Banner final ===== */
+		#evento-cta-banner {
+			padding: 48px 0 72px;
+			background: rgba(18,180,212,1);
+			position: relative;
+			overflow: hidden;
+		}
+		.evento-cta-inner {
+			display: flex;
+			flex-direction: column;
+			gap: 32px;
+			align-items: flex-start;
+			max-width: 1350px;
+			margin: 0 auto;
+			padding: 0 5%;
+			width: 90%;
+			box-sizing: border-box;
+		}
+		.evento-cta-left {
+			display: flex;
+			align-items: flex-start;
+			gap: 24px;
+			flex: 1;
+		}
+		.evento-cta-calendar-icon {
+			flex-shrink: 0;
+			width: 72px;
+			height: 72px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 3px solid rgba(255,255,255,0.72);
+			border-radius: 50%;
+			color: #ffffff;
+			font-size: 28px;
+		}
+		.evento-cta-text h2 {
+			color: #ffffff;
+			text-align: left;
+			padding-top: 0;
+		}
+		.evento-cta-text p {
+			color: rgba(24,26,28,1);
+			font-size: 16px;
+			line-height: 24px;
+			padding-top: 8px;
+		}
+		.evento-cta-buttons {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			align-items: stretch;
+		}
+		.evento-cta-buttons .button-cta {
+			background: rgba(255,255,255,0.15);
+			color: #ffffff !important;
+			box-shadow:
+				inset 0 0 0 2px rgba(255,255,255,0.72),
+				0px 8px 16px -6px rgba(24,26,28,0.08);
+			margin: 0;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			text-decoration: none !important;
+			font-size: 16px;
+			padding: 16px 28px 14px;
+			min-width: 260px;
+		}
+		.evento-cta-buttons .button-cta:hover {
+			background: rgba(255,255,255,0.25);
+			box-shadow: inset 0 0 0 2px rgba(255,255,255,1);
+		}
+		.evento-cta-dots {
+			position: absolute;
+			right: 4%;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 120px;
+			height: 120px;
+			pointer-events: none;
+			opacity: 0.25;
+			background-image: radial-gradient(circle, #ffffff 1.5px, transparent 1.5px);
+			background-size: 14px 14px;
+		}
+
+		/* ===== Responsive ===== */
+		@media (min-width: 768px) {
+			.evento-page-logo { width: 220px; }
+			.evento-page-logo-wrap { padding: 36px 0 24px; }
+			#evento-hero { padding-top: 48px !important; padding-bottom: 80px; }
+			#evento-hero .col:last-child { padding-top: 0; }
+			.cta-group { flex-direction: row; flex-wrap: wrap; }
+			.evento-impact-content .cta-group { flex-direction: column; align-items: flex-start; }
+			.evento-cta-inner { flex-direction: row; align-items: center; justify-content: space-between; }
+			.evento-cta-buttons { align-items: flex-end; min-width: 280px; }
+			.evento-impact-title h2 { font-size: 42px; line-height: 52px; }
+		}
+
+		/* ===== Foco visible — WCAG 2.4.7 ===== */
+		a:focus-visible,
+		button:focus-visible,
+		input:focus-visible,
+		label:focus-visible {
+			outline: 3px solid #12B4D4;
+			outline-offset: 3px;
+		}
+	</style>
+</head>
+
+<body class="bg-init">
+
+	<!-- Enlace de salto al contenido principal para usuarios de teclado (WCAG 2.4.1) -->
+	<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+	<!-- ***** OVERLAY ***** -->
+	<div class="animsition-overlay">
+
+		<!-- Logo centrado de la página -->
+		<div class="evento-page-logo-wrap">
+			<a href="index.html" aria-label="Ir a la página principal de LViS Vally">
+				<img src="images/LVISVally_Logotipo.svg" alt="Logotipo de LViS Vally" class="evento-page-logo">
+			</a>
+		</div>
+
+		<!-- ***** CONTENIDO PRINCIPAL ***** -->
+		<main id="contenido-principal">
+
+			<!-- ***** SECCIÓN 1: HERO ***** -->
+			<div id="evento-hero" class="wrapper clearfix" role="region" aria-labelledby="titulo-evento">
+				<section class="grid-2">
+
+					<!-- Columna izquierda: título, meta, CTAs -->
+					<div class="col">
+						<h1 id="titulo-evento">Más allá del<br> botón play:</h1>
+						<h2>¿Cómo hacer tus vídeos<br>accesibles e inclusivos?</h2>
+						<p>¿Tu contenido en vídeo llega realmente a todas las personas? Descubre cómo adaptar tus contenidos para que conecten con todas las audiencias, cumpliendo con los estándares de accesibilidad de forma sencilla y efectiva.</p>
+						<ul class="evento-meta" role="list">
+							<li>
+								<i class="fa-regular fa-calendar" aria-hidden="true"></i>
+								<span>Próximamente · Sesión online</span>
+							</li>
+							<li>
+								<i class="fa-regular fa-clock" aria-hidden="true"></i>
+								<span>Inscripción gratuita y abierta</span>
+							</li>
+						</ul>
+						<div class="cta-group" role="group" aria-label="Acciones del evento">
+							<a class="button-cta"
+								href="https://www.linkedin.com/events/7455586226792718336"
+								target="_blank"
+								rel="noopener"
+								aria-label="Ver el evento en LinkedIn, se abre en una nueva pestaña">
+								<i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+								Ver evento en LinkedIn
+							</a>
+							<a class="button-cta button-cta--outline"
+								href="https://www.lvis.es/forms/eventoslvisvally"
+								target="_blank"
+								rel="noopener"
+								aria-label="Formulario de inscripción al evento, se abre en una nueva pestaña">
+								<i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+								Inscríbete al evento
+							</a>
+						</div>
+					</div>
+
+					<!-- Columna derecha: 3 feature cards -->
+					<div class="col">
+						<div class="evento-features" role="list">
+
+							<div class="evento-feature-card" role="listitem">
+								<div class="evento-feature-icon" aria-hidden="true">
+									<i class="fa-solid fa-closed-captioning"></i>
+								</div>
+								<div>
+									<h3>Accesibilidad</h3>
+									<p>Aprende a añadir subtítulos cerrados, audiodescripciones y transcripciones para que cualquier persona acceda a tu mensaje completo.</p>
+								</div>
+							</div>
+
+							<div class="evento-feature-card" role="listitem">
+								<div class="evento-feature-icon" aria-hidden="true">
+									<i class="fa-solid fa-ear-deaf"></i>
+								</div>
+								<div>
+									<h3>Inclusión</h3>
+									<p>Descubre técnicas prácticas para eliminar barreras en tu contenido audiovisual y llegar a audiencias más amplias y diversas.</p>
+								</div>
+							</div>
+
+							<div class="evento-feature-card" role="listitem">
+								<div class="evento-feature-icon" aria-hidden="true">
+									<i class="fa-solid fa-chart-line"></i>
+								</div>
+								<div>
+									<h3>Impacto</h3>
+									<p>Cumple normativa vigente, mejora tu posicionamiento y amplía el alcance de tu contenido. La accesibilidad es una inversión, no un coste.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</section>
+			</div>
+			<!-- ***** FIN HERO ***** -->
+
+			<!-- ***** SECCIÓN 2: BENEFICIOS ***** -->
+			<div id="evento-benefits" class="wrapper clearfix" role="region" aria-labelledby="beneficios-heading">
+				<section class="grid-1">
+					<div class="col">
+						<h2 id="beneficios-heading" class="post">Un vídeo inclusivo es un vídeo para todos</h2>
+						<p>La accesibilidad en vídeo amplía tu audiencia, mejora la experiencia de usuario y te posiciona como una organización responsable.</p>
+					</div>
+				</section>
+				<section class="grid-4" aria-label="Beneficios de la accesibilidad en vídeo">
+					<div class="col evento-benefit-card">
+						<div class="evento-benefit-icon" aria-hidden="true">
+							<i class="fa-solid fa-people-group"></i>
+						</div>
+						<h3>Más personas,<br>sin barreras</h3>
+						<p>Tu contenido llega a personas con discapacidad auditiva, visual o cognitiva, y también a quienes ven vídeos sin sonido.</p>
+					</div>
+					<div class="col evento-benefit-card">
+						<div class="evento-benefit-icon" aria-hidden="true">
+							<i class="fa-regular fa-eye"></i>
+						</div>
+						<h3>Mejora la comprensión<br>y el engagement</h3>
+						<p>Los subtítulos y las transcripciones aumentan el tiempo de visualización y facilitan la retención del mensaje.</p>
+					</div>
+					<div class="col evento-benefit-card">
+						<div class="evento-benefit-icon" aria-hidden="true">
+							<i class="fa-solid fa-globe"></i>
+						</div>
+						<h3>Cumple estándares<br>y normativas</h3>
+						<p>Anticípate a la legislación de accesibilidad digital (WCAG AA, Acta Europea de Accesibilidad) y evita riesgos legales.</p>
+					</div>
+					<div class="col evento-benefit-card">
+						<div class="evento-benefit-icon" aria-hidden="true">
+							<i class="fa-regular fa-heart"></i>
+						</div>
+						<h3>Refuerza tu marca<br>y tu propósito</h3>
+						<p>Demostrar compromiso con la inclusión genera confianza, diferenciación y una imagen de marca sólida y coherente.</p>
+					</div>
+				</section>
+			</div>
+			<!-- ***** FIN BENEFICIOS ***** -->
+
+			<!-- ***** SECCIÓN 3: DE LA INTENCIÓN AL IMPACTO ***** -->
+			<div id="evento-impact" class="wrapper clearfix" role="region" aria-labelledby="impacto-heading">
+				<section class="grid-3--1-2">
+
+					<!-- Columna izquierda: título -->
+					<div class="col evento-impact-title">
+						<h2 id="impacto-heading">De la intención<br>al impacto</h2>
+						<span class="teal-line" aria-hidden="true"></span>
+					</div>
+
+					<!-- Columna derecha: texto + CTAs -->
+					<div class="col evento-impact-content">
+						<p>Compartiremos ejemplos prácticos y te mostraremos cómo, con nuestros servicios en LViS Vally, puedes transformar los vídeos de tu organización en contenidos inclusivos, pensados para todos y listos para cualquier canal.</p>
+						<p>Una charla práctica, útil y pensada para que nadie se quede fuera de tu mensaje. Sin tecnicismos, sin complicaciones y con resultados reales desde el primer día.</p>
+						<div class="cta-group" role="group" aria-label="Acciones de la sección">
+							<a class="button-cta button-cta--outline"
+								href="https://www.lvis.es/forms/eventoslvisvally"
+								target="_blank"
+								rel="noopener"
+								aria-label="Formulario de inscripción al evento, se abre en una nueva pestaña">
+								<i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+								Inscríbete al evento
+							</a>
+							<a class="button-cta button-cta--ghost"
+								href="index.html"
+								aria-label="Conoce los servicios de LViS Vally en la página principal">
+								Conoce LViS Vally →
+							</a>
+						</div>
+					</div>
+
+				</section>
+			</div>
+			<!-- ***** FIN IMPACTO ***** -->
+
+			<!-- ***** SECCIÓN 4: CTA BANNER ***** -->
+			<div id="evento-cta-banner" role="region" aria-labelledby="cta-banner-heading">
+				<div class="evento-cta-inner">
+					<div class="evento-cta-left">
+						<div class="evento-cta-calendar-icon" aria-hidden="true">
+							<i class="fa-regular fa-calendar-check"></i>
+						</div>
+						<div class="evento-cta-text">
+							<h2 id="cta-banner-heading">No te lo pierdas</h2>
+							<p>Únete a la sesión gratuita de LViS Vally y descubre cómo hacer tus vídeos accesibles e inclusivos de forma sencilla y efectiva.</p>
+						</div>
+					</div>
+					<div class="evento-cta-buttons" role="group" aria-label="Acciones del banner">
+						<a class="button-cta"
+							href="https://www.linkedin.com/events/7455586226792718336"
+							target="_blank"
+							rel="noopener"
+							aria-label="Ver el evento en LinkedIn, se abre en una nueva pestaña">
+							<i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+							Ver evento en LinkedIn
+						</a>
+						<a class="button-cta"
+							href="https://www.lvis.es/forms/eventoslvisvally"
+							target="_blank"
+							rel="noopener"
+							aria-label="Formulario de inscripción al evento, se abre en una nueva pestaña">
+							<i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+							Inscríbete al evento
+						</a>
+					</div>
+				</div>
+				<div class="evento-cta-dots" aria-hidden="true"></div>
+			</div>
+			<!-- ***** FIN CTA BANNER ***** -->
+
+		</main>
+		<!-- ***** FIN CONTENIDO PRINCIPAL ***** -->
+
+		<!-- ***** FOOTER ***** -->
+		<footer class="wrapper clearfix" role="contentinfo">
+			<section class="grid-1">
+				<div class="col">
+					<div class="align-center powered-by-lvis">
+						<p>
+							<a href="https://lvis.es" target="_blank" rel="noopener" aria-label="Visitar el sitio web de LViS, se abre en una nueva pestaña">
+								Powered by <img src="images/logo.svg" alt="LViS">
+							</a>
+						</p>
+					</div>
+					<div id="copyright" class="align-center">
+						<p>© 2025 LViS Video Automatización S.L. LViS es una marca registrada. Todos los derechos reservados.</p>
+					</div>
+					<hr aria-hidden="true" class="rupture">
+					<div aria-label="Enlaces legales" class="legal-links">
+						<p class="display-inline footer-legal-links">
+							<a href="aviso-legal.html" target="_blank" rel="noopener">Aviso legal</a>
+							<a href="politica-de-cookies.html" target="_blank" rel="noopener">Política de cookies</a>
+							<a href="politica-privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>
+							<a href="terminos-servicio.html" target="_blank" rel="noopener">Términos de servicio</a>
+							<a href="politica-marcas-servicios.html" target="_blank" rel="noopener">Política de marcas y productos</a>
+							<a href="accesibilidad.html" target="_blank" rel="noopener">Accesibilidad</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</footer>
+		<!-- ***** FIN FOOTER ***** -->
+
+	</div>
+	<!-- ***** FIN OVERLAY ***** -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+	<script src="js/vendor/easings.js"></script>
+	<script src="js/vendor/venobox.min.js"></script>
+	<script src="js/vendor/font-animation.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/update_copyright_year.js"></script>
+	<script>
+		const dropdowns = document.querySelectorAll('.dropdown');
+		dropdowns.forEach(dropdown => {
+			dropdown.addEventListener('click', (e) => {
+				dropdown.classList.toggle('dropdown__options--visible')
+			})
+			dropdown.querySelectorAll('.dropdown__options .dropdown__option').forEach(opt => {
+				opt.addEventListener('click', (e) => {
+					dropdown.querySelector('.dropdown__selected').innerHTML = opt.innerHTML;
+				})
+			})
+		})
+	</script>
+
+</body>
+
+</html>
