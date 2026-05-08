@@ -103,23 +103,17 @@
 		#evento-hero {
 			padding-top: 40px !important;
 			padding-bottom: 60px;
-			background-color: rgba(250,251,251,1);
+			background-color: #181618;
 		}
-		#evento-hero h1 {
-			color: #203460;
-			padding-top: 0.75rem;
+		.evento-hero-img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			border-radius: 16px;
+			margin: 0 auto 2rem;
 		}
-		#evento-hero h2 {
-			color: #203460;
-			font-weight: 400;
-			padding-top: 0.5rem;
-		}
-		#evento-hero p {
-			color: rgba(24,26,28,0.72);
-			padding-top: 1rem;
-		}
-		#evento-hero .col:last-child {
-			padding-top: 2rem;
+		#evento-hero .cta-group {
+			justify-content: center;
 		}
 
 		/* ===== Meta info del evento (fecha, hora) ===== */
@@ -336,15 +330,16 @@
 			background: transparent;
 		}
 
-		/* ===== Elimina padding-bottom heredado en main para que el banner llegue al borde ===== */
+		/* ===== Elimina padding heredado en main para que el banner llegue al borde ===== */
 		main {
+			padding-top: 0 !important;
 			padding-bottom: 0 !important;
 		}
 
 		/* ===== CTA Banner final ===== */
 		#evento-cta-banner {
 			padding: 48px 0 72px;
-			background: rgba(18,180,212,1);
+			background: #0A798F;
 			position: relative;
 			overflow: hidden;
 		}
@@ -383,7 +378,7 @@
 			padding-top: 0;
 		}
 		.evento-cta-text p {
-			color: rgba(24,26,28,1);
+			color: #ffffff;
 			font-size: 16px;
 			line-height: 24px;
 			padding-top: 8px;
@@ -440,6 +435,19 @@
 			.evento-impact-title h2 { font-size: 42px; line-height: 52px; }
 		}
 
+		/* ===== Texto visualmente oculto para lectores de pantalla ===== */
+		.visually-hidden {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			white-space: nowrap;
+			border: 0;
+		}
+
 		/* ===== Foco visible — WCAG 2.4.7 ===== */
 		a:focus-visible,
 		button:focus-visible,
@@ -459,35 +467,22 @@
 	<!-- ***** OVERLAY ***** -->
 	<div class="animsition-overlay">
 
-		<!-- Logo centrado de la página -->
-		<div class="evento-page-logo-wrap">
-			<a href="index.html" aria-label="Ir a la página principal de LViS Vally">
-				<img src="images/LVISVally_Logotipo.svg" alt="Logotipo de LViS Vally" class="evento-page-logo">
-			</a>
-		</div>
-
 		<!-- ***** CONTENIDO PRINCIPAL ***** -->
 		<main id="contenido-principal">
 
 			<!-- ***** SECCIÓN 1: HERO ***** -->
-			<div id="evento-hero" class="wrapper clearfix" role="region" aria-labelledby="titulo-evento">
-				<section class="grid-2">
+			<div id="evento-hero" class="wrapper clearfix" role="region" aria-label="Presentación del evento">
+				<section class="grid-1">
 
-					<!-- Columna izquierda: título, meta, CTAs -->
-					<div class="col">
-						<h1 id="titulo-evento">Más allá del<br> botón play:</h1>
-						<h2>¿Cómo hacer tus vídeos<br>accesibles e inclusivos?</h2>
-						<p>¿Tu contenido en vídeo llega realmente a todas las personas? Descubre cómo adaptar tus contenidos para que conecten con todas las audiencias, cumpliendo con los estándares de accesibilidad de forma sencilla y efectiva.</p>
-						<ul class="evento-meta" role="list">
-							<li>
-								<i class="fa-regular fa-calendar" aria-hidden="true"></i>
-								<span>Próximamente · Sesión online</span>
-							</li>
-							<li>
-								<i class="fa-regular fa-clock" aria-hidden="true"></i>
-								<span>Inscripción gratuita y abierta</span>
-							</li>
-						</ul>
+					<div class="col" style="text-align: center;">
+						<h1 class="visually-hidden">Más allá del botón play: ¿Cómo hacer tus vídeos accesibles e inclusivos?</h1>
+						<img
+							src="images/evento.png"
+							class="evento-hero-img"
+							alt="Cartel del evento de LViS Vally: «Más allá del botón play: ¿Cómo hacer tus vídeos accesibles e inclusivos?». Viernes 22 de mayo de 2026, 13:00 CET."
+							aria-describedby="evento-img-desc"
+						>
+						<p id="evento-img-desc" class="visually-hidden">Lema del evento: «Tus contenidos audiovisuales, para todos. Sin barreras.» La ilustración incluye iconos de herramientas de accesibilidad audiovisual: subtítulos cerrados (CC), audiodescripción (AD), transcripción, micrófono y claqueta de cine.</p>
 						<div class="cta-group" role="group" aria-label="Acciones del evento">
 							<a class="button-cta"
 								href="https://www.linkedin.com/events/7455586226792718336"
@@ -505,43 +500,6 @@
 								<i class="fa-solid fa-file-signature" aria-hidden="true"></i>
 								Inscríbete al evento
 							</a>
-						</div>
-					</div>
-
-					<!-- Columna derecha: 3 feature cards -->
-					<div class="col">
-						<div class="evento-features" role="list">
-
-							<div class="evento-feature-card" role="listitem">
-								<div class="evento-feature-icon" aria-hidden="true">
-									<i class="fa-solid fa-closed-captioning"></i>
-								</div>
-								<div>
-									<h3>Accesibilidad</h3>
-									<p>Aprende a añadir subtítulos cerrados, audiodescripciones y transcripciones para que cualquier persona acceda a tu mensaje completo.</p>
-								</div>
-							</div>
-
-							<div class="evento-feature-card" role="listitem">
-								<div class="evento-feature-icon" aria-hidden="true">
-									<i class="fa-solid fa-ear-deaf"></i>
-								</div>
-								<div>
-									<h3>Inclusión</h3>
-									<p>Descubre técnicas prácticas para eliminar barreras en tu contenido audiovisual y llegar a audiencias más amplias y diversas.</p>
-								</div>
-							</div>
-
-							<div class="evento-feature-card" role="listitem">
-								<div class="evento-feature-icon" aria-hidden="true">
-									<i class="fa-solid fa-chart-line"></i>
-								</div>
-								<div>
-									<h3>Impacto</h3>
-									<p>Cumple normativa vigente, mejora tu posicionamiento y amplía el alcance de tu contenido. La accesibilidad es una inversión, no un coste.</p>
-								</div>
-							</div>
-
 						</div>
 					</div>
 
@@ -605,14 +563,14 @@
 						<p>Compartiremos ejemplos prácticos y te mostraremos cómo, con nuestros servicios en LViS Vally, puedes transformar los vídeos de tu organización en contenidos inclusivos, pensados para todos y listos para cualquier canal.</p>
 						<p>Una charla práctica, útil y pensada para que nadie se quede fuera de tu mensaje. Sin tecnicismos, sin complicaciones y con resultados reales desde el primer día.</p>
 						<div class="cta-group" role="group" aria-label="Acciones de la sección">
-							<a class="button-cta button-cta--outline"
+							<!-- <a class="button-cta button-cta--outline"
 								href="https://www.lvis.es/forms/eventoslvisvally"
 								target="_blank"
 								rel="noopener"
 								aria-label="Formulario de inscripción al evento, se abre en una nueva pestaña">
 								<i class="fa-solid fa-file-signature" aria-hidden="true"></i>
 								Inscríbete al evento
-							</a>
+							</a> -->
 							<a class="button-cta button-cta--ghost"
 								href="index.html"
 								aria-label="Conoce los servicios de LViS Vally en la página principal">
