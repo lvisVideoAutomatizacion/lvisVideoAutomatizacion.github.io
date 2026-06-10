@@ -2319,7 +2319,23 @@ ol strong {
 	/* color: rgba(var(--color-black), 1) !important;  */
 }
 
+#catalog-grid .catalog-grid .catalog-card a {
+	font-weight: 700;
+	color: #6c63ff;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
 
+#catalog-grid .catalog-grid .catalog-card a::after {
+	content: "→";
+	transition: transform 0.2s ease;
+}
+
+#catalog-grid .catalog-grid .catalog-card a:hover::after {
+	transform: translateX(3px);
+}
 
 /* ============================
    Use Cases
