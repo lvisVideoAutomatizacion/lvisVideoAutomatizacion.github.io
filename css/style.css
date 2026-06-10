@@ -362,7 +362,7 @@ p {
 #why,
 #tech-people,
 #main-services,
-#services-hero,
+#catalog-hero,
 #faq,
 #make,
 #how,
@@ -2312,7 +2312,13 @@ ol strong {
 
 .catalog-card{
 	height:100%;
-}	
+}
+
+.catalog-bold {
+	font-weight: bold;
+	/* color: rgba(var(--color-black), 1) !important;  */
+}
+
 
 
 /* ============================
@@ -3134,14 +3140,14 @@ footer a:hover {
    HERO SERVICIOS
    ========================================================================== */
 
-#services-hero {
+#catalog-hero {
 	background-color: var(--color-blue-dark);
 	padding-top: 150px !important;
 	padding-bottom: 180px;
 	background-image: url('../images/backgrounds/white-wave.svg');
 }
 
-.services-hero-inner {
+.catalog-hero-inner {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -3150,11 +3156,11 @@ footer a:hover {
 	margin: 0 auto;
 }
 
-.services-hero-left {
+.catalog-hero-left {
 	flex: 1 1 340px;
 }
 
-.services-hero-label {
+.catalog-hero-label {
 	display: block;
 	font-family: var(--font-main);
 	font-weight: 700;
@@ -3165,7 +3171,7 @@ footer a:hover {
 	margin-bottom: 20px;
 }
 
-.services-hero-title {
+.catalog-hero-title {
 	font-family: var(--font-main);
 	font-weight: 700;
 	font-size: 48px;
@@ -3175,7 +3181,7 @@ footer a:hover {
 	margin: 0 0 24px;
 }
 
-.services-hero-sub {
+.catalog-hero-sub {
 	font-size: 18px;
 	line-height: 30px;
 	color: rgba(var(--color-white), 0.75);
@@ -3183,13 +3189,13 @@ footer a:hover {
 	margin: 0 0 36px;
 }
 
-.services-hero-actions {
+.catalog-hero-actions {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 16px;
 }
 
-.services-hero-btn {
+.catalog-hero-btn {
 	display: inline-block;
 	font-family: var(--font-main);
 	font-weight: 700;
@@ -3201,33 +3207,33 @@ footer a:hover {
 	text-decoration: none;
 }
 
-.services-hero-btn--primary {
+.catalog-hero-btn--primary {
 	background: rgba(var(--color-primary), 1);
 	color: rgba(var(--color-white), 1);
 	box-shadow: 0 4px 16px -4px rgba(var(--color-primary), 0.5);
 }
 
-.services-hero-btn--primary:hover {
+.catalog-hero-btn--primary:hover {
 	box-shadow: inset 0 0 180px 0 rgba(var(--color-black), 0.12), 0 4px 16px -4px rgba(var(--color-primary), 0.5);
 	color: rgba(var(--color-white), 1);
 }
 
-.services-hero-btn--secondary {
+.catalog-hero-btn--secondary {
 	background: transparent;
 	color: rgba(var(--color-white), 1);
 	box-shadow: inset 0 0 0 2px rgba(var(--color-white), 0.4);
 }
 
-.services-hero-btn--secondary:hover {
+.catalog-hero-btn--secondary:hover {
 	box-shadow: inset 0 0 0 2px rgba(var(--color-white), 0.9);
 	color: rgba(var(--color-white), 1);
 }
 
-.services-hero-right {
+.catalog-hero-right {
 	flex: 0 1 380px;
 }
 
-.services-hero-card {
+.catalog-hero-card {
 	background: rgba(255, 255, 255, 0.07);
 	border: 1px solid rgba(255, 255, 255, 0.12);
 	border-radius: 24px;
@@ -3235,14 +3241,14 @@ footer a:hover {
 	backdrop-filter: blur(12px);
 }
 
-.services-hero-pills {
+.catalog-hero-pills {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 10px;
 	margin-bottom: 28px;
 }
 
-.services-pill {
+.catalog-pill {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -3256,7 +3262,7 @@ footer a:hover {
 	letter-spacing: 0.5px;
 }
 
-.services-hero-card-title {
+.catalog-hero-card-title {
 	font-family: var(--font-main);
 	font-weight: 700;
 	font-size: 22px;
@@ -3266,7 +3272,7 @@ footer a:hover {
 	margin: 0 0 14px;
 }
 
-.services-hero-card-desc {
+.catalog-hero-card-desc {
 	font-size: 16px;
 	line-height: 26px;
 	color: rgba(var(--color-white), 0.7);
@@ -3275,7 +3281,7 @@ footer a:hover {
 }
 
 @media only screen and (min-width: 1280px) {
-	.services-hero-title {
+	.catalog-hero-title {
 		font-size: 60px;
 	}
 }
