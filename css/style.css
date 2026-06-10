@@ -2217,17 +2217,24 @@ ol strong {
    Services Grid
    ============================ */
 
-.services-grid{
-	display:grid;
-	grid-template-columns:1fr;
-	gap:24px;
-	padding-top:48px;
-	padding-bottom:158px;
+#services-grid{
 	background: rgba(var(--color-white), 1);
 	background-image: url('../images/backgrounds/black-wave.svg');
 	background-size: 100% auto;
 	background-position: center bottom;
 	background-repeat: no-repeat;
+
+	padding-top: 48px;
+	padding-bottom: 158px;
+}
+
+#services-grid .services-grid{
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 24px;
+	width: 90%;
+	max-width: 1350px;
+	margin: 0 auto;
 }
 
 .services-card {
@@ -2291,15 +2298,15 @@ ol strong {
 	color: rgba(var(--color-primary), 1);
 }
 
-@media (min-width:768px){
-	.services-grid{
-		grid-template-columns:repeat(2, 1fr);
+@media (min-width: 768px){
+	#services-grid .services-grid{
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
-@media (min-width:1200px){
-	.services-grid{
-		grid-template-columns:repeat(3, 1fr);
+@media (min-width: 1200px){
+	#services-grid .services-grid{
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
