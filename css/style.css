@@ -1857,22 +1857,24 @@ ol strong {
    PARTNERS
    ========================================================================== */
 #partners {
-	padding-top: 168px !important;
+	padding-top: 100px !important;
 	padding-bottom: 200px;
-	background-color: rgba(var(--color-grey-light), 1);
+	background-color: white;
 	background-image: url('../images/backgrounds/black-wave.svg');
 }
 
 #partners h1 {
 	color: var(--color-blue-dark);
 	text-align: center;
+	margin-bottom: 50px;
 }
 
 #partners h2 {
-	font-size: 30px;
+	font-size: 25px;
 	color: var(--color-blue-dark);
 	text-align: center;
 	line-height: 2.5rem;
+	font-weight: 400 !important;
 }
 
 #partners .button-cta {
@@ -1938,7 +1940,7 @@ ol strong {
 
 .partners-tables .partners .box .box__head .box__title {
 	font-size: 24px;
-	color: rgba(var(--color-primary), 1);
+	color: var(--color-blue-dark);
 	padding: 0;
 	margin: 12px 0 24px;
 }
