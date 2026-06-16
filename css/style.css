@@ -920,7 +920,7 @@ p {
 #hero {
 	padding-top: 90px !important;
 	padding-bottom: 150px;
-	background-color: rgba(var(--color-grey-light), 1);
+	background-color: var(--color-blue-dark);
 	background-image: url('../images/backgrounds/light-purple-wave.svg')
 }
 
@@ -929,7 +929,7 @@ p {
 }
 
 #hero p {
-	color: rgba(var(--color-black), 0.78);
+	color: white;
 	padding-top: 24px;
 }
 
@@ -979,7 +979,7 @@ p {
 
 #hero h1 {
 	margin-bottom: 20px;
-	color: #203460;
+	color: white;	
 }
 
 #hero h3 {
