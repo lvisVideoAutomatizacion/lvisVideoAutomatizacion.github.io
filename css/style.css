@@ -3822,6 +3822,31 @@ footer a:hover {
 	}
 }
 
+/* =============================================================================
+   EXAMPLES SOCIAL
+   ========================================================================== */
+
+.examples-social{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	gap:32px;
+	margin-top:32px;
+	margin-bottom:32px;
+}
+
+.examples-social a{
+	color:rgba(var(--color-black),0.75);
+	font-size:42px;
+	line-height:1;
+	transition:all .3s ease;
+}
+
+.examples-social a:hover{
+	color:rgba(var(--color-primary),1);
+	transform:translateY(-2px);
+}
+
 
 /* =============================================================================
    PRICING SECTIONS
