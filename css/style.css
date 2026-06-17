@@ -919,9 +919,9 @@ p {
 
 #hero {
 	padding-top: 90px !important;
-	padding-bottom: 150px;
+	padding-bottom: 150px !important;
 	background-color: var(--color-blue-dark);
-	background-image: url('../images/backgrounds/light-purple-wave.svg')
+	background-image: url('../images/backgrounds/white-wave.svg')
 }
 
 #hero .grid-3--2-1 .col:first-child {
@@ -1168,6 +1168,29 @@ p {
 
 #hero.lvis-starter {
 	background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1512 72" style="enable-background:new 0 0 1512 72;" xml:space="preserve"><style type="text/css">.st0{fill:%233C126A;}</style><path class="st0" d="M270.1,55.5c99.5-12.7,204-37.6,304.7-47.8C678.4-2.9,786.5-2.3,890.3,7.9c72.9,7.1,143.6,18.9,216.7,25.5c135.8,12.1,275.8,5.9,404.9-17.7V72H0V57.3C85.4,71.3,181.8,66.7,270.1,55.5z"/></svg>');
+}
+
+/* ============================
+   Stats & Benefits
+   ============================ */
+
+#stats-benefits {
+	padding-bottom: 80px;
+	background-color: rgba(var(--color-white), 1);
+	background-image: url('../images/backgrounds/light-purple-wave.svg');
+	background-size: 100% auto;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	text-align: center;
+	padding-bottom: 150px !important;
+}
+
+#stats-benefits .hero-benefits h2 {
+	color: var(--color-blue-dark);
+}
+
+#stats-benefits .hero-benefits p {
+	color: rgba(var(--color-black), 0.72);
 }
 
 /* ============================
