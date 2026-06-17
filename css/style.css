@@ -1175,14 +1175,14 @@ p {
    ============================ */
 
 #stats-benefits {
-	padding-bottom: 80px;
+	/* padding-top: 60px !important; */
+	padding-bottom: 150px !important;
 	background-color: rgba(var(--color-white), 1);
 	background-image: url('../images/backgrounds/light-purple-wave.svg');
 	background-size: 100% auto;
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	text-align: center;
-	padding-bottom: 150px !important;
 }
 
 #stats-benefits .hero-benefits h2 {
