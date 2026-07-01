@@ -913,6 +913,105 @@ p {
 	margin-top: 5px;
 }
 
+.language-dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.language-dropdown-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	font-family: 'Raleway';
+	font-weight: 700;
+	font-optical-sizing: auto;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 9px 12px 7px;
+	margin-left: 3px;
+	color: rgba(var(--color-white), 1);
+	background: transparent;
+	border: none;
+	border-radius: 12px;
+	opacity: 0.72;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.language-dropdown-toggle:hover,
+.language-dropdown--open .language-dropdown-toggle {
+	opacity: 1;
+	background-color: rgba(var(--color-white), 0.12);
+}
+
+.language-dropdown .language-icon {
+	width: 15px;
+	margin-right: 3px;
+}
+
+.language-caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 5px solid rgba(var(--color-white), 1);
+	transition: transform 0.2s ease;
+}
+
+.language-dropdown--open .language-caret {
+	transform: rotate(180deg);
+}
+
+.language-menu {
+	position: absolute;
+	top: calc(100% + 8px);
+	right: 0;
+	min-width: 160px;
+	padding: 8px;
+	margin: 0;
+	list-style: none;
+	background: rgba(var(--color-menu), 0.96);
+	backdrop-filter: blur(18px);
+	border: 1px solid rgba(var(--color-white), 0.16);
+	border-radius: 14px;
+	box-shadow: 0px 8px 16px -6px rgba(var(--color-black), 0.24);
+	opacity: 0;
+	transform: translateY(-6px);
+	pointer-events: none;
+	transition: opacity 0.2s ease, transform 0.2s ease;
+	z-index: 1001;
+}
+
+.language-dropdown--open .language-menu {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+.language-menu-link {
+	display: block;
+	padding: 8px 12px;
+	font-family: 'Raleway';
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 20px;
+	color: rgba(var(--color-white), 0.84);
+	border-radius: 8px;
+	transition: all 0.2s ease;
+}
+
+.language-menu-link:hover {
+	background-color: rgba(var(--color-primary), 1);
+	color: rgba(var(--color-white), 1);
+}
+
+.language-menu-link.is-active {
+	color: rgba(var(--color-primary), 1);
+	background-color: rgba(var(--color-white), 0.08);
+}
+
 /* =============================================================================
    HERO
    ========================================================================== */
@@ -979,7 +1078,7 @@ p {
 
 #hero h1 {
 	margin-bottom: 20px;
-	color: white;	
+	color: white;
 }
 
 #hero h3 {
@@ -3109,7 +3208,7 @@ footer a:hover {
 /* ===== TECH AI ===== */
 #tech-ai {
 	padding-top: 42px !important;
-	padding-bottom: 60px ;
+	padding-bottom: 60px;
 	background-color: white;
 	background-image: url('../images/backgrounds/light-purple-wave.svg');
 }
@@ -3878,25 +3977,25 @@ footer a:hover {
    EXAMPLES SOCIAL
    ========================================================================== */
 
-.examples-social{
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	gap:32px;
-	margin-top:32px;
-	margin-bottom:32px;
+.examples-social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	margin-top: 32px;
+	margin-bottom: 32px;
 }
 
-.examples-social a{
-	color:rgba(var(--color-black),0.75);
-	font-size:42px;
-	line-height:1;
-	transition:all .3s ease;
+.examples-social a {
+	color: rgba(var(--color-black), 0.75);
+	font-size: 42px;
+	line-height: 1;
+	transition: all .3s ease;
 }
 
-.examples-social a:hover{
-	color:rgba(var(--color-primary),1);
-	transform:translateY(-2px);
+.examples-social a:hover {
+	color: rgba(var(--color-primary), 1);
+	transform: translateY(-2px);
 }
 
 
@@ -3904,7 +4003,7 @@ footer a:hover {
    PRICING SECTIONS
    ========================================================================== */
 
-#pricing-spot{
+#pricing-spot {
 	padding-top: 60px !important;
 	padding-bottom: 180px;
 	background-color: rgba(var(--color-white), 1);
