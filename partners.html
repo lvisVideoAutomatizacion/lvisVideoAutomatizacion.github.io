@@ -122,12 +122,28 @@
 					Hablemos
 				</a>
 
-				<a class="language-button" href="en/solutions.html" aria-label="Cambiar idioma a inglés">
-					<div class="language-content">
-						<img src="images/globe_white.svg" alt="Icono de un globo terráqueo" class="language-icon" />
-						<span class="language-text">English</span>
-					</div>
-				</a>
+				<div class="language-dropdown">
+					<button type="button" class="language-dropdown-toggle" aria-haspopup="true" aria-expanded="false"
+						aria-controls="language-menu">
+						<img src="images/globe_white.svg" alt="" class="language-icon" />
+						<span class="language-text">ES</span>
+						<span class="language-caret" aria-hidden="true"></span>
+					</button>
+					<ul class="language-menu" id="language-menu" role="menu">
+						<li role="none">
+							<a role="menuitem" href="partners.html" class="language-menu-link is-active" lang="es"
+								hreflang="es">Español</a>
+						</li>
+						<li role="none">
+							<a role="menuitem" href="en/partners.html" class="language-menu-link" lang="en"
+								hreflang="en">English</a>
+						</li>
+						<li role="none">
+							<a role="menuitem" href="cat/partners.html" class="language-menu-link" lang="ca"
+								hreflang="ca">Català</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</header>
 		<!-- ***** FIN HEADER ***** -->
@@ -367,6 +383,7 @@
 	<script src="js/vendor/venobox.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/update_copyright_year.js"></script>
+	<script src="js/language_dropdown.js"></script>
 	<script>
 		const dropdowns = document.querySelectorAll('.dropdown');
 		dropdowns.forEach(dropdown => {
