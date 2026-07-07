@@ -377,6 +377,9 @@ p {
 #partners,
 #pricing-spot,
 #pricing-training,
+#pricing-custom,
+#tech-measurable-quality,
+#examples-grid,
 footer,
 .main,
 .legal {
@@ -3515,6 +3518,7 @@ footer a:hover {
 	padding-top: 42px !important;
 	padding-bottom: 60px;
 	background-color: rgba(var(--color-purple-light), 1);
+	background-image: url('../images/backgrounds/black-wave.svg');
 }
 
 .content-cards-inner {
@@ -3843,8 +3847,9 @@ footer a:hover {
 
 #examples-grid {
 	padding-top: 60px !important;
-	padding-bottom: 60px;
+	padding-bottom: 150px;
 	background-color: white;
+	background-image: url('../images/backgrounds/black-wave.svg');
 }
 
 .examples-grid {
@@ -4012,8 +4017,9 @@ footer a:hover {
 
 #pricing-custom {
 	padding-top: 60px !important;
-	padding-bottom: 60px;
+	padding-bottom: 160px;
 	background-color: rgba(var(--color-white), 1);
+	background-image: url('../images/backgrounds/black-wave.svg');
 }
 
 #pricing-training {
