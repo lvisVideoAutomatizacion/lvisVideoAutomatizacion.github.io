@@ -2831,17 +2831,39 @@ footer a:hover {
 	text-decoration: underline;
 }
 
-.legal-links {
-	text-align: center;
+/* Forzar visibilidad de enlaces legales en el footer */
+footer .legal-links {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 14px !important; /* Sobreescribe el font-size: 0 del .wrapper */
+    margin-top: 20px !important;
 }
 
-.footer-legal-links {
-	margin-top: 0px;
+footer .footer-legal-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    list-style: none !important;
 }
 
-.footer-legal-links a {
-	color: darkslategray;
-	margin-right: 30px;
+footer .footer-legal-links li {
+    display: inline-block !important;
+    margin: 5px 15px !important;
+}
+
+footer .footer-legal-links a {
+    font-size: 14px !important;
+    color: #2F4F4F !important; /* darkslategray en HEX */
+    text-decoration: none !important;
+    visibility: visible !important;
+    display: inline !important;
+}
+
+footer .footer-legal-links a:hover {
+    text-decoration: underline !important;
+    color: rgba(var(--color-primary), 1) !important;
 }
 
 .footer-legal-links a:last-child {
