@@ -402,6 +402,7 @@ footer,
 	padding-top: 60px !important;
 }
 
+
 /* ===== Listas numeradas ===== */
 .list-number {
 	list-style: none;
@@ -1020,7 +1021,7 @@ p {
    ========================================================================== */
 
 #hero {
-	padding-top: 90px !important;
+	/* padding-top: 90px !important; */
 	padding-bottom: 150px !important;
 	background-color: var(--color-blue-dark);
 	background-image: url('../images/backgrounds/white-wave.svg')
@@ -1690,6 +1691,14 @@ p {
 /* =============================================================================
    MAIN
    ========================================================================== */
+#main-content {
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: clip;
+    position: relative; 
+}
+
 .main {
 	padding-top: 90px !important;
 	padding-bottom: 150px;
@@ -4840,7 +4849,7 @@ footer .footer-legal-links a:hover {
    Hero 1024
    ============================ */
 
-	#hero,
+	/* #hero, */
 	main {
 		padding-top: 120px !important;
 		padding-bottom: 96px;
@@ -5029,7 +5038,7 @@ footer .footer-legal-links a:hover {
 		padding-top: 6px;
 	}
 
-	#hero,
+	/* #hero, */
 	#home-video,
 	#home-advantage,
 	#customers,
@@ -5048,7 +5057,7 @@ footer .footer-legal-links a:hover {
 		padding-bottom: 100px;
 	}
 
-	#hero,
+	/* #hero, */
 	#make,
 	#pricing,
 	#services,
@@ -5237,7 +5246,7 @@ footer .footer-legal-links a:hover {
    Hero 1280
    ============================ */
 
-	#hero,
+	/* #hero, */
 	.main {
 		padding-top: 144px !important;
 	}
@@ -5801,4 +5810,8 @@ footer p{
 		scroll-behavior: auto;
 	}
 
+}
+
+main {
+	padding-top: 0px !important;
 }
