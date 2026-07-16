@@ -69,10 +69,11 @@
 			</a>
 
 			<!-- Menú Hamburguesa -->
-			<input class="side-menu" type="checkbox" id="side-menu" aria-label="Obrir o tancar el menú de navegació" />
-			<label class="hamb" for="side-menu" aria-controls="primary-navigation" aria-expanded="false" role="button">
+			<button type="button" class="hamb" id="menu-toggle" aria-controls="primary-navigation"
+				aria-expanded="false">
 				<span class="hamb-line"></span>
-			</label>
+				<span class="sr-only">Obrir el menú de navegació</span>
+			</button>
 
 			<!-- Navegación Principal -->
 			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Navegació principal">
@@ -455,6 +456,7 @@
 	<script src="js/main.js"></script>
 	<script src="js/update_copyright_year.js"></script>
 	<script src="js/language_dropdown.js"></script>
+	<script src="js/mobile-menu.js"></script>
 
 </body>
 

@@ -55,7 +55,7 @@
 </head>
 
 <body class="bg-init">
-	
+
 	<!-- Enlace para saltar al contenido principal cuando se utiliza un lector de pantalla -->
 	<a class="skip-link" href="#main-content">Skip to main content</a>
 
@@ -71,10 +71,11 @@
 			</a>
 
 			<!-- Menú Hamburguesa -->
-			<input class="side-menu" type="checkbox" id="side-menu" aria-label="Open or close the navigation menu" />
-			<label class="hamb" for="side-menu" aria-controls="primary-navigation" aria-expanded="false" role="button">
+			<button type="button" class="hamb" id="menu-toggle" aria-controls="primary-navigation"
+				aria-expanded="false">
 				<span class="hamb-line"></span>
-			</label>
+				<span class="sr-only">Open the navigation menu</span>
+			</button>
 
 			<!-- Navegación Principal -->
 			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Main navigation">
@@ -170,14 +171,14 @@
 						</section>
 					</div>
 
-				<div class="col">
-					<div class="iframe-content">
-						<iframe
-							src="https://player.vimeo.com/video/1047849578?autopause=0&amp;muted=1&amp;badge=0&amp;player_id=0&amp;app_id=58479&amp;texttrack=en&amp;hl=en&amp;dnt=1"
-							allow="fullscreen; picture-in-picture; clipboard-write"
-							title="Accessible video: creating accessible audiovisual content with audio description, captions, and transcripts"
-							aria-describedby="video-descripcion" allowfullscreen>
-						</iframe>
+					<div class="col">
+						<div class="iframe-content">
+							<iframe
+								src="https://player.vimeo.com/video/1047849578?autopause=0&amp;muted=1&amp;badge=0&amp;player_id=0&amp;app_id=58479&amp;texttrack=en&amp;hl=en&amp;dnt=1"
+								allow="fullscreen; picture-in-picture; clipboard-write"
+								title="Accessible video: creating accessible audiovisual content with audio description, captions, and transcripts"
+								aria-describedby="video-descripcion" allowfullscreen>
+							</iframe>
 
 							<div id="video-descripcion" class="sr-only">
 								Example of accessible audiovisual content with audio description,
@@ -454,6 +455,7 @@
 	<script src="../js/main.js"></script>
 	<script src="../js/update_copyright_year.js"></script>
 	<script src="../js/language_dropdown.js"></script>
+	<script src="js/mobile-menu.js"></script>
 
 </body>
 

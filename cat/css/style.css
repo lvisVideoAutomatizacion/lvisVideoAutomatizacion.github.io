@@ -798,6 +798,10 @@ p {
 	float: right;
 	width: auto;
 	padding: 26px 18px;
+	background: none;
+	border: none;
+	appearance: none;
+	-webkit-appearance: none;
 }
 
 .hamb-line {
@@ -836,26 +840,27 @@ p {
 }
 
 /* ===== Menú toggling ===== */
-.side-menu {
-	display: none;
-}
-
-.side-menu:checked~nav {
+.nav.is-open {
 	max-height: 600px;
 }
 
-.side-menu:checked~.hamb .hamb-line {
+.hamb.is-open .hamb-line {
 	background: transparent;
 }
 
-.side-menu:checked~.hamb .hamb-line::before {
+.hamb.is-open .hamb-line::before {
 	transform: rotate(-45deg);
 	top: 0;
 }
 
-.side-menu:checked~.hamb .hamb-line::after {
+.hamb.is-open .hamb-line::after {
 	transform: rotate(45deg);
 	top: 0;
+}
+
+.hamb:focus-visible {
+	outline: 2px solid rgba(var(--color-white), 1);
+	outline-offset: 2px;
 }
 
 /* ===== Botones navegación ===== */
