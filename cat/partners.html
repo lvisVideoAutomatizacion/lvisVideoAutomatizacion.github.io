@@ -311,9 +311,10 @@
 							</div>
 							<h3 class="box__title">Echararodar</h3>
 							<p>
-								Echararodar comparteix la seva experiència en el món audiovisual per convertir-se en el
-								referent de la formació integral 360 del sector,
-								ajudant cada alumne a créixer com a professional en allò que més l'apassiona.
+								Fer fora Rodar és una consultora especialitzada en sostenibilitat, RSC i impacte per a
+								la indústria audiovisual i indústries culturals i creatives. Ofereix plans de
+								sostenibilitat, càlcul d'empremta de carboni, green filming, formació i assessorament
+								per a produccions, festivals, empreses i esdeveniments
 							</p>
 						</a>
 					</div>
@@ -328,9 +329,10 @@
 							</div>
 							<h3 class="box__title">Circulav</h3>
 							<p>
-								Circulav ajuda productores i equips audiovisuals a reduir el risc de greenwashing
-								en les seves comunicacions de sostenibilitat, revisant cada afirmació amb criteris clars i
-								verificables d'acord amb la normativa vigent i les bones pràctiques del sector.
+								Circulav és una agència andalusa especialitzada en sostenibilitat per al sector
+								audiovisual i cultural. Ajuda a reduir, mesurar i documentar l'impacte ambiental de
+								rodatges, festivals, esdeveniments, animació, videojocs, arts escèniques, mitjans o
+								institucions culturals.
 							</p>
 						</a>
 					</div>
@@ -418,34 +420,6 @@
 	<script src="js/main.js"></script>
 	<script src="js/update_copyright_year.js"></script>
 	<script src="js/language_dropdown.js"></script>
-	<script>
-		const dropdowns = document.querySelectorAll('.dropdown');
-		dropdowns.forEach(dropdown => {
-			dropdown.addEventListener('click', (e) => {
-				dropdown.classList.toggle('dropdown__options--visible')
-			})
-			dropdown.querySelectorAll('.dropdown__options .dropdown__option').forEach(opt => {
-				opt.addEventListener('click', (e) => {
-					dropdown.querySelector('.dropdown__selected').innerHTML = opt.innerHTML;
-				})
-			})
-		})
-	</script>
-	<script>
-		$(".custom-switch").each(function (i) {
-			var classes = $(this).attr("class"),
-				id = $(this).attr("id"),
-				name = $(this).attr("name");
-
-			$(this).wrap('<div class="custom-switch" id="' + name + '"></div>');
-			$(this).after('<label for="custom-switch-' + i + '"></label>');
-			$(this).attr("id", "custom-switch-" + i);
-			$(this).attr("name", name);
-		});
-		$(".custom-switch input").change(function () {
-			$(".pricing-tables").toggleClass("plans--annually");
-		});	
-	</script>
 </body>
 
 </html>
