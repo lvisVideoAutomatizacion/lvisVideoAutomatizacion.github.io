@@ -9,9 +9,7 @@
 	<meta content="Amb LViS Vally fes accessibles tots els teus vídeos" property="og:description" />
 	<meta content="https://www.accesible.video/images/LVISVally_Logotipo.png" property="og:image" />
 	<meta content="LViS • Vally" property="twitter:title" />
-	<meta
-		content="Amb LViS Vally fes accessibles tots els teus vídeos"
-		property="twitter:description" />
+	<meta content="Amb LViS Vally fes accessibles tots els teus vídeos" property="twitter:description" />
 	<meta content="https://www.accesible.video/images/LVISVally_Logotipo.png" property="twitter:image" />
 	<meta property="og:type" content="website" />
 	<meta content="summary_large_image" name="twitter:card" />
@@ -56,6 +54,9 @@
 
 <body class="bg-init">
 
+	<!-- Enlace para saltar al contenido principal cuando se utiliza un lector de pantalla -->
+	<a class="skip-link" href="#main-content">Saltar al contingut principal</a>
+
 	<!-- ***** OVERLAY ***** -->
 	<div class="animsition-overlay">
 
@@ -68,10 +69,11 @@
 			</a>
 
 			<!-- Menú Hamburguesa -->
-			<input class="side-menu" type="checkbox" id="side-menu" aria-label="Obrir o tancar el menú de navegació" />
-			<label class="hamb" for="side-menu" aria-controls="primary-navigation" aria-expanded="false" role="button">
+			<button type="button" class="hamb" id="menu-toggle" aria-controls="primary-navigation"
+				aria-expanded="false">
 				<span class="hamb-line"></span>
-			</label>
+				<span class="sr-only">Obrir el menú de navegació</span>
+			</button>
 
 			<!-- Navegación Principal -->
 			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Navegació principal">
@@ -144,26 +146,29 @@
 		</header>
 		<!-- ***** FIN HEADER ***** -->
 
-		<!-- ***** HERO ***** -->
-		<div id="hero" class="wrapper clearfix" role="region" aria-labelledby="hero-section">
-			<section class="grid-2">
-				<div class="col post">
-					<section class="cd-intro">
-						<h2 class="color-primary">
-							Accessibilitat audiovisual automatitzada i supervisada
-						</h2>
+		<!-- ***** MAIN ***** -->
+		<main id="main-content" role="main">
+			<!-- ***** HERO ***** -->
+			<div id="hero" class="wrapper clearfix" aria-labelledby="hero-section">
+				<section class="grid-2">
+					<div class="col post">
+						<section class="cd-intro">
+							<h1 class="cd-headline loading-bar" id="hero-section">
+								Fes que els teus vídeos arribin a tothom
+							</h1>
 
-						<h1 class="cd-headline loading-bar" id="hero-section">
-							Fes que els teus vídeos arribin a tothom
-						</h1>
+							<h2 class="color-primary">
+								Accessibilitat audiovisual automatitzada i supervisada
+							</h2>
 
-						<p>
-							Transformem vídeos i àudios en continguts accessibles, inclusius i fàcils de consumir amb
-							audiodescripció, subtítols tancats, transcripcions, capítols, lectura fàcil i formats
-							adaptats.
-						</p>
-					</section>
-				</div>
+							<p>
+								Transformem vídeos i àudios en continguts accessibles, inclusius i fàcils de consumir
+								amb
+								audiodescripció, subtítols tancats, transcripcions, capítols, lectura fàcil i formats
+								adaptats.
+							</p>
+						</section>
+					</div>
 
 				<div class="col">
 					<div class="iframe-content">
@@ -174,226 +179,229 @@
 							aria-describedby="video-descripcion" allowfullscreen>
 						</iframe>
 
-						<div id="video-descripcion" class="sr-only">
-							Exemple de contingut audiovisual accessible amb audiodescripció, 
-subtítols tancats i transcripció per facilitar l'accés a totes les persones.
+							<div id="video-descripcion" class="sr-only">
+								Exemple de contingut audiovisual accessible amb audiodescripció,
+								subtítols tancats i transcripció per facilitar l'accés a totes les persones.
+							</div>
 						</div>
 					</div>
+
+
+
+				</section>
+			</div>
+			<!-- ***** FIN HERO ***** -->
+
+			<!-- ***** STATS & BENEFITS ***** -->
+			<section id="stats-benefits" class="wrapper clearfix">
+				<div class="grid-1">
+					<div class="col">
+
+						<div class="hero-actions">
+							<a href="https://calendly.com/" class="button-cta button-inline" target="_blank"
+								aria-label="Demana una demo gratuïta. S'obre el calendari de reserves en una pestanya nova."
+								rel="noopener noreferrer">
+								Demana una demo gratuïta
+							</a>
+							<a href="soluciones.html" class="button-cta button-inline">
+								Veure solucions
+							</a>
+						</div>
+
+						<div class="hero-stats" aria-label="Dades d'activitat">
+							<div class="hero-stat-card">
+								<span class="hero-stat-number">50.000+</span>
+								<span class="hero-stat-label">vídeos accessibles</span>
+							</div>
+							<div class="hero-stat-card">
+								<span class="hero-stat-number">2.000+</span>
+								<span class="hero-stat-label">hores produïdes</span>
+							</div>
+							<div class="hero-stat-card">
+								<span class="hero-stat-number">9</span>
+								<span class="hero-stat-label">idiomes de treball</span>
+							</div>
+						</div>
+
+						<div class="hero-benefits">
+							<div class="hero-benefits-icons" aria-hidden="true">
+								<span>AD</span>
+								<span>CC</span>
+								<span>TR</span>
+								<span>LSE</span>
+								<span>LF</span>
+							</div>
+							<h2>Més que complir una norma</h2>
+							<p>
+								L'accessibilitat millora l'abast, l'experiència de l'usuari, el SEO,
+								la reutilització, la reputació i la participació.
+							</p>
+						</div>
+
+					</div>
 				</div>
-
-
-
 			</section>
-		</div>
-		<!-- ***** FIN HERO ***** -->
+			<!-- ***** FIN STATS & BENEFITS ***** -->
 
-		<!-- ***** STATS & BENEFITS ***** -->
-		<section id="stats-benefits" class="wrapper clearfix" role="region" aria-label="Mètriques i beneficis">
-			<div class="grid-1">
-				<div class="col">
+			<!-- ***** WHY / POR QUÉ ACCESIBILIZAR ***** -->
+			<section id="why">
+				<div class="wrapper">
 
-					<div class="hero-actions">
-						<a href="https://calendly.com/" class="button-cta button-inline" target="_blank"
-							rel="noopener noreferrer">
-							Demana una demo gratuïta
-						</a>
-						<a href="soluciones.html" class="button-cta button-inline">
-							Veure solucions
-						</a>
+					<span class="why-label">PER QUÈ FER ACCESSIBLE</span>
+
+					<h2>Una inversió en abast, inclusió i valor del contingut</h2>
+
+					<div class="why-cards">
+
+						<article class="why-card">
+							<span class="why-card-number">01</span>
+							<h3>Arribes a més persones</h3>
+							<p>
+								Facilites l'accés a persones amb discapacitat visual,
+								auditiva o cognitiva i a aquells que consumeixen vídeo en
+								contextos diversos.
+							</p>
+						</article>
+
+						<article class="why-card">
+							<span class="why-card-number">02</span>
+							<h3>Millor experiència</h3>
+							<p>
+								Subtítols, capítols i transcripcions fan que els teus
+								vídeos siguin més fàcils de cercar, navegar, estudiar i
+								compartir.
+							</p>
+						</article>
+
+						<article class="why-card">
+							<span class="why-card-number">03</span>
+							<h3>Més reputació</h3>
+							<p>
+								Transmiten responsabilitat, empatia, innovació i
+								compromís real amb la inclusió.
+							</p>
+						</article>
+
+						<article class="why-card">
+							<span class="why-card-number">04</span>
+							<h3>Producció sostenible</h3>
+							<p>
+								Automatitzem part del procés i el combinem amb
+								revisió humana per escalar sense perdre qualitat.
+							</p>
+						</article>
+
+						<article class="why-card">
+							<span class="why-card-number">05</span>
+							<h3>Compliment</h3>
+							<p>
+								Facilita el compliment dels estàndards internacionals d'accessibilitat i la legislació
+								vigent aplicable a cada organització i país.
+							</p>
+						</article>
+
 					</div>
-
-					<div class="hero-stats" aria-label="Dades d'activitat">
-						<div class="hero-stat-card">
-							<span class="hero-stat-number">50.000+</span>
-							<span class="hero-stat-label">vídeos accessibles</span>
-						</div>
-						<div class="hero-stat-card">
-							<span class="hero-stat-number">2.000+</span>
-							<span class="hero-stat-label">hores produïdes</span>
-						</div>
-						<div class="hero-stat-card">
-							<span class="hero-stat-number">9</span>
-							<span class="hero-stat-label">idiomes de treball</span>
-						</div>
-					</div>
-
-					<div class="hero-benefits">
-						<div class="hero-benefits-icons" aria-hidden="true">
-							<span>AD</span>
-							<span>CC</span>
-							<span>TR</span>
-							<span>LSE</span>
-							<span>LF</span>
-						</div>
-						<h2>Més que complir una norma</h2>
-						<p>
-							L'accessibilitat millora l'abast, l'experiència de l'usuari, el SEO,
-							la reutilització, la reputació i la participació.
-						</p>
-					</div>
-
-				</div>
-			</div>
-		</section>
-		<!-- ***** FIN STATS & BENEFITS ***** -->
-
-		<!-- ***** WHY / POR QUÉ ACCESIBILIZAR ***** -->
-		<section id="why">
-			<div class="wrapper">
-
-				<span class="why-label">PER QUÈ FER ACCESSIBLE</span>
-
-				<h2>Una inversió en abast, inclusió i valor del contingut</h2>
-
-				<div class="why-cards">
-
-					<article class="why-card">
-						<span class="why-card-number">01</span>
-						<h3>Arribes a més persones</h3>
-						<p>
-							Facilites l'accés a persones amb discapacitat visual,
-							auditiva o cognitiva i a aquells que consumeixen vídeo en
-							contextos diversos.
-						</p>
-					</article>
-
-					<article class="why-card">
-						<span class="why-card-number">02</span>
-						<h3>Millor experiència</h3>
-						<p>
-							Subtítols, capítols i transcripcions fan que els teus
-							vídeos siguin més fàcils de cercar, navegar, estudiar i
-							compartir.
-						</p>
-					</article>
-
-					<article class="why-card">
-						<span class="why-card-number">03</span>
-						<h3>Més reputació</h3>
-						<p>
-							Transmiten responsabilitat, empatia, innovació i
-							compromís real amb la inclusió.
-						</p>
-					</article>
-
-					<article class="why-card">
-						<span class="why-card-number">04</span>
-						<h3>Producció sostenible</h3>
-						<p>
-							Automatitzem part del procés i el combinem amb
-							revisió humana per escalar sense perdre qualitat.
-						</p>
-					</article>
-
-					<article class="why-card">
-						<span class="why-card-number">05</span>
-						<h3>Compliment</h3>
-						<p>
-							Facilita el compliment dels estàndards internacionals d'accessibilitat i la legislació
-							vigent aplicable a cada organització i país.
-						</p>
-					</article>
-
-				</div>
-
-			</div>
-		</section>
-		<!-- ***** END WHY / PER QUÈ FER ACCESSIBLE ***** -->
-
-		<!-- ***** TECH PEOPLE ***** -->
-		<section id="tech-people" class="wrapper clearfix" role="region" aria-labelledby="tech-people-heading">
-			<div class="grid-2">
-				<div class="col post">
-					<span class="tech-people-label">TECNOLOGIA + PERSONES</span>
-					<h2 id="tech-people-heading">Automatització per escalar. Revisió humana per garantir qualitat.
-					</h2>
-					<p>Generem versions accessibles en múltiples idiomes i formats, <br>amb un procés supervisat
-						per
-						persones per assegurar claredat, sincronització i comprensió.</p>
-					<a href="tecnologia.html" class="tech-people-link">Coneix la nostra tecnologia →</a>
-				</div>
-				<div class="col">
-					<div class="tech-people-card">
-						<h3>Artefactes accessibles</h3>
-						<div class="tech-people-lists">
-							<ul>
-								<li>Audiodescripció</li>
-								<li>Subtítols tancats</li>
-								<li>Transcripció</li>
-								<li>Capítols</li>
-							</ul>
-							<ul>
-								<li>Lectura fàcil</li>
-								<li>Llengua de signes</li>
-								<li>Versions multilingües</li>
-								<li>Descàrregues individuals</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- ***** END TECH PEOPLE ***** -->
-
-		<!-- ***** MAIN SERVICES ***** -->
-		<section id="main-services" role="region" aria-labelledby="main-services-heading">
-			<div class="wrapper">
-				<span class="main-services-label">SERVEIS PRINCIPALS</span>
-				<h2 id="main-services-heading">Des d'un vídeo puntual fins a una estratègia completa</h2>
-				<div class="main-services-cards">
-					<article class="main-services-card">
-						<h3>Producció accessible</h3>
-						<p>Adaptem vídeos existents amb audiodescripció, CC, transcripció, navegació accessible i
-							altres mecanismes.
-						</p>
-						<a href="servicios.html" class="main-services-link">Veure serveis →</a>
-					</article>
-					<article class="main-services-card">
-						<h3>Solucions per sector</h3>
-						<p>Administració, universitats, empreses, cultura, sanitat, programari, formació i grans
-							repositoris.</p>
-						<a href="soluciones.html" class="main-services-link">Veure solucions →</a>
-					</article>
-					<article class="main-services-card">
-						<h3>Formació i consultoria</h3>
-						<p>Ajudem els equips tècnics, comunicació, contractació, formació i inclusió a prendre
-							millor
-							decisions.</p>
-						<a href="precios.html" class="main-services-link">Veure preus →</a>
-					</article>
-				</div>
-			</div>
-		</section>
-		<!-- ***** END MAIN SERVICES ***** -->
-
-		<!-- ***** SECCIÓN DEMO ***** -->
-		<div id="demo-section" class="wrapper clearfix" role="region" aria-labelledby="demo-heading">
-			<section class="grid-1">
-				<div class="col">
-
-					<h2 id="demo-heading" class="post">
-						Els teus continguts audiovisuals, a l'abast de tothom. Sense barreres.
-					</h2>
-
-					<h3>
-						Quan comencem?
-					</h3>
-
-					<p>
-						Explica'ns quins vídeos necessites adaptar i t'ajudem a estimar l'esforç,
-						formats i terminis.
-					</p>
-
-					<a class="button-cta" target="_blank" rel="noopener noreferrer"
-						href="https://calendly.com/lvis-meetings/30min" role="button"
-						aria-label="Sol·licitar una consulta. S'obre el calendari de reserves en una pestanya nova.">
-						Demana una consulta
-					</a>
 
 				</div>
 			</section>
-		</div>
-		<!-- ***** FIN SECCIÓN DEMO ***** -->
+			<!-- ***** END WHY / PER QUÈ FER ACCESSIBLE ***** -->
+
+			<!-- ***** TECH PEOPLE ***** -->
+			<section id="tech-people" class="wrapper clearfix">
+				<div class="grid-2">
+					<div class="col post">
+						<span class="tech-people-label">TECNOLOGIA + PERSONES</span>
+						<h2 id="tech-people-heading">Automatització per escalar. Revisió humana per garantir qualitat.
+						</h2>
+						<p>Generem versions accessibles en múltiples idiomes i formats, <br>amb un procés supervisat
+							per
+							persones per assegurar claredat, sincronització i comprensió.</p>
+						<a href="tecnologia.html" class="tech-people-link">Coneix la nostra tecnologia →</a>
+					</div>
+					<div class="col">
+						<div class="tech-people-card">
+							<h3>Artefactes accessibles</h3>
+							<div class="tech-people-lists">
+								<ul>
+									<li>Audiodescripció</li>
+									<li>Subtítols tancats</li>
+									<li>Transcripció</li>
+									<li>Capítols</li>
+								</ul>
+								<ul>
+									<li>Lectura fàcil</li>
+									<li>Llengua de signes</li>
+									<li>Versions multilingües</li>
+									<li>Descàrregues individuals</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ***** END TECH PEOPLE ***** -->
+
+			<!-- ***** MAIN SERVICES ***** -->
+			<section id="main-services">
+				<div class="wrapper">
+					<span class="main-services-label">SERVEIS PRINCIPALS</span>
+					<h2 id="main-services-heading">Des d'un vídeo puntual fins a una estratègia completa</h2>
+					<div class="main-services-cards">
+						<article class="main-services-card">
+							<h3>Producció accessible</h3>
+							<p>Adaptem vídeos existents amb audiodescripció, CC, transcripció, navegació accessible i
+								altres mecanismes.
+							</p>
+							<a href="servicios.html" class="main-services-link">Veure serveis →</a>
+						</article>
+						<article class="main-services-card">
+							<h3>Solucions per sector</h3>
+							<p>Administració, universitats, empreses, cultura, sanitat, programari, formació i grans
+								repositoris.</p>
+							<a href="soluciones.html" class="main-services-link">Veure solucions →</a>
+						</article>
+						<article class="main-services-card">
+							<h3>Formació i consultoria</h3>
+							<p>Ajudem els equips tècnics, comunicació, contractació, formació i inclusió a prendre
+								millor
+								decisions.</p>
+							<a href="precios.html" class="main-services-link">Veure preus →</a>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- ***** END MAIN SERVICES ***** -->
+
+			<!-- ***** SECCIÓN DEMO ***** -->
+			<div id="demo-section" class="wrapper clearfix">
+				<section class="grid-1">
+					<div class="col">
+
+						<h2 id="demo-heading" class="post">
+							Els teus continguts audiovisuals, a l'abast de tothom. Sense barreres.
+						</h2>
+
+						<h3>
+							Quan comencem?
+						</h3>
+
+						<p>
+							Explica'ns quins vídeos necessites adaptar i t'ajudem a estimar l'esforç,
+							formats i terminis.
+						</p>
+
+						<a class="button-cta" target="_blank" rel="noopener noreferrer"
+							href="https://calendly.com/lvis-meetings/30min" role="button"
+							aria-label="Sol·licitar una consulta. S'obre el calendari de reserves en una pestanya nova.">
+							Demana una consulta
+						</a>
+
+					</div>
+				</section>
+			</div>
+			<!-- ***** FIN SECCIÓN DEMO ***** -->
+		</main>
+		<!-- ***** FIN MAIN ***** -->
 
 		<!-- ***** FOOTER ***** -->
 		<footer class="wrapper clearfix" role="contentinfo">
@@ -401,8 +409,9 @@ subtítols tancats i transcripció per facilitar l'accés a totes les persones.
 				<div class="col">
 					<div class="align-center powered-by-lvis">
 						<p>
-							<a href="https://lvis.es" target="_blank">
-								Powered by <img src="images/logo.svg">
+							<a href="https://lvis.es" target="_blank" rel="noopener"
+								aria-label="Enllaç a la pàgina de lvis.es (s'obre en una pestanya nova)">
+								Powered by <img src="images/logo.svg" alt="Logotip de LViS">
 							</a>
 						</p>
 					</div>
@@ -411,16 +420,27 @@ subtítols tancats i transcripció per facilitar l'accés a totes les persones.
 							reservats.</p>
 					</div>
 					<hr aria-hidden="true" class="rupture">
-					<div aria-label="Enllaços legals" class="legal-links">
-						<p class="display-inline footer-legal-links">
-							<a href="aviso-legal.html" target="_blank">Avís legal</a>
-							<a href="politica-de-cookies.html" target="_blank">Política de cookies</a>
-							<a href="politica-privacidad.html" target="_blank">Política de privacitat</a>
-							<a href="terminos-servicio.html" target="_blank">Termes de servei</a>
-							<a href="politica-marcas-servicios.html" target="_blank">Política de marques i productes</a>
-							<a href="accesibilidad.html" target="_blank">Accessibilitat</a>
-						</p>
-					</div>
+					<nav aria-label="Legal links" class="legal-links">
+						<ul class="footer-legal-links">
+							<li><a href="aviso-legal.html" target="_blank"
+									aria-label="Avís legal (s'obre en una pestanya nova)">Avís legal</a></li>
+							<li><a href="politica-de-cookies.html" target="_blank"
+									aria-label="Política de cookies (s'obre en una pestanya nova)">Política de
+									cookies</a></li>
+							<li><a href="politica-privacidad.html" target="_blank"
+									aria-label="Política de privacitat (s'obre en una pestanya nova)">Política de
+									privacitat</a></li>
+							<li><a href="terminos-servicio.html" target="_blank"
+									aria-label="Termes de servei (s'obre en una pestanya nova)">Termes de servei</a>
+							</li>
+							<li><a href="politica-marcas-servicios.html" target="_blank"
+									aria-label="Política de marques i productes (s'obre en una pestanya nova)">Política
+									de marques i productes</a></li>
+							<li><a href="accesibilidad.html" target="_blank"
+									aria-label="Declaració d'accessibilitat (s'obre en una pestanya nova)">Accessibilitat</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</section>
 		</footer>
@@ -436,19 +456,7 @@ subtítols tancats i transcripció per facilitar l'accés a totes les persones.
 	<script src="js/main.js"></script>
 	<script src="js/update_copyright_year.js"></script>
 	<script src="js/language_dropdown.js"></script>
-	<script>
-		const dropdowns = document.querySelectorAll('.dropdown');
-		dropdowns.forEach(dropdown => {
-			dropdown.addEventListener('click', (e) => {
-				dropdown.classList.toggle('dropdown__options--visible')
-			})
-			dropdown.querySelectorAll('.dropdown__options .dropdown__option').forEach(opt => {
-				opt.addEventListener('click', (e) => {
-					dropdown.querySelector('.dropdown__selected').innerHTML = opt.innerHTML;
-				})
-			})
-		})
-	</script>
+	<script src="js/mobile-menu.js"></script>
 
 </body>
 

@@ -47,14 +47,17 @@
 	<meta name="msapplication-TileImage" content="../images/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="viewport" content="width=device-width; initial-scale=1">
-	<link rel="stylesheet" href="../css/animsition.min.css">
-	<link rel="stylesheet" href="../css/venobox.css">
-	<link rel="stylesheet" href="../css/style.css">
-	<link rel="stylesheet" href="../js\cookies\cookies.css">
+	<link rel="stylesheet" href="css/animsition.min.css">
+	<link rel="stylesheet" href="css/venobox.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="js/cookies/cookies.css">
 	<script src="https://kit.fontawesome.com/3d245d70bc.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-init">
+
+	<!-- Enlace para saltar al contenido principal cuando se utiliza un lector de pantalla -->
+	<a class="skip-link" href="#main-content">Skip to main content</a>
 
 	<!-- ***** OVERLAY ***** -->
 	<div class="animsition-overlay">
@@ -68,10 +71,11 @@
 			</a>
 
 			<!-- Menú Hamburguesa -->
-			<input class="side-menu" type="checkbox" id="side-menu" aria-label="Open or close the navigation menu" />
-			<label class="hamb" for="side-menu" aria-controls="primary-navigation" aria-expanded="false" role="button">
+			<button type="button" class="hamb" id="menu-toggle" aria-controls="primary-navigation"
+				aria-expanded="false">
 				<span class="hamb-line"></span>
-			</label>
+				<span class="sr-only">Open the navigation menu</span>
+			</button>
 
 			<!-- Navegación Principal -->
 			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Main navigation">
@@ -144,27 +148,256 @@
 		</header>
 		<!-- ***** FIN HEADER ***** -->
 
-		<!-- ***** HERO ***** -->
-		<div id="hero" class="wrapper clearfix" role="region" aria-labelledby="hero-section">
-			<section class="grid-2">
-				<div class="col post">
-					<section class="cd-intro">
-						<h2 class="color-primary">
-							Automated and supervised audiovisual accessibility
+		<!-- ***** MAIN ***** -->
+		<main id="main-content" role="main">
+			<!-- ***** HERO ***** -->
+			<div id="hero" class="wrapper clearfix" aria-labelledby="hero-section">
+				<section class="grid-2">
+					<div class="col post">
+						<section class="cd-intro">
+							<h1 class="cd-headline loading-bar" id="hero-section">
+								Make your videos reach everyone
+							</h1>
+
+							<h2 class="color-primary">
+								Automated and supervised audiovisual accessibility
+							</h2>
+
+							<p>
+								We turn videos and audio into accessible, inclusive, and easy-to-consume content
+								with audio description, closed captions, transcripts, chapters,
+								easy-read formats, and adapted formats.
+							</p>
+						</section>
+					</div>
+
+					<div class="col">
+						<div class="iframe-content">
+							<iframe
+								src="https://player.vimeo.com/video/1047849578?autopause=0&amp;muted=1&amp;badge=0&amp;player_id=0&amp;app_id=58479&amp;texttrack=en&amp;hl=en&amp;dnt=1"
+								allow="fullscreen; picture-in-picture; clipboard-write"
+								title="Accessible video: creating accessible audiovisual content with audio description, captions, and transcripts"
+								aria-describedby="video-descripcion" allowfullscreen>
+							</iframe>
+
+							<div id="video-descripcion" class="sr-only">
+								Example of accessible audiovisual content with audio description,
+								closed captions, and transcripts to make it easier for everyone to access.
+							</div>
+						</div>
+					</div>
+
+
+
+				</section>
+			</div>
+			<!-- ***** FIN HERO ***** -->
+
+			<!-- ***** STATS & BENEFITS ***** -->
+			<section id="stats-benefits" class="wrapper clearfix">
+				<div class="grid-1">
+					<div class="col">
+
+						<div class="hero-actions">
+							<a href="https://calendly.com/" class="button-cta button-inline" target="_blank"
+								aria-label="Request a free demo. Opens the booking calendar in a new tab."
+								rel="noopener noreferrer">
+								Request a free demo
+							</a>
+							<a href="soluciones.html" class="button-cta button-inline">
+								View solutions
+							</a>
+						</div>
+
+						<div class="hero-stats" aria-label="Activity data">
+							<div class="hero-stat-card">
+								<span class="hero-stat-number">50,000+</span>
+								<span class="hero-stat-label">accessible videos</span>
+							</div>
+							<div class="hero-stat-card">
+								<span class="hero-stat-number">2,000+</span>
+								<span class="hero-stat-label">hours produced</span>
+							</div>
+							<div class="hero-stat-card">
+								<span class="hero-stat-number">9</span>
+								<span class="hero-stat-label">working languages</span>
+							</div>
+						</div>
+
+						<div class="hero-benefits">
+							<div class="hero-benefits-icons" aria-hidden="true">
+								<span>AD</span>
+								<span>CC</span>
+								<span>TR</span>
+								<span>SL</span>
+								<span>ER</span>
+							</div>
+							<h2>More than just meeting a standard</h2>
+							<p>
+								Accessibility improves reach, user experience, SEO,
+								reusability, reputation, and engagement.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- ***** FIN STATS & BENEFITS ***** -->
+
+			<!-- ***** WHY / POR QUÉ ACCESIBILIZAR ***** -->
+			<section id="why">
+				<div class="wrapper">
+
+					<span class="why-label">WHY MAKE CONTENT ACCESSIBLE</span>
+
+					<h2>An investment in reach, inclusion, and content value</h2>
+
+					<div class="why-cards">
+
+						<article class="why-card">
+							<span class="why-card-number">01</span>
+							<h3>You reach more people</h3>
+							<p>
+								You make content accessible to people with visual,
+								hearing, or cognitive disabilities and to those who
+								consume video in a variety of contexts.
+							</p>
+						</article>
+
+						<article class="why-card">
+							<span class="why-card-number">02</span>
+							<h3>Better experience</h3>
+							<p>
+								Captions, chapters, and transcripts make your
+								videos easier to search, navigate, study, and
+								share.
+							</p>
+						</article>
+
+						<article class="why-card">
+							<span class="why-card-number">03</span>
+							<h3>Stronger reputation</h3>
+							<p>
+								They convey responsibility, empathy, innovation, and
+								real commitment to inclusion.
+							</p>
+						</article>
+
+						<article class="why-card">
+							<span class="why-card-number">04</span>
+							<h3>Sustainable production</h3>
+							<p>
+								We automate part of the process and combine it with
+								human review to scale without losing quality.
+							</p>
+						</article>
+
+						<article class="why-card">
+							<span class="why-card-number">05</span>
+							<h3>Compliance</h3>
+							<p>
+								It helps meet international accessibility standards and the
+								legislation applicable to each organization and country.
+							</p>
+						</article>
+
+					</div>
+
+				</div>
+			</section>
+			<!-- ***** END WHY / POR QUÉ ACCESIBILIZAR ***** -->
+
+			<!-- ***** TECH PEOPLE ***** -->
+			<section id="tech-people" class="wrapper clearfix">
+				<div class="grid-2">
+					<div class="col post">
+						<span class="tech-people-label">TECHNOLOGY + PEOPLE</span>
+						<h2 id="tech-people-heading">Automation to scale. Human review to guarantee quality.
+						</h2>
+						<p>We generate accessible versions in multiple languages and formats, <br>with a process
+							supervised
+							by
+							people to ensure clarity, synchronization, and comprehension.</p>
+						<a href="tecnologia.html" class="tech-people-link">Learn about our technology →</a>
+					</div>
+					<div class="col">
+						<div class="tech-people-card">
+							<h3>Accessible artifacts</h3>
+							<div class="tech-people-lists">
+								<ul>
+									<li>Audio description</li>
+									<li>Closed captions</li>
+									<li>Transcription</li>
+									<li>Chapters</li>
+								</ul>
+								<ul>
+									<li>Easy-read format</li>
+									<li>Sign language</li>
+									<li>Multilingual versions</li>
+									<li>Individual downloads</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ***** END TECH PEOPLE ***** -->
+
+			<!-- ***** MAIN SERVICES ***** -->
+			<section id="main-services">
+				<div class="wrapper">
+					<span class="main-services-label">MAIN SERVICES</span>
+					<h2 id="main-services-heading">From a single video to a complete strategy</h2>
+					<div class="main-services-cards">
+						<article class="main-services-card">
+							<h3>Accessible production</h3>
+							<p>We adapt existing videos with audio description, CC, transcripts, accessible navigation,
+								and
+								other mechanisms.
+							</p>
+							<a href="servicios.html" class="main-services-link">View services →</a>
+						</article>
+						<article class="main-services-card">
+							<h3>Solutions by sector</h3>
+							<p>Government, universities, businesses, culture, healthcare, software, training, and large
+								repositories.</p>
+							<a href="soluciones.html" class="main-services-link">View solutions →</a>
+						</article>
+						<article class="main-services-card">
+							<h3>Training and consulting</h3>
+							<p>We help technical, communications, hiring, training, and inclusion teams make
+								better
+								decisions.</p>
+							<a href="precios.html" class="main-services-link">View pricing →</a>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- ***** END MAIN SERVICES ***** -->
+
+			<!-- ***** SECCIÓN DEMO ***** -->
+			<div id="demo-section" class="wrapper clearfix">
+				<section class="grid-1">
+					<div class="col">
+
+						<h2 id="demo-heading" class="post">
+							Your audiovisual content, for everyone. Without barriers.
 						</h2>
 
-						<h1 class="cd-headline loading-bar" id="hero-section">
-							Make your videos reach everyone
-						</h1>
+						<h3>
+							When do we start?
+						</h3>
 
 						<p>
-							We turn videos and audio into accessible, inclusive, and easy-to-consume content
-							with audio description, closed captions, transcripts, chapters,
-							easy-read formats, and adapted formats.
+							Tell us which videos you need to adapt, and we'll help you estimate effort,
+							formats, and timelines.
 						</p>
-					</section>
-				</div>
 
+<<<<<<< HEAD
+						<a class="button-cta" target="_blank" rel="noopener noreferrer"
+							href="https://calendly.com/lvis-meetings/30min" role="button"
+							aria-label="Request a consultation. Opens the booking calendar in a new tab.">
+=======
 				<div class="col">
 					<div class="iframe-content">
 						<iframe
@@ -195,205 +428,16 @@
 					<div class="hero-actions">
 						<a href="https://calendly.com/" class="button-cta button-inline" target="_blank"
 							rel="noopener noreferrer">
+>>>>>>> development
 							Request a free demo
 						</a>
-						<a href="soluciones.html" class="button-cta button-inline">
-							View solutions
-						</a>
+
 					</div>
-
-					<div class="hero-stats" aria-label="Activity data">
-						<div class="hero-stat-card">
-							<span class="hero-stat-number">50,000+</span>
-							<span class="hero-stat-label">accessible videos</span>
-						</div>
-						<div class="hero-stat-card">
-							<span class="hero-stat-number">2,000+</span>
-							<span class="hero-stat-label">hours produced</span>
-						</div>
-						<div class="hero-stat-card">
-							<span class="hero-stat-number">9</span>
-							<span class="hero-stat-label">working languages</span>
-						</div>
-					</div>
-
-					<div class="hero-benefits">
-						<div class="hero-benefits-icons" aria-hidden="true">
-							<span>AD</span>
-							<span>CC</span>
-							<span>TR</span>
-							<span>SL</span>
-							<span>ER</span>
-						</div>
-						<h2>More than just meeting a standard</h2>
-						<p>
-							Accessibility improves reach, user experience, SEO,
-							reusability, reputation, and engagement.
-						</p>
-					</div>
-
-				</div>
+				</section>
 			</div>
-		</section>
-		<!-- ***** FIN STATS & BENEFITS ***** -->
-
-		<!-- ***** WHY / POR QUÉ ACCESIBILIZAR ***** -->
-		<section id="why">
-			<div class="wrapper">
-
-				<span class="why-label">WHY MAKE CONTENT ACCESSIBLE</span>
-
-				<h2>An investment in reach, inclusion, and content value</h2>
-
-				<div class="why-cards">
-
-					<article class="why-card">
-						<span class="why-card-number">01</span>
-						<h3>You reach more people</h3>
-						<p>
-							You make content accessible to people with visual,
-							hearing, or cognitive disabilities and to those who
-							consume video in a variety of contexts.
-						</p>
-					</article>
-
-					<article class="why-card">
-						<span class="why-card-number">02</span>
-						<h3>Better experience</h3>
-						<p>
-							Captions, chapters, and transcripts make your
-							videos easier to search, navigate, study, and
-							share.
-						</p>
-					</article>
-
-					<article class="why-card">
-						<span class="why-card-number">03</span>
-						<h3>Stronger reputation</h3>
-						<p>
-							They convey responsibility, empathy, innovation, and
-							real commitment to inclusion.
-						</p>
-					</article>
-
-					<article class="why-card">
-						<span class="why-card-number">04</span>
-						<h3>Sustainable production</h3>
-						<p>
-							We automate part of the process and combine it with
-							human review to scale without losing quality.
-						</p>
-					</article>
-
-					<article class="why-card">
-						<span class="why-card-number">05</span>
-						<h3>Compliance</h3>
-						<p>
-							It helps meet international accessibility standards and the
-							legislation applicable to each organization and country.
-						</p>
-					</article>
-
-				</div>
-
-			</div>
-		</section>
-		<!-- ***** END WHY / POR QUÉ ACCESIBILIZAR ***** -->
-
-		<!-- ***** TECH PEOPLE ***** -->
-		<section id="tech-people" class="wrapper clearfix" role="region" aria-labelledby="tech-people-heading">
-			<div class="grid-2">
-				<div class="col post">
-					<span class="tech-people-label">TECHNOLOGY + PEOPLE</span>
-					<h2 id="tech-people-heading">Automation to scale. Human review to guarantee quality.
-					</h2>
-					<p>We generate accessible versions in multiple languages and formats, <br>with a process supervised
-						by
-						people to ensure clarity, synchronization, and comprehension.</p>
-					<a href="tecnologia.html" class="tech-people-link">Learn about our technology →</a>
-				</div>
-				<div class="col">
-					<div class="tech-people-card">
-						<h3>Accessible artifacts</h3>
-						<div class="tech-people-lists">
-							<ul>
-								<li>Audio description</li>
-								<li>Closed captions</li>
-								<li>Transcription</li>
-								<li>Chapters</li>
-							</ul>
-							<ul>
-								<li>Easy-read format</li>
-								<li>Sign language</li>
-								<li>Multilingual versions</li>
-								<li>Individual downloads</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- ***** END TECH PEOPLE ***** -->
-
-		<!-- ***** MAIN SERVICES ***** -->
-		<section id="main-services" role="region" aria-labelledby="main-services-heading">
-			<div class="wrapper">
-				<span class="main-services-label">MAIN SERVICES</span>
-				<h2 id="main-services-heading">From a single video to a complete strategy</h2>
-				<div class="main-services-cards">
-					<article class="main-services-card">
-						<h3>Accessible production</h3>
-						<p>We adapt existing videos with audio description, CC, transcripts, accessible navigation, and
-							other mechanisms.
-						</p>
-						<a href="servicios.html" class="main-services-link">View services →</a>
-					</article>
-					<article class="main-services-card">
-						<h3>Solutions by sector</h3>
-						<p>Government, universities, businesses, culture, healthcare, software, training, and large
-							repositories.</p>
-						<a href="soluciones.html" class="main-services-link">View solutions →</a>
-					</article>
-					<article class="main-services-card">
-						<h3>Training and consulting</h3>
-						<p>We help technical, communications, hiring, training, and inclusion teams make
-							better
-							decisions.</p>
-						<a href="precios.html" class="main-services-link">View pricing →</a>
-					</article>
-				</div>
-			</div>
-		</section>
-		<!-- ***** END MAIN SERVICES ***** -->
-
-		<!-- ***** SECCIÓN DEMO ***** -->
-		<div id="demo-section" class="wrapper clearfix" role="region" aria-labelledby="demo-heading">
-			<section class="grid-1">
-				<div class="col">
-
-					<h2 id="demo-heading" class="post">
-						Your audiovisual content, for everyone. Without barriers.
-					</h2>
-
-					<h3>
-						When do we start?
-					</h3>
-
-					<p>
-						Tell us which videos you need to adapt, and we'll help you estimate effort,
-						formats, and timelines.
-					</p>
-
-					<a class="button-cta" target="_blank" rel="noopener noreferrer"
-						href="https://calendly.com/lvis-meetings/30min" role="button"
-						aria-label="Request a consultation. Opens the booking calendar in a new tab.">
-						Request a free demo
-					</a>
-
-				</div>
-			</section>
-		</div>
-		<!-- ***** FIN SECCIÓN DEMO ***** -->
+			<!-- ***** FIN SECCIÓN DEMO ***** -->
+		</main>
+		<!-- ***** END MAIN ***** -->
 
 		<!-- ***** FOOTER ***** -->
 		<footer class="wrapper clearfix" role="contentinfo">
@@ -401,8 +445,9 @@
 				<div class="col">
 					<div class="align-center powered-by-lvis">
 						<p>
-							<a href="https://lvis.es" target="_blank">
-								Powered by <img src="../images/logo.svg">
+							<a href="https://lvis.es" target="_blank" rel="noopener"
+								aria-label="Link to the lvis.es page (opens in a new tab)">
+								Powered by <img src="images/logo.svg" alt="LViS logo">
 							</a>
 						</p>
 					</div>
@@ -411,16 +456,23 @@
 							reserved.</p>
 					</div>
 					<hr aria-hidden="true" class="rupture">
-					<div aria-label="Legal links" class="legal-links">
-						<p class="display-inline footer-legal-links">
-							<a href="aviso-legal.html" target="_blank">Legal notice</a>
-							<a href="politica-de-cookies.html" target="_blank">Cookie policy</a>
-							<a href="politica-privacidad.html" target="_blank">Privacy policy</a>
-							<a href="terminos-servicio.html" target="_blank">Terms of service</a>
-							<a href="politica-marcas-servicios.html" target="_blank">Trademark and product policy</a>
-							<a href="accesibilidad.html" target="_blank">Accessibility</a>
-						</p>
-					</div>
+					<nav aria-label="Legal links" class="legal-links">
+						<ul class="footer-legal-links">
+							<li><a href="aviso-legal.html" target="_blank"
+									aria-label="Legal notice (opens in a new tab)">Legal notice</a></li>
+							<li><a href="politica-de-cookies.html" target="_blank"
+									aria-label="Cookie policy (opens in a new tab)">Cookie policy</a></li>
+							<li><a href="politica-privacidad.html" target="_blank"
+									aria-label="Privacy policy (opens in a new tab)">Privacy policy</a></li>
+							<li><a href="terminos-servicio.html" target="_blank"
+									aria-label="Terms of service (opens in a new tab)">Terms of service</a></li>
+							<li><a href="politica-marcas-servicios.html" target="_blank"
+									aria-label="Trademark and product policy (opens in a new tab)">Trademark and product
+									policy</a></li>
+							<li><a href="accesibilidad.html" target="_blank"
+									aria-label="Accessibility statement (opens in a new tab)">Accessibility</a></li>
+						</ul>
+					</nav>
 				</div>
 			</section>
 		</footer>
@@ -436,19 +488,7 @@
 	<script src="../js/main.js"></script>
 	<script src="../js/update_copyright_year.js"></script>
 	<script src="../js/language_dropdown.js"></script>
-	<script>
-		const dropdowns = document.querySelectorAll('.dropdown');
-		dropdowns.forEach(dropdown => {
-			dropdown.addEventListener('click', (e) => {
-				dropdown.classList.toggle('dropdown__options--visible')
-			})
-			dropdown.querySelectorAll('.dropdown__options .dropdown__option').forEach(opt => {
-				opt.addEventListener('click', (e) => {
-					dropdown.querySelector('.dropdown__selected').innerHTML = opt.innerHTML;
-				})
-			})
-		})
-	</script>
+	<script src="js/mobile-menu.js"></script>
 
 </body>
 

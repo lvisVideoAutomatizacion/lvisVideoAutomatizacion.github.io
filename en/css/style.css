@@ -402,6 +402,7 @@ footer,
 	padding-top: 60px !important;
 }
 
+
 /* ===== Listas numeradas ===== */
 .list-number {
 	list-style: none;
@@ -674,6 +675,30 @@ p {
 }
 
 /* =============================================================================
+   Skip Link para lectores de pantalla
+   ========================================================================== */
+
+.skip-link {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	z-index: 9999;
+	padding: 12px 20px;
+	background-color: #000;
+	color: #fff;
+	font-weight: 600;
+	text-decoration: none;
+	border-radius: 0 0 4px 0;
+	transition: top 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+	top: 0;
+	outline: 3px solid #ffbf47;
+	outline-offset: 2px;
+}
+
+/* =============================================================================
    MENÚ
    ========================================================================== */
 
@@ -773,6 +798,10 @@ p {
 	float: right;
 	width: auto;
 	padding: 26px 18px;
+	background: none;
+	border: none;
+	appearance: none;
+	-webkit-appearance: none;
 }
 
 .hamb-line {
@@ -811,26 +840,27 @@ p {
 }
 
 /* ===== Menú toggling ===== */
-.side-menu {
-	display: none;
-}
-
-.side-menu:checked~nav {
+.nav.is-open {
 	max-height: 600px;
 }
 
-.side-menu:checked~.hamb .hamb-line {
+.hamb.is-open .hamb-line {
 	background: transparent;
 }
 
-.side-menu:checked~.hamb .hamb-line::before {
+.hamb.is-open .hamb-line::before {
 	transform: rotate(-45deg);
 	top: 0;
 }
 
-.side-menu:checked~.hamb .hamb-line::after {
+.hamb.is-open .hamb-line::after {
 	transform: rotate(45deg);
 	top: 0;
+}
+
+.hamb:focus-visible {
+	outline: 2px solid rgba(var(--color-white), 1);
+	outline-offset: 2px;
 }
 
 /* ===== Botones navegación ===== */
@@ -1020,7 +1050,7 @@ p {
    ========================================================================== */
 
 #hero {
-	padding-top: 90px !important;
+	/* padding-top: 90px !important; */
 	padding-bottom: 150px !important;
 	background-color: var(--color-blue-dark);
 	background-image: url('../images/backgrounds/white-wave.svg')
@@ -1690,6 +1720,14 @@ p {
 /* =============================================================================
    MAIN
    ========================================================================== */
+#main-content {
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: clip;
+    position: relative; 
+}
+
 .main {
 	padding-top: 90px !important;
 	padding-bottom: 150px;
@@ -2831,17 +2869,39 @@ footer a:hover {
 	text-decoration: underline;
 }
 
-.legal-links {
-	text-align: center;
+/* Forzar visibilidad de enlaces legales en el footer */
+footer .legal-links {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 14px !important; /* Sobreescribe el font-size: 0 del .wrapper */
+    margin-top: 20px !important;
 }
 
-.footer-legal-links {
-	margin-top: 0px;
+footer .footer-legal-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    list-style: none !important;
 }
 
-.footer-legal-links a {
-	color: darkslategray;
-	margin-right: 30px;
+footer .footer-legal-links li {
+    display: inline-block !important;
+    margin: 5px 15px !important;
+}
+
+footer .footer-legal-links a {
+    font-size: 14px !important;
+    color: #2F4F4F !important; /* darkslategray en HEX */
+    text-decoration: none !important;
+    visibility: visible !important;
+    display: inline !important;
+}
+
+footer .footer-legal-links a:hover {
+    text-decoration: underline !important;
+    color: rgba(var(--color-primary), 1) !important;
 }
 
 .footer-legal-links a:last-child {
@@ -4818,7 +4878,7 @@ footer a:hover {
    Hero 1024
    ============================ */
 
-	#hero,
+	/* #hero, */
 	main {
 		padding-top: 120px !important;
 		padding-bottom: 96px;
@@ -5007,7 +5067,7 @@ footer a:hover {
 		padding-top: 6px;
 	}
 
-	#hero,
+	/* #hero, */
 	#home-video,
 	#home-advantage,
 	#customers,
@@ -5026,7 +5086,7 @@ footer a:hover {
 		padding-bottom: 100px;
 	}
 
-	#hero,
+	/* #hero, */
 	#make,
 	#pricing,
 	#services,
@@ -5215,7 +5275,7 @@ footer a:hover {
    Hero 1280
    ============================ */
 
-	#hero,
+	/* #hero, */
 	.main {
 		padding-top: 144px !important;
 	}
@@ -5779,4 +5839,8 @@ footer p{
 		scroll-behavior: auto;
 	}
 
+}
+
+main {
+	padding-top: 0px !important;
 }
