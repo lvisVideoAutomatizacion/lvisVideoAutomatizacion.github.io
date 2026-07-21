@@ -2069,7 +2069,7 @@ ol strong {
 	box-shadow: 0px 10px 15px -3px rgba(var(--color-black), 0.12);
 	transition: box-shadow 300ms ease, transform 300ms ease;
 	overflow: inherit;
-	min-height: 500px;
+	min-height: 550px;
 }
 
 .partners-tables .partners .box.box--contact {
