@@ -63,6 +63,9 @@
 
 <body class="bg-init">
 
+	<!-- Enlace para saltar al contenido principal cuando se utiliza un lector de pantalla -->
+	<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
 	<!-- ***** OVERLAY ***** -->
 	<div class="animsition-overlay">
 
@@ -75,7 +78,8 @@
 			</a>
 
 			<!-- Menú Hamburguesa -->
-			<button type="button" class="hamb" id="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+			<button type="button" class="hamb" id="menu-toggle" aria-controls="primary-navigation"
+				aria-expanded="false">
 				<span class="hamb-line"></span>
 				<span class="sr-only">Abrir menú de navegación</span>
 			</button>
@@ -151,161 +155,169 @@
 		</header>
 		<!-- ***** FIN HEADER ***** -->
 
-		<!-- ***** HERO SERVICIOS ***** -->
-		<section id="catalog-hero">
-			<div class="wrapper">
-				<div class="catalog-hero-inner">
+		<!-- MAIN -->
+		<main id="main-content" role="main">
+			<!-- ***** HERO SERVICIOS ***** -->
+			<section id="catalog-hero">
+				<div class="wrapper">
+					<div class="catalog-hero-inner">
 
-					<div class="catalog-hero-left">
-						<span class="catalog-hero-label">SERVICIOS</span>
-						<h1 class="catalog-hero-title">Servicios integrales de accesibilidad audiovisual</h1>
-						<p class="catalog-hero-sub">Acompañamos todo el ciclo de vida del contenido: análisis,
-							producción,
-							revisión, publicación y mantenimiento.</p>
-						<div class="catalog-hero-actions">
-							<a href="https://calendly.com/lvis-meetings/30min" target="_blank" rel="noopener"
-								class="catalog-hero-btn catalog-hero-btn--primary">Solicitar demo</a>
-							<a href="soluciones.html" class="catalog-hero-btn catalog-hero-btn--secondary">Ver
-								soluciones</a>
-						</div>
-					</div>
-
-					<div class="catalog-hero-right">
-						<div class="catalog-hero-card">
-							<div class="catalog-hero-pills">
-								<span class="catalog-pill">AD</span>
-								<span class="catalog-pill">CC</span>
-								<span class="catalog-pill">TR</span>
-								<span class="catalog-pill">LSE</span>
-								<span class="catalog-pill">LF</span>
+						<div class="catalog-hero-left">
+							<span class="catalog-hero-label">SERVICIOS</span>
+							<h1 class="catalog-hero-title">Servicios integrales de accesibilidad audiovisual</h1>
+							<p class="catalog-hero-sub">Acompañamos todo el ciclo de vida del contenido: análisis,
+								producción,
+								revisión, publicación y mantenimiento.</p>
+							<div class="catalog-hero-actions">
+								<a href="https://calendly.com/lvis-meetings/30min" target="_blank" rel="noopener"
+									class="catalog-hero-btn catalog-hero-btn--primary">Solicitar demo</a>
+								<a href="soluciones.html" class="catalog-hero-btn catalog-hero-btn--secondary">Ver
+									soluciones</a>
 							</div>
-							<!-- <p class="catalog-hero-card-title">AD · CC · TR · LSE · LF</p> -->
-							<p class="catalog-hero-card-desc">Audiodescripción, subtítulos cerrados, transcripción,
-								lengua de
-								signos, lectura fácil y formatos listos para publicar.</p>
 						</div>
+
+						<div class="catalog-hero-right">
+							<div class="catalog-hero-card">
+								<div class="catalog-hero-pills">
+									<span class="catalog-pill">AD</span>
+									<span class="catalog-pill">CC</span>
+									<span class="catalog-pill">TR</span>
+									<span class="catalog-pill">LSE</span>
+									<span class="catalog-pill">LF</span>
+								</div>
+								<!-- <p class="catalog-hero-card-title">AD · CC · TR · LSE · LF</p> -->
+								<p class="catalog-hero-card-desc">Audiodescripción, subtítulos cerrados, transcripción,
+									lengua de
+									signos, lectura fácil y formatos listos para publicar.</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<!-- ***** END HERO SERVICIOS ***** -->
+
+			<!-- ***** SERVICES CARD ***** -->
+			<section id="catalog-grid">
+				<h2 class="sr-only">Catálogo de servicios</h2>
+				<div class="catalog-grid">
+					<div class="catalog-card">
+						<h3>Producción de vídeos accesibles</h3>
+						<p>Convertimos vídeos y audios existentes en contenidos accesibles.</p>
+						<ul>
+							<li>Audiodescripción</li>
+							<li>Subtítulos cerrados</li>
+							<li>Transcripciones</li>
+							<li>Capítulos</li>
+							<li>Lectura fácil</li>
+							<li>Lengua de signos</li>
+						</ul>
 					</div>
 
-				</div>
-			</div>
-		</section>
-		<!-- ***** END HERO SERVICIOS ***** -->
+					<div class="catalog-card">
+						<h3>Producción continua</h3>
+						<p>Actuamos como tu equipo de accesibilidad audiovisual para nuevos contenidos y repositorios
+							existentes.
+						</p>
+						<ul>
+							<li>Calidad homogénea</li>
+							<li>Escalabilidad</li>
+							<li>Plazos garantizados</li>
+							<li>Producción multilingüe</li>
+						</ul>
+					</div>
 
-		<!-- ***** SERVICES CARD ***** -->
-		<section id="catalog-grid">
-			<h2 class="sr-only">Catálogo de servicios</h2>
-			<div class="catalog-grid">
-				<div class="catalog-card">
-					<h3>Producción de vídeos accesibles</h3>
-					<p>Convertimos vídeos y audios existentes en contenidos accesibles.</p>
-					<ul>
-						<li>Audiodescripción</li>
-						<li>Subtítulos cerrados</li>
-						<li>Transcripciones</li>
-						<li>Capítulos</li>
-						<li>Lectura fácil</li>
-						<li>Lengua de signos</li>
-					</ul>
-				</div>
+					<div class="catalog-card">
+						<h3>Evaluación de proyectos</h3>
+						<p>Analizamos el catálogo audiovisual y estimamos esfuerzo, coste, tipologías, prioridades y
+							plan de
+							implantación.</p>
+						<ul>
+							<li>Inventario audiovisual</li>
+							<li>Estimación de esfuerzo</li>
+							<li>Simulación de costes</li>
+							<li>Análisis de accesibilidad</li>
+							<li>Plan de implantación</li>
+							<li>Priorización de acciones</li>
+						</ul>
+					</div>
 
-				<div class="catalog-card">
-					<h3>Producción continua</h3>
-					<p>Actuamos como tu equipo de accesibilidad audiovisual para nuevos contenidos y repositorios
-						existentes.
-					</p>
-					<ul>
-						<li>Calidad homogénea</li>
-						<li>Escalabilidad</li>
-						<li>Plazos garantizados</li>
-						<li>Producción multilingüe</li>
-					</ul>
-				</div>
+					<div class="catalog-card">
+						<h3>Producción de ejemplos</h3>
+						<p>Creamos vídeos modelo para definir criterios de calidad, estilos y procesos internos o de
+							proveedores.
+						</p>
+					</div>
 
-				<div class="catalog-card">
-					<h3>Evaluación de proyectos</h3>
-					<p>Analizamos el catálogo audiovisual y estimamos esfuerzo, coste, tipologías, prioridades y plan de
-						implantación.</p>
-					<ul>
-						<li>Inventario audiovisual</li>
-						<li>Estimación de esfuerzo</li>
-						<li>Simulación de costes</li>
-						<li>Análisis de accesibilidad</li>
-						<li>Plan de implantación</li>
-						<li>Priorización de acciones</li>
-					</ul>
-				</div>
+					<div class="catalog-card">
+						<h3>Consultoría especializada</h3>
+						<p>Resolución de dudas, revisión de entregas, interpretación normativa, auditoría de calidad y
+							procedimientos.</p>
+					</div>
 
-				<div class="catalog-card">
-					<h3>Producción de ejemplos</h3>
-					<p>Creamos vídeos modelo para definir criterios de calidad, estilos y procesos internos o de
-						proveedores.
-					</p>
-				</div>
+					<div class="catalog-card">
+						<h3>Formación y concienciación</h3>
+						<p>Charlas, cursos y talleres para responsables de comunicación, contratación, marketing,
+							inclusión
+							y equipos técnicos.</p>
+					</div>
 
-				<div class="catalog-card">
-					<h3>Consultoría especializada</h3>
-					<p>Resolución de dudas, revisión de entregas, interpretación normativa, auditoría de calidad y
-						procedimientos.</p>
-				</div>
+					<div class="catalog-card">
+						<h3>Creación de contenidos accesibles</h3>
+						<p> AudioSignoGuías, boletines audiovisuales, Videotutoriales, materiales didácticos y recursos
+							para
+							e-learning.</p>
+					</div>
 
-				<div class="catalog-card">
-					<h3>Formación y concienciación</h3>
-					<p>Charlas, cursos y talleres para responsables de comunicación, contratación, marketing, inclusión
-						y equipos técnicos.</p>
-				</div>
+					<div class="catalog-card">
+						<h3>Traducción y localización</h3>
+						<p>Versiones accesibles en castellano, catalán, gallego, euskera, valenciano, inglés, francés,
+							italiano y portugués.</p>
+					</div>
 
-				<div class="catalog-card">
-					<h3>Creación de contenidos accesibles</h3>
-					<p> AudioSignoGuías, boletines audiovisuales, Videotutoriales, materiales didácticos y recursos para
-						e-learning.</p>
-				</div>
-
-				<div class="catalog-card">
-					<h3>Traducción y localización</h3>
-					<p>Versiones accesibles en castellano, catalán, gallego, euskera, valenciano, inglés, francés,
-						italiano y portugués.</p>
-				</div>
-
-				<div class="catalog-card">
-					<h3>Desarrollo tecnológico</h3>
-					<p>Reproductores accesibles, transcripción interactiva, descargas, gestión multidioma e integración
-						con
-						IA.
-					</p>
-				</div>
-
-			</div>
-		</section>
-		<!-- ***** END SERVICES CARD ***** -->
-
-		<!-- ***** SECCIÓN DEMO ***** -->
-		<div id="demo-section" class="wrapper clearfix" role="region" aria-labelledby="demo-heading">
-			<section class="grid-1">
-				<div class="col">
-
-					<h2 id="demo-heading" class="post">
-						Tus contenidos audiovisuales, para todos. Sin barreras.
-					</h2>
-
-					<h3>
-						¿Cuándo empezamos?
-					</h3>
-
-					<p>
-						Cuéntanos qué vídeos necesitas adaptar y te ayudamos a estimar esfuerzo,
-						formatos y plazos.
-					</p>
-
-					<a class="button-cta" target="_blank" rel="noopener noreferrer"
-						href="https://calendly.com/lvis-meetings/30min" role="button"
-						aria-label="Solicitar una consulta. Se abre el calendario de reservas en una nueva pestaña.">
-						Solicitar una consulta
-					</a>
+					<div class="catalog-card">
+						<h3>Desarrollo tecnológico</h3>
+						<p>Reproductores accesibles, transcripción interactiva, descargas, gestión multidioma e
+							integración
+							con
+							IA.
+						</p>
+					</div>
 
 				</div>
 			</section>
-		</div>
-		<!-- ***** FIN SECCIÓN DEMO ***** -->
+			<!-- ***** END SERVICES CARD ***** -->
+
+			<!-- ***** SECCIÓN DEMO ***** -->
+			<div id="demo-section" class="wrapper clearfix" role="region" aria-labelledby="demo-heading">
+				<section class="grid-1">
+					<div class="col">
+
+						<h2 id="demo-heading" class="post">
+							Tus contenidos audiovisuales, para todos. Sin barreras.
+						</h2>
+
+						<h3>
+							¿Cuándo empezamos?
+						</h3>
+
+						<p>
+							Cuéntanos qué vídeos necesitas adaptar y te ayudamos a estimar esfuerzo,
+							formatos y plazos.
+						</p>
+
+						<a class="button-cta" target="_blank" rel="noopener noreferrer"
+							href="https://calendly.com/lvis-meetings/30min" role="button"
+							aria-label="Solicitar una consulta. Se abre el calendario de reservas en una nueva pestaña.">
+							Solicitar una consulta
+						</a>
+
+					</div>
+				</section>
+			</div>
+			<!-- ***** FIN SECCIÓN DEMO ***** -->
+		</main>
+		<!-- ***** END MAIN ***** -->
 
 		<!-- ***** FOOTER ***** -->
 		<footer class="wrapper clearfix" role="contentinfo">
