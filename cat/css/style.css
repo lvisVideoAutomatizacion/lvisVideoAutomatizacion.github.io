@@ -770,7 +770,7 @@ p {
 	background-color: rgba(var(--color-primary), 1);
 }
 
-.menu a.active {
+.menu a[aria-current="page"] {
 	font-family: 'Raleway', sans-serif;
 	color: rgba(var(--color-primary), 1);
 	font-optical-sizing: auto;
@@ -1040,7 +1040,7 @@ p {
 	color: rgba(var(--color-white), 1);
 }
 
-.language-menu-link.is-active {
+.language-menu-link[aria-current="page"] {
 	color: rgba(var(--color-primary), 1);
 	background-color: rgba(var(--color-white), 0.08);
 }
