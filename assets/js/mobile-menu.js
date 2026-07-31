@@ -33,9 +33,12 @@
 	// está visible y el botón hamburguesa se oculta.
 	var desktopQuery = window.matchMedia('(min-width: 1280px)');
 
-	var labelClosed = 'Open the navigation menu';
-	var labelOpen = 'Close the navigation menu';
 	var toggleLabel = toggle.querySelector('.sr-only');
+	// El texto inicial del span .sr-only y el atributo data-label-open se
+	// definen en cada página en su propio idioma, de modo que este script
+	// puede compartirse entre todos los idiomas del sitio sin duplicarse.
+	var labelClosed = toggleLabel ? toggleLabel.textContent : '';
+	var labelOpen = toggle.getAttribute('data-label-open') || labelClosed;
 
 	function setOpen(isOpen) {
 		toggle.setAttribute('aria-expanded', String(isOpen));
