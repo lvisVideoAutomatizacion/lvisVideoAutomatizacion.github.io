@@ -31,19 +31,19 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
 		rel="stylesheet">
-	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/logo_azul_claro.svg">
-	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/logo_azul_claro.svg">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/logo_azul_claro.svg">
-	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/logo_azul_claro.svg">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/logo_azul_claro.svg">
-	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/logo_azul_claro.svg">
-	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/logo_azul_claro.svg">
-	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/logo_azul_claro.svg">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/logo_azul_claro.svg">
-	<link rel="icon" type="image/png" sizes="192x192" href="images/favicon/logo_azul_claro.svg">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/logo_azul_claro.svg">
-	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/logo_azul_claro.svg">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/logo_azul_claro.svg">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/logo_azul_claro.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/logo_azul_claro.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/logo_azul_claro.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/logo_azul_claro.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/logo_azul_claro.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/logo_azul_claro.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/logo_azul_claro.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/logo_azul_claro.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/logo_azul_claro.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/favicon/logo_azul_claro.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/logo_azul_claro.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/logo_azul_claro.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/logo_azul_claro.png">
 	<link rel="manifest" href="images/favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
@@ -54,11 +54,9 @@
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="js\cookies\cookies.css">
+	<link rel="stylesheet" href="js/cookies/cookies.css">
 	<script src="https://kit.fontawesome.com/3d245d70bc.js" crossorigin="anonymous"></script>
-	<!-- Pixel Code for https://overtracking.com/ -->
-	<script defer src="https://overtracking.com/p/u1lKOy3bjAeQ8eNW"></script>
-	<!-- END Pixel Code -->
+	
 </head>
 
 <body class="bg-init">
@@ -67,11 +65,11 @@
 	<div class="animsition-overlay">
 
 		<!-- ***** HEADER ***** -->
-		<header class="header" role="banner">
+		<header class="header">
 			<!-- Logo -->
 			<a href="index.html" class="logo animsition-link" data-animsition-out-class="overlay-slide-out-left"
 				aria-label="Ir a la página principal de LViS Vally">
-				<img src="images/LVISVally_Logotipo.svg" alt="Logotipo de LViS Vally">
+				<img src="images/LVISVally_Logotipo.svg" alt="">
 			</a>
 
 			<!-- Menú Hamburguesa -->
@@ -81,7 +79,7 @@
 			</button>
 
 			<!-- Navegación Principal -->
-			<nav class="nav" id="primary-navigation" role="navigation" aria-label="Navegación principal">
+			<nav class="nav" id="primary-navigation" aria-label="Navegación principal">
 				<ul class="menu">
 					<li>
 						<a href="index.html" class="animsition-link"
@@ -127,9 +125,9 @@
 
 				<div class="language-dropdown">
 					<button type="button" class="language-dropdown-toggle" aria-haspopup="true" aria-expanded="false"
-						aria-controls="language-menu">
+						aria-controls="language-menu" aria-label="Seleccionar idioma. Idioma actual: Español">
 						<img src="images/globe_white.svg" alt="" class="language-icon" />
-						<span class="language-text">ES</span>
+						<span class="language-text" aria-hidden="true">ES</span>
 						<span class="language-caret" aria-hidden="true"></span>
 					</button>
 					<ul class="language-menu" id="language-menu" role="menu">
@@ -171,7 +169,7 @@
 
 					<div class="catalog-hero-right">
 						<div class="catalog-hero-card">
-							<div class="catalog-hero-pills">
+							<div class="catalog-hero-pills" aria-hidden="true">
 								<span class="catalog-pill">AD</span>
 								<span class="catalog-pill">CC</span>
 								<span class="catalog-pill">TR</span>
@@ -255,7 +253,7 @@
 		<!-- ***** END SERVICES CARD ***** -->
 
 		<!-- ***** SECCIÓN DEMO ***** -->
-		<div id="demo-section" class="wrapper clearfix" role="region" aria-labelledby="demo-heading">
+		<section id="demo-section" class="wrapper clearfix" aria-labelledby="demo-heading">
 			<section class="grid-1">
 				<div class="col">
 
@@ -273,18 +271,18 @@
 					</p>
 
 					<a class="button-cta" target="_blank" rel="noopener noreferrer"
-						href="https://calendly.com/lvis-meetings/30min" role="button"
+						href="https://calendly.com/lvis-meetings/30min"
 						aria-label="Solicitar una consulta. Se abre el calendario de reservas en una nueva pestaña.">
 						Solicitar una consulta
 					</a>
 
 				</div>
 			</section>
-		</div>
+		</section>
 		<!-- ***** FIN SECCIÓN DEMO ***** -->
 
 		<!-- ***** FOOTER ***** -->
-		<footer class="wrapper clearfix" role="contentinfo">
+		<footer class="wrapper clearfix">
 			<section class="grid-1">
 				<div class="col">
 					<div class="align-center powered-by-lvis">
