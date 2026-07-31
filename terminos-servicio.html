@@ -281,33 +281,5 @@
 	<script src="js/vendor/venobox.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/update_copyright_year.js"></script>
-	<script>
-		const dropdowns = document.querySelectorAll('.dropdown');
-		dropdowns.forEach(dropdown => {
-		  dropdown.addEventListener('click', (e) => {
-			dropdown.classList.toggle('dropdown__options--visible')
-		  })
-		  dropdown.querySelectorAll('.dropdown__options .dropdown__option').forEach(opt => {
-			opt.addEventListener('click', (e) => {      
-			  dropdown.querySelector('.dropdown__selected').innerHTML = opt.innerHTML;
-			})
-		  })
-		})
-	</script>
-	<script>	
-		$(".custom-switch").each(function(i) {
-			var classes = $(this).attr("class"),
-				id      = $(this).attr("id"),
-				name    = $(this).attr("name");
-
-			$(this).wrap('<div class="custom-switch" id="' + name + '"></div>');
-			  $(this).after('<label for="custom-switch-' + i + '"></label>');
-			$(this).attr("id", "custom-switch-" + i);
-			$(this).attr("name", name);
-		  });
-		  $(".custom-switch input").change(function() {
-			$(".pricing-tables").toggleClass("plans--annually");
-		  });	
-	</script>
 </body>
 </html>
