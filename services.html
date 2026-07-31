@@ -3,9 +3,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>LViS Vally</title>
-	<meta content="" name="description" />
-	<meta content="LViS • Vally" property="og:title" />
+	<title>LViS Vally • Servicios</title>
+	<meta
+		content="Con LViS puedes crear vídeos en múltiples idiomas, reconocer objetos en la pantalla o añadir múltiples efectos de postproducción"
+		name="description" />
+	<meta content="LViS • Características" property="og:title" />
 	<meta content="Con LViS Vally haz accesibles todos tus vídeos" property="og:description" />
 	<meta content="https://www.accesible.video/images/LVISVally_Logotipo.png" property="og:image" />
 	<meta content="LViS • Vally" property="twitter:title" />
@@ -21,7 +23,7 @@
 	<meta name="author" content="LViS" />
 	<meta name="robots" content="index,follow" lang="es" />
 	<meta property="og:locale" content="es_ES" />
-	<meta name="url" property="og:url" content="https://vally.lvis.es" />
+	<meta name="url" property="og:url" content="https://www.accesible.video" />
 	<meta property="og:site_name" content="LViS" />
 	<meta property="twitter:site" content="@lvis" />
 	<meta property="twitter:creator" content="@lvis" />
@@ -49,6 +51,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/animsition.min.css">
 	<link rel="stylesheet" href="css/venobox.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="js/cookies/cookies.css">
 	<script src="https://kit.fontawesome.com/3d245d70bc.js" crossorigin="anonymous"></script>
@@ -71,7 +75,8 @@
 			</a>
 
 			<!-- Menú Hamburguesa -->
-			<button type="button" class="hamb" id="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+			<button type="button" class="hamb" id="menu-toggle" aria-controls="primary-navigation"
+				aria-expanded="false">
 				<span class="hamb-line"></span>
 				<span class="sr-only">Abrir menú de navegación</span>
 			</button>
@@ -80,11 +85,11 @@
 			<nav class="nav" id="primary-navigation" aria-label="Navegación principal">
 				<ul class="menu">
 					<li>
-						<a href="index.html" class="animsition-link" aria-current="page"
+						<a href="index.html" class="animsition-link"
 							data-animsition-out-class="overlay-slide-out-left">Inicio</a>
 					</li>
 					<li>
-						<a href="services.html" class="animsition-link"
+						<a href="services.html" class="animsition-link" aria-current="page"
 							data-animsition-out-class="overlay-slide-out-left">Servicios</a>
 					</li>
 					<li>
@@ -130,15 +135,15 @@
 					</button>
 					<ul class="language-menu" id="language-menu" role="menu">
 						<li role="none">
-							<a role="menuitem" href="index.html" class="language-menu-link" aria-current="page" lang="es"
+							<a role="menuitem" href="services.html" class="language-menu-link" aria-current="page" lang="es"
 								hreflang="es">Español</a>
 						</li>
 						<li role="none">
-							<a role="menuitem" href="en/index.html" class="language-menu-link" lang="en"
+							<a role="menuitem" href="en/services.html" class="language-menu-link" lang="en"
 								hreflang="en">English</a>
 						</li>
 						<li role="none">
-							<a role="menuitem" href="cat/index.html" class="language-menu-link" lang="ca"
+							<a role="menuitem" href="cat/services.html" class="language-menu-link" lang="ca"
 								hreflang="ca">Català</a>
 						</li>
 					</ul>
@@ -147,237 +152,141 @@
 		</header>
 		<!-- ***** FIN HEADER ***** -->
 
-		<!-- ***** MAIN ***** -->
+		<!-- MAIN -->
 		<main id="main-content">
-			<!-- ***** HERO ***** -->
-			<div id="hero" class="wrapper clearfix" aria-labelledby="hero-section">
-				<section class="grid-2">
-					<div class="col post">
-						<section class="cd-intro">
-							<h1 class="cd-headline loading-bar" id="hero-section">
-								Haz que tus vídeos lleguen a todas las personas
-							</h1>
-
-							<h2 class="color-primary">
-								Accesibilidad audiovisual automatizada y supervisada
-							</h2>
-
-							<p>
-								Transformamos vídeos y audios en contenidos accesibles, inclusivos y fáciles de consumir
-								con audiodescripción, subtítulos cerrados, transcripciones, capítulos,
-								lectura fácil y formatos adaptados.
-							</p>
-						</section>
-					</div>
-
-				<div class="col">
-					<div class="iframe-content">
-						<iframe
-							src="https://player.vimeo.com/video/1210709788?autopause=0&amp;muted=1&amp;badge=0&amp;player_id=0&amp;app_id=58479&amp;texttrack=es&amp;hl=es&amp;dnt=1"
-							allow="fullscreen; picture-in-picture; clipboard-write"
-							title="Vídeo accesible: creación de contenidos audiovisuales accesibles con audiodescripción, subtítulos y transcripción"
-							aria-describedby="video-descripcion" allowfullscreen>
-						</iframe>
-
-							<div id="video-descripcion" class="sr-only">
-								Ejemplo de contenido audiovisual accesible con audiodescripción,
-								subtítulos cerrados y transcripción para facilitar el acceso a todas las personas.
-							</div>
-						</div>
-					</div>
-
-
-
-				</section>
-			</div>
-			<!-- ***** FIN HERO ***** -->
-
-			<!-- ***** STATS & BENEFITS ***** -->
-			<section id="stats-benefits" class="wrapper clearfix">
-				<div class="grid-1">
-					<div class="col">
-
-						<div class="hero-actions">
-							<a href="https://calendly.com/" class="button-cta button-inline" target="_blank"
-								aria-label="Solicita una demo gratuita. Se abre el calendario de reservas en una nueva pestaña."
-								rel="noopener noreferrer">
-								Solicita una demo gratuita
-							</a>
-							<a href="solutions.html" class="button-cta button-inline">
-								Ver soluciones
-							</a>
-						</div>
-
-						<div class="hero-stats" aria-label="Datos de actividad">
-							<div class="hero-stat-card">
-								<span class="hero-stat-number">50.000+</span>
-								<span class="hero-stat-label">vídeos accesibles</span>
-							</div>
-							<div class="hero-stat-card">
-								<span class="hero-stat-number">2.000+</span>
-								<span class="hero-stat-label">horas producidas</span>
-							</div>
-							<div class="hero-stat-card">
-								<span class="hero-stat-number">9</span>
-								<span class="hero-stat-label">idiomas de trabajo</span>
-							</div>
-						</div>
-
-						<div class="hero-benefits">
-							<div class="hero-benefits-icons" aria-hidden="true">
-								<span>AD</span>
-								<span>CC</span>
-								<span>TR</span>
-								<span>LSE</span>
-								<span>LF</span>
-							</div>
-							<h2>Más que cumplir una norma</h2>
-							<p>
-								La accesibilidad mejora alcance, experiencia de usuario, SEO,
-								reutilización, reputación y participación.
-							</p>
-						</div>
-
-					</div>
-				</div>
-			</section>
-			<!-- ***** FIN STATS & BENEFITS ***** -->
-
-			<!-- ***** WHY / POR QUÉ ACCESIBILIZAR ***** -->
-			<section id="why">
+			<!-- ***** HERO SERVICIOS ***** -->
+			<section id="catalog-hero">
 				<div class="wrapper">
+					<div class="catalog-hero-inner">
 
-					<span class="why-label">POR QUÉ ACCESIBILIZAR</span>
-
-					<h2>Una inversión en alcance, inclusión y valor del contenido</h2>
-
-					<div class="why-cards">
-
-						<article class="why-card">
-							<span class="why-card-number">01</span>
-							<h3>Llegas a más personas</h3>
-							<p>
-								Facilitas el acceso a personas con discapacidad visual,
-								auditiva o cognitiva y a quienes consumen vídeo en
-								contextos diversos.
-							</p>
-						</article>
-
-						<article class="why-card">
-							<span class="why-card-number">02</span>
-							<h3>Mejor experiencia</h3>
-							<p>
-								Subtítulos, capítulos y transcripciones hacen que tus
-								vídeos sean más fáciles de buscar, navegar, estudiar y
-								compartir.
-							</p>
-						</article>
-
-						<article class="why-card">
-							<span class="why-card-number">03</span>
-							<h3>Más reputación</h3>
-							<p>
-								Transmiten responsabilidad, empatía, innovación y
-								compromiso real con la inclusión.
-							</p>
-						</article>
-
-						<article class="why-card">
-							<span class="why-card-number">04</span>
-							<h3>Producción sostenible</h3>
-							<p>
-								Automatizamos parte del proceso y lo combinamos con
-								revisión humana para escalar sin perder calidad.
-							</p>
-						</article>
-
-						<article class="why-card">
-							<span class="why-card-number">05</span>
-							<h3>Cumplimiento</h3>
-							<p>
-								Facilita el cumplimiento de los estándares internacionales de accesibilidad y la
-								legislación
-								vigente aplicable a cada organización y país.
-							</p>
-						</article>
-
-					</div>
-
-				</div>
-			</section>
-			<!-- ***** END WHY / POR QUÉ ACCESIBILIZAR ***** -->
-
-			<!-- ***** TECH PEOPLE ***** -->
-			<section id="tech-people" class="wrapper clearfix">
-				<div class="grid-2">
-					<div class="col post">
-						<span class="tech-people-label">TECNOLOGÍA + PERSONAS</span>
-						<h2 id="tech-people-heading">Automatización para escalar. Revisión humana para garantizar
-							calidad.
-						</h2>
-						<p>Generamos versiones accesibles en múltiples idiomas y formatos, <br>con un proceso
-							supervisado
-							por
-							personas para asegurar claridad, sincronización y comprensión.</p>
-						<a href="technology.html" class="tech-people-link">Conoce nuestra tecnología →</a>
-					</div>
-					<div class="col">
-						<div class="tech-people-card">
-							<h3>Artefactos accesibles</h3>
-							<div class="tech-people-lists">
-								<ul>
-									<li>Audiodescripción</li>
-									<li>Subtítulos cerrados</li>
-									<li>Transcripción</li>
-									<li>Capítulos</li>
-								</ul>
-								<ul>
-									<li>Lectura fácil</li>
-									<li>Lengua de signos</li>
-									<li>Versiones multilingües</li>
-									<li>Descargas individuales</li>
-								</ul>
+						<div class="catalog-hero-left">
+							<span class="catalog-hero-label">SERVICIOS</span>
+							<h1 class="catalog-hero-title">Servicios integrales de accesibilidad audiovisual</h1>
+							<p class="catalog-hero-sub">Acompañamos todo el ciclo de vida del contenido: análisis,
+								producción,
+								revisión, publicación y mantenimiento.</p>
+							<div class="catalog-hero-actions">
+								<a href="https://calendly.com/lvis-meetings/30min" target="_blank" rel="noopener"
+									class="catalog-hero-btn catalog-hero-btn--primary">Solicitar demo</a>
+								<a href="solutions.html" class="catalog-hero-btn catalog-hero-btn--secondary">Ver
+									soluciones</a>
 							</div>
 						</div>
-					</div>
-				</div>
-			</section>
-			<!-- ***** END TECH PEOPLE ***** -->
 
-			<!-- ***** MAIN SERVICES ***** -->
-			<section id="main-services">
-				<div class="wrapper">
-					<span class="main-services-label">SERVICIOS PRINCIPALES</span>
-					<h2 id="main-services-heading">Desde un vídeo puntual hasta una estrategia completa</h2>
-					<div class="main-services-cards">
-						<article class="main-services-card">
-							<h3>Producción accesible</h3>
-							<p>Adaptamos vídeos existentes con audiodescripción, CC, transcripción, navegación accesible
-								y
-								otros mecanismos.
-							</p>
-							<a href="services.html" class="main-services-link">Ver servicios →</a>
-						</article>
-						<article class="main-services-card">
-							<h3>Soluciones por sector</h3>
-							<p>Administración, universidades, empresas, cultura, sanidad, software, formación y grandes
-								repositorios.</p>
-							<a href="solutions.html" class="main-services-link">Ver soluciones →</a>
-						</article>
-						<article class="main-services-card">
-							<h3>Formación y consultoría</h3>
-							<p>Ayudamos a equipos técnicos, comunicación, contratación, formación e inclusión a tomar
-								mejores
-								decisiones.</p>
-							<a href="prices.html" class="main-services-link">Ver precios →</a>
-						</article>
+						<div class="catalog-hero-right">
+							<div class="catalog-hero-card">
+								<div class="catalog-hero-pills" aria-hidden="true">
+									<span class="catalog-pill">AD</span>
+									<span class="catalog-pill">CC</span>
+									<span class="catalog-pill">TR</span>
+									<span class="catalog-pill">LSE</span>
+									<span class="catalog-pill">LF</span>
+								</div>
+								
+								<p class="catalog-hero-card-desc">Audiodescripción, subtítulos cerrados, transcripción,
+									lengua de
+									signos, lectura fácil y formatos listos para publicar.</p>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</section>
-			<!-- ***** END MAIN SERVICES ***** -->
+			<!-- ***** END HERO SERVICIOS ***** -->
+
+			<!-- ***** SERVICES CARD ***** -->
+			<section id="catalog-grid">
+				<h2 class="sr-only">Catálogo de servicios</h2>
+				<div class="catalog-grid">
+					<div class="catalog-card">
+						<h3>Producción de vídeos accesibles</h3>
+						<p>Convertimos vídeos y audios existentes en contenidos accesibles.</p>
+						<ul>
+							<li>Audiodescripción</li>
+							<li>Subtítulos cerrados</li>
+							<li>Transcripciones</li>
+							<li>Capítulos</li>
+							<li>Lectura fácil</li>
+							<li>Lengua de signos</li>
+						</ul>
+					</div>
+
+					<div class="catalog-card">
+						<h3>Producción continua</h3>
+						<p>Actuamos como tu equipo de accesibilidad audiovisual para nuevos contenidos y repositorios
+							existentes.
+						</p>
+						<ul>
+							<li>Calidad homogénea</li>
+							<li>Escalabilidad</li>
+							<li>Plazos garantizados</li>
+							<li>Producción multilingüe</li>
+						</ul>
+					</div>
+
+					<div class="catalog-card">
+						<h3>Evaluación de proyectos</h3>
+						<p>Analizamos el catálogo audiovisual y estimamos esfuerzo, coste, tipologías, prioridades y
+							plan de
+							implantación.</p>
+						<ul>
+							<li>Inventario audiovisual</li>
+							<li>Estimación de esfuerzo</li>
+							<li>Simulación de costes</li>
+							<li>Análisis de accesibilidad</li>
+							<li>Plan de implantación</li>
+							<li>Priorización de acciones</li>
+						</ul>
+					</div>
+
+					<div class="catalog-card">
+						<h3>Producción de ejemplos</h3>
+						<p>Creamos vídeos modelo para definir criterios de calidad, estilos y procesos internos o de
+							proveedores.
+						</p>
+					</div>
+
+					<div class="catalog-card">
+						<h3>Consultoría especializada</h3>
+						<p>Resolución de dudas, revisión de entregas, interpretación normativa, auditoría de calidad y
+							procedimientos.</p>
+					</div>
+
+					<div class="catalog-card">
+						<h3>Formación y concienciación</h3>
+						<p>Charlas, cursos y talleres para responsables de comunicación, contratación, marketing,
+							inclusión
+							y equipos técnicos.</p>
+					</div>
+
+					<div class="catalog-card">
+						<h3>Creación de contenidos accesibles</h3>
+						<p> AudioSignoGuías, boletines audiovisuales, Videotutoriales, materiales didácticos y recursos
+							para
+							e-learning.</p>
+					</div>
+
+					<div class="catalog-card">
+						<h3>Traducción y localización</h3>
+						<p>Versiones accesibles en castellano, catalán, gallego, euskera, valenciano, inglés, francés,
+							italiano y portugués.</p>
+					</div>
+
+					<div class="catalog-card">
+						<h3>Desarrollo tecnológico</h3>
+						<p>Reproductores accesibles, transcripción interactiva, descargas, gestión multidioma e
+							integración
+							con
+							IA.
+						</p>
+					</div>
+
+				</div>
+			</section>
+			<!-- ***** END SERVICES CARD ***** -->
 
 			<!-- ***** SECCIÓN DEMO ***** -->
-			<div id="demo-section" class="wrapper clearfix">
+			<section id="demo-section" class="wrapper clearfix" aria-labelledby="demo-heading">
 				<section class="grid-1">
 					<div class="col">
 
@@ -402,11 +311,10 @@
 
 					</div>
 				</section>
-			</div>
+			</section>
 			<!-- ***** FIN SECCIÓN DEMO ***** -->
-
 		</main>
-		<!-- ***** FIN MAIN ***** -->
+		<!-- ***** END MAIN ***** -->
 
 		<!-- ***** FOOTER ***** -->
 		<footer class="wrapper clearfix">
@@ -452,7 +360,7 @@
 		<!-- ***** FIN FOOTER ***** -->
 
 	</div>
-	<!-- ***** FIN OVERLAY ***** -->
+	<!-- ***** END OVERLAY ***** -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 	<script src="js/vendor/easings.js"></script>
@@ -462,7 +370,6 @@
 	<script src="js/update_copyright_year.js"></script>
 	<script src="js/language_dropdown.js"></script>
 	<script src="js/mobile-menu.js"></script>
-
 </body>
 
 </html>
