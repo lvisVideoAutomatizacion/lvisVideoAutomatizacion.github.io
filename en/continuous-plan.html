@@ -81,7 +81,7 @@
 							aria-current="page">Training</a>
 					</li>
 					<li>
-						<a href="project-assesment.html" class="animsition-link"
+						<a href="project-assessment.html" class="animsition-link"
 							data-animsition-out-class="overlay-slide-out-left">Project Assessment</a>
 					</li>
 					<li>
@@ -112,7 +112,7 @@
 				Let’s Talk
 			  </a>
 
-			  <a class="language-button" href="../plan-continuo.html" aria-label="Switch language to Spanish">
+			  <a class="language-button" href="../continuous-plan.html" aria-label="Switch language to Spanish">
 				<div class="language-content">
 				  <img src="images/globe_white.svg" alt="Globe icon" class="language-icon"/>
 				  <span class="language-text">Español</span>
@@ -351,7 +351,7 @@
 							<a href="privacy-policy.html" target="_blank">Privacy Policy</a>
 							<a href="service-terms.html" target="_blank">Terms of Service</a>
 							<a href="trademark-services-policy.html" target="_blank">Trademark and Product Policy</a>
-							<a href="accesibility.html" target="_blank">Accessibility</a>
+							<a href="accessibility.html" target="_blank">Accessibility</a>
 						</p>
 					</div>
 				</div>
@@ -368,19 +368,6 @@
 	<script src="js/vendor/slick.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/update_copyright_year.js"></script>
-	<script>
-		const dropdowns = document.querySelectorAll('.dropdown');
-		dropdowns.forEach(dropdown => {
-		  dropdown.addEventListener('click', (e) => {
-			dropdown.classList.toggle('dropdown__options--visible')
-		  })
-		  dropdown.querySelectorAll('.dropdown__options .dropdown__option').forEach(opt => {
-			opt.addEventListener('click', (e) => {      
-			  dropdown.querySelector('.dropdown__selected').innerHTML = opt.innerHTML;
-			})
-		  })
-		})
-	</script>
 	<script>
 		$(".project-detail").slick({
 			slidesToShow: 1,
