@@ -18,52 +18,8 @@ $(document).ready(function() {
 		classToAdd: 'visible animated fadeIn',
 		offset: 100
 		});
-	// checkCookiePolicy();
 	$('.venobox').venobox();
 });
-
-/*!
- * jQuery Cookie Plugin v1.4.0
- * https://github.com/carhartl/jquery-cookie
- *
- * Copyright 2013 Klaus Hartl
- * Released under the MIT license
- */
-
-// function checkCookiePolicy(){
-// 	if( !$.cookie('cookie-policy-ok') ) {
-// 		var cookieTitle = 'Información sobre cookies';
-// 		var cookieMsg1  = 'Utilizamos cookies propias y de terceros con fines analíticos. En algunos espacios web puede haber vídeos u otros contenidos de terceros que también inserten cookies con fines publicitarios. En <a class="venobox" data-vbtype="ajax" href="external/legal.html">esta página</a> encontrarás más información. Puedes aceptar todas las cookies pulsando "Aceptar" o decidir cuáles aceptas pulsando "Configurar".'; 
-// 		var cookieMsg2  = ''; 
-// 		var cookieLink  = '';
-// 		var cookieDiv = $('<div />').addClass('cookies-policy');
-
-// 	    cookieDiv.append('<a id="cookie-policy-ok" href="#close">x</a>');
-// 		cookieDiv.append('<h2>'+cookieTitle+'</h2>');
-// 		cookieDiv.append('<p>'+cookieMsg1 + ' ' + cookieMsg2 + ' ' + cookieLink+'</p>');
-		
-// 		// Set event
-// 		cookieDiv.find('#cookie-policy-ok').click(function(e){
-// 			e.preventDefault();
-		
-// 			var d = new Date();
-// 			var month = d.getMonth()+1;
-// 			var day = d.getDate();
-
-// 			var output = d.getFullYear() + '-' +
-// 		    ((''+month).length<2 ? '0' : '') + month + '-' +
-// 			((''+day).length<2 ? '0' : '') + day;
-
-// 			$.cookie('cookie-policy-ok', output, { expires: 2*365 });
-// 			cookieDiv.hide();
-// 			return false;
-// 		});
-
-// 		$('body').append(cookieDiv);
-// 	}
-// }
-
-// (function(factory){if(typeof define==="function"&&define.amd){define(["jquery"],factory)}else{if(typeof exports==="object"){factory(require("jquery"))}else{factory(jQuery)}}}(function($){var pluses=/\+/g;function encode(s){return config.raw?s:encodeURIComponent(s)}function decode(s){return config.raw?s:decodeURIComponent(s)}function stringifyCookieValue(value){return encode(config.json?JSON.stringify(value):String(value))}function parseCookieValue(s){if(s.indexOf('"')===0){s=s.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\")}try{s=decodeURIComponent(s.replace(pluses," "));return config.json?JSON.parse(s):s}catch(e){}}function read(s,converter){var value=config.raw?s:parseCookieValue(s);return $.isFunction(converter)?converter(value):value}var config=$.cookie=function(key,value,options){if(value!==undefined&&!$.isFunction(value)){options=$.extend({},config.defaults,options);if(typeof options.expires==="number"){var days=options.expires,t=options.expires=new Date();t.setTime(+t+days*86400000)}return(document.cookie=[encode(key),"=",stringifyCookieValue(value),options.expires?"; expires="+options.expires.toUTCString():"",options.path?"; path="+options.path:"",options.domain?"; domain="+options.domain:"",options.secure?"; secure":""].join(""))}var result=key?undefined:{};var cookies=document.cookie?document.cookie.split("; "):[];for(var i=0,l=cookies.length;i<l;i++){var parts=cookies[i].split("=");var name=decode(parts.shift());var cookie=parts.join("=");if(key&&key===name){result=read(cookie,value);break}if(!key&&(cookie=read(cookie))!==undefined){result[name]=cookie}}return result};config.defaults={};$.removeCookie=function(key,options){if($.cookie(key)===undefined){return false}$.cookie(key,"",$.extend({},options,{expires:-1}));return !$.cookie(key)}}));
 
 /*
     The MIT License (MIT)
