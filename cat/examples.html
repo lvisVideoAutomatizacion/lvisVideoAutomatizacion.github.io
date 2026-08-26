@@ -18,8 +18,8 @@
 	<meta property="og:type" content="website" />
 	<meta content="summary_large_image" name="twitter:card" />
 	<meta name="keywords"
-		content="Videos automaticos, generación de vídeo, vídeo como servicio, vídeo como código, automatización, elearning, visión artificial,
-	video as a service, no code, video, video as a code, blockly, videos actualizables, artificial vision, creación de vídeo, video creation" />
+		content="Vídeos automàtics, generació de vídeo, vídeo com a servei, vídeo com a codi, automatització, elearning, visió artificial,
+	vídeo sota demanda, sense codi, vídeo, blockly, vídeos actualitzables, visió artificial, creació de vídeo, creació de vídeos" />
 	<meta name="author" content="LViS" />
 	<meta name="robots" content="index,follow" lang="ca" />
 	<meta property="og:locale" content="ca_ES" />
@@ -59,6 +59,9 @@
 </head>
 
 <body class="bg-init">
+
+	<!-- Enllaç per saltar al contingut principal quan s'utilitza un lector de pantalla -->
+	<a class="skip-link" href="#main-content">Saltar al contingut principal</a>
 
 	<!-- ***** OVERLAY ***** -->
 	<div class="animsition-overlay">
@@ -147,9 +150,11 @@
 				</div>
 			</div>
 		</header>
-		<!-- ***** FIN HEADER ***** -->
+		<!-- ***** FI HEADER ***** -->
 
-		<!-- ***** HERO EJEMPLOS ***** -->
+		<!-- ***** MAIN ***** -->
+		<main id="main-content">
+		<!-- ***** HERO EXEMPLES ***** -->
 		<section id="catalog-hero">
 			<div class="wrapper">
 				<div class="catalog-hero-inner">
@@ -178,7 +183,6 @@
 								<span class="catalog-pill">LSE</span>
 								<span class="catalog-pill">LF</span>
 							</div>
-							
 							<p class="catalog-hero-card-desc">Audiodescripció, subtítols tancats, transcripció,
 								llengua de
 								signes, lectura fàcil i formats a punt per publicar.</p>
@@ -188,11 +192,12 @@
 				</div>
 			</div>
 		</section>
-		<!-- ***** END HERO TECNOLOGÍA ***** -->
+		<!-- ***** FI HERO EXEMPLES ***** -->
 
-		<!-- ***** SECCIÓN EJEMPLOS GRID ***** -->
+		<!-- ***** SECCIÓ GRAELLA D'EXEMPLES ***** -->
 		<section id="examples-grid" aria-labelledby="examples-grid-heading">
 			<div class="wrapper">
+				<h2 id="examples-grid-heading" class="sr-only">Exemples de vídeos accessibles</h2>
 				<div class="examples-grid">
 
 					<article class="example-card">
@@ -272,11 +277,11 @@
 				<div class="examples-social">
 					<a href="https://www.youtube.com/@lvisvideo" target="_blank" rel="noopener"
 						aria-label="Canal de YouTube">
-						<i class="fa-brands fa-youtube"></i>
-					</a>
+					<i class="fa-brands fa-youtube" aria-hidden="true"></i>
+				</a>
 
-					<a href="https://vimeo.com/lvisvideo" target="_blank" rel="noopener" aria-label="Canal de Vimeo">
-						<i class="fa-brands fa-vimeo-v"></i>
+				<a href="https://vimeo.com/lvisvideo" target="_blank" rel="noopener" aria-label="Canal de Vimeo">
+					<i class="fa-brands fa-vimeo-v" aria-hidden="true"></i>
 					</a>
 				</div>
 
@@ -286,9 +291,9 @@
 				</aside>
 			</div>
 		</section>
-		<!-- ***** FIN SECCIÓN EJEMPLOS GRID ***** -->
+		<!-- ***** FI SECCIÓ GRAELLA D'EXEMPLES ***** -->
 
-		<!-- ***** SECCIÓN DEMO ***** -->
+		<!-- ***** SECCIÓ DEMO ***** -->
 		<section id="demo-section" class="wrapper clearfix" aria-labelledby="demo-heading">
 			<section class="grid-1">
 				<div class="col">
@@ -315,7 +320,9 @@
 				</div>
 			</section>
 		</section>
-		<!-- ***** FIN SECCIÓN DEMO ***** -->
+		<!-- ***** FI SECCIÓ DEMO ***** -->
+		</main>
+		<!-- ***** FI MAIN ***** -->
 
 		<!-- ***** FOOTER ***** -->
 		<footer class="wrapper clearfix">
@@ -358,7 +365,7 @@
 				</div>
 			</section>
 		</footer>
-		<!-- ***** FIN FOOTER ***** -->
+		<!-- ***** FI FOOTER ***** -->
 
 	</div>
 	<!-- ***** END OVERLAY ***** -->

@@ -18,8 +18,8 @@
 	<meta property="og:type" content="website" />
 	<meta content="summary_large_image" name="twitter:card" />
 	<meta name="keywords"
-		content="Videos automaticos, generación de vídeo, vídeo como servicio, vídeo como código, automatización, elearning, visión artificial,
-	video as a service, no code, video, video as a code, blockly, videos actualizables, artificial vision, creación de vídeo, video creation" />
+		content="Automatic videos, video generation, video as a service, video as code, automation, elearning, artificial vision,
+	video on demand, no code, video, blockly, updatable videos, artificial vision, video creation, video production" />
 	<meta name="author" content="LViS" />
 	<meta name="robots" content="index,follow" lang="en" />
 	<meta property="og:locale" content="en_US" />
@@ -59,6 +59,9 @@
 </head>
 
 <body class="bg-init">
+
+	<!-- Skip link for screen reader users to jump to the main content -->
+	<a class="skip-link" href="#main-content">Skip to main content</a>
 
 	<!-- ***** OVERLAY ***** -->
 	<div class="animsition-overlay">
@@ -149,6 +152,8 @@
 		</header>
 		<!-- ***** END HEADER ***** -->
 
+		<!-- ***** MAIN ***** -->
+		<main id="main-content">
 		<!-- ***** EXAMPLES HERO ***** -->
 		<section id="catalog-hero">
 			<div class="wrapper">
@@ -186,11 +191,12 @@
 				</div>
 			</div>
 		</section>
-		<!-- ***** END TECHNOLOGY HERO ***** -->
+		<!-- ***** END EXAMPLES HERO ***** -->
 
 		<!-- ***** EXAMPLES GRID SECTION ***** -->
 		<section id="examples-grid" aria-labelledby="examples-grid-heading">
 			<div class="wrapper">
+				<h2 id="examples-grid-heading" class="sr-only">Examples of accessible videos</h2>
 				<div class="examples-grid">
 
 					<article class="example-card">
@@ -270,11 +276,11 @@
 				<div class="examples-social">
 					<a href="https://www.youtube.com/@lvisvideo" target="_blank" rel="noopener"
 						aria-label="YouTube channel">
-						<i class="fa-brands fa-youtube"></i>
-					</a>
+					<i class="fa-brands fa-youtube" aria-hidden="true"></i>
+				</a>
 
-					<a href="https://vimeo.com/lvisvideo" target="_blank" rel="noopener" aria-label="Vimeo channel">
-						<i class="fa-brands fa-vimeo-v"></i>
+				<a href="https://vimeo.com/lvisvideo" target="_blank" rel="noopener" aria-label="Vimeo channel">
+					<i class="fa-brands fa-vimeo-v" aria-hidden="true"></i>
 					</a>
 				</div>
 
@@ -314,6 +320,8 @@
 			</section>
 		</section>
 		<!-- ***** END DEMO SECTION ***** -->
+		</main>
+		<!-- ***** END MAIN ***** -->
 
 		<!-- ***** FOOTER ***** -->
 		<footer class="wrapper clearfix">

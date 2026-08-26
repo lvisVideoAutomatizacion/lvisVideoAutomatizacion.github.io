@@ -18,8 +18,8 @@
 	<meta property="og:type" content="website" />
 	<meta content="summary_large_image" name="twitter:card" />
 	<meta name="keywords"
-		content="Videos automaticos, generación de vídeo, vídeo como servicio, vídeo como código, automatización, elearning, visión artificial,
-	video as a service, no code, video, video as a code, blockly, videos actualizables, artificial vision, creación de vídeo, video creation" />
+		content="Vídeos automáticos, generación de vídeo, vídeo como servicio, vídeo como código, automatización, elearning, visión artificial,
+	video bajo demanda, sin código, vídeo, blockly, vídeos actualizables, visión artificial, creación de vídeo, creación de vídeos" />
 	<meta name="author" content="LViS" />
 	<meta name="robots" content="index,follow" lang="es" />
 	<meta property="og:locale" content="es_ES" />
@@ -59,6 +59,9 @@
 </head>
 
 <body class="bg-init">
+
+	<!-- Enlace para saltar al contenido principal cuando se utiliza un lector de pantalla -->
+	<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
 	<!-- ***** OVERLAY ***** -->
 	<div class="animsition-overlay">
@@ -149,6 +152,8 @@
 		</header>
 		<!-- ***** FIN HEADER ***** -->
 
+		<!-- ***** MAIN ***** -->
+		<main id="main-content">
 		<!-- ***** HERO EJEMPLOS ***** -->
 		<section id="catalog-hero">
 			<div class="wrapper">
@@ -194,6 +199,7 @@
 		<!-- ***** SECCIÓN EJEMPLOS GRID ***** -->
 		<section id="examples-grid" aria-labelledby="examples-grid-heading">
 			<div class="wrapper">
+				<h2 id="examples-grid-heading" class="sr-only">Ejemplos de vídeos accesibles</h2>
 				<div class="examples-grid">
 
 					<article class="example-card">
@@ -273,11 +279,11 @@
 				<div class="examples-social">
 					<a href="https://www.youtube.com/@lvisvideo" target="_blank" rel="noopener"
 						aria-label="Canal de YouTube">
-						<i class="fa-brands fa-youtube"></i>
-					</a>
+					<i class="fa-brands fa-youtube" aria-hidden="true"></i>
+				</a>
 
-					<a href="https://vimeo.com/lvisvideo" target="_blank" rel="noopener" aria-label="Canal de Vimeo">
-						<i class="fa-brands fa-vimeo-v"></i>
+				<a href="https://vimeo.com/lvisvideo" target="_blank" rel="noopener" aria-label="Canal de Vimeo">
+					<i class="fa-brands fa-vimeo-v" aria-hidden="true"></i>
 					</a>
 				</div>
 
@@ -317,6 +323,8 @@
 			</section>
 		</section>
 		<!-- ***** FIN SECCIÓN DEMO ***** -->
+		</main>
+		<!-- ***** FIN MAIN ***** -->
 
 		<!-- ***** FOOTER ***** -->
 		<footer class="wrapper clearfix">
