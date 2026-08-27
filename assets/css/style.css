@@ -381,8 +381,7 @@ p {
 #tech-measurable-quality,
 #examples-grid,
 footer,
-.main,
-.legal {
+.main {
 	padding-top: 42px !important;
 	padding-bottom: 60px;
 	background-size: 100% auto;
@@ -1658,9 +1657,16 @@ p {
 }
 
 /* =============================================================================
-   LEGAL
+   LEGAL (páginas de aviso legal, cookies, privacidad, términos, marcas y
+   accesibilidad). Bloque autocontenido: no depende de selectores de otras
+   secciones/páginas, salvo el footer común compartido en todo el sitio.
    ========================================================================== */
 .legal {
+	padding-top: 42px !important;
+	padding-bottom: 60px;
+	background-size: 100% auto;
+	background-position: center bottom;
+	background-repeat: no-repeat;
 	text-align: center;
 	background-color: rgba(var(--color-purple-light), 1);
 	background-image: url('../images/backgrounds/black-wave.svg');
