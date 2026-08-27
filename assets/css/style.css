@@ -2026,13 +2026,13 @@ ol strong {
 	background-image: url('../images/backgrounds/black-wave.svg');
 }
 
-#partners h1 {
+#partners .grid-1 h2 {
 	color: var(--color-blue-dark);
 	text-align: center;
 	margin-bottom: 50px;
 }
 
-#partners h2 {
+#partners .grid-1 h3 {
 	font-size: 25px;
 	color: var(--color-blue-dark);
 	text-align: center;
