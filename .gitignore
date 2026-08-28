@@ -7,6 +7,10 @@
 node_modules/
 dist/
 
+# Eleventy build output
+_site/
+.cache/
+
 # Compiled Java class files
 *.class
 
