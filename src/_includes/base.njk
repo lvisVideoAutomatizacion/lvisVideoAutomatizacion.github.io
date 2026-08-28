@@ -1,6 +1,7 @@
 ---
 title: Vally
 ---
+{% set t = translations[lang] %}
 <!doctype html>
 <html lang="{{ lang }}">
   <head>
@@ -8,8 +9,11 @@ title: Vally
     <title>{{ title }} - {{ site.name }}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">{{ t.meta.skipLink }}</a>
     {% include "header.njk" %}
-    {{ content | safe }}
+    <main id="main-content">
+      {{ content | safe }}
+    </main>
     {% include "footer.njk" %}
   </body>
 </html>

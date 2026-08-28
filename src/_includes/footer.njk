@@ -1,3 +1,13 @@
 <footer class="site-footer">
-  <p>&copy; <span id="copyright-year"></span> {{ site.name }}</p>
+  <p>{{ t.footer.copyright | replace("{{ year }}", currentYear) }}</p>
+  <nav aria-label="{{ t.footer.legalLinksAriaLabel }}">
+    <ul class="footer-legal-links">
+      <li><a href="/{{ lang }}/legal/">{{ t.footer.legalNotice }}</a></li>
+      <li><a href="/{{ lang }}/cookies-policy/">{{ t.footer.cookiesPolicy }}</a></li>
+      <li><a href="/{{ lang }}/privacy-policy/">{{ t.footer.privacyPolicy }}</a></li>
+      <li><a href="/{{ lang }}/service-terms/">{{ t.footer.serviceTerms }}</a></li>
+      <li><a href="/{{ lang }}/trademark-services-policy/">{{ t.footer.trademarkPolicy }}</a></li>
+      <li><a href="/{{ lang }}/accessibility/">{{ t.footer.accessibility }}</a></li>
+    </ul>
+  </nav>
 </footer>

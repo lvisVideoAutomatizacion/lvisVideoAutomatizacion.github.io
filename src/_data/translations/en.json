@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "skipLink": "Skip to main content"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "solutions": "Solutions",
+    "technology": "Technology",
+    "examples": "Examples",
+    "prices": "Prices",
+    "resources": "Resources",
+    "partners": "Partners",
+    "ariaLabel": "Main navigation",
+    "ctaLabel": "Let's talk",
+    "ctaAriaLabel": "Schedule a 30-minute call on Calendly. Opens in a new tab.",
+    "logoAriaLabel": "Go to the LViS Vally home page"
+  },
+  "languageSwitcher": {
+    "ariaLabel": "Language switcher",
+    "current": "Current language"
+  },
+  "footer": {
+    "poweredByAriaLabel": "Link to the lvis.es page (opens in a new tab)",
+    "poweredBy": "Powered by",
+    "copyright": "© {{ year }} LViS Video Automatización S.L. LViS is a registered trademark. All rights reserved.",
+    "legalLinksAriaLabel": "Legal links",
+    "legalNotice": "Legal notice",
+    "cookiesPolicy": "Cookie policy",
+    "privacyPolicy": "Privacy policy",
+    "serviceTerms": "Terms of service",
+    "trademarkPolicy": "Trademark and product policy",
+    "accessibility": "Accessibility",
+    "opensInNewTab": "opens in a new tab"
+  }
+}

@@ -1,5 +1,12 @@
 <header class="site-header">
-  <nav class="lang-switcher" aria-label="Language switcher">
+  <nav class="nav" aria-label="{{ t.nav.ariaLabel }}">
+    <ul class="menu">
+      <li><a href="/{{ lang }}/" {% if page.fileSlug == lang %}aria-current="page"{% endif %}>{{ t.nav.home }}</a></li>
+      <li><a href="/{{ lang }}/services/" {% if page.fileSlug == 'services' %}aria-current="page"{% endif %}>{{ t.nav.services }}</a></li>
+    </ul>
+  </nav>
+
+  <nav class="lang-switcher" aria-label="{{ t.languageSwitcher.ariaLabel }}">
     <ul>
       {%- for language in i18n.languages %}
       <li>
