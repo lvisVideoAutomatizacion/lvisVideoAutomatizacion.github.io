@@ -1,0 +1,13 @@
+<header class="site-header">
+  <nav class="lang-switcher" aria-label="Language switcher">
+    <ul>
+      {%- for language in i18n.languages %}
+      <li>
+        <a href="{{ language.path }}" hreflang="{{ language.code }}" {% if language.code == lang %}aria-current="true"{% endif %}>
+          {{ language.label }}
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </nav>
+</header>

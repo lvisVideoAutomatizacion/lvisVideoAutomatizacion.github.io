@@ -2,12 +2,14 @@
 title: Vally
 ---
 <!doctype html>
-<html lang="en">
+<html lang="{{ lang }}">
   <head>
     <meta charset="utf-8">
     <title>{{ title }} - {{ site.name }}</title>
   </head>
   <body>
+    {% include "header.njk" %}
     {{ content | safe }}
+    {% include "footer.njk" %}
   </body>
 </html>

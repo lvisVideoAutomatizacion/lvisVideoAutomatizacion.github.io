@@ -1,0 +1,8 @@
+{
+  "default": "es",
+  "languages": [
+    { "code": "es", "label": "Español", "path": "/es/" },
+    { "code": "en", "label": "English", "path": "/en/" },
+    { "code": "ca", "label": "Català", "path": "/ca/" }
+  ]
+}
