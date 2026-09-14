@@ -1,0 +1,14 @@
+{% macro demoSection(heading, subheading, body, ctaLabel, ctaHref, ctaAriaLabel) %}
+<section id="demo-section" class="wrapper clearfix" aria-labelledby="demo-heading">
+  <section class="grid-1">
+    <div class="col">
+      <h2 id="demo-heading" class="post">{{ heading }}</h2>
+      {% if subheading %}<h3>{{ subheading }}</h3>{% endif %}
+      {% if body %}<p>{{ body }}</p>{% endif %}
+      {% if ctaLabel and ctaHref %}
+      <a class="button-cta" target="_blank" rel="noopener noreferrer" href="{{ ctaHref }}"{% if ctaAriaLabel %} aria-label="{{ ctaAriaLabel }}"{% endif %}>{{ ctaLabel }}</a>
+      {% endif %}
+    </div>
+  </section>
+</section>
+{% endmacro %}

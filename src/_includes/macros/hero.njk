@@ -1,0 +1,30 @@
+{% macro catalogHero(t, label, title, sub, pills, cardDesc, secondaryHref, secondaryLabel) %}
+<section id="catalog-hero">
+  <div class="wrapper">
+    <div class="catalog-hero-inner">
+
+      <div class="catalog-hero-left">
+        <span class="catalog-hero-label">{{ label }}</span>
+        <h1 class="catalog-hero-title">{{ title }}</h1>
+        <p class="catalog-hero-sub">{{ sub }}</p>
+        <div class="catalog-hero-actions">
+          <a href="https://calendly.com/lvis-meetings/30min" target="_blank" rel="noopener" class="catalog-hero-btn catalog-hero-btn--primary" aria-label="{{ t.hero.demoCtaAriaLabel }}">{{ t.hero.demoCtaLabel }}</a>
+          <a href="{{ secondaryHref }}" class="catalog-hero-btn catalog-hero-btn--secondary">{{ secondaryLabel }}</a>
+        </div>
+      </div>
+
+      <div class="catalog-hero-right">
+        <div class="catalog-hero-card">
+          <div class="catalog-hero-pills" aria-hidden="true">
+            {%- for pill in pills %}
+            <span class="catalog-pill">{{ pill }}</span>
+            {%- endfor %}
+          </div>
+          <p class="catalog-hero-card-desc">{{ cardDesc }}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endmacro %}

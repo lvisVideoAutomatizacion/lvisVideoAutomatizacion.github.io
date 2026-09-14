@@ -24,6 +24,10 @@
     "ariaLabel": "Selector d'idioma",
     "current": "Idioma actual"
   },
+  "hero": {
+    "demoCtaLabel": "Demana una demo",
+    "demoCtaAriaLabel": "Demana una demo. S'obre el calendari de reserves en una nova pestanya."
+  },
   "footer": {
     "poweredByAriaLabel": "Enllaç a la pàgina de lvis.es (s'obre en una pestanya nova)",
     "poweredBy": "Powered by",

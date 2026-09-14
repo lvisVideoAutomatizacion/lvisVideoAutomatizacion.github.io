@@ -24,6 +24,10 @@
     "ariaLabel": "Language switcher",
     "current": "Current language"
   },
+  "hero": {
+    "demoCtaLabel": "Request a demo",
+    "demoCtaAriaLabel": "Request a demo. Opens the booking calendar in a new tab."
+  },
   "footer": {
     "poweredByAriaLabel": "Link to the lvis.es page (opens in a new tab)",
     "poweredBy": "Powered by",

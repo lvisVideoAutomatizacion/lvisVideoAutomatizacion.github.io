@@ -1,0 +1,45 @@
+{% macro catalogCard(title, desc, list) %}
+<div class="catalog-card">
+  <h3>{{ title }}</h3>
+  {% if desc %}<p>{{ desc }}</p>{% endif %}
+  {% if list and list.length %}
+  <ul>
+    {%- for item in list %}
+    <li>{{ item }}</li>
+    {%- endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro catalogGrid(heading, cards) %}
+<section id="catalog-grid">
+  <h2 class="sr-only">{{ heading }}</h2>
+  <div class="catalog-grid">
+    {%- for card in cards %}
+    {{ catalogCard(card.title, card.desc, card.list) }}
+    {%- endfor %}
+  </div>
+</section>
+{% endmacro %}
+
+{% macro contentCard(title, desc) %}
+<div class="content-card">
+  <h3 class="content-card-title">{{ title }}</h3>
+  <p class="content-card-desc">{{ desc }}</p>
+</div>
+{% endmacro %}
+
+{% macro contentCards(label, title, cards) %}
+<div class="content-cards-inner">
+  <div class="content-cards-header">
+    <span class="content-cards-label">{{ label }}</span>
+    <h2 class="content-cards-title">{{ title }}</h2>
+  </div>
+  <div class="content-cards-grid">
+    {%- for card in cards %}
+    {{ contentCard(card.title, card.desc) }}
+    {%- endfor %}
+  </div>
+</div>
+{% endmacro %}
