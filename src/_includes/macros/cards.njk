@@ -1,6 +1,9 @@
-{% macro catalogCard(title, desc, list, bold) %}
+{% macro catalogCard(title, desc, list, bold, html) %}
 <div class="catalog-card">
   <h3>{{ title }}</h3>
+  {% if html %}
+  {{ html | safe }}
+  {% else %}
   {% if desc %}<p>{{ desc }}</p>{% endif %}
   {% if list and list.length %}
   <ul>
@@ -10,6 +13,7 @@
   </ul>
   {% endif %}
   {% if bold %}<p class="catalog-bold">{{ bold }}</p>{% endif %}
+  {% endif %}
 </div>
 {% endmacro %}
 
@@ -18,7 +22,7 @@
   <h2 class="sr-only">{{ heading }}</h2>
   <div class="catalog-grid">
     {%- for card in cards %}
-    {{ catalogCard(card.title, card.desc, card.list, card.bold) }}
+    {{ catalogCard(card.title, card.desc, card.list, card.bold, card.html) }}
     {%- endfor %}
   </div>
 </section>
