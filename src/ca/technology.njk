@@ -2,5 +2,91 @@
 layout: base.njk
 title: Tecnologia
 ---
-<h1>Tecnologia</h1>
-<p>Pàgina de tecnologia en català (contingut pendent de migrar).</p>
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cards.njk" as cards %}
+{% import "macros/split.njk" as split %}
+{% import "macros/cta.njk" as cta %}
+
+{{ hero.catalogHero(
+  t,
+  "TECNOLOGIA",
+  "Tecnologia per escalar. Humans per garantir la qualitat.",
+  "Combinem Intel·ligència Artificial, automatització i supervisió humana per crear continguts audiovisuals accessibles de forma ràpida, consistent i escalable.",
+  ["ASR", "TTS", "NLP", "CV", "LLM", "RAG"],
+  "Reconeixement Automàtic de la Parla, Síntesi de Veu, Processament del Llenguatge Natural, Visió Artificial, Models de Llenguatge de Gran Mida i Generació Augmentada per Recuperació",
+  "/ca/services/",
+  "Veure serveis"
+) }}
+
+<section id="tech-ai" class="wrapper">
+  {% call split.contentSplit("tech-ai", "AUTOMATITZACIÓ INTEL·LIGENT", "La plataforma analitza cada contingut audiovisual", "La IA accelera tasques repetitives i permet dedicar l'esforç humà a la revisió, el criteri editorial i l'experiència d'usuari.") %}
+  <div class="tech-ai-card">
+    <ul class="tech-ai-list">
+      <li>Detecció d'escenes</li>
+      <li>Silencis per a AD</li>
+      <li>Personatges i locutors</li>
+      <li>Música i sons</li>
+      <li>Esborranys d'AD</li>
+      <li>Subtítols sincronitzats</li>
+      <li>Transcripcions</li>
+      <li>Capítols</li>
+      <li>Lectura fàcil</li>
+      <li>Multiidioma</li>
+    </ul>
+  </div>
+  {% endcall %}
+</section>
+
+<section id="tech-phases" class="wrapper">
+  {% call split.contentSplit("content-split", "REVISIÓ EN DUES FASES", "La tecnologia accelera. Les persones garanteixen el resultat.", null) %}
+  <div class="content-split-cards">
+    <div class="content-split-card">
+      <h3 class="content-split-card-title">Fase 1: revisió tècnica i lingüística</h3>
+      <ul class="content-split-card-list">
+        <li>Correcció del llenguatge</li>
+        <li>Sincronització temporal</li>
+        <li>CPS i CPL</li>
+        <li>Personatges, sons i músiques</li>
+        <li>Consistència terminològica</li>
+      </ul>
+    </div>
+    <div class="content-split-card">
+      <h3 class="content-split-card-title">Fase 2: experiència d'usuari</h3>
+      <ul class="content-split-card-list">
+        <li>Comprensió global</li>
+        <li>Qualitat narrativa de l'audiodescripció</li>
+        <li>Coherència entre artefactes</li>
+        <li>Fluïdesa de lectura</li>
+        <li>Validació final</li>
+      </ul>
+    </div>
+  </div>
+  {% endcall %}
+</section>
+
+<section id="tech-scale" class="wrapper">
+  {{ cards.contentCards("ESCALABILITAT", "Des d'un vídeo fins a milers d'hores", [
+    { title: "Multiformat", desc: "Audiodescripció, CC, transcripció, capítols, lectura fàcil, llengua de signes, versions multilingües i descàrregues." },
+    { title: "Multiplataforma", desc: "Llocs web, LMS, campus virtuals, intranets, repositoris, vídeo a la carta, apps i sistemes documentals." },
+    { title: "Actualitzacions contínues", desc: "Reutilitzem informació i treball previ per actualitzar dades, veus, estils, artefactes i canviar plataformes de publicació." }
+  ]) }}
+</section>
+
+<section id="tech-measurable-quality" class="wrapper">
+  {{ cards.contentCards("QUALITAT MESURABLE", "Mètriques objectives i criteri expert", [
+    { title: "CPS", desc: "Velocitat de lectura." },
+    { title: "CPL", desc: "Longitud de línia." },
+    { title: "Sincronització", desc: "Temps precisos." },
+    { title: "Comprensió", desc: "Claredat global." },
+    { title: "Estàndards", desc: "WCAG, UNE i bones pràctiques." }
+  ]) }}
+</section>
+
+{{ cta.demoSection(
+  "Els teus continguts audiovisuals, a l'abast de tothom. Sense barreres.",
+  "Quan comencem?",
+  "Explica'ns quins vídeos necessites adaptar i t'ajudem a estimar l'esforç, formats i terminis.",
+  "Demana una consulta",
+  "https://calendly.com/lvis-meetings/30min",
+  "Demana una consulta. S'obre el calendari de reserves en una pestanya nova."
+) }}

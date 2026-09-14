@@ -2,5 +2,91 @@
 layout: base.njk
 title: Technology
 ---
-<h1>Technology</h1>
-<p>Technology page in English (content pending migration).</p>
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cards.njk" as cards %}
+{% import "macros/split.njk" as split %}
+{% import "macros/cta.njk" as cta %}
+
+{{ hero.catalogHero(
+  t,
+  "TECHNOLOGY",
+  "Technology to scale. Humans to guarantee quality.",
+  "We combine Artificial Intelligence, automation and human oversight to create accessible audiovisual content quickly, consistently and at scale.",
+  ["ASR", "TTS", "NLP", "CV", "LLM", "RAG"],
+  "Automatic Speech Recognition, Text-to-Speech Synthesis, Natural Language Processing, Computer Vision, Large Language Models and Retrieval-Augmented Generation",
+  "/en/services/",
+  "View services"
+) }}
+
+<section id="tech-ai" class="wrapper">
+  {% call split.contentSplit("tech-ai", "INTELLIGENT AUTOMATION", "The platform analyzes every piece of audiovisual content", "AI speeds up repetitive tasks and frees up human effort for review, editorial judgment and user experience.") %}
+  <div class="tech-ai-card">
+    <ul class="tech-ai-list">
+      <li>Scene detection</li>
+      <li>Silences for AD</li>
+      <li>Characters and speakers</li>
+      <li>Music and sounds</li>
+      <li>AD drafts</li>
+      <li>Synchronized captions</li>
+      <li>Transcriptions</li>
+      <li>Chapters</li>
+      <li>Easy read</li>
+      <li>Multilingual</li>
+    </ul>
+  </div>
+  {% endcall %}
+</section>
+
+<section id="tech-phases" class="wrapper">
+  {% call split.contentSplit("content-split", "TWO-PHASE REVIEW", "Technology accelerates. People guarantee the result.", null) %}
+  <div class="content-split-cards">
+    <div class="content-split-card">
+      <h3 class="content-split-card-title">Phase 1: technical and linguistic review</h3>
+      <ul class="content-split-card-list">
+        <li>Language correction</li>
+        <li>Time synchronization</li>
+        <li>CPS and CPL</li>
+        <li>Characters, sounds and music</li>
+        <li>Terminology consistency</li>
+      </ul>
+    </div>
+    <div class="content-split-card">
+      <h3 class="content-split-card-title">Phase 2: user experience</h3>
+      <ul class="content-split-card-list">
+        <li>Overall comprehension</li>
+        <li>Narrative quality of the audio description</li>
+        <li>Consistency across artifacts</li>
+        <li>Reading flow</li>
+        <li>Final validation</li>
+      </ul>
+    </div>
+  </div>
+  {% endcall %}
+</section>
+
+<section id="tech-scale" class="wrapper">
+  {{ cards.contentCards("SCALABILITY", "From one video to thousands of hours", [
+    { title: "Multi-format", desc: "Audio description, CC, transcription, chapters, easy read, sign language, multilingual versions and downloads." },
+    { title: "Multi-platform", desc: "Websites, LMS, virtual campuses, intranets, repositories, video on demand, apps and document management systems." },
+    { title: "Continuous updates", desc: "We reuse information and previous work to update data, voices, styles, artifacts and switch publishing platforms." }
+  ]) }}
+</section>
+
+<section id="tech-measurable-quality" class="wrapper">
+  {{ cards.contentCards("MEASURABLE QUALITY", "Objective metrics and expert judgment", [
+    { title: "CPS", desc: "Reading speed." },
+    { title: "CPL", desc: "Line length." },
+    { title: "Synchronization", desc: "Precise timing." },
+    { title: "Comprehension", desc: "Overall clarity." },
+    { title: "Standards", desc: "WCAG, UNE and best practices." }
+  ]) }}
+</section>
+
+{{ cta.demoSection(
+  "Your audiovisual content, for everyone. No barriers.",
+  "When shall we start?",
+  "Tell us which videos you need to adapt and we'll help you estimate effort, formats and timelines.",
+  "Request a consultation",
+  "https://calendly.com/lvis-meetings/30min",
+  "Request a consultation. Opens the booking calendar in a new tab."
+) }}
