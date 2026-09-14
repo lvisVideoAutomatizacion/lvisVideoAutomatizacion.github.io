@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "skipLink": "Passer au contenu principal",
+    "ogDescription": "Avec LViS Vally, rendez toutes vos vidéos accessibles",
+    "twitterDescription": "Avec LViS, créez et maintenez vos vidéos de façon automatique et autonome. Gardez vos vidéos toujours à jour, facilement"
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "solutions": "Solutions",
+    "technology": "Technologie",
+    "examples": "Exemples",
+    "prices": "Tarifs",
+    "resources": "Ressources",
+    "partners": "Partenaires",
+    "ariaLabel": "Navigation principale",
+    "ctaLabel": "Parlons-en",
+    "ctaAriaLabel": "Planifier un appel de 30 minutes sur Calendly. Ouvre un nouvel onglet.",
+    "logoAriaLabel": "Aller à la page d'accueil de LViS Vally",
+    "menuOpen": "Ouvrir le menu de navigation",
+    "menuClose": "Fermer le menu de navigation"
+  },
+  "languageSwitcher": {
+    "ariaLabel": "Sélectionner la langue",
+    "current": "Langue actuelle"
+  },
+  "hero": {
+    "demoCtaLabel": "Demandez une démo",
+    "demoCtaAriaLabel": "Demandez une démo. Ouvre le calendrier de réservation dans un nouvel onglet."
+  },
+  "footer": {
+    "poweredByAriaLabel": "Lien vers la page lvis.es (ouvre un nouvel onglet)",
+    "poweredBy": "Propulsé par",
+    "copyright": "© {{ year }} LViS Video Automatización S.L. LViS est une marque déposée. Tous droits réservés.",
+    "legalLinksAriaLabel": "Liens légaux",
+    "legalNotice": "Mentions légales",
+    "cookiesPolicy": "Politique de cookies",
+    "privacyPolicy": "Politique de confidentialité",
+    "serviceTerms": "Conditions d'utilisation",
+    "trademarkPolicy": "Politique de marque et de produit",
+    "accessibility": "Accessibilité",
+    "opensInNewTab": "ouvre un nouvel onglet"
+  }
+}

@@ -1,0 +1,71 @@
+---
+layout: base.njk
+title: Partenaires
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cta.njk" as cta %}
+
+{% macro partnerBox(p) %}
+<div class="box col">
+  <div class="box__head">
+    <a href="{{ p.url }}" target="_blank">
+      <div class="logo-wrapper">
+        <img src="{{ p.logo }}" alt="{{ p.alt }}">
+      </div>
+      <h3 class="box__title">{{ p.name }}</h3>
+      <p>{{ p.desc }}</p>
+    </a>
+  </div>
+</div>
+{% endmacro %}
+
+{% set partners = [
+  { logo: "/assets/images/customer_logos/conchita.png", alt: "Logo Conchita Consulting", name: "Conchita Consulting", url: "https://www.conchitaconsulting.com/bienvenides-spanish", desc: "Conchita Consulting propose des services de conseil et de formation sur l'accessibilité, la cécité, la basse vision et le handicap." },
+  { logo: "/assets/images/customer_logos/AISTE.png", alt: "Logo AISTE", name: "AISTE", url: "https://www.aiste.es", desc: "AISTE porte la révolution technologique comme moteur de changement social. Elle recherche une transformation inclusive et durable, en plaçant les personnes au centre de son action." },
+  { logo: "/assets/images/customer_logos/accedeme.png", alt: "Logo Accedeme", name: "Accedeme", url: "https://accedeme.com", desc: "Accedeme croit en l'innovation comme moteur d'un monde plus durable et inclusif. Son objectif est clair : mettre la technologie au service de l'égalité des chances pour tous." },
+  { logo: "/assets/images/customer_logos/singular.png", alt: "Logo Sngular", name: "Sngular", url: "https://www.sngular.com/", desc: "Sngular combine talent et technologie pour démontrer que l'approche non conventionnelle fonctionne. Elle conçoit des solutions technologiques pensées pour durer, tant pour le client que pour la planète." },
+  { logo: "/assets/images/customer_logos/samoo.png", alt: "Logo Samoo", name: "Samoo", url: "https://www.samoo.es/", desc: "Samoo est une référence nationale dans le domaine de l'e-learning, grâce à sa vaste expérience, sa vision innovante et sa capacité de développement multiplateforme." },
+  { logo: "/assets/images/customer_logos/artaiz.jpg", alt: "Logo Artaiz Asesoría", name: "Artaiz", url: "https://artaiz-asesoria.es", desc: "L'objectif d'Artaiz est de permettre aux petites et moyennes entreprises de tirer le meilleur parti des avantages de la digitalisation dans un environnement de plus en plus concurrentiel." },
+  { logo: "/assets/images/customer_logos/echararodar.png", alt: "Logo Echararodar", name: "Echar a Rodar", url: "https://www.echararodar.es", desc: "Echar a Rodar est un cabinet de conseil spécialisé dans la durabilité, la RSE et l'impact pour les secteurs audiovisuel, culturel et créatif. Il propose des plans de durabilité, des calculs d'empreinte carbone, du tournage écoresponsable, ainsi que des formations et du conseil pour les productions, festivals, entreprises et événements." },
+  { logo: "/assets/images/customer_logos/circulav.png", alt: "Logo Circulav", name: "Circulav", url: "https://www.circulav.es", desc: "Circulav est une agence andalouse spécialisée dans la durabilité pour le secteur audiovisuel et culturel. Elle aide à réduire, mesurer et documenter l'impact environnemental des tournages, festivals, événements, animations, jeux vidéo, arts vivants, médias et institutions culturelles." }
+] %}
+
+{{ hero.catalogHero(
+  t,
+  "PARTENAIRES",
+  "Des partenaires pour amplifier l'impact de l'accessibilité audiovisuelle",
+  "Nous collaborons avec des organisations, des intégrateurs, des cabinets de conseil, des producteurs et des plateformes qui souhaitent intégrer l'accessibilité audiovisuelle à leurs services.",
+  ["AD", "CC", "TR", "SL", "ER"],
+  "Audiodescription, sous-titres, transcription, langue des signes, lecture facile et formats prêts à publier.",
+  "/fr/services/",
+  "Voir les services"
+) }}
+
+<section id="partners" class="partners-tables wrapper clearfix">
+  <div class="grid-1">
+    <h2>Un modèle flexible pour les partenaires technologiques et commerciaux</h2>
+    <h3>Nous apportons technologie, méthodologie et capacité de production afin que nos partenaires puissent proposer l'accessibilité audiovisuelle à leurs clients sans avoir à construire tout le processus à partir de zéro.</h3>
+  </div>
+
+  <div class="grid-3 partners">
+    {%- for partner in partners %}
+    {{ partnerBox(partner) }}
+    {%- endfor %}
+
+    <div class="box col box--contact">
+      <div class="box__head">
+        <h3 class="box__title">Vous souhaitez rejoindre nos partenaires ?</h3>
+      </div>
+      <a class="button-cta" href="https://eu.bigin.online/org20092830437/forms/contacta-con-nosotros">Contactez-nous</a>
+    </div>
+  </div>
+</section>
+
+{{ cta.demoSection(
+  "Vos contenus audiovisuels, à la portée de tous. Sans barrières.",
+  "Quand commençons-nous ?",
+  "Expliquez-nous quelles vidéos vous devez adapter et nous vous aiderons à évaluer le projet, les formats et les délais.",
+  "Demandez un rendez-vous",
+  "https://calendly.com/lvis-meetings/30min",
+  "Demander une consultation. Ouvre le calendrier de réservation dans un nouvel onglet."
+) }}

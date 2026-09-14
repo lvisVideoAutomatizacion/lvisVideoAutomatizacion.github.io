@@ -1,0 +1,4 @@
+{
+  "lang": "fr",
+  "permalink": "/{% if page.fileSlug == lang %}{{ lang }}/index.html{% else %}{{ lang }}/{{ page.fileSlug }}/index.html{% endif %}"
+}
