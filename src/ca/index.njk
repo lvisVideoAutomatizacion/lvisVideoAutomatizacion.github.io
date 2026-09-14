@@ -2,5 +2,143 @@
 layout: base.njk
 title: Inici
 ---
-<h1>Benvingut a Vally</h1>
-<p>Pàgina d'inici en català (contingut pendent de migrar).</p>
+{% import "macros/cta.njk" as cta %}
+
+{% macro heroStatCard(number, label) %}
+<div class="hero-stat-card">
+  <span class="hero-stat-number">{{ number }}</span>
+  <span class="hero-stat-label">{{ label }}</span>
+</div>
+{% endmacro %}
+
+{% macro whyCard(number, title, desc) %}
+<article class="why-card">
+  <span class="why-card-number">{{ number }}</span>
+  <h3>{{ title }}</h3>
+  <p>{{ desc }}</p>
+</article>
+{% endmacro %}
+
+{% macro mainServicesCard(title, desc, href, label) %}
+<article class="main-services-card">
+  <h3>{{ title }}</h3>
+  <p>{{ desc }}</p>
+  <a href="{{ href }}" class="main-services-link">{{ label }} →</a>
+</article>
+{% endmacro %}
+
+<div id="hero" class="wrapper clearfix" aria-labelledby="hero-section">
+  <section class="grid-2">
+    <div class="col post">
+      <section class="cd-intro">
+        <h1 class="cd-headline loading-bar" id="hero-section">Fes que els teus vídeos arribin a tothom</h1>
+        <h2 class="color-primary">Accessibilitat audiovisual automatitzada i supervisada</h2>
+        <p>Transformem vídeos i àudios en continguts accessibles, inclusius i fàcils de consumir amb audiodescripció, subtítols tancats, transcripcions, capítols, lectura fàcil i formats adaptats.</p>
+      </section>
+    </div>
+
+    <div class="col">
+      <div class="iframe-content">
+        <iframe src="https://player.vimeo.com/video/1210734145?autopause=0&amp;muted=1&amp;badge=0&amp;player_id=0&amp;app_id=58479&amp;texttrack=es&amp;hl=es&amp;dnt=1" allow="fullscreen; picture-in-picture; clipboard-write" title="Vídeo accessible: creació de continguts audiovisuals accessibles amb audiodescripció, subtítols i transcripció" aria-describedby="video-descripcion" allowfullscreen></iframe>
+        <div id="video-descripcion" class="sr-only">Exemple de contingut audiovisual accessible amb audiodescripció, subtítols tancats i transcripció per facilitar l'accés a totes les persones.</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="stats-benefits" class="wrapper clearfix">
+  <div class="grid-1">
+    <div class="col">
+
+      <div class="hero-actions">
+        <a href="https://calendly.com/" class="button-cta button-inline" target="_blank" rel="noopener noreferrer" aria-label="Demana una demo gratuïta. S'obre el calendari de reserves en una pestanya nova.">Demana una demo gratuïta</a>
+        <a href="/ca/solutions/" class="button-cta button-inline">Veure solucions</a>
+      </div>
+
+      <div class="hero-stats" aria-label="Dades d'activitat">
+        {{ heroStatCard("50.000+", "vídeos accessibles") }}
+        {{ heroStatCard("2.000+", "hores produïdes") }}
+        {{ heroStatCard("9", "idiomes de treball") }}
+      </div>
+
+      <div class="hero-benefits">
+        <div class="hero-benefits-icons" aria-hidden="true">
+          <span>AD</span>
+          <span>CC</span>
+          <span>TR</span>
+          <span>LSE</span>
+          <span>LF</span>
+        </div>
+        <h2>Més que complir una norma</h2>
+        <p>L'accessibilitat millora l'abast, l'experiència de l'usuari, el SEO, la reutilització, la reputació i la participació.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrapper">
+    <span class="why-label">PER QUÈ FER ACCESSIBLE</span>
+    <h2>Una inversió en abast, inclusió i valor del contingut</h2>
+
+    <div class="why-cards">
+      {{ whyCard("01", "Arribes a més persones", "Facilites l'accés a persones amb discapacitat visual, auditiva o cognitiva i a aquells que consumeixen vídeo en contextos diversos.") }}
+      {{ whyCard("02", "Millor experiència", "Subtítols, capítols i transcripcions fan que els teus vídeos siguin més fàcils de cercar, navegar, estudiar i compartir.") }}
+      {{ whyCard("03", "Més reputació", "Transmiten responsabilitat, empatia, innovació i compromís real amb la inclusió.") }}
+      {{ whyCard("04", "Producció sostenible", "Automatitzem part del procés i el combinem amb revisió humana per escalar sense perdre qualitat.") }}
+      {{ whyCard("05", "Compliment", "Facilita el compliment dels estàndards internacionals d'accessibilitat i la legislació vigent aplicable a cada organització i país.") }}
+    </div>
+  </div>
+</section>
+
+<section id="tech-people" class="wrapper clearfix">
+  <div class="grid-2">
+    <div class="col post">
+      <span class="tech-people-label">TECNOLOGIA + PERSONES</span>
+      <h2 id="tech-people-heading">Automatització per escalar. Revisió humana per garantir qualitat.</h2>
+      <p>Generem versions accessibles en múltiples idiomes i formats, <br>amb un procés supervisat per persones per assegurar claredat, sincronització i comprensió.</p>
+      <a href="/ca/technology/" class="tech-people-link">Coneix la nostra tecnologia →</a>
+    </div>
+    <div class="col">
+      <div class="tech-people-card">
+        <h3>Artefactes accessibles</h3>
+        <div class="tech-people-lists">
+          <ul>
+            <li>Audiodescripció</li>
+            <li>Subtítols tancats</li>
+            <li>Transcripció</li>
+            <li>Capítols</li>
+          </ul>
+          <ul>
+            <li>Lectura fàcil</li>
+            <li>Llengua de signes</li>
+            <li>Versions multilingües</li>
+            <li>Descàrregues individuals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="main-services">
+  <div class="wrapper">
+    <span class="main-services-label">SERVEIS PRINCIPALS</span>
+    <h2 id="main-services-heading">Des d'un vídeo puntual fins a una estratègia completa</h2>
+    <div class="main-services-cards">
+      {{ mainServicesCard("Producció accessible", "Adaptem vídeos existents amb audiodescripció, CC, transcripció, navegació accessible i altres mecanismes.", "/ca/services/", "Veure serveis") }}
+      {{ mainServicesCard("Solucions per sector", "Administració, universitats, empreses, cultura, sanitat, programari, formació i grans repositoris.", "/ca/solutions/", "Veure solucions") }}
+      {{ mainServicesCard("Formació i consultoria", "Ajudem els equips tècnics, comunicació, contractació, formació i inclusió a prendre millor decisions.", "/ca/prices/", "Veure preus") }}
+    </div>
+  </div>
+</section>
+
+{{ cta.demoSection(
+  "Els teus continguts audiovisuals, a l'abast de tothom. Sense barreres.",
+  "Quan comencem?",
+  "Explica'ns quins vídeos necessites adaptar i t'ajudem a estimar l'esforç, formats i terminis.",
+  "Demana una consulta",
+  "https://calendly.com/lvis-meetings/30min",
+  "Sol·licitar una consulta. S'obre el calendari de reserves en una pestanya nova."
+) }}
