@@ -1,0 +1,8 @@
+[
+  { "slug": "legal", "translationKey": "legalNotice" },
+  { "slug": "cookies-policy", "translationKey": "cookiesPolicy" },
+  { "slug": "privacy-policy", "translationKey": "privacyPolicy" },
+  { "slug": "service-terms", "translationKey": "serviceTerms" },
+  { "slug": "trademark-services-policy", "translationKey": "trademarkPolicy" },
+  { "slug": "accessibility", "translationKey": "accessibility" }
+]

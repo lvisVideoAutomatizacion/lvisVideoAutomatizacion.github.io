@@ -1,4 +1,8 @@
 {
   "name": "Vally",
-  "url": "https://vallyweb.com"
+  "url": "https://vallyweb.com",
+  "author": "LViS",
+  "twitterHandle": "@lvis",
+  "ogImage": "https://www.accesible.video/images/LVISVally_Logotipo.png",
+  "keywords": "Videos automaticos, generación de vídeo, vídeo como servicio, vídeo como código, automatización, elearning, visión artificial, video as a service, no code, video, video as a code, blockly, videos actualizables, artificial vision, creación de vídeo, video creation"
 }

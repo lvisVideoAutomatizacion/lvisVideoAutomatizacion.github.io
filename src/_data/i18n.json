@@ -4,5 +4,10 @@
     { "code": "es", "label": "Español", "path": "/es/" },
     { "code": "en", "label": "English", "path": "/en/" },
     { "code": "ca", "label": "Català", "path": "/ca/" }
-  ]
+  ],
+  "ogLocales": {
+    "es": "es_ES",
+    "en": "en_US",
+    "ca": "ca_ES"
+  }
 }

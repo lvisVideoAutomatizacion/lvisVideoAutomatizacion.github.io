@@ -1,6 +1,8 @@
 {
   "meta": {
-    "skipLink": "Ves al contingut principal"
+    "skipLink": "Ves al contingut principal",
+    "ogDescription": "Amb LViS Vally fes accessibles tots els teus vídeos",
+    "twitterDescription": "Amb LViS Vally fes accessibles tots els teus vídeos"
   },
   "nav": {
     "home": "Inici",
@@ -14,7 +16,9 @@
     "ariaLabel": "Navegació principal",
     "ctaLabel": "Parlem-ne",
     "ctaAriaLabel": "Programa una reunió de 30 minuts a Calendly. S'obrirà en una pestanya nova.",
-    "logoAriaLabel": "Vés a la pàgina principal de LViS Vally"
+    "logoAriaLabel": "Vés a la pàgina principal de LViS Vally",
+    "menuOpen": "Obrir el menú de navegació",
+    "menuClose": "Tancar el menú de navegació"
   },
   "languageSwitcher": {
     "ariaLabel": "Selector d'idioma",

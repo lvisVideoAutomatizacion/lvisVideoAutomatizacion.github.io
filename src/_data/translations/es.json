@@ -1,6 +1,8 @@
 {
   "meta": {
-    "skipLink": "Saltar al contenido principal"
+    "skipLink": "Saltar al contenido principal",
+    "ogDescription": "Con LViS Vally haz accesibles todos tus vídeos",
+    "twitterDescription": "Con LViS puedes crear y mantener tus vídeos de forma automática y autónoma. Ten tus vídeos siempre al día fácilmente"
   },
   "nav": {
     "home": "Inicio",
@@ -14,7 +16,9 @@
     "ariaLabel": "Navegación principal",
     "ctaLabel": "Hablemos",
     "ctaAriaLabel": "Agenda una llamada de 30 minutos en Calendly. Se abre en una nueva pestaña.",
-    "logoAriaLabel": "Ir a la página principal de LViS Vally"
+    "logoAriaLabel": "Ir a la página principal de LViS Vally",
+    "menuOpen": "Abrir menú de navegación",
+    "menuClose": "Cerrar menú de navegación"
   },
   "languageSwitcher": {
     "ariaLabel": "Selector de idioma",

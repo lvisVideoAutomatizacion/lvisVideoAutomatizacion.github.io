@@ -1,6 +1,8 @@
 {
   "meta": {
-    "skipLink": "Skip to main content"
+    "skipLink": "Skip to main content",
+    "ogDescription": "With LViS Vally, make all your videos accessible",
+    "twitterDescription": "With LViS you can create and maintain your videos automatically and autonomously. Keep your videos always up to date, easily"
   },
   "nav": {
     "home": "Home",
@@ -14,7 +16,9 @@
     "ariaLabel": "Main navigation",
     "ctaLabel": "Let's talk",
     "ctaAriaLabel": "Schedule a 30-minute call on Calendly. Opens in a new tab.",
-    "logoAriaLabel": "Go to the LViS Vally home page"
+    "logoAriaLabel": "Go to the LViS Vally home page",
+    "menuOpen": "Open the navigation menu",
+    "menuClose": "Close the navigation menu"
   },
   "languageSwitcher": {
     "ariaLabel": "Language switcher",
