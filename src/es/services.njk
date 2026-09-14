@@ -2,5 +2,68 @@
 layout: base.njk
 title: Servicios
 ---
-<h1>Servicios</h1>
-<p>Página de servicios en español (contenido pendiente de migrar).</p>
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cards.njk" as cards %}
+{% import "macros/cta.njk" as cta %}
+
+{{ hero.catalogHero(
+  t,
+  "SERVICIOS",
+  "Servicios integrales de accesibilidad audiovisual",
+  "Acompañamos todo el ciclo de vida del contenido: análisis, producción, revisión, publicación y mantenimiento.",
+  ["AD", "CC", "TR", "LSE", "LF"],
+  "Audiodescripción, subtítulos cerrados, transcripción, lengua de signos, lectura fácil y formatos listos para publicar.",
+  "/es/solutions/",
+  "Ver soluciones"
+) }}
+
+{{ cards.catalogGrid("Catálogo de servicios", [
+  {
+    title: "Producción de vídeos accesibles",
+    desc: "Convertimos vídeos y audios existentes en contenidos accesibles.",
+    list: ["Audiodescripción", "Subtítulos cerrados", "Transcripciones", "Capítulos", "Lectura fácil", "Lengua de signos"]
+  },
+  {
+    title: "Producción continua",
+    desc: "Actuamos como tu equipo de accesibilidad audiovisual para nuevos contenidos y repositorios existentes.",
+    list: ["Calidad homogénea", "Escalabilidad", "Plazos garantizados", "Producción multilingüe"]
+  },
+  {
+    title: "Evaluación de proyectos",
+    desc: "Analizamos el catálogo audiovisual y estimamos esfuerzo, coste, tipologías, prioridades y plan de implantación.",
+    list: ["Inventario audiovisual", "Estimación de esfuerzo", "Simulación de costes", "Análisis de accesibilidad", "Plan de implantación", "Priorización de acciones"]
+  },
+  {
+    title: "Producción de ejemplos",
+    desc: "Creamos vídeos modelo para definir criterios de calidad, estilos y procesos internos o de proveedores."
+  },
+  {
+    title: "Consultoría especializada",
+    desc: "Resolución de dudas, revisión de entregas, interpretación normativa, auditoría de calidad y procedimientos."
+  },
+  {
+    title: "Formación y concienciación",
+    desc: "Charlas, cursos y talleres para responsables de comunicación, contratación, marketing, inclusión y equipos técnicos."
+  },
+  {
+    title: "Creación de contenidos accesibles",
+    desc: "AudioSignoGuías, boletines audiovisuales, videotutoriales, materiales didácticos y recursos para e-learning."
+  },
+  {
+    title: "Traducción y localización",
+    desc: "Versiones accesibles en castellano, catalán, gallego, euskera, valenciano, inglés, francés, italiano y portugués."
+  },
+  {
+    title: "Desarrollo tecnológico",
+    desc: "Reproductores accesibles, transcripción interactiva, descargas, gestión multidioma e integración con IA."
+  }
+]) }}
+
+{{ cta.demoSection(
+  "Tus contenidos audiovisuales, para todos. Sin barreras.",
+  "¿Cuándo empezamos?",
+  "Cuéntanos qué vídeos necesitas adaptar y te ayudamos a estimar esfuerzo, formatos y plazos.",
+  "Solicitar una consulta",
+  "https://calendly.com/lvis-meetings/30min",
+  "Solicitar una consulta. Se abre el calendario de reservas en una nueva pestaña."
+) }}

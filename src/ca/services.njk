@@ -2,5 +2,68 @@
 layout: base.njk
 title: Serveis
 ---
-<h1>Serveis</h1>
-<p>Pàgina de serveis en català (contingut pendent de migrar).</p>
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cards.njk" as cards %}
+{% import "macros/cta.njk" as cta %}
+
+{{ hero.catalogHero(
+  t,
+  "SERVEIS",
+  "Serveis integrals d'accessibilitat audiovisual",
+  "T'acompanyem durant tot el cicle de vida del contingut: anàlisi, producció, revisió, publicació i manteniment.",
+  ["AD", "CC", "TR", "LSE", "LF"],
+  "Audiodescripció, subtítols tancats, transcripció, llengua de signes, lectura fàcil i formats llestos per publicar.",
+  "/ca/solutions/",
+  "Veure solucions"
+) }}
+
+{{ cards.catalogGrid("Catàleg de serveis", [
+  {
+    title: "Producció de vídeos accessibles",
+    desc: "Convertim vídeos i àudios existents en continguts accessibles.",
+    list: ["Audiodescripció", "Subtítols tancats", "Transcripcions", "Capítols", "Lectura fàcil", "Llengua de signes"]
+  },
+  {
+    title: "Producció contínua",
+    desc: "Actuem com el teu equip d'accessibilitat audiovisual per a nous continguts i repositoris existents.",
+    list: ["Qualitat homogènia", "Escalabilitat", "Terminis garantits", "Producció multilingüe"]
+  },
+  {
+    title: "Avaluació de projectes",
+    desc: "Analitzem el catàleg audiovisual i n'estimem l'esforç, el cost, les tipologies, les prioritats i el pla d'implantació.",
+    list: ["Inventari audiovisual", "Estimació d'esforç", "Simulació de costos", "Anàlisi d'accessibilitat", "Pla d'implantació", "Priorització d'accions"]
+  },
+  {
+    title: "Producció d'exemples",
+    desc: "Creem vídeos model per definir criteris de qualitat, estils i processos interns o de proveïdors."
+  },
+  {
+    title: "Consultoria especialitzada",
+    desc: "Resolució de dubtes, revisió de lliuraments, interpretació normativa, auditoria de qualitat i procediments."
+  },
+  {
+    title: "Formació i conscienciació",
+    desc: "Xerrades, cursos i tallers per a responsables de comunicació, contractació, màrqueting, inclusió i equips tècnics."
+  },
+  {
+    title: "Creació de continguts accessibles",
+    desc: "AudioSignoGuies, butlletins audiovisuals, videotutorials, materials didàctics i recursos per a l'e-learning."
+  },
+  {
+    title: "Traducció i localització",
+    desc: "Versions accessibles en castellà, català, gallec, basc, valencià, anglès, francès, italià i portuguès."
+  },
+  {
+    title: "Desenvolupament tecnològic",
+    desc: "Reproductors accessibles, transcripció interactiva, descàrregues, gestió multiidioma i integració amb IA."
+  }
+]) }}
+
+{{ cta.demoSection(
+  "Els teus continguts audiovisuals, a l'abast de tothom. Sense barreres.",
+  "Quan comencem?",
+  "Explica'ns quins vídeos necessites adaptar i t'ajudem a estimar l'esforç, els formats i els terminis.",
+  "Demana una consulta",
+  "https://calendly.com/lvis-meetings/30min",
+  "Sol·licitar una consulta. S'obre el calendari de reserves en una pestanya nova."
+) }}

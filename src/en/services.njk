@@ -2,5 +2,68 @@
 layout: base.njk
 title: Services
 ---
-<h1>Services</h1>
-<p>English services page (content pending migration).</p>
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cards.njk" as cards %}
+{% import "macros/cta.njk" as cta %}
+
+{{ hero.catalogHero(
+  t,
+  "SERVICES",
+  "Comprehensive audiovisual accessibility services",
+  "We support the entire content lifecycle: analysis, production, review, publishing, and maintenance.",
+  ["AD", "CC", "TR", "SL", "ER"],
+  "Audio description, closed captions, transcription, sign language, easy read, and publish-ready formats.",
+  "/en/solutions/",
+  "View solutions"
+) }}
+
+{{ cards.catalogGrid("Services catalog", [
+  {
+    title: "Production of accessible videos",
+    desc: "We turn existing videos and audio into accessible content.",
+    list: ["Audio description", "Closed captions", "Transcriptions", "Chapters", "Easy read", "Sign language"]
+  },
+  {
+    title: "Ongoing production",
+    desc: "We act as your audiovisual accessibility team for new content and existing repositories.",
+    list: ["Consistent quality", "Scalability", "Guaranteed turnaround times", "Multilingual production"]
+  },
+  {
+    title: "Project assessment",
+    desc: "We analyze your audiovisual catalog and estimate effort, cost, content types, priorities, and an implementation plan.",
+    list: ["Audiovisual inventory", "Effort estimation", "Cost simulation", "Accessibility analysis", "Implementation plan", "Action prioritization"]
+  },
+  {
+    title: "Example production",
+    desc: "We create model videos to define quality criteria, styles, and internal or vendor processes."
+  },
+  {
+    title: "Specialized consulting",
+    desc: "Resolving questions, reviewing deliverables, interpreting regulations, and auditing quality and procedures."
+  },
+  {
+    title: "Training and awareness",
+    desc: "Talks, courses, and workshops for communications, hiring, marketing, inclusion, and technical teams."
+  },
+  {
+    title: "Creation of accessible content",
+    desc: "Audio-signed guides, audiovisual newsletters, video tutorials, teaching materials, and resources for e-learning."
+  },
+  {
+    title: "Translation and localization",
+    desc: "Accessible versions in Spanish, Catalan, Galician, Basque, Valencian, English, French, Italian, and Portuguese."
+  },
+  {
+    title: "Technology development",
+    desc: "Accessible players, interactive transcription, downloads, multilingual management, and integration with AI."
+  }
+]) }}
+
+{{ cta.demoSection(
+  "Your audiovisual content, for everyone. Without barriers.",
+  "When shall we start?",
+  "Tell us which videos you need to adapt, and we'll help you estimate effort, formats, and timelines.",
+  "Request a consultation",
+  "https://calendly.com/lvis-meetings/30min",
+  "Request a consultation. Opens the booking calendar in a new tab."
+) }}
