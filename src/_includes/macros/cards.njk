@@ -1,4 +1,4 @@
-{% macro catalogCard(title, desc, list) %}
+{% macro catalogCard(title, desc, list, bold) %}
 <div class="catalog-card">
   <h3>{{ title }}</h3>
   {% if desc %}<p>{{ desc }}</p>{% endif %}
@@ -9,6 +9,7 @@
     {%- endfor %}
   </ul>
   {% endif %}
+  {% if bold %}<p class="catalog-bold">{{ bold }}</p>{% endif %}
 </div>
 {% endmacro %}
 
@@ -17,7 +18,7 @@
   <h2 class="sr-only">{{ heading }}</h2>
   <div class="catalog-grid">
     {%- for card in cards %}
-    {{ catalogCard(card.title, card.desc, card.list) }}
+    {{ catalogCard(card.title, card.desc, card.list, card.bold) }}
     {%- endfor %}
   </div>
 </section>
