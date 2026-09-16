@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "skipLink": "Ves al contingut principal",
+    "ogDescription": "Amb LViS Vally fes accessibles tots els teus vídeos",
+    "twitterDescription": "Amb LViS Vally fes accessibles tots els teus vídeos"
+  },
+  "nav": {
+    "home": "Inici",
+    "services": "Serveis",
+    "solutions": "Solucions",
+    "technology": "Tecnologia",
+    "examples": "Exemples",
+    "prices": "Preus",
+    "resources": "Recursos",
+    "partners": "Partners",
+    "ariaLabel": "Navegació principal",
+    "ctaLabel": "Parlem-ne",
+    "ctaAriaLabel": "Programa una reunió de 30 minuts a Calendly. S'obrirà en una pestanya nova.",
+    "logoAriaLabel": "Vés a la pàgina principal de LViS Vally",
+    "menuOpen": "Obrir el menú de navegació",
+    "menuClose": "Tancar el menú de navegació"
+  },
+  "languageSwitcher": {
+    "ariaLabel": "Selector d'idioma",
+    "current": "Idioma actual"
+  },
+  "hero": {
+    "demoCtaLabel": "Demana una demo",
+    "demoCtaAriaLabel": "Demana una demo. S'obre el calendari de reserves en una nova pestanya."
+  },
+  "footer": {
+    "poweredByAriaLabel": "Enllaç a la pàgina de lvis.es (s'obre en una pestanya nova)",
+    "poweredBy": "Powered by",
+    "copyright": "© {{ year }} LViS Video Automatización S.L. LViS és una marca registrada. Tots els drets reservats.",
+    "legalLinksAriaLabel": "Enllaços legals",
+    "legalNotice": "Avís legal",
+    "cookiesPolicy": "Política de cookies",
+    "privacyPolicy": "Política de privacitat",
+    "serviceTerms": "Termes de servei",
+    "trademarkPolicy": "Política de marques i productes",
+    "accessibility": "Accessibilitat",
+    "opensInNewTab": "s'obre en una pestanya nova"
+  }
+}

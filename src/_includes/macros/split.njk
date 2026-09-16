@@ -1,0 +1,12 @@
+{% macro contentSplit(classPrefix, label, title, desc) %}
+<div class="{{ classPrefix }}-inner">
+  <div class="{{ classPrefix }}-left">
+    <span class="{{ classPrefix }}-label">{{ label }}</span>
+    <h2 class="{{ classPrefix }}-title">{{ title }}</h2>
+    {% if desc %}<p class="{{ classPrefix }}-desc">{{ desc }}</p>{% endif %}
+  </div>
+  <div class="{{ classPrefix }}-right">
+    {{ caller() }}
+  </div>
+</div>
+{% endmacro %}

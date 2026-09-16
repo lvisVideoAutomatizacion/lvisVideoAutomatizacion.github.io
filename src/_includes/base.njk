@@ -1,0 +1,19 @@
+---
+title: Vally
+bodyClass: bg-init
+---
+<!doctype html>
+<html lang="{{ lang }}">
+  <head>
+    {% include "meta.njk" %}
+  </head>
+  <body class="{{ bodyClass }}">
+    <a class="skip-link" href="#main-content">{{ t.meta.skipLink }}</a>
+    {% include "header.njk" %}
+    <main id="main-content">
+      {{ content | safe }}
+    </main>
+    {% include "footer.njk" %}
+    {% include "scripts.njk" %}
+  </body>
+</html>

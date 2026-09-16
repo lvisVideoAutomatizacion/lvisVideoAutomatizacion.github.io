@@ -1,0 +1,42 @@
+<header class="header">
+  <a href="/{{ lang }}/" class="logo" aria-label="{{ t.nav.logoAriaLabel }}">
+    <img src="/assets/images/LVISVally_Logotipo.svg" alt="">
+  </a>
+
+  <button type="button" class="hamb" id="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" data-label-open="{{ t.nav.menuClose }}">
+    <span class="hamb-line"></span>
+    <span class="sr-only">{{ t.nav.menuOpen }}</span>
+  </button>
+
+  <nav class="nav" id="primary-navigation" aria-label="{{ t.nav.ariaLabel }}">
+    <ul class="menu">
+      {%- for item in nav %}
+      {%- set isCurrent = (item.slug == "" and page.fileSlug == lang) or item.slug == page.fileSlug %}
+      <li>
+        <a href="/{{ lang }}/{{ item.slug }}{{ '/' if item.slug else '' }}" {% if isCurrent %}aria-current="page"{% endif %}>{{ t.nav[item.translationKey] }}</a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </nav>
+
+  <div class="nav-buttons">
+    <a class="demo-button" target="_blank" rel="noopener" href="https://calendly.com/lvis-meetings/30min" aria-label="{{ t.nav.ctaAriaLabel }}">
+      {{ t.nav.ctaLabel }}
+    </a>
+
+    <div class="language-dropdown">
+      <button type="button" class="language-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="language-menu" aria-label="{{ t.languageSwitcher.ariaLabel }}">
+        <img src="/assets/images/globe_white.svg" alt="" class="language-icon">
+        <span class="language-text" aria-hidden="true">{{ lang | upper }}</span>
+        <span class="language-caret" aria-hidden="true"></span>
+      </button>
+      <ul class="language-menu" id="language-menu" role="menu">
+        {%- for language in i18n.languages %}
+        <li role="none">
+          <a role="menuitem" href="{{ language.path }}{{ currentPath }}" class="language-menu-link" {% if language.code == lang %}aria-current="page"{% endif %} lang="{{ language.code }}" hreflang="{{ language.code }}">{{ language.label }}</a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</header>

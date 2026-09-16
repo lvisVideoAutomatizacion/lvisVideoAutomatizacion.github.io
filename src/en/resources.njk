@@ -1,0 +1,66 @@
+---
+layout: base.njk
+title: Resources
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cards.njk" as cards %}
+{% import "macros/cta.njk" as cta %}
+
+{{ hero.catalogHero(
+  t,
+  "RESOURCES",
+  "Everything you need to know about audiovisual accessibility",
+  "Guides, articles, regulations, best practices, success stories, frequently asked questions, webinars, and downloads.",
+  ["AD", "CC", "TR", "SL", "ER"],
+  "Audio description, closed captions, transcription, sign language, easy read, and publish-ready formats.",
+  "/en/services/",
+  "View services"
+) }}
+
+{{ cards.catalogGrid("Resources catalog", [
+  {
+    title: "Accessibility guides",
+    html: "<p>Guides and resources on web and multimedia accessibility.</p><a href='https://www.w3.org/WAI/' target='_blank' rel='noopener'>W3C Web Accessibility Initiative (WAI)</a><p>International accessibility standard.</p><a href='https://www.w3.org/WAI/WCAG22/quickref/' target='_blank' rel='noopener'>WCAG 2.2 (Web Content Accessibility Guidelines)</a><p>Accessibility requirements for multimedia content.</p><a href='https://www.w3.org/TR/media-accessibility-reqs/' target='_blank' rel='noopener'>Media Accessibility User Requirements (MAUR)</a>"
+  },
+  {
+    title: "Regulations and legislation",
+    html: "<p>UNE 153020 – Audio description. Requirements and recommendations for creating accessible audio descriptions for people with visual disabilities.</p><a href='https://dialnet.unirioja.es/descarga/articulo/8888749.pdf' target='_blank' rel='noopener'>Information on the UNE 153020 standard</a><p>UNE 153010 – Captioning for the deaf and hard of hearing. Sets quality criteria for accessible captions, including synchronization, speaker identification, sound effects, and reading speed.</p><a href='https://www.une.org' target='_blank' rel='noopener'>UNE Catalog</a><p>UNE 153101 EX – Easy Read. Guidelines and recommendations for the adaptation, creation, and validation of easy-read documents, promoting comprehension of information for everyone.</p><a href='https://accesibilidadweb.dlsi.ua.es' target='_blank' rel='noopener'>Information on UNE 153101 EX</a><p>UNE-EN 301 549 – European accessibility requirements for ICT products and services.</p><a href='https://www.une.org' target='_blank' rel='noopener'>UNE – Spanish Association for Standardization</a>"
+  },
+  {
+    title: "Best practices",
+    html: "<p>Multimedia accessibility best practices (W3C WAI). International recommendations for making audio and video accessible on the web.</p><a href='https://www.w3.org/WAI/media/av/' target='_blank' rel='noopener'>W3C WAI – Media Accessibility Resources</a><p>How to write accessible scripts, record with AD in mind, caption with quality, and publish accessible content.</p><a href='https://www.w3.org/WAI/media/av/av-content' target='_blank' rel='noopener'>W3C – Making Audio and Video Media Accessible</a><p>Captioning Key (Described and Captioned Media Program). International reference on best practices for accessible captions and closed captioning.</p><a href='https://dcmp.org/learn/captioningkey' target='_blank' rel='noopener'>DCMP Captioning Key</a><p>BBC Accessibility Guidelines. Practical guides on captions, audio description, and accessibility in audiovisual content.</p><a href='https://www.bbc.co.uk/accessibility/forproducts/guides' target='_blank' rel='noopener'>BBC Accessibility Guidelines</a>"
+  },
+  {
+    title: "Success stories",
+    desc: "Universities, public administrations, businesses, museums, social organizations, and educational platforms."
+  },
+  {
+    title: "Frequently asked questions",
+    desc: "Costs, timelines, formats, regulations, automation, reuse, and publishing."
+  },
+  {
+    title: "Webinars and training",
+    desc: "Talks and seminars on multimedia accessibility, AI, and best practices for content creators."
+  },
+  {
+    title: "Downloads",
+    desc: "Checklists, templates, technical documentation, reports, infographics, and accessible examples."
+  },
+  {
+    title: "Blog",
+    desc: "Artificial intelligence, audiovisual automation, accessibility, legislation, training, and trends."
+  },
+  {
+    title: "Accessible examples",
+    desc: "Demo videos with captions, audio description, transcription, chapters, and downloads."
+  }
+]) }}
+
+{{ cta.demoSection(
+  "Your audiovisual content, for everyone. Without barriers.",
+  "When do we start?",
+  "Tell us which videos you need to adapt and we'll help you estimate effort, formats, and timelines.",
+  "Request a consultation",
+  "https://calendly.com/lvis-meetings/30min",
+  "Request a consultation. Opens the booking calendar in a new tab."
+) }}

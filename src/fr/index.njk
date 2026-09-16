@@ -1,0 +1,144 @@
+---
+layout: base.njk
+title: Accueil
+---
+{% import "macros/cta.njk" as cta %}
+
+{% macro heroStatCard(number, label) %}
+<div class="hero-stat-card">
+  <span class="hero-stat-number">{{ number }}</span>
+  <span class="hero-stat-label">{{ label }}</span>
+</div>
+{% endmacro %}
+
+{% macro whyCard(number, title, desc) %}
+<article class="why-card">
+  <span class="why-card-number">{{ number }}</span>
+  <h3>{{ title }}</h3>
+  <p>{{ desc }}</p>
+</article>
+{% endmacro %}
+
+{% macro mainServicesCard(title, desc, href, label) %}
+<article class="main-services-card">
+  <h3>{{ title }}</h3>
+  <p>{{ desc }}</p>
+  <a href="{{ href }}" class="main-services-link">{{ label }} →</a>
+</article>
+{% endmacro %}
+
+<div id="hero" class="wrapper clearfix" aria-labelledby="hero-section">
+  <section class="grid-2">
+    <div class="col post">
+      <section class="cd-intro">
+        <h1 class="cd-headline loading-bar" id="hero-section">Faites en sorte que vos vidéos touchent tout le monde</h1>
+        <h2 class="color-primary">Accessibilité audiovisuelle automatisée et supervisée</h2>
+        <p>Nous transformons vidéos et fichiers audio en contenus accessibles, inclusifs et faciles à consommer grâce à l'audiodescription, aux sous-titres, aux transcriptions, aux chapitres, à la lecture facile et à des formats adaptés.</p>
+      </section>
+    </div>
+
+    <div class="col">
+      <div class="iframe-content">
+        <iframe src="https://player.vimeo.com/video/1221071344?autopause=0&amp;muted=1&amp;badge=0&amp;player_id=0&amp;app_id=58479&amp;texttrack=fr&amp;hl=fr&amp;dnt=1" allow="fullscreen; picture-in-picture; clipboard-write" title="Vidéo accessible : création de contenu audiovisuel accessible avec audiodescription, sous-titres et transcriptions" aria-describedby="video-descripcion" allowfullscreen></iframe>
+        <div id="video-descripcion" class="sr-only">Exemple de contenu audiovisuel accessible avec audiodescription, sous-titres et transcriptions, afin d'en faciliter l'accès à tous.</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="stats-benefits" class="wrapper clearfix">
+  <div class="grid-1">
+    <div class="col">
+
+      <div class="hero-actions">
+        <a href="https://calendly.com/" class="button-cta button-inline" target="_blank" rel="noopener noreferrer" aria-label="Demandez une démo gratuite. Ouvre le calendrier de réservation dans un nouvel onglet.">Demandez une démo gratuite</a>
+        <a href="/fr/solutions/" class="button-cta button-inline">Voir les solutions</a>
+      </div>
+
+      <div class="hero-stats" aria-label="Données d'activité">
+        {{ heroStatCard("50 000+", "vidéos accessibles") }}
+        {{ heroStatCard("2 000+", "heures produites") }}
+        {{ heroStatCard("9", "langues de travail") }}
+      </div>
+
+      <div class="hero-benefits">
+        <div class="hero-benefits-icons" aria-hidden="true">
+          <span>AD</span>
+          <span>CC</span>
+          <span>TR</span>
+          <span>SL</span>
+          <span>ER</span>
+        </div>
+        <h2>Plus qu'une simple conformité aux normes</h2>
+        <p>L'accessibilité améliore la portée, l'expérience utilisateur, le référencement (SEO), la réutilisation, la réputation et l'engagement.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrapper">
+    <span class="why-label">POURQUOI RENDRE LE CONTENU ACCESSIBLE</span>
+    <h2>Un investissement dans la portée, l'inclusion et la valeur du contenu</h2>
+
+    <div class="why-cards">
+      {{ whyCard("01", "Vous touchez plus de personnes", "Vous facilitez l'accès aux personnes en situation de handicap visuel, auditif ou cognitif, ainsi qu'à celles qui regardent des vidéos dans des contextes variés.") }}
+      {{ whyCard("02", "Meilleure expérience", "Les sous-titres, les chapitres et les transcriptions rendent vos vidéos plus faciles à rechercher, à parcourir, à étudier et à partager.") }}
+      {{ whyCard("03", "Meilleure réputation", "Ils traduisent une responsabilité, une empathie, une innovation et un engagement réel envers l'inclusion.") }}
+      {{ whyCard("04", "Production durable", "Nous automatisons une partie du processus et le combinons à une révision humaine pour évoluer sans perdre en qualité.") }}
+      {{ whyCard("05", "Conformité réglementaire", "Cela facilite le respect des normes internationales d'accessibilité et de la législation en vigueur applicable à chaque organisation et pays.") }}
+    </div>
+  </div>
+</section>
+
+<section id="tech-people" class="wrapper clearfix">
+  <div class="grid-2">
+    <div class="col post">
+      <span class="tech-people-label">TECHNOLOGIE + PERSONNES</span>
+      <h2 id="tech-people-heading">Automatisation pour évoluer. Révision humaine pour garantir la qualité.</h2>
+      <p>Nous générons des versions accessibles dans plusieurs langues et formats, <br>avec un processus supervisé par des personnes pour garantir la clarté, la synchronisation et la compréhension.</p>
+      <a href="/fr/technology/" class="tech-people-link">Découvrez notre technologie →</a>
+    </div>
+    <div class="col">
+      <div class="tech-people-card">
+        <h3>Éléments accessibles</h3>
+        <div class="tech-people-lists">
+          <ul>
+            <li>Audiodescription</li>
+            <li>Sous-titres</li>
+            <li>Transcription</li>
+            <li>Chapitres</li>
+          </ul>
+          <ul>
+            <li>Format de lecture facile</li>
+            <li>Langue des signes</li>
+            <li>Versions multilingues</li>
+            <li>Téléchargements individuels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="main-services">
+  <div class="wrapper">
+    <span class="main-services-label">SERVICES PRINCIPAUX</span>
+    <h2 id="main-services-heading">D'une vidéo ponctuelle à une stratégie complète</h2>
+    <div class="main-services-cards">
+      {{ mainServicesCard("Production accessible", "Nous adaptons les vidéos existantes avec audiodescription, sous-titres, transcriptions, navigation accessible et d'autres mécanismes.", "/fr/services/", "Voir les services") }}
+      {{ mainServicesCard("Solutions par secteur", "Administration publique, universités, entreprises, culture, santé, logiciels, formation et grands référentiels.", "/fr/solutions/", "Voir les solutions") }}
+      {{ mainServicesCard("Formation et conseil", "Nous aidons les équipes techniques, de communication, de recrutement, de formation et d'inclusion à prendre de meilleures décisions.", "/fr/prices/", "Voir les tarifs") }}
+    </div>
+  </div>
+</section>
+
+{{ cta.demoSection(
+  "Vos contenus audiovisuels, à la portée de tous. Sans barrières.",
+  "Quand commençons-nous ?",
+  "Expliquez-nous quelles vidéos vous devez adapter et nous vous aiderons à évaluer le projet, les formats et les délais.",
+  "Demandez un rendez-vous",
+  "https://calendly.com/lvis-meetings/30min",
+  "Demander une consultation. Ouvre le calendrier de réservation dans un nouvel onglet."
+) }}

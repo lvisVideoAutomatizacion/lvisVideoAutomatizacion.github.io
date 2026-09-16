@@ -1,0 +1,10 @@
+[
+  { "slug": "", "translationKey": "home" },
+  { "slug": "services", "translationKey": "services" },
+  { "slug": "solutions", "translationKey": "solutions" },
+  { "slug": "technology", "translationKey": "technology" },
+  { "slug": "examples", "translationKey": "examples" },
+  { "slug": "prices", "translationKey": "prices" },
+  { "slug": "resources", "translationKey": "resources" },
+  { "slug": "partners", "translationKey": "partners" }
+]

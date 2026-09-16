@@ -1,0 +1,153 @@
+---
+layout: base.njk
+title: Precios
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cta.njk" as cta %}
+
+{% macro pricingDurCard(c) %}
+<div class="pricing-dur-card{{ ' pricing-dur-card--highlight' if c.highlight }}">
+  <p class="pricing-dur-name">{{ c.name }}</p>
+  <p class="pricing-dur-range{{ ' pricing-dur-range--accent' if c.rangeAccent }}">{{ c.range }}</p>
+  <p class="pricing-dur-price{{ ' pricing-dur-price--lg' if c.priceLg }}">{{ c.price | safe }}</p>
+  {% if c.extra %}<p class="pricing-dur-extra">{{ c.extra }}</p>{% endif %}
+  <p class="pricing-dur-desc">{{ c.desc }}</p>
+</div>
+{% endmacro %}
+
+{% macro pricingClosedCard(c) %}
+<div class="pricing-closed-card">
+  <p class="pricing-closed-name">{{ c.name }}</p>
+  {% if c.price %}<p class="pricing-closed-price{{ ' pricing-closed-price--link' if c.priceLink }}">{{ c.price }}</p>{% endif %}
+  {% for d in c.desc %}
+  <p class="pricing-closed-desc">{{ d }}</p>
+  {% endfor %}
+  {% if c.cta %}<a href="{{ c.cta.href }}" target="_blank" rel="noopener" class="pricing-closed-cta">{{ c.cta.label }}</a>{% endif %}
+</div>
+{% endmacro %}
+
+{{ hero.catalogHero(
+  t,
+  "PRECIOS",
+  "Tarifas claras para trabajos puntuales. Soluciones a medida para grandes proyectos.",
+  "Mostramos precios de servicios estandarizados y mantenemos los proyectos complejos como propuestas personalizadas.",
+  ["AD", "CC", "TR", "LSE", "LF"],
+  "Audiodescripción, subtítulos cerrados, transcripción, lengua de signos, lectura fácil y formatos listos para publicar.",
+  "/es/services/",
+  "Ver servicios"
+) }}
+
+<section id="pricing-spot" class="wrapper">
+  <div class="pricing-block">
+    <span class="pricing-block-label">TRABAJOS PUNTUALES</span>
+    <h2 class="pricing-block-title">Producción accesible por duración</h2>
+    <div class="pricing-cards-row">
+      {{ pricingDurCard({
+        name: "Microvideos",
+        range: "< 3 minutos",
+        price: "40 €<small>/minuto</small>",
+        extra: "Pedido mínimo 3 minutos.",
+        desc: "Anuncios, redes sociales, mensajes institucionales, píldoras formativas y comunicaciones breves."
+      }) }}
+      {{ pricingDurCard({
+        name: "Vídeos cortos",
+        range: "3 a 5 minutos",
+        price: "35 €<small>/minuto</small>",
+        desc: "Tutoriales rápidos, presentaciones, demostraciones de producto y contenidos educativos de corta duración.",
+        highlight: true
+      }) }}
+      {{ pricingDurCard({
+        name: "Vídeos medios",
+        range: "5 a 20 minutos",
+        price: "30 €<small>/minuto</small>",
+        desc: "Reportajes, entrevistas, webinars, clases, formaciones y presentaciones corporativas."
+      }) }}
+      {{ pricingDurCard({
+        name: "Vídeos largos",
+        range: "21 a 60 minutos",
+        price: "Desde 600 €",
+        priceLg: true,
+        extra: "+ 10 €/min adicional",
+        desc: "Conferencias, cursos completos, eventos, mesas redondas, documentales y sesiones técnicas."
+      }) }}
+      {{ pricingDurCard({
+        name: "Vídeos extensos",
+        range: "Más de 60 minutos",
+        rangeAccent: true,
+        price: "Desde 1.000 €",
+        priceLg: true,
+        extra: "+ 8 €/min adicional",
+        desc: "Congresos, jornadas, plenos, cursos modulares, grabaciones de eventos completos, y series formativas."
+      }) }}
+    </div>
+    <div class="pricing-options-bar">
+      <p><strong>Opciones:</strong> entrega urgente en 1 día laborable (+50%), lengua de signos desde 25 €/min y traducción a otro idioma (+30%).</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing-training" class="wrapper">
+  <div class="pricing-block pricing-block--light">
+    <span class="pricing-block-label">FORMACIÓN ACCESIBILIDAD AUDIOVISUAL</span>
+    <h2 class="pricing-block-title">Servicios cerrados con precio visible</h2>
+    <div class="pricing-closed-cards">
+      {{ pricingClosedCard({
+        name: "Charla informativa",
+        price: "200 € · 1 hora",
+        desc: ["Hasta 64 participantes.", "Ideal para tomar contacto, entender alcance, inspirar y aclarar dudas"]
+      }) }}
+      {{ pricingClosedCard({
+        name: "Curso fundamentos",
+        price: "600 € · 4 horas",
+        desc: [
+          "Hasta 16 participantes.",
+          "Recomendado para contratistas, creadores de contenido, responsables de comunicación, marketing, inclusión, rsc, …",
+          "Temario: legislación, requisitos, consideraciones, métricas, mejores prácticas, publicación, métricas de calidad…"
+        ]
+      }) }}
+      {{ pricingClosedCard({
+        name: "Taller práctico",
+        price: "1.600 € · 8 horas",
+        desc: [
+          "Hasta 8 participantes.",
+          "Adecuado para formar técnicos, equipos multimedia, profesores y personal audiovisual",
+          "Temario: mecanismos, herramientas, plataformas, mejores prácticas, proyecto real"
+        ]
+      }) }}
+    </div>
+  </div>
+</section>
+
+<section id="pricing-custom" class="wrapper">
+  <div class="pricing-block">
+    <span class="pricing-block-label">A MEDIDA</span>
+    <h2 class="pricing-block-title">Grandes proyectos y servicios especializados</h2>
+    <div class="pricing-closed-cards">
+      {{ pricingClosedCard({
+        name: "Consultoría y revisión",
+        price: "Desde 380 €/mes",
+        priceLink: true,
+        desc: ["Revisión de vídeos accesibles, resolución de dudas y soporte especializado durante todo el proyecto. Incluye auditoría de calidad, validación del cumplimiento de requisitos de accesibilidad y recomendaciones para mejorar procesos, formatos y publicaciones."]
+      }) }}
+      {{ pricingClosedCard({
+        name: "Plan continuo",
+        desc: ["Actuamos como tu equipo de accesibilidad audiovisual, adaptando tanto nuevas producciones como contenidos existentes. Disfruta de una capacidad de producción flexible, entregas garantizadas y control continuo de la calidad y las métricas de accesibilidad."],
+        cta: { label: "Solicitar propuesta →", href: "https://calendly.com/lvis-meetings/30min" }
+      }) }}
+      {{ pricingClosedCard({
+        name: "Producción multimedia",
+        desc: ["Producimos AudioSignoGuías, boletines multimedia, video tutoriales, y materiales didácticos adaptados a distintos dispositivos e idiomas, garantizando una experiencia inclusiva y fácil de distribuir."],
+        cta: { label: "Consultar solución →", href: "https://calendly.com/lvis-meetings/30min" }
+      }) }}
+    </div>
+  </div>
+</section>
+
+{{ cta.demoSection(
+  "Tus contenidos audiovisuales, para todos. Sin barreras.",
+  "¿Cuándo empezamos?",
+  "Cuéntanos qué vídeos necesitas adaptar y te ayudamos a estimar esfuerzo, formatos y plazos.",
+  "Solicitar una consulta",
+  "https://calendly.com/lvis-meetings/30min",
+  "Solicitar una consulta. Se abre el calendario de reservas en una nueva pestaña."
+) }}

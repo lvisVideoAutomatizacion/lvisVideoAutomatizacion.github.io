@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+{% import "macros/cta.njk" as cta %}
+<div class="clearfix legal">
+  <div id="logo">
+    <img src="/assets/images/logo.svg" alt="LViS logo">
+  </div>
+  <section class="grid-1">
+    <div class="col">
+      {{ content | safe }}
+    </div>
+  </section>
+</div>
+
+{{ cta.demoSection(demoHeading, demoSubheading, demoBody, demoCtaLabel, demoCtaHref, demoCtaAriaLabel) }}

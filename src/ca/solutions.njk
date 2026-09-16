@@ -1,0 +1,75 @@
+---
+layout: base.njk
+title: Solucions
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cards.njk" as cards %}
+{% import "macros/cta.njk" as cta %}
+
+{{ hero.catalogHero(
+  t,
+  "SOLUCIONS",
+  "Accessibilitat audiovisual adaptada a cada organització",
+  "Cada sector té necessitats diferents, però tots comparteixen un objectiu: que els seus continguts arribin al màxim nombre possible de persones.",
+  ["AD", "CC", "TR", "LSE", "LF"],
+  "Audiodescripció, subtítols tancats, transcripció, llengua de signes, lectura fàcil i formats llestos per publicar.",
+  "/ca/services/",
+  "Veure serveis"
+) }}
+
+{{ cards.catalogGrid("Catàleg de solucions", [
+  {
+    title: "Administració pública",
+    desc: "Plens, campanyes, seus electròniques, procediments, formació interna i participació ciutadana.",
+    bold: "Transparència, inclusió i accés universal."
+  },
+  {
+    title: "Universitats i educació",
+    desc: "Classes enregistrades, MOOC, tutorials, conferències, seminaris i recursos docents.",
+    bold: "Educació inclusiva i materials reutilitzables."
+  },
+  {
+    title: "Empresa i comunicació corporativa",
+    desc: "Onboarding, webinars, esdeveniments, llançaments, comunicació interna i formació.",
+    bold: "Millor experiència per a empleats i clients."
+  },
+  {
+    title: "Màrqueting i xarxes socials",
+    desc: "Campanyes digitals, vídeos promocionals, anuncis, casos d'èxit i presentacions.",
+    bold: "Més visualitzacions, retenció i SEO."
+  },
+  {
+    title: "Turisme, cultura i patrimoni",
+    desc: "AudioSignoGuies, audioguies, per a rutes, museus, exposicions virtuals, centres d'interpretació i material divulgatiu.",
+    bold: "Cultura inclusiva i turisme accessible."
+  },
+  {
+    title: "Sanitat i organitzacions socials",
+    desc: "Campanyes de prevenció, informació per a pacients, procediments i formació sanitària.",
+    bold: "Informació clara i comprensible."
+  },
+  {
+    title: "Software i transformació digital",
+    desc: "Tutorials, guies d'usuari, manuals interactius, suport i formació tècnica.",
+    bold: "Actualitzacions ràpides i consistents."
+  },
+  {
+    title: "Formació i e-learning",
+    desc: "Cursos en línia, píndoles, simulacions, casos pràctics i escenaris interactius.",
+    bold: "Continguts llestos per a plataformes formatives."
+  },
+  {
+    title: "Grans col·leccions audiovisuals",
+    desc: "Videoteques, repositoris, arxius històrics, fons documentals i biblioteques digitals.",
+    bold: "Escalabilitat amb revisió humana."
+  }
+]) }}
+
+{{ cta.demoSection(
+  "Els teus continguts audiovisuals, a l'abast de tothom. Sense barreres.",
+  "Quan comencem?",
+  "Explica'ns quins vídeos necessites adaptar i t'ajudem a estimar l'esforç, els formats i els terminis.",
+  "Demana una consulta",
+  "https://calendly.com/lvis-meetings/30min",
+  "Sol·licitar una consulta. S'obre el calendari de reserves en una pestanya nova."
+) }}

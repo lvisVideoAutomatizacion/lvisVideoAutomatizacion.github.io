@@ -1,0 +1,66 @@
+---
+layout: base.njk
+title: Ressources
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cards.njk" as cards %}
+{% import "macros/cta.njk" as cta %}
+
+{{ hero.catalogHero(
+  t,
+  "RESSOURCES",
+  "Tout ce que vous devez savoir sur l'accessibilité audiovisuelle",
+  "Guides, articles, réglementations, bonnes pratiques, témoignages clients, questions fréquentes, webinaires et téléchargements.",
+  ["AD", "CC", "TR", "SL", "ER"],
+  "Audiodescription, sous-titres, transcription, langue des signes, lecture facile et formats prêts à publier.",
+  "/fr/services/",
+  "Voir les services"
+) }}
+
+{{ cards.catalogGrid("Catalogue de ressources", [
+  {
+    title: "Guides d'accessibilité",
+    html: "<p>Guides et ressources sur l'accessibilité du web et des contenus multimédias.</p><a href='https://www.w3.org/WAI/' target='_blank' rel='noopener'>W3C Web Accessibility Initiative (WAI)</a><p>Norme internationale d'accessibilité.</p><a href='https://www.w3.org/WAI/WCAG22/quickref/' target='_blank' rel='noopener'>WCAG 2.2 (Web Content Accessibility Guidelines)</a><p>Exigences d'accessibilité pour les contenus multimédias.</p><a href='https://www.w3.org/TR/media-accessibility-reqs/' target='_blank' rel='noopener'>Media Accessibility User Requirements (MAUR)</a>"
+  },
+  {
+    title: "Réglementations et législation",
+    html: "<p>UNE 153020 – Audiodescription. Exigences et recommandations pour la création d'audiodescriptions accessibles pour les personnes malvoyantes.</p><a href='https://dialnet.unirioja.es/descarga/articulo/8888749.pdf' target='_blank' rel='noopener'>Informations sur la norme UNE 153020</a><p>UNE 153010 – Sous-titrage pour sourds et malentendants. Établit des critères de qualité pour des sous-titres accessibles, incluant la synchronisation, l'identification des locuteurs, les effets sonores et la vitesse de lecture.</p><a href='https://www.une.org' target='_blank' rel='noopener'>Catalogue UNE</a><p>UNE 153101 EX – Lecture facile. Lignes directrices et recommandations pour l'adaptation, la création et la validation de documents en lecture facile, favorisant la compréhension de l'information pour tous.</p><a href='https://accesibilidadweb.dlsi.ua.es' target='_blank' rel='noopener'>Informations sur la norme UNE 153101 EX</a>"
+  },
+  {
+    title: "Bonnes pratiques",
+    html: "<p>Bonnes pratiques d'accessibilité multimédia (W3C WAI). Recommandations internationales pour rendre l'audio et la vidéo accessibles sur le web.</p><a href='https://www.w3.org/WAI/media/av/' target='_blank' rel='noopener'>W3C WAI – Ressources d'accessibilité multimédia</a><p>Comment rédiger des scripts accessibles, enregistrer en pensant à l'audiodescription, sous-titrer avec qualité et publier du contenu accessible.</p><a href='https://www.w3.org/WAI/media/av/av-content' target='_blank' rel='noopener'>W3C – Rendre les contenus audio et vidéo accessibles</a><p>Captioning Key (Described and Captioned Media Program). Référence internationale sur les bonnes pratiques de sous-titrage accessible.</p><a href='https://dcmp.org/learn/captioningkey' target='_blank' rel='noopener'>DCMP Captioning Key</a><p>Directives d'accessibilité de la BBC. Guides pratiques sur les sous-titres, l'audiodescription et l'accessibilité des contenus audiovisuels.</p><a href='https://www.bbc.co.uk/accessibility/forproducts/guides' target='_blank' rel='noopener'>Directives d'accessibilité de la BBC</a>"
+  },
+  {
+    title: "Études de cas",
+    desc: "Universités, administrations publiques, entreprises, musées, organisations sociales et plateformes éducatives."
+  },
+  {
+    title: "Questions fréquentes",
+    desc: "Coûts, délais, formats, réglementations, automatisation, réutilisation et publication."
+  },
+  {
+    title: "Webinaires et formation",
+    desc: "Conférences et séminaires sur l'accessibilité multimédia, l'IA et les bonnes pratiques pour les créateurs de contenu."
+  },
+  {
+    title: "Téléchargements",
+    desc: "Listes de contrôle, modèles, documentation technique, rapports, infographies et exemples accessibles."
+  },
+  {
+    title: "Blog",
+    desc: "Intelligence artificielle, automatisation audiovisuelle, accessibilité, législation, formation et tendances."
+  },
+  {
+    title: "Exemples accessibles",
+    desc: "Vidéos de démonstration avec sous-titres, audiodescription, transcription, chapitres et téléchargements."
+  }
+]) }}
+
+{{ cta.demoSection(
+  "Vos contenus audiovisuels, à la portée de tous. Sans barrières.",
+  "Quand commençons-nous ?",
+  "Expliquez-nous quelles vidéos vous devez adapter et nous vous aiderons à évaluer le projet, les formats et les délais.",
+  "Demandez un rendez-vous",
+  "https://calendly.com/lvis-meetings/30min",
+  "Demander une consultation. Ouvre le calendrier de réservation dans un nouvel onglet."
+) }}

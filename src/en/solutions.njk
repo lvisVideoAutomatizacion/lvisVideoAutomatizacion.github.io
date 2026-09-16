@@ -1,0 +1,75 @@
+---
+layout: base.njk
+title: Solutions
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cards.njk" as cards %}
+{% import "macros/cta.njk" as cta %}
+
+{{ hero.catalogHero(
+  t,
+  "SOLUTIONS",
+  "Audiovisual accessibility adapted to every organization",
+  "Every sector has different needs, but they all share one goal: reaching as many people as possible with their content.",
+  ["AD", "CC", "TR", "SL", "ER"],
+  "Audio description, closed captions, transcription, sign language, easy read, and publish-ready formats.",
+  "/en/services/",
+  "View services"
+) }}
+
+{{ cards.catalogGrid("Solutions catalog", [
+  {
+    title: "Public administration",
+    desc: "Plenary sessions, campaigns, electronic offices, procedures, internal training, and citizen participation.",
+    bold: "Transparency, inclusion, and universal access."
+  },
+  {
+    title: "Universities and education",
+    desc: "Recorded classes, MOOCs, tutorials, lectures, seminars, and teaching resources.",
+    bold: "Inclusive education and reusable materials."
+  },
+  {
+    title: "Business and corporate communication",
+    desc: "Onboarding, webinars, events, launches, internal communication, and training.",
+    bold: "A better experience for employees and customers."
+  },
+  {
+    title: "Marketing and social media",
+    desc: "Digital campaigns, promotional videos, ads, success stories, and presentations.",
+    bold: "More views, retention, and SEO."
+  },
+  {
+    title: "Tourism, culture, and heritage",
+    desc: "Audio-sign guides and audio guides for routes, museums, virtual exhibitions, interpretation centers, and outreach materials.",
+    bold: "Inclusive culture and accessible tourism."
+  },
+  {
+    title: "Healthcare and social organizations",
+    desc: "Prevention campaigns, patient information, procedures, and healthcare training.",
+    bold: "Clear, understandable information."
+  },
+  {
+    title: "Software and digital transformation",
+    desc: "Tutorials, user guides, interactive manuals, support, and technical training.",
+    bold: "Fast, consistent updates."
+  },
+  {
+    title: "Training and e-learning",
+    desc: "Online courses, microlearning, simulations, case studies, and interactive scenarios.",
+    bold: "Content ready for learning platforms."
+  },
+  {
+    title: "Large audiovisual collections",
+    desc: "Video libraries, repositories, historical archives, document collections, and digital libraries.",
+    bold: "Scalability with human review."
+  }
+]) }}
+
+{{ cta.demoSection(
+  "Your audiovisual content, for everyone. No barriers.",
+  "When do we start?",
+  "Tell us which videos you need to adapt and we'll help you estimate effort, formats, and timelines.",
+  "Request a consultation",
+  "https://calendly.com/lvis-meetings/30min",
+  "Request a consultation. Opens the booking calendar in a new tab."
+) }}

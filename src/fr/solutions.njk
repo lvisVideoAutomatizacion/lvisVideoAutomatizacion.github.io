@@ -1,0 +1,75 @@
+---
+layout: base.njk
+title: Solutions
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cards.njk" as cards %}
+{% import "macros/cta.njk" as cta %}
+
+{{ hero.catalogHero(
+  t,
+  "SOLUTIONS",
+  "Une accessibilité audiovisuelle adaptée à chaque organisation",
+  "Chaque secteur a des besoins différents, mais tous partagent un même objectif : toucher le plus grand nombre de personnes possible avec leur contenu.",
+  ["AD", "CC", "TR", "SL", "ER"],
+  "Audiodescription, sous-titres, transcription, langue des signes, lecture facile et formats prêts à publier.",
+  "/fr/services/",
+  "Voir les services"
+) }}
+
+{{ cards.catalogGrid("Catalogue de solutions", [
+  {
+    title: "Administration publique",
+    desc: "Séances plénières, campagnes, bureaux électroniques, démarches, formation interne et participation citoyenne.",
+    bold: "Transparence, inclusion et accès universel."
+  },
+  {
+    title: "Universités et enseignement",
+    desc: "Cours enregistrés, MOOC, tutoriels, conférences, séminaires et supports pédagogiques.",
+    bold: "Enseignement inclusif et supports réutilisables."
+  },
+  {
+    title: "Entreprises et communication institutionnelle",
+    desc: "Intégration des nouveaux employés, webinaires, événements, lancements, communication interne et formation.",
+    bold: "Une meilleure expérience pour les employés et les clients."
+  },
+  {
+    title: "Marketing et réseaux sociaux",
+    desc: "Campagnes numériques, vidéos promotionnelles, publicités, témoignages de réussite et présentations.",
+    bold: "Plus de vues, de rétention et de référencement."
+  },
+  {
+    title: "Tourisme, culture et patrimoine",
+    desc: "Guides audio-signés et audioguides pour les circuits, musées, expositions virtuelles, centres d'interprétation et supports de médiation.",
+    bold: "Culture inclusive et tourisme accessible."
+  },
+  {
+    title: "Santé et organisations sociales",
+    desc: "Campagnes de prévention, information des patients, démarches et formation du personnel soignant.",
+    bold: "Une information claire et compréhensible."
+  },
+  {
+    title: "Logiciels et transformation numérique",
+    desc: "Tutoriels, guides d'utilisation, manuels interactifs, support et formation technique.",
+    bold: "Des mises à jour rapides et cohérentes."
+  },
+  {
+    title: "Formation et e-learning",
+    desc: "Cours en ligne, microlearning, simulations, études de cas et scénarios interactifs.",
+    bold: "Des contenus prêts pour les plateformes d'apprentissage."
+  },
+  {
+    title: "Grandes collections audiovisuelles",
+    desc: "Vidéothèques, référentiels, archives historiques, collections de documents et bibliothèques numériques.",
+    bold: "Évolutivité avec révision humaine."
+  }
+]) }}
+
+{{ cta.demoSection(
+  "Vos contenus audiovisuels, à la portée de tous. Sans barrières.",
+  "Quand commençons-nous ?",
+  "Expliquez-nous quelles vidéos vous devez adapter et nous vous aiderons à évaluer le projet, les formats et les délais.",
+  "Demandez un rendez-vous",
+  "https://calendly.com/lvis-meetings/30min",
+  "Demander une consultation. Ouvre le calendrier de réservation dans un nouvel onglet."
+) }}

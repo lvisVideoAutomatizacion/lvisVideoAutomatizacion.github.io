@@ -1,0 +1,71 @@
+---
+layout: base.njk
+title: Partners
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cta.njk" as cta %}
+
+{% macro partnerBox(p) %}
+<div class="box col">
+  <div class="box__head">
+    <a href="{{ p.url }}" target="_blank">
+      <div class="logo-wrapper">
+        <img src="{{ p.logo }}" alt="{{ p.alt }}">
+      </div>
+      <h3 class="box__title">{{ p.name }}</h3>
+      <p>{{ p.desc }}</p>
+    </a>
+  </div>
+</div>
+{% endmacro %}
+
+{% set partners = [
+  { logo: "/assets/images/customer_logos/conchita.png", alt: "Conchita Consulting logo", name: "Conchita Consulting", url: "https://www.conchitaconsulting.com/bienvenides-spanish", desc: "Conchita Consulting offers consulting and educational services for accessibility, blindness, low vision, and disability." },
+  { logo: "/assets/images/customer_logos/AISTE.png", alt: "AISTE logo", name: "AISTE", url: "https://www.aiste.es", desc: "AISTE drives the technological revolution as an engine of social change. It seeks an inclusive and sustainable transformation, putting people at the center of its action." },
+  { logo: "/assets/images/customer_logos/accedeme.png", alt: "Accedeme logo", name: "Accedeme", url: "https://accedeme.com", desc: "Accedeme believes in innovation as an engine for a more sustainable and inclusive world. Its goal is clear: putting technology at the service of equal opportunities for everyone." },
+  { logo: "/assets/images/customer_logos/singular.png", alt: "Sngular logo", name: "Sngular", url: "https://www.sngular.com/", desc: "Sngular combines talent and technology to show that the unconventional works. It designs technology solutions with durability in mind, both for the client and the planet." },
+  { logo: "/assets/images/customer_logos/samoo.png", alt: "Samoo logo", name: "Samoo", url: "https://www.samoo.es/", desc: "Samoo is a national benchmark in the e-learning field, thanks to its extensive experience, innovative vision, and multi-platform development capability." },
+  { logo: "/assets/images/customer_logos/artaiz.jpg", alt: "Artaiz Asesoría logo", name: "Artaiz", url: "https://artaiz-asesoria.es", desc: "Artaiz's goal is for small and medium-sized businesses to make the most of the advantages of digitalization in an increasingly competitive environment." },
+  { logo: "/assets/images/customer_logos/echararodar.png", alt: "Echararodar logo", name: "Echar a Rodar", url: "https://www.echararodar.es", desc: "Echar a Rodar is a consultancy specializing in sustainability, CSR, and impact for the audiovisual, cultural, and creative industries. It offers sustainability plans, carbon footprint calculations, green filming, training, and consulting for productions, festivals, companies, and events." },
+  { logo: "/assets/images/customer_logos/circulav.png", alt: "Circulav logo", name: "Circulav", url: "https://www.circulav.es", desc: "Circulav is an Andalusian agency specializing in sustainability for the audiovisual and cultural sector. It helps reduce, measure, and document the environmental impact of filming, festivals, events, animation, video games, performing arts, media, and cultural institutions." }
+] %}
+
+{{ hero.catalogHero(
+  t,
+  "PARTNERS",
+  "Partners to expand the impact of audiovisual accessibility",
+  "We collaborate with organizations, integrators, consultancies, production companies, and platforms that want to incorporate audiovisual accessibility into their services.",
+  ["AD", "CC", "TR", "SL", "ER"],
+  "Audio description, closed captions, transcription, sign language, easy read, and publish-ready formats.",
+  "/en/services/",
+  "View services"
+) }}
+
+<section id="partners" class="partners-tables wrapper clearfix">
+  <div class="grid-1">
+    <h2>A flexible model for technology and business partners</h2>
+    <h3>We provide technology, methodology, and production capacity so that our partners can offer audiovisual accessibility to their clients without building the entire process from scratch.</h3>
+  </div>
+
+  <div class="grid-3 partners">
+    {%- for partner in partners %}
+    {{ partnerBox(partner) }}
+    {%- endfor %}
+
+    <div class="box col box--contact">
+      <div class="box__head">
+        <h3 class="box__title">Would you like to become one of our partners?</h3>
+      </div>
+      <a class="button-cta" href="https://eu.bigin.online/org20092830437/forms/contacta-con-nosotros">Contact us</a>
+    </div>
+  </div>
+</section>
+
+{{ cta.demoSection(
+  "Your audiovisual content, for everyone. No barriers.",
+  "When shall we start?",
+  "Tell us which videos you need to adapt and we'll help you estimate effort, formats, and timelines.",
+  "Request a consultation",
+  "https://calendly.com/lvis-meetings/30min",
+  "Request a consultation. Opens the booking calendar in a new tab."
+) }}

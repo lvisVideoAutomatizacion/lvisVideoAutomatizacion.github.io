@@ -1,0 +1,71 @@
+---
+layout: base.njk
+title: Partners
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cta.njk" as cta %}
+
+{% macro partnerBox(p) %}
+<div class="box col">
+  <div class="box__head">
+    <a href="{{ p.url }}" target="_blank">
+      <div class="logo-wrapper">
+        <img src="{{ p.logo }}" alt="{{ p.alt }}">
+      </div>
+      <h3 class="box__title">{{ p.name }}</h3>
+      <p>{{ p.desc }}</p>
+    </a>
+  </div>
+</div>
+{% endmacro %}
+
+{% set partners = [
+  { logo: "/assets/images/customer_logos/conchita.png", alt: "logotip Conchita Consulting", name: "Conchita Consulting", url: "https://www.conchitaconsulting.com/bienvenides-spanish", desc: "Conchita Consulting ofereix consultoria i serveis educatius per a accessibilitat, ceguesa, baixa visió i discapacitat." },
+  { logo: "/assets/images/customer_logos/AISTE.png", alt: "logotip AISTE", name: "AISTE", url: "https://www.aiste.es", desc: "AISTE impulsa la revolució tecnològica com a motor de canvi social. Cerca una transformació inclusiva i sostenible situant les persones al centre de la seva acció." },
+  { logo: "/assets/images/customer_logos/accedeme.png", alt: "logotip Accedeme", name: "Accedeme", url: "https://accedeme.com", desc: "Accedeme creu en la innovació com a motor per a un món més sostenible i inclusiu. El seu objectiu és clar: posar la tecnologia al servei de la igualtat d'oportunitats per a totes les persones." },
+  { logo: "/assets/images/customer_logos/singular.png", alt: "logotip Sngular", name: "Sngular", url: "https://www.sngular.com/", desc: "Sngular combina talent i tecnologia per demostrar que allò no convencional funciona. Dissenya solucions tecnològiques pensant en la durabilitat, tant per al client com per al planeta." },
+  { logo: "/assets/images/customer_logos/samoo.png", alt: "logotip Samoo", name: "Samoo", url: "https://www.samoo.es/", desc: "Samoo és un referent en l'àmbit de l'e-learning a nivell nacional, gràcies a la seva àmplia experiència, la seva visió innovadora i la seva capacitat de desenvolupament multiplataforma." },
+  { logo: "/assets/images/customer_logos/artaiz.jpg", alt: "logotip Artaiz Assessoria", name: "Artaiz", url: "https://artaiz-asesoria.es", desc: "L'objectiu d'Artaiz és que les petites i mitjanes empreses aprofitin al màxim els avantatges de la digitalització en un entorn cada cop més competitiu." },
+  { logo: "/assets/images/customer_logos/echararodar.png", alt: "logotip d'Echararodar", name: "Echar a Rodar", url: "https://www.echararodar.es", desc: "Echar a Rodar és una consultora especialitzada en sostenibilitat, RSC i impacte per a la indústria audiovisual i indústries culturals i creatives. Ofereix plans de sostenibilitat, càlcul d'empremta de carboni, green filming, formació i assessorament per a produccions, festivals, empreses i esdeveniments." },
+  { logo: "/assets/images/customer_logos/circulav.png", alt: "logotip de Circulav", name: "Circulav", url: "https://www.circulav.es", desc: "Circulav és una agència andalusa especialitzada en sostenibilitat per al sector audiovisual i cultural. Ajuda a reduir, mesurar i documentar l'impacte ambiental de rodatges, festivals, esdeveniments, animació, videojocs, arts escèniques, mitjans o institucions culturals." }
+] %}
+
+{{ hero.catalogHero(
+  t,
+  "PARTNERS",
+  "Partners per ampliar l'impacte de l'accessibilitat audiovisual",
+  "Col·laborem amb organitzacions, integradors, consultories, productores i plataformes que volen incorporar accessibilitat audiovisual als seus serveis.",
+  ["AD", "CC", "TR", "LSE", "LF"],
+  "Audiodescripció, subtítols tancats, transcripció, llengua de signes, lectura fàcil i formats a punt per publicar.",
+  "/ca/services/",
+  "Veure serveis"
+) }}
+
+<section id="partners" class="partners-tables wrapper clearfix">
+  <div class="grid-1">
+    <h2>Un model flexible per a partners tecnològics i comercials</h2>
+    <h3>Aportem tecnologia, metodologia i capacitat de producció perquè els nostres partners puguin oferir accessibilitat audiovisual als seus clients sense construir tot el procés des de zero.</h3>
+  </div>
+
+  <div class="grid-3 partners">
+    {%- for partner in partners %}
+    {{ partnerBox(partner) }}
+    {%- endfor %}
+
+    <div class="box col box--contact">
+      <div class="box__head">
+        <h3 class="box__title">T'agradaria formar part dels nostres partners?</h3>
+      </div>
+      <a class="button-cta" href="https://eu.bigin.online/org20092830437/forms/contacta-con-nosotros">Contacta amb nosaltres</a>
+    </div>
+  </div>
+</section>
+
+{{ cta.demoSection(
+  "Els teus continguts audiovisuals, per a tothom. Sense barreres.",
+  "Quan comencem?",
+  "Explica'ns quins vídeos necessites adaptar i t'ajudem a estimar l'esforç, els formats i els terminis.",
+  "Demana una consulta",
+  "https://calendly.com/lvis-meetings/30min",
+  "Sol·licitar una consulta. S'obre el calendari de reserves en una pestanya nova."
+) }}

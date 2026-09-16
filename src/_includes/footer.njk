@@ -1,0 +1,17 @@
+<footer class="site-footer">
+  <div class="align-center powered-by-lvis">
+    <p>
+      <a href="https://lvis.es" target="_blank" rel="noopener" aria-label="{{ t.footer.poweredByAriaLabel }}">
+        {{ t.footer.poweredBy }} <img src="/assets/images/logo.svg" alt="LViS">
+      </a>
+    </p>
+  </div>
+  <p class="copyright">{{ t.footer.copyright | replace("{{ year }}", currentYear) }}</p>
+  <nav aria-label="{{ t.footer.legalLinksAriaLabel }}">
+    <ul class="footer-legal-links">
+      {%- for item in legalPages %}
+      <li><a href="/{{ lang }}/{{ item.slug }}/">{{ t.footer[item.translationKey] }}</a></li>
+      {%- endfor %}
+    </ul>
+  </nav>
+</footer>

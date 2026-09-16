@@ -1,0 +1,75 @@
+---
+layout: base.njk
+title: Soluciones
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cards.njk" as cards %}
+{% import "macros/cta.njk" as cta %}
+
+{{ hero.catalogHero(
+  t,
+  "SOLUCIONES",
+  "Accesibilidad audiovisual adaptada a cada organización",
+  "Cada sector tiene necesidades diferentes, pero todos comparten un objetivo: que sus contenidos lleguen al mayor número posible de personas.",
+  ["AD", "CC", "TR", "LSE", "LF"],
+  "Audiodescripción, subtítulos cerrados, transcripción, lengua de signos, lectura fácil y formatos listos para publicar.",
+  "/es/services/",
+  "Ver servicios"
+) }}
+
+{{ cards.catalogGrid("Catálogo de soluciones", [
+  {
+    title: "Administración pública",
+    desc: "Plenos, campañas, sedes electrónicas, procedimientos, formación interna y participación ciudadana.",
+    bold: "Transparencia, inclusión y acceso universal."
+  },
+  {
+    title: "Universidades y educación",
+    desc: "Clases grabadas, MOOC, tutoriales, conferencias, seminarios y recursos docentes.",
+    bold: "Educación inclusiva y materiales reutilizables."
+  },
+  {
+    title: "Empresa y comunicación corporativa",
+    desc: "Onboarding, webinars, eventos, lanzamientos, comunicación interna y formación.",
+    bold: "Mejor experiencia para empleados y clientes."
+  },
+  {
+    title: "Marketing y redes sociales",
+    desc: "Campañas digitales, vídeos promocionales, anuncios, casos de éxito y presentaciones.",
+    bold: "Más visualizaciones, retención y SEO."
+  },
+  {
+    title: "Turismo, cultura y patrimonio",
+    desc: "AudioSignoGuías, audioguías, para rutas, museos, exposiciones virtuales, centros de interpretación y material divulgativo.",
+    bold: "Cultura inclusiva y turismo accesible."
+  },
+  {
+    title: "Sanidad y organizaciones sociales",
+    desc: "Campañas de prevención, información para pacientes, procedimientos y formación sanitaria.",
+    bold: "Información clara y comprensible."
+  },
+  {
+    title: "Software y transformación digital",
+    desc: "Tutoriales, guías de usuario, manuales interactivos, soporte y formación técnica.",
+    bold: "Actualizaciones rápidas y consistentes."
+  },
+  {
+    title: "Formación y e-learning",
+    desc: "Cursos online, píldoras, simulaciones, casos prácticos y escenarios interactivos.",
+    bold: "Contenidos listos para plataformas formativas."
+  },
+  {
+    title: "Grandes colecciones audiovisuales",
+    desc: "Videotecas, repositorios, archivos históricos, fondos documentales y bibliotecas digitales.",
+    bold: "Escalabilidad con revisión humana."
+  }
+]) }}
+
+{{ cta.demoSection(
+  "Tus contenidos audiovisuales, para todos. Sin barreras.",
+  "¿Cuándo empezamos?",
+  "Cuéntanos qué vídeos necesitas adaptar y te ayudamos a estimar esfuerzo, formatos y plazos.",
+  "Solicitar una consulta",
+  "https://calendly.com/lvis-meetings/30min",
+  "Solicitar una consulta. Se abre el calendario de reservas en una nueva pestaña."
+) }}

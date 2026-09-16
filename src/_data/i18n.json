@@ -1,0 +1,15 @@
+{
+  "default": "es",
+  "languages": [
+    { "code": "es", "label": "Español", "path": "/es/" },
+    { "code": "en", "label": "English", "path": "/en/" },
+    { "code": "ca", "label": "Català", "path": "/ca/" },
+    { "code": "fr", "label": "Français", "path": "/fr/" }
+  ],
+  "ogLocales": {
+    "es": "es_ES",
+    "en": "en_US",
+    "ca": "ca_ES",
+    "fr": "fr_FR"
+  }
+}

@@ -1,0 +1,91 @@
+---
+layout: base.njk
+title: Examples
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cta.njk" as cta %}
+
+{% set examples = [
+  {
+    src: "https://player.vimeo.com/video/1210714979",
+    videoTitle: "Space Is Fascinating",
+    title: "Interesting facts about space",
+    desc: "Educational example with subtitles, audio description, and transcription."
+  },
+  {
+    src: "https://player.vimeo.com/video/1129203402",
+    videoTitle: "Accessibility with LViS: The Skeleton Dance",
+    title: "The skeleton dance",
+    desc: "Narrative example to test the description of actions, music, and scenes."
+  },
+  {
+    src: "https://www.youtube.com/embed/ouiwn5JYk6Q",
+    videoTitle: "How to make an accessible video… that is NOT accessible",
+    title: "How to make an accessible video… that is NOT accessible",
+    desc: "Educational example explaining common mistakes and best practices."
+  },
+  {
+    src: "https://www.youtube.com/embed/Y7R2JdwhBjg",
+    videoTitle: "Courtyards of Córdoba",
+    title: "Courtyards of Córdoba",
+    desc: "Example of an inclusive documentary with audio description, closed captions, transcript, and Spanish Sign Language."
+  },
+  {
+    src: "https://www.youtube.com/embed/3OcDBbpoLHY",
+    videoTitle: "Sierra Norte Madrid Route",
+    title: "Sierra Norte Madrid Route",
+    desc: "Example of an audio guide for accessible routes with audio description, closed captions, transcription, and Spanish Sign Language."
+  }
+] %}
+
+{{ hero.catalogHero(
+  t,
+  "EXAMPLES",
+  "Examples of accessible videos",
+  "See how content is experienced with subtitles, audio description, transcription, chapters, easy-read summaries, and downloads.",
+  ["AD", "CC", "TR", "SL", "ER"],
+  "Audio description, closed captions, transcription, sign language, easy-read summaries, and formats ready to publish.",
+  "/en/services/",
+  "View services"
+) }}
+
+<section id="examples-grid" aria-labelledby="examples-grid-heading">
+  <div class="wrapper">
+    <h2 id="examples-grid-heading" class="sr-only">Examples of accessible videos</h2>
+    <div class="examples-grid">
+      {%- for example in examples %}
+      <article class="example-card">
+        <div class="example-card__thumb">
+          <iframe src="{{ example.src }}" title="{{ example.videoTitle }}" loading="lazy" allow="fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="example-card__body">
+          <h3 class="example-card__title">{{ example.title }}</h3>
+          <p class="example-card__desc">{{ example.desc }}</p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <div class="examples-social">
+      <a href="https://www.youtube.com/@lvisvideo" target="_blank" rel="noopener" aria-label="YouTube channel">
+        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+      </a>
+      <a href="https://vimeo.com/lvisvideo" target="_blank" rel="noopener" aria-label="Vimeo channel">
+        <i class="fa-brands fa-vimeo-v" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <aside class="examples-note" role="note">
+      <p><strong>Note:</strong> turn on subtitles and audio description. In the final version, you can add chapters, a full transcription, an easy-read summary, and downloads.</p>
+    </aside>
+  </div>
+</section>
+
+{{ cta.demoSection(
+  "Your audiovisual content, for everyone. No barriers.",
+  "When do we start?",
+  "Tell us which videos you need to adapt and we'll help you estimate effort, formats, and timelines.",
+  "Request a consultation",
+  "https://calendly.com/lvis-meetings/30min",
+  "Request a consultation. Opens the booking calendar in a new tab."
+) }}

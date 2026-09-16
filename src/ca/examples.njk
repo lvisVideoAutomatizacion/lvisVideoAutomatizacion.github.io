@@ -1,0 +1,91 @@
+---
+layout: base.njk
+title: Exemples
+---
+{% import "macros/hero.njk" as hero %}
+{% import "macros/cta.njk" as cta %}
+
+{% set examples = [
+  {
+    src: "https://player.vimeo.com/video/1210734145",
+    videoTitle: "L'Espai És Fascinant",
+    title: "Dades interessants sobre l'espai",
+    desc: "Exemple divulgatiu amb subtítols, audiodescripció i transcripció."
+  },
+  {
+    src: "https://player.vimeo.com/video/1129203402",
+    videoTitle: "Accessibilitat amb LViS: El Ball dels Esquelets",
+    title: "El ball dels esquelets",
+    desc: "Exemple narratiu per provar descripció d'accions, música i escenes."
+  },
+  {
+    src: "https://www.youtube.com/embed/ouiwn5JYk6Q",
+    videoTitle: "Com fer un vídeo accessible… que NO és accessible",
+    title: "Com fer un vídeo accessible… que NO és accessible",
+    desc: "Exemple formatiu per explicar errors comuns i bones pràctiques."
+  },
+  {
+    src: "https://www.youtube.com/embed/Y7R2JdwhBjg",
+    videoTitle: "Patis de Còrdova",
+    title: "Patis de Còrdova",
+    desc: "Exemple de documental inclusiu amb audiodescripció, subtítol tancat, transcripció i llengua de signes espanyola."
+  },
+  {
+    src: "https://www.youtube.com/embed/3OcDBbpoLHY",
+    videoTitle: "Ruta Serra Nord Madrid",
+    title: "Ruta Serra Nord Madrid",
+    desc: "Exemple d'audiosignoguia per a rutes accessibles amb audiodescripció, subtítol tancat, transcripció i llengua de signes espanyola."
+  }
+] %}
+
+{{ hero.catalogHero(
+  t,
+  "EXEMPLES",
+  "Exemples de vídeos accessibles",
+  "Mostra com es consumeixen els continguts amb subtítols, audiodescripció, transcripció, capítols, lectura fàcil i descàrregues.",
+  ["AD", "CC", "TR", "LSE", "LF"],
+  "Audiodescripció, subtítols tancats, transcripció, llengua de signes, lectura fàcil i formats a punt per publicar.",
+  "/ca/services/",
+  "Veure serveis"
+) }}
+
+<section id="examples-grid" aria-labelledby="examples-grid-heading">
+  <div class="wrapper">
+    <h2 id="examples-grid-heading" class="sr-only">Exemples de vídeos accessibles</h2>
+    <div class="examples-grid">
+      {%- for example in examples %}
+      <article class="example-card">
+        <div class="example-card__thumb">
+          <iframe src="{{ example.src }}" title="{{ example.videoTitle }}" loading="lazy" allow="fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="example-card__body">
+          <h3 class="example-card__title">{{ example.title }}</h3>
+          <p class="example-card__desc">{{ example.desc }}</p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <div class="examples-social">
+      <a href="https://www.youtube.com/@lvisvideo" target="_blank" rel="noopener" aria-label="Canal de YouTube">
+        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+      </a>
+      <a href="https://vimeo.com/lvisvideo" target="_blank" rel="noopener" aria-label="Canal de Vimeo">
+        <i class="fa-brands fa-vimeo-v" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <aside class="examples-note" role="note">
+      <p><strong>Nota:</strong> activa els subtítols i l'audiodescripció. A la versió final es poden afegir capítols, transcripció completa, sumari en lectura fàcil i descàrregues.</p>
+    </aside>
+  </div>
+</section>
+
+{{ cta.demoSection(
+  "Els teus continguts audiovisuals, per a tothom. Sense barreres.",
+  "Quan comencem?",
+  "Explica'ns quins vídeos necessites adaptar i t'ajudem a estimar l'esforç, els formats i els terminis.",
+  "Demana una consulta",
+  "https://calendly.com/lvis-meetings/30min",
+  "Sol·licitar una consulta. S'obre el calendari de reserves en una pestanya nova."
+) }}

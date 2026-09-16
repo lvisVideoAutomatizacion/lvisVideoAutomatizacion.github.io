@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<title>{{ title }} - {{ site.name }}</title>
+<meta name="description" content="{{ description or t.meta.ogDescription }}">
+<meta name="keywords" content="{{ site.keywords }}">
+<meta name="author" content="{{ site.author }}">
+<meta name="robots" content="index,follow" lang="{{ lang }}">
+<meta property="og:title" content="{{ site.name }}">
+<meta property="og:description" content="{{ ogDescription or t.meta.ogDescription }}">
+<meta property="og:image" content="{{ site.ogImage }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="{{ ogLocale }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ site.name }}">
+<meta name="twitter:description" content="{{ twitterDescription or t.meta.twitterDescription }}">
+<meta name="twitter:image" content="{{ site.ogImage }}">
+<meta name="twitter:site" content="{{ site.twitterHandle }}">
+<meta name="twitter:creator" content="{{ site.twitterHandle }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+{%- for language in i18n.languages %}
+<link rel="alternate" hreflang="{{ language.code }}" href="{{ site.url }}/{{ language.code }}/{{ currentPath }}">
+{%- endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}/{{ i18n.default }}/{{ currentPath }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+{%- set appleTouchIconSizes = [57, 60, 72, 76, 114, 120, 144, 152, 180] %}
+{%- for size in appleTouchIconSizes %}
+<link rel="apple-touch-icon" sizes="{{ size }}x{{ size }}" href="/assets/images/favicon/logo_azul_claro.png">
+{%- endfor %}
+{%- set iconSizes = [192, 32, 96, 16] %}
+{%- for size in iconSizes %}
+<link rel="icon" type="image/png" sizes="{{ size }}x{{ size }}" href="/assets/images/favicon/logo_azul_claro.png">
+{%- endfor %}
+<link rel="manifest" href="/assets/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/assets/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/assets/css/animsition.min.css">
+<link rel="stylesheet" href="/assets/css/venobox.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/js/cookies/cookies.css">
+{%- for stylesheet in (extraStyles or []) %}
+<link rel="stylesheet" href="{{ stylesheet }}">
+{%- endfor %}
+<script src="https://kit.fontawesome.com/3d245d70bc.js" crossorigin="anonymous"></script>
