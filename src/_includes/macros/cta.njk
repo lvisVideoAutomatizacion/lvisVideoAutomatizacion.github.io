@@ -2,7 +2,7 @@
 <section id="demo-section" class="wrapper clearfix" aria-labelledby="demo-heading">
   <section class="grid-1">
     <div class="col">
-      <h2 id="demo-heading" class="post">{{ heading }}</h2>
+      <h2 id="demo-heading" class="post">{{ heading | safe }}</h2>
       {% if subheading %}<h3>{{ subheading }}</h3>{% endif %}
       {% if body %}<p>{{ body }}</p>{% endif %}
       {% if ctaLabel and ctaHref %}

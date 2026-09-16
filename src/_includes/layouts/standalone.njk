@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="author" content="LViS">
+    <meta name="robots" content="index,follow" lang="es">
+    <meta property="og:title" content="{{ ogTitle }}">
+    <meta property="og:description" content="{{ ogDescription }}">
+    <meta property="og:image" content="{{ ogImage }}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="{{ canonicalUrl }}">
+    <meta property="og:site_name" content="LViS">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ twitterTitle }}">
+    <meta name="twitter:description" content="{{ twitterDescription }}">
+    <meta name="twitter:image" content="{{ ogImage }}">
+    <meta name="twitter:site" content="@lvis">
+    <meta name="twitter:creator" content="@lvis">
+    <link rel="canonical" href="{{ canonicalUrl }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    {%- set appleTouchIconSizes = [57, 60, 72, 76, 114, 120, 144, 152, 180] %}
+    {%- for size in appleTouchIconSizes %}
+    <link rel="apple-touch-icon" sizes="{{ size }}x{{ size }}" href="/assets/images/favicon/logo_azul_claro.png">
+    {%- endfor %}
+    {%- set iconSizes = [192, 32, 96, 16] %}
+    {%- for size in iconSizes %}
+    <link rel="icon" type="image/png" sizes="{{ size }}x{{ size }}" href="/assets/images/favicon/logo_azul_claro.png">
+    {%- endfor %}
+    <link rel="manifest" href="/assets/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/animsition.min.css">
+    <link rel="stylesheet" href="/assets/css/venobox.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/js/cookies/cookies.css">
+    <script src="https://kit.fontawesome.com/3d245d70bc.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-init">
+    <div class="animsition-overlay">
+
+      <div class="moments-logo-header">
+        <a href="https://vally.lvis.es" target="_blank" rel="noopener" class="moments-logo-header-link" aria-label="Ir a la web de LViS Vally Moments. Se abre en una nueva pestaña.">
+          <img src="/assets/images/LVISVally_moments.svg" alt="Logotipo de LViS Vally" class="moments-logo-header-img">
+        </a>
+        <div class="moments-logo-header-actions">
+          <a href="https://vally.lvis.es" target="_blank" rel="noopener" class="catalog-hero-btn catalog-hero-btn--secondary moments-logo-header-btn" aria-label="Ir a la web de LViS Vally Moments. Se abre en una nueva pestaña.">Ir a la web</a>
+          <a href="https://calendly.com/lvis-meetings/30min" target="_blank" rel="noopener" class="catalog-hero-btn catalog-hero-btn--primary moments-logo-header-btn" aria-label="Hablemos. Se abre el calendario de reservas en una nueva pestaña.">Hablemos</a>
+        </div>
+      </div>
+
+      <main id="main-content">
+        {{ content | safe }}
+      </main>
+
+      <footer class="wrapper clearfix">
+        <section class="grid-1">
+          <div class="col">
+            <div class="align-center powered-by-lvis">
+              <p>
+                <a href="https://lvis.es" target="_blank" rel="noopener" aria-label="Enlace a la página de lvis.es (se abre en una nueva pestaña)">
+                  Powered by <img src="/assets/images/logo.svg" alt="Logotipo de LViS">
+                </a>
+              </p>
+            </div>
+            <div id="copyright" class="align-center">
+              <p>© {{ currentYear }} LViS Video Automatización S.L. LViS es una marca registrada. Todos los derechos reservados.</p>
+            </div>
+            <hr aria-hidden="true" class="rupture">
+            <div aria-label="Enlaces legales" class="legal-links">
+              <p class="display-inline footer-legal-links">
+                <a href="/es/legal/" target="_blank">Aviso legal</a>
+                <a href="/es/cookies-policy/" target="_blank">Política de cookies</a>
+                <a href="/es/privacy-policy/" target="_blank">Política de privacidad</a>
+                <a href="/es/service-terms/" target="_blank">Términos de servicio</a>
+                <a href="/es/trademark-services-policy/" target="_blank">Política de marcas y productos</a>
+                <a href="/es/accessibility/" target="_blank">Accesibilidad</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </footer>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+    <script src="/assets/js/vendor/easings.js"></script>
+    <script src="/assets/js/vendor/venobox.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
