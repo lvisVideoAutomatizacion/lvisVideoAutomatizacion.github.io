@@ -1463,6 +1463,8 @@ ol strong {
 }
 
 #partners .button-cta {
+	box-sizing: border-box;
+	width: calc(100% - 48px);
 	margin: 0px 24px 30px 24px;
 }
 
