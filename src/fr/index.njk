@@ -27,6 +27,33 @@ title: Accueil
 </article>
 {% endmacro %}
 
+{% macro clientLogo(client) %}
+<div class="clients-logo{{ ' clients-logo--square' if client.square }}">
+  {%- if client.url %}
+  <a href="{{ client.url }}" target="_blank" rel="noopener" aria-label="{{ client.alt }}">
+    <img src="{{ client.logo }}" alt="" loading="lazy">
+  </a>
+  {%- else %}
+  <img src="{{ client.logo }}" alt="{{ client.alt }}" loading="lazy">
+  {%- endif %}
+</div>
+{% endmacro %}
+
+{% set clients = [
+  { logo: "/assets/images/clients/logo-difusion.png", alt: "Logo Difusión", url: "https://difusion.com/conocenos/", square: true },
+  { logo: "/assets/images/clients/emdl-logo.jpg", alt: "Logo Éditions Maison des Langues", url: "https://www.emdl.fr/fle/a-propos/qui-sommes-nous", square: true },
+  { logo: "/assets/images/clients/once_logo.jpg", alt: "Logo ONCE", url: "https://www.once.es" },
+  { logo: "/assets/images/clients/ars.png", alt: "Logo Fundación Accesibilidad y Responsabilidad Social", url: "https://aiscertificacion.com/quienes-somos/fundacion-ars/" },
+  { logo: "/assets/images/clients/sgel.png", alt: "Logo SGEL", url: "https://sgellibros.es/", square: true },
+  { logo: "/assets/images/clients/diputacio_barcelona_logo.png", alt: "Logo Diputació de Barcelona", url: "https://www.diba.cat/ca/inici", square: true },
+  { logo: "/assets/images/clients/telefonica.png", alt: "Logo Telefónica", url: "https://www.telefonica.com/" },
+  { logo: "/assets/images/clients/abbvie_logo.png", alt: "Logo AbbVie", url: "https://www.abbvie.com/" },
+  { logo: "/assets/images/clients/granada_logo.png", alt: "Logo Universidad de Granada", url: "https://www.ugr.es/" },
+  { logo: "/assets/images/clients/sierra_norte_logo.png", alt: "Logo Sierra Norte de Madrid", url: "https://www.sierranortemadrid.org" },
+  { logo: "/assets/images/clients/ayto_cordoba_logo.png", alt: "Logo Ayuntamiento de Córdoba", url: "https://www.cordoba.es/sede" },
+  { logo: "/assets/images/clients/proarte_logo.svg", alt: "Logo Proarte", url: "https://www.e-proarte.com/es" }
+] %}
+
 <div id="hero" class="wrapper clearfix" aria-labelledby="hero-section">
   <section class="grid-2">
     <div class="col post">
@@ -130,6 +157,18 @@ title: Accueil
       {{ mainServicesCard("Production accessible", "Nous adaptons les vidéos existantes avec audiodescription, sous-titres, transcriptions, navigation accessible et d'autres mécanismes.", "/fr/services/", "Voir les services") }}
       {{ mainServicesCard("Solutions par secteur", "Administration publique, universités, entreprises, culture, santé, logiciels, formation et grands référentiels.", "/fr/solutions/", "Voir les solutions") }}
       {{ mainServicesCard("Formation et conseil", "Nous aidons les équipes techniques, de communication, de recrutement, de formation et d'inclusion à prendre de meilleures décisions.", "/fr/prices/", "Voir les tarifs") }}
+    </div>
+  </div>
+</section>
+
+<section id="clients">
+  <div class="wrapper">
+    <span class="clients-label">CLIENTS</span>
+    <h2>Des organisations qui nous font déjà confiance</h2>
+    <div class="clients-logos">
+      {%- for client in clients %}
+      {{ clientLogo(client) }}
+      {%- endfor %}
     </div>
   </div>
 </section>

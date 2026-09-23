@@ -27,6 +27,33 @@ title: Home
 </article>
 {% endmacro %}
 
+{% macro clientLogo(client) %}
+<div class="clients-logo{{ ' clients-logo--square' if client.square }}">
+  {%- if client.url %}
+  <a href="{{ client.url }}" target="_blank" rel="noopener" aria-label="{{ client.alt }}">
+    <img src="{{ client.logo }}" alt="" loading="lazy">
+  </a>
+  {%- else %}
+  <img src="{{ client.logo }}" alt="{{ client.alt }}" loading="lazy">
+  {%- endif %}
+</div>
+{% endmacro %}
+
+{% set clients = [
+  { logo: "/assets/images/clients/logo-difusion.png", alt: "Difusión logo", url: "https://difusion.com/conocenos/", square: true },
+  { logo: "/assets/images/clients/emdl-logo.jpg", alt: "Éditions Maison des Langues logo", url: "https://www.emdl.fr/fle/a-propos/qui-sommes-nous", square: true },
+  { logo: "/assets/images/clients/once_logo.jpg", alt: "ONCE logo", url: "https://www.once.es" },
+  { logo: "/assets/images/clients/ars.png", alt: "Fundación Accesibilidad y Responsabilidad Social logo", url: "https://aiscertificacion.com/quienes-somos/fundacion-ars/" },
+  { logo: "/assets/images/clients/sgel.png", alt: "SGEL logo", url: "https://sgellibros.es/", square: true },
+  { logo: "/assets/images/clients/diputacio_barcelona_logo.png", alt: "Diputació de Barcelona logo", url: "https://www.diba.cat/ca/inici", square: true },
+  { logo: "/assets/images/clients/telefonica.png", alt: "Telefónica logo", url: "https://www.telefonica.com/" },
+  { logo: "/assets/images/clients/abbvie_logo.png", alt: "AbbVie logo", url: "https://www.abbvie.com/" },
+  { logo: "/assets/images/clients/granada_logo.png", alt: "Universidad de Granada logo", url: "https://www.ugr.es/" },
+  { logo: "/assets/images/clients/sierra_norte_logo.png", alt: "Sierra Norte de Madrid logo", url: "https://www.sierranortemadrid.org" },
+  { logo: "/assets/images/clients/ayto_cordoba_logo.png", alt: "Ayuntamiento de Córdoba logo", url: "https://www.cordoba.es/sede" },
+  { logo: "/assets/images/clients/proarte_logo.svg", alt: "Proarte logo", url: "https://www.e-proarte.com/es" }
+] %}
+
 <div id="hero" class="wrapper clearfix" aria-labelledby="hero-section">
   <section class="grid-2">
     <div class="col post">
@@ -130,6 +157,18 @@ title: Home
       {{ mainServicesCard("Accessible production", "We adapt existing videos with audio description, CC, transcripts, accessible navigation, and other mechanisms.", "/en/services/", "View services") }}
       {{ mainServicesCard("Solutions by sector", "Government, universities, businesses, culture, healthcare, software, training, and large repositories.", "/en/solutions/", "View solutions") }}
       {{ mainServicesCard("Training and consulting", "We help technical, communications, hiring, training, and inclusion teams make better decisions.", "/en/prices/", "View pricing") }}
+    </div>
+  </div>
+</section>
+
+<section id="clients">
+  <div class="wrapper">
+    <span class="clients-label">CLIENTS</span>
+    <h2>Organizations that already trust us</h2>
+    <div class="clients-logos">
+      {%- for client in clients %}
+      {{ clientLogo(client) }}
+      {%- endfor %}
     </div>
   </div>
 </section>

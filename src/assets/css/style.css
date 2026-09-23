@@ -301,6 +301,7 @@ p {
 #why,
 #tech-people,
 #main-services,
+#clients,
 #catalog-hero,
 #faq,
 #make,
@@ -2579,7 +2580,7 @@ footer .footer-legal-links a:hover {
 	padding-top: 60px !important;
 	padding-bottom: 72px;
 	background-color: rgba(var(--color-purple-light), 1);
-	background-image: url('../images/backgrounds/black-wave.svg');
+	background-image: url('../images/backgrounds/white-wave.svg');
 }
 
 #main-services .main-services-label {
@@ -2649,6 +2650,92 @@ footer .footer-legal-links a:hover {
 
 #main-services .main-services-card {
 	flex: 1;
+}
+
+/* ===== CLIENTS ===== */
+#clients {
+	padding-top: 60px !important;
+	padding-bottom: 140px;
+	background-color: rgba(var(--color-white), 1);
+	background-image: url('../images/backgrounds/black-wave.svg');
+}
+
+#clients .clients-label {
+	display: block;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: var(--color-blue-dark);
+	padding-top: 0;
+	margin-bottom: 8px;
+}
+
+#clients h2 {
+	color: var(--color-blue-dark);
+	padding-top: 12px;
+	margin-bottom: 8px;
+	max-width: 700px;
+}
+
+.clients-logos {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	justify-items: center;
+	gap: 40px 24px;
+	margin-top: 56px;
+}
+
+.clients-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 56px;
+}
+
+.clients-logo a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.clients-logo img {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+/* Los logotipos cuadrados o verticales quedan visualmente más pequeños que
+   los alargados si comparten la misma altura máxima, porque esta última
+   apenas la aprovechan a lo ancho. Se les da más altura para equilibrar
+   el peso visual con el resto de logos de la fila. */
+.clients-logo--square {
+	height: 88px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.clients-logos {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.clients-logos {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.clients-logo {
+		height: 64px;
+	}
+
+	.clients-logo--square {
+		height: 104px;
+	}
 }
 
 /* =============================================================================

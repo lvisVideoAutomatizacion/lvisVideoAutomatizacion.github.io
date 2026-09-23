@@ -27,6 +27,33 @@ title: Inicio
 </article>
 {% endmacro %}
 
+{% macro clientLogo(client) %}
+<div class="clients-logo{{ ' clients-logo--square' if client.square }}">
+  {%- if client.url %}
+  <a href="{{ client.url }}" target="_blank" rel="noopener" aria-label="{{ client.alt }}">
+    <img src="{{ client.logo }}" alt="" loading="lazy">
+  </a>
+  {%- else %}
+  <img src="{{ client.logo }}" alt="{{ client.alt }}" loading="lazy">
+  {%- endif %}
+</div>
+{% endmacro %}
+
+{% set clients = [
+  { logo: "/assets/images/clients/logo-difusion.png", alt: "logo Difusión", url: "https://difusion.com/conocenos/", square: true },
+  { logo: "/assets/images/clients/emdl-logo.jpg", alt: "logo Éditions Maison des Langues", url: "https://www.emdl.fr/fle/a-propos/qui-sommes-nous", square: true },
+  { logo: "/assets/images/clients/once_logo.jpg", alt: "logo ONCE", url: "https://www.once.es" },
+  { logo: "/assets/images/clients/ars.png", alt: "logo Fundación Accesibilidad y Responsabilidad Social", url: "https://aiscertificacion.com/quienes-somos/fundacion-ars/" },
+  { logo: "/assets/images/clients/sgel.png", alt: "logo SGEL", url: "https://sgellibros.es/", square: true },
+  { logo: "/assets/images/clients/diputacio_barcelona_logo.png", alt: "logo Diputació de Barcelona", url: "https://www.diba.cat/ca/inici", square: true },
+  { logo: "/assets/images/clients/telefonica.png", alt: "logo Telefónica", url: "https://www.telefonica.com/" },
+  { logo: "/assets/images/clients/abbvie_logo.png", alt: "logo AbbVie", url: "https://www.abbvie.com/" },
+  { logo: "/assets/images/clients/granada_logo.png", alt: "logo Universidad de Granada", url: "https://www.ugr.es/" },
+  { logo: "/assets/images/clients/sierra_norte_logo.png", alt: "logo Sierra Norte de Madrid", url: "https://www.sierranortemadrid.org" },
+  { logo: "/assets/images/clients/ayto_cordoba_logo.png", alt: "logo Ayuntamiento de Córdoba", url: "https://www.cordoba.es/sede" },
+  { logo: "/assets/images/clients/proarte_logo.svg", alt: "logo Proarte", url: "https://www.e-proarte.com/es" }
+] %}
+
 <div id="hero" class="wrapper clearfix" aria-labelledby="hero-section">
   <section class="grid-2">
     <div class="col post">
@@ -130,6 +157,18 @@ title: Inicio
       {{ mainServicesCard("Producción accesible", "Adaptamos vídeos existentes con audiodescripción, CC, transcripción, navegación accesible y otros mecanismos.", "/es/services/", "Ver servicios") }}
       {{ mainServicesCard("Soluciones por sector", "Administración, universidades, empresas, cultura, sanidad, software, formación y grandes repositorios.", "/es/solutions/", "Ver soluciones") }}
       {{ mainServicesCard("Formación y consultoría", "Ayudamos a equipos técnicos, comunicación, contratación, formación e inclusión a tomar mejores decisiones.", "/es/prices/", "Ver precios") }}
+    </div>
+  </div>
+</section>
+
+<section id="clients">
+  <div class="wrapper">
+    <span class="clients-label">CLIENTES</span>
+    <h2>Organizaciones que ya confían en nosotros</h2>
+    <div class="clients-logos">
+      {%- for client in clients %}
+      {{ clientLogo(client) }}
+      {%- endfor %}
     </div>
   </div>
 </section>
