@@ -3319,6 +3319,9 @@ footer .footer-legal-links a:hover {
 
 .moments-hero {
 	background-image: url('../images/backgrounds/white-wave.svg');
+	background-size: 100% auto;
+	background-position: center bottom;
+	background-repeat: no-repeat;
 }
 
 .moments-tagline {
@@ -3374,6 +3377,18 @@ footer .footer-legal-links a:hover {
 }
 
 /* ----- Fondos individuales por sección ----- */
+#ejemplo,
+#para-quien,
+#como-lo-hacemos,
+#servicios-moments,
+#imagina,
+#por-que-elegirnos,
+#regala-accesibilidad {
+	background-size: 100% auto;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
 #ejemplo {
 	background-image: url('../images/backgrounds/light-gray-wave.svg');
 }
