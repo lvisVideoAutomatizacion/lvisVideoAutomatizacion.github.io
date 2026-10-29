@@ -20,6 +20,11 @@
   </nav>
 
   <div class="nav-buttons">
+    {%- if lang == "es" %}
+    <a class="demo-button" href="/vally-moments/" aria-label="Ir a la página de LViS Vally Moments">
+      Vally Moments
+    </a>
+    {%- endif %}
     <a class="demo-button" target="_blank" rel="noopener" href="https://www.lvis.es/forms/contacta-con-nosotros" aria-label="{{ t.nav.ctaAriaLabel }}">
       {{ t.nav.ctaLabel }}
     </a>
